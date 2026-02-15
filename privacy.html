@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プライバシーポリシー | Cambridge Audio Japan</title>
+  <meta name="description" content="Cambridge Audio Japanのプライバシーポリシー。個人情報の取り扱い、Cookieポリシーについてご説明します。">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ===== Font Face ===== */
+    @font-face {
+      font-family: 'Sohne Wide';
+      src: url('fonts/sohne-wide-bold.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Tiempos Headline';
+      src: url('fonts/tiempos-headline-light.woff2') format('woff2');
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* ===== Reset & Base ===== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --color-black: #000;
+      --color-white: #fff;
+      --color-gray-50: #f8f8f8;
+      --color-gray-100: #f0f0f0;
+      --color-gray-200: #e0e0e0;
+      --color-gray-400: #999;
+      --color-gray-600: #666;
+      --color-gray-800: #333;
+      --color-teal: #00857c;
+      --color-teal-dark: #006b63;
+      --font-sans: 'Helvetica Neue', 'Noto Sans JP', Arial, sans-serif;
+      --font-serif: 'Tiempos Headline', 'Noto Serif JP', Georgia, 'Times New Roman', serif;
+      --max-width: 1280px;
+      --header-height: 64px;
+    }
+
+    html {
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--color-black);
+      background: var(--color-white);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ===== Header ===== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--color-white);
+      border-bottom: 1px solid var(--color-gray-200);
+      height: var(--header-height);
+    }
+
+    .header-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header-logo a {
+      display: flex;
+      align-items: center;
+    }
+
+    .header-logo img {
+      height: 20px;
+      width: auto;
+    }
+
+    .header-logo .logo-text {
+      font-family: var(--font-sans);
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .header-nav a {
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+      position: relative;
+    }
+
+    .header-nav a:hover {
+      color: var(--color-teal);
+    }
+
+    .header-nav a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--color-teal);
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .region-selector {
+      font-size: 13px;
+      color: var(--color-gray-600);
+      font-weight: 500;
+    }
+
+    .search-btn {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+
+    .search-btn svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--color-black);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--color-black);
+      margin: 5px 0;
+      transition: 0.3s;
+    }
+
+    /* ===== Page Title ===== */
+    .page-title {
+      background: var(--color-white);
+      padding: 120px 0 60px;
+    }
+
+    .page-title h1 {
+      font-family: 'Tiempos Headline', 'Noto Serif JP', Georgia, serif;
+      font-size: 48px;
+      font-weight: 300;
+      color: #000;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .page-title .last-updated {
+      font-size: 14px;
+      color: var(--color-gray-400);
+    }
+
+    /* ===== Legal Content ===== */
+    .legal-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    .legal-content [id] {
+      scroll-margin-top: calc(var(--header-height) + 24px);
+    }
+
+    .legal-content h2 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-top: 48px;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--color-gray-200);
+    }
+
+    .legal-content h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 32px;
+      margin-bottom: 12px;
+    }
+
+    .legal-content p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--color-gray-800);
+      margin-bottom: 16px;
+    }
+
+    .legal-content ul {
+      list-style: disc;
+      margin-left: 24px;
+      margin-bottom: 16px;
+    }
+
+    .legal-content ul li {
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--color-gray-800);
+      margin-bottom: 4px;
+    }
+
+    /* ===== Footer ===== */
+    .site-footer {
+      background: var(--color-black);
+      color: var(--color-white);
+      padding: 64px 0 32px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      margin-bottom: 32px;
+    }
+
+    .footer-col h3 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      letter-spacing: 0.02em;
+    }
+
+    .footer-col a {
+      display: block;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 10px;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: var(--color-white);
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-bottom p {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    .footer-bottom-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-bottom-links a {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.4);
+      transition: color 0.2s;
+    }
+
+    .footer-bottom-links a:hover {
+      color: var(--color-white);
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 1024px) {
+      .page-title h1 {
+        font-size: 40px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header-nav {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .page-title {
+        padding: 96px 0 48px;
+      }
+
+      .page-title h1 {
+        font-size: 32px;
+      }
+
+      .legal-content h2 {
+        font-size: 20px;
+        margin-top: 36px;
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .page-title h1 {
+        font-size: 28px;
+      }
+
+      .legal-content h2 {
+        font-size: 18px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-logo">
+        <a href="index.html">
+          <img src="images/logo.svg" alt="Cambridge Audio" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="logo-text" style="display:none">CAMBRIDGE AUDIO</span>
+        </a>
+      </div>
+      <nav class="header-nav" aria-label="メインナビゲーション">
+        <a href="hifi.html">Hi-Fi</a>
+        <a href="headphones.html">ヘッドホン</a>
+        <a href="speakers.html">スピーカー</a>
+        <a href="accessories.html">アクセサリー</a>
+        <a href="about.html">ブランドストーリー</a>
+      </nav>
+      <div class="header-right">
+        <span class="region-selector">日本 / JP</span>
+        <button class="search-btn" type="button" aria-label="検索">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== Page Title ===== -->
+    <section class="page-title">
+      <div class="container">
+        <h1>プライバシーポリシー</h1>
+        <p class="last-updated">最終更新日: 2025年1月1日</p>
+      </div>
+    </section>
+
+    <!-- ===== Legal Content ===== -->
+    <div class="legal-content">
+
+      <section id="introduction">
+        <h2>1. はじめに</h2>
+        <p>Cambridge Audio（以下「当社」）は、お客様の個人情報の保護を重要視しています。本プライバシーポリシーは、当社がお客様の個人情報をどのように収集、使用、保護するかについて説明するものです。</p>
+        <p>当社のウェブサイトをご利用いただくことにより、本ポリシーに記載された個人情報の取り扱いに同意いただいたものとみなします。</p>
+      </section>
+
+      <section id="collection">
+        <h2>2. 収集する情報</h2>
+        <p>当社は、以下の種類の個人情報を収集する場合があります。</p>
+        <ul>
+          <li>氏名</li>
+          <li>メールアドレス</li>
+          <li>住所</li>
+          <li>電話番号</li>
+          <li>製品登録情報</li>
+          <li>購入履歴</li>
+          <li>ウェブサイトの利用状況（Cookieを通じて取得する情報）</li>
+          <li>お問い合わせ内容</li>
+        </ul>
+      </section>
+
+      <section id="usage">
+        <h2>3. 情報の利用目的</h2>
+        <p>収集した個人情報は、以下の目的で利用します。</p>
+        <ul>
+          <li>製品およびサービスの提供</li>
+          <li>カスタマーサポートの提供</li>
+          <li>製品の改善および新製品の開発</li>
+          <li>マーケティングおよびプロモーション活動（お客様の同意がある場合）</li>
+          <li>法令に基づく義務の履行</li>
+          <li>ウェブサイトの利用状況の分析および改善</li>
+        </ul>
+      </section>
+
+      <section id="sharing">
+        <h2>4. 情報の共有</h2>
+        <p>当社は、以下の場合を除き、お客様の個人情報を第三者に提供することはありません。</p>
+        <ul>
+          <li>お客様の同意がある場合</li>
+          <li>法令に基づく開示要求がある場合</li>
+          <li>当社のサービス提供に必要な業務委託先への提供（適切な管理体制のもとで行います）</li>
+          <li>人の生命、身体または財産の保護のために必要な場合</li>
+        </ul>
+      </section>
+
+      <section id="rights">
+        <h2>5. お客様の権利</h2>
+        <p>お客様は、当社が保有するご自身の個人情報について、以下の権利を有しています。</p>
+        <ul>
+          <li>情報の開示を請求する権利</li>
+          <li>情報の訂正を請求する権利</li>
+          <li>情報の削除を請求する権利</li>
+          <li>情報の利用停止を請求する権利</li>
+          <li>マーケティング目的での利用を拒否する権利</li>
+        </ul>
+        <p>これらの権利を行使される場合は、下記のお問い合わせ先までご連絡ください。</p>
+      </section>
+
+      <section id="security">
+        <h2>6. セキュリティ</h2>
+        <p>当社は、お客様の個人情報を不正アクセス、紛失、改ざん、漏洩から保護するため、以下のセキュリティ対策を講じています。</p>
+        <ul>
+          <li>SSL/TLS暗号化通信の使用</li>
+          <li>アクセス制御およびアクセス権限の管理</li>
+          <li>定期的なセキュリティ監査の実施</li>
+          <li>従業員に対する個人情報保護教育の実施</li>
+        </ul>
+      </section>
+
+      <section id="cookies">
+        <h2>7. Cookieポリシー</h2>
+
+        <h3>Cookieとは</h3>
+        <p>Cookieとは、ウェブサイトがお客様のブラウザに保存する小さなテキストファイルです。当サイトでは、サイトの機能向上およびお客様の利便性向上のためにCookieを使用しています。</p>
+
+        <h3>使用するCookieの種類</h3>
+        <ul>
+          <li><strong>必須Cookie</strong> — サイトの基本的な機能を提供するために必要なCookieです。これらは無効にすることができません。</li>
+          <li><strong>分析Cookie</strong> — サイトの利用状況を分析するためのCookieです。Google Analyticsなどのサービスを利用し、匿名化されたデータを収集します。</li>
+          <li><strong>マーケティングCookie</strong> — お客様の興味に基づいた広告を表示するためのCookieです。お客様の同意がある場合にのみ使用します。</li>
+        </ul>
+
+        <h3>Cookieの管理</h3>
+        <p>ほとんどのウェブブラウザでは、Cookie設定を変更することが可能です。ブラウザの設定からCookieを無効化することができますが、一部の機能が正常に動作しなくなる場合があります。</p>
+      </section>
+
+      <section id="contact">
+        <h2>8. お問い合わせ</h2>
+        <p>個人情報の取り扱いに関するお問い合わせ、ご意見、苦情等がございましたら、以下の窓口までご連絡ください。</p>
+        <p>Cambridge Audio<br>
+        Gallery Court, Hankey Place, London SE1 4BB, United Kingdom</p>
+        <p>お問い合わせは、<a href="support.html#contact" style="color: var(--color-teal); text-decoration: underline;">サポートページ</a>のお問い合わせフォームからも承っております。</p>
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>製品</h3>
+          <a href="hifi.html">Hi-Fi</a>
+          <a href="headphones.html">ヘッドホン</a>
+          <a href="speakers.html">スピーカー</a>
+          <a href="accessories.html">アクセサリー</a>
+        </div>
+        <div class="footer-col">
+          <h3>サポート</h3>
+          <a href="support.html#registration">製品登録</a>
+          <a href="support.html#faq">よくあるご質問</a>
+          <a href="support.html#manuals">取扱説明書</a>
+          <a href="support.html#contact">お問い合わせ</a>
+        </div>
+        <div class="footer-col">
+          <h3>ブランド</h3>
+          <a href="about.html">ブランドストーリー</a>
+          <a href="technology.html">テクノロジー</a>
+          <a href="news.html">ニュース</a>
+          <a href="reviews.html">レビュー</a>
+        </div>
+        <div class="footer-col">
+          <h3>法的情報</h3>
+          <a href="privacy.html">プライバシーポリシー</a>
+          <a href="terms.html">利用規約</a>
+          <a href="terms.html#tokushoho">特定商取引法に基づく表記</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Cambridge Audio. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">プライバシー</a>
+          <a href="privacy.html#cookies">Cookie設定</a>
+          <a href="terms.html#sitemap">サイトマップ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

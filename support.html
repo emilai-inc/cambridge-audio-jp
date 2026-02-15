@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>サポート | Cambridge Audio Japan</title>
+  <meta name="description" content="Cambridge Audio製品のサポート情報。よくあるご質問、取扱説明書、製品登録、お問い合わせなど。">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ===== Font Face ===== */
+    @font-face {
+      font-family: 'Sohne Wide';
+      src: url('fonts/sohne-wide-bold.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Tiempos Headline';
+      src: url('fonts/tiempos-headline-light.woff2') format('woff2');
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* ===== Reset & Base ===== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --color-black: #000;
+      --color-white: #fff;
+      --color-gray-50: #f8f8f8;
+      --color-gray-100: #f0f0f0;
+      --color-gray-200: #e0e0e0;
+      --color-gray-400: #999;
+      --color-gray-600: #666;
+      --color-gray-800: #333;
+      --color-teal: #00857c;
+      --color-teal-dark: #006b63;
+      --font-sans: 'Helvetica Neue', 'Noto Sans JP', Arial, sans-serif;
+      --font-serif: 'Tiempos Headline', 'Noto Serif JP', Georgia, 'Times New Roman', serif;
+      --max-width: 1280px;
+      --header-height: 64px;
+    }
+
+    html {
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--color-black);
+      background: var(--color-white);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ===== Header ===== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--color-white);
+      border-bottom: 1px solid var(--color-gray-200);
+      height: var(--header-height);
+    }
+
+    .header-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header-logo a {
+      display: flex;
+      align-items: center;
+    }
+
+    .header-logo img {
+      height: 20px;
+      width: auto;
+    }
+
+    .header-logo .logo-text {
+      font-family: var(--font-sans);
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .header-nav a {
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+      position: relative;
+    }
+
+    .header-nav a:hover {
+      color: var(--color-teal);
+    }
+
+    .header-nav a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--color-teal);
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .region-selector {
+      font-size: 13px;
+      color: var(--color-gray-600);
+      font-weight: 500;
+    }
+
+    .search-btn {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+
+    .search-btn svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--color-black);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--color-black);
+      margin: 5px 0;
+      transition: 0.3s;
+    }
+
+    /* ===== Page Title ===== */
+    .page-title {
+      background: var(--color-white);
+      padding: 120px 0 60px;
+    }
+
+    .page-title h1 {
+      font-family: 'Sohne Wide', 'Helvetica Neue', Arial, sans-serif;
+      font-size: 72px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #000;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .page-title p {
+      font-family: 'Tiempos Headline', 'Noto Serif JP', Georgia, serif;
+      font-size: 32px;
+      font-weight: 300;
+      color: #000;
+      line-height: 1.2;
+    }
+
+    /* ===== Support Sections ===== */
+    .support-section {
+      padding: 64px 0;
+      border-top: 1px solid var(--color-gray-200);
+      scroll-margin-top: calc(var(--header-height) + 24px);
+    }
+
+    .support-section:first-of-type {
+      border-top: none;
+    }
+
+    .support-section h2 {
+      font-family: var(--font-serif);
+      font-size: 32px;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+    }
+
+    .support-section p {
+      font-size: 16px;
+      color: var(--color-gray-600);
+      line-height: 1.8;
+      margin-bottom: 16px;
+      max-width: 720px;
+    }
+
+    /* ===== FAQ Accordion ===== */
+    .faq-list {
+      max-width: 800px;
+    }
+
+    .faq-list details {
+      border-bottom: 1px solid var(--color-gray-200);
+    }
+
+    .faq-list details:first-child {
+      border-top: 1px solid var(--color-gray-200);
+    }
+
+    .faq-list summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.5;
+      color: var(--color-black);
+      list-style: none;
+    }
+
+    .faq-list summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-list summary::after {
+      content: '';
+      width: 12px;
+      height: 12px;
+      border-right: 2px solid var(--color-gray-600);
+      border-bottom: 2px solid var(--color-gray-600);
+      transform: rotate(45deg);
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
+      margin-left: 16px;
+    }
+
+    .faq-list details[open] summary::after {
+      transform: rotate(-135deg);
+    }
+
+    .faq-list .faq-answer {
+      padding: 0 0 24px;
+      font-size: 15px;
+      color: var(--color-gray-600);
+      line-height: 1.8;
+    }
+
+    /* ===== CTA Button ===== */
+    .cta-btn {
+      display: inline-block;
+      background: var(--color-teal);
+      color: var(--color-white);
+      padding: 14px 32px;
+      border-radius: 6px;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      transition: background 0.2s;
+      margin-top: 8px;
+    }
+
+    .cta-btn:hover {
+      background: var(--color-teal-dark);
+    }
+
+    /* ===== Category Links ===== */
+    .category-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    .category-links a {
+      display: inline-block;
+      padding: 10px 24px;
+      border: 1px solid var(--color-gray-200);
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .category-links a:hover {
+      border-color: var(--color-teal);
+      color: var(--color-teal);
+    }
+
+    /* ===== Contact Info ===== */
+    .contact-info {
+      background: var(--color-gray-50);
+      border-radius: 10px;
+      padding: 32px;
+      max-width: 600px;
+      margin-top: 24px;
+    }
+
+    .contact-info dt {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-gray-400);
+      margin-bottom: 4px;
+      margin-top: 20px;
+    }
+
+    .contact-info dt:first-child {
+      margin-top: 0;
+    }
+
+    .contact-info dd {
+      font-size: 16px;
+      color: var(--color-black);
+      line-height: 1.6;
+    }
+
+    .contact-info dd a {
+      color: var(--color-teal);
+      transition: color 0.2s;
+    }
+
+    .contact-info dd a:hover {
+      color: var(--color-teal-dark);
+    }
+
+    /* ===== Warranty List ===== */
+    .warranty-list {
+      max-width: 720px;
+      margin-top: 16px;
+    }
+
+    .warranty-list li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 12px;
+      font-size: 15px;
+      color: var(--color-gray-600);
+      line-height: 1.7;
+    }
+
+    .warranty-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--color-teal);
+    }
+
+    /* ===== Footer ===== */
+    .site-footer {
+      background: var(--color-black);
+      color: var(--color-white);
+      padding: 64px 0 32px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      margin-bottom: 32px;
+    }
+
+    .footer-col h3 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      letter-spacing: 0.02em;
+    }
+
+    .footer-col a {
+      display: block;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 10px;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: var(--color-white);
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-bottom p {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    .footer-bottom-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-bottom-links a {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.4);
+      transition: color 0.2s;
+    }
+
+    .footer-bottom-links a:hover {
+      color: var(--color-white);
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 1024px) {
+      .page-title h1 {
+        font-size: 48px;
+      }
+
+      .page-title p {
+        font-size: 26px;
+      }
+
+      .support-section h2 {
+        font-size: 28px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header-nav {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .page-title {
+        padding: 96px 0 48px;
+      }
+
+      .page-title h1 {
+        font-size: 36px;
+      }
+
+      .page-title p {
+        font-size: 22px;
+      }
+
+      .support-section {
+        padding: 48px 0;
+      }
+
+      .support-section h2 {
+        font-size: 24px;
+      }
+
+      .category-links {
+        flex-direction: column;
+      }
+
+      .contact-info {
+        padding: 24px;
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .page-title h1 {
+        font-size: 28px;
+      }
+
+      .page-title p {
+        font-size: 20px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-logo">
+        <a href="index.html">
+          <img src="images/logo.svg" alt="Cambridge Audio" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="logo-text" style="display:none">CAMBRIDGE AUDIO</span>
+        </a>
+      </div>
+      <nav class="header-nav" aria-label="メインナビゲーション">
+        <a href="hifi.html">Hi-Fi</a>
+        <a href="headphones.html">ヘッドホン</a>
+        <a href="speakers.html">スピーカー</a>
+        <a href="accessories.html">アクセサリー</a>
+        <a href="about.html">ブランドストーリー</a>
+      </nav>
+      <div class="header-right">
+        <span class="region-selector">日本 / JP</span>
+        <button class="search-btn" type="button" aria-label="検索">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== Page Title ===== -->
+    <section class="page-title">
+      <div class="container">
+        <h1>サポート</h1>
+        <p>お客様をサポートいたします。</p>
+      </div>
+    </section>
+
+    <div class="container">
+
+      <!-- ===== FAQ ===== -->
+      <section id="faq" class="support-section">
+        <h2>よくあるご質問</h2>
+        <div class="faq-list">
+          <details>
+            <summary>Cambridge Audio製品の保証期間は？</summary>
+            <div class="faq-answer">
+              正規輸入品は2年間の保証が付きます。保証期間中の修理は無償で対応いたします。
+            </div>
+          </details>
+          <details>
+            <summary>製品登録は必要ですか？</summary>
+            <div class="faq-answer">
+              製品登録をしていただくことで、保証サービスをスムーズに受けられます。また、最新のファームウェア情報やキャンペーン情報をお届けします。
+            </div>
+          </details>
+          <details>
+            <summary>ファームウェアのアップデート方法は？</summary>
+            <div class="faq-answer">
+              StreamMagicアプリまたはCambridge Connectアプリから、お使いの製品のファームウェアを最新版に更新できます。
+            </div>
+          </details>
+          <details>
+            <summary>修理の依頼方法は？</summary>
+            <div class="faq-answer">
+              お問い合わせフォームまたはメールにてご連絡ください。症状を確認の上、修理のご案内をいたします。
+            </div>
+          </details>
+          <details>
+            <summary>対応する音楽ストリーミングサービスは？</summary>
+            <div class="faq-answer">
+              Spotify Connect、TIDAL、Qobuz、Amazon Music、Deezer、インターネットラジオなど、主要なストリーミングサービスに対応しています。
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- ===== Manuals ===== -->
+      <section id="manuals" class="support-section">
+        <h2>取扱説明書</h2>
+        <p>各製品の取扱説明書はCambridge Audio公式サイトの各製品ページからダウンロードいただけます。以下のカテゴリからお探しの製品をご確認ください。</p>
+        <div class="category-links">
+          <a href="hifi.html">Hi-Fi</a>
+          <a href="headphones.html">ヘッドホン</a>
+          <a href="speakers.html">スピーカー</a>
+          <a href="accessories.html">アクセサリー</a>
+        </div>
+      </section>
+
+      <!-- ===== Registration ===== -->
+      <section id="registration" class="support-section">
+        <h2>製品登録</h2>
+        <p>製品登録を行うと、保証サービスの迅速な対応、ファームウェア更新のお知らせ、特別キャンペーンのご案内を受けられます。</p>
+        <a href="https://www.cambridgeaudio.com/row/en/register" class="cta-btn" target="_blank" rel="noopener noreferrer">製品を登録する</a>
+      </section>
+
+      <!-- ===== Retailers ===== -->
+      <section id="retailers" class="support-section">
+        <h2>正規販売店</h2>
+        <p>Cambridge Audio製品は、日本国内の正規販売店でお求めいただけます。お近くの取扱店舗をお探しの場合は、以下のリンクからご確認ください。</p>
+        <a href="https://www.cambridgeaudio.com/row/en/where-to-buy" class="cta-btn" target="_blank" rel="noopener noreferrer">販売店を探す</a>
+      </section>
+
+      <!-- ===== Warranty ===== -->
+      <section id="warranty" class="support-section">
+        <h2>保証について</h2>
+        <p>Cambridge Audio製品には、正規輸入品に対して2年間のメーカー保証が付帯されます。保証の詳細は以下の通りです。</p>
+        <ul class="warranty-list">
+          <li>保証期間は、製品のご購入日から2年間です。</li>
+          <li>保証期間内に通常のご使用において発生した故障については、無償で修理いたします。</li>
+          <li>保証を受けるには、購入証明書（レシートまたは納品書）が必要です。</li>
+          <li>お客様による改造・分解、または不適切な使用による故障は保証対象外となります。</li>
+          <li>天災・事故・過失による損傷は保証の対象外です。</li>
+          <li>並行輸入品は保証の対象外となります。正規輸入品をお求めください。</li>
+        </ul>
+      </section>
+
+      <!-- ===== Contact ===== -->
+      <section id="contact" class="support-section">
+        <h2>お問い合わせ</h2>
+        <p>お問い合わせはメールにて承っております。お気軽にご連絡ください。</p>
+        <dl class="contact-info">
+          <dt>メール</dt>
+          <dd><a href="mailto:support@cambridgeaudio.jp">support@cambridgeaudio.jp</a></dd>
+          <dt>営業時間</dt>
+          <dd>月曜日〜金曜日 10:00 - 18:00（土日祝休業）</dd>
+          <dt>対応言語</dt>
+          <dd>日本語・英語</dd>
+        </dl>
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>製品</h3>
+          <a href="hifi.html">Hi-Fi</a>
+          <a href="headphones.html">ヘッドホン</a>
+          <a href="speakers.html">スピーカー</a>
+          <a href="accessories.html">アクセサリー</a>
+        </div>
+        <div class="footer-col">
+          <h3>サポート</h3>
+          <a href="support.html#registration">製品登録</a>
+          <a href="support.html#faq">よくあるご質問</a>
+          <a href="support.html#manuals">取扱説明書</a>
+          <a href="support.html#contact">お問い合わせ</a>
+        </div>
+        <div class="footer-col">
+          <h3>ブランド</h3>
+          <a href="about.html">ブランドストーリー</a>
+          <a href="technology.html">テクノロジー</a>
+          <a href="news.html">ニュース</a>
+          <a href="reviews.html">レビュー</a>
+        </div>
+        <div class="footer-col">
+          <h3>法的情報</h3>
+          <a href="privacy.html">プライバシーポリシー</a>
+          <a href="terms.html">利用規約</a>
+          <a href="terms.html#tokushoho">特定商取引法に基づく表記</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Cambridge Audio. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">プライバシー</a>
+          <a href="privacy.html#cookies">Cookie設定</a>
+          <a href="terms.html#sitemap">サイトマップ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

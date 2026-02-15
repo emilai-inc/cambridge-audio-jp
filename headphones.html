@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ヘッドホン | Cambridge Audio Japan</title>
+  <meta name="description" content="Cambridge Audioのヘッドホン＆イヤホン。Hi-Fiエンジニアが設計した、妥協のないサウンドをどこでも。">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ===== Font Face ===== */
+    @font-face {
+      font-family: 'Sohne Wide';
+      src: url('fonts/sohne-wide-bold.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Tiempos Headline';
+      src: url('fonts/tiempos-headline-light.woff2') format('woff2');
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* ===== Reset & Base ===== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --color-black: #000;
+      --color-white: #fff;
+      --color-gray-50: #f8f8f8;
+      --color-gray-100: #f0f0f0;
+      --color-gray-200: #e0e0e0;
+      --color-gray-400: #999;
+      --color-gray-600: #666;
+      --color-gray-800: #333;
+      --color-teal: #00857c;
+      --color-teal-dark: #006b63;
+      --font-sans: 'Helvetica Neue', 'Noto Sans JP', Arial, sans-serif;
+      --font-serif: 'Tiempos Headline', 'Noto Serif JP', Georgia, 'Times New Roman', serif;
+      --max-width: 1280px;
+      --header-height: 64px;
+    }
+
+    html {
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--color-black);
+      background: var(--color-white);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ===== Header ===== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--color-white);
+      border-bottom: 1px solid var(--color-gray-200);
+      height: var(--header-height);
+    }
+
+    .header-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header-logo a {
+      display: flex;
+      align-items: center;
+    }
+
+    .header-logo img {
+      height: 20px;
+      width: auto;
+    }
+
+    .header-logo .logo-text {
+      font-family: var(--font-sans);
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .header-nav a {
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+      position: relative;
+    }
+
+    .header-nav a:hover {
+      color: var(--color-teal);
+    }
+
+    .header-nav a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--color-teal);
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .region-selector {
+      font-size: 13px;
+      color: var(--color-gray-600);
+      font-weight: 500;
+    }
+
+    .search-btn {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+
+    .search-btn svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--color-black);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--color-black);
+      margin: 5px 0;
+      transition: 0.3s;
+    }
+
+    /* ===== Page Title ===== */
+    .page-title {
+      background: var(--color-white);
+      padding: 120px 0 60px;
+    }
+
+    .page-title h1 {
+      font-family: 'Sohne Wide', 'Helvetica Neue', Arial, sans-serif;
+      font-size: 72px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #000;
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+
+    .page-title__sub {
+      font-size: 24px;
+      color: #666;
+      margin-top: 8px;
+      margin-bottom: 16px;
+    }
+
+    .page-title p {
+      font-family: 'Tiempos Headline', 'Noto Serif JP', Georgia, serif;
+      font-size: 32px;
+      font-weight: 300;
+      color: #000;
+      line-height: 1.2;
+    }
+
+    /* ===== Category Section ===== */
+    .category-section {
+      padding: 64px 0;
+    }
+
+    /* ===== Product Grid ===== */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .product-grid--2col {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* ===== Product Card ===== */
+    .product-card {
+      background: #f0f0f0;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    }
+
+    .product-card__image {
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      background: var(--color-gray-100);
+    }
+
+    .product-card__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .product-card:hover .product-card__image img {
+      transform: scale(1.05);
+    }
+
+    .product-card__body {
+      padding: 24px;
+    }
+
+    .product-card__name {
+      font-family: var(--font-sans);
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      line-height: 1.3;
+      color: #000;
+    }
+
+    .product-card__desc {
+      font-size: 14px;
+      color: var(--color-gray-600);
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .product-card-link {
+      display: block;
+    }
+
+    /* ===== Large Product Card ===== */
+    .product-card--large .product-card__image {
+      aspect-ratio: 3 / 2;
+    }
+
+    .product-card--large .product-card__name {
+      font-family: var(--font-serif);
+      font-size: 24px;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      margin-bottom: 8px;
+    }
+
+    .product-card--large .product-card__body {
+      padding: 32px;
+    }
+
+    /* ===== Product Features ===== */
+    .product-card__features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .product-card__features li {
+      font-size: 13px;
+      color: var(--color-gray-600);
+      padding: 6px 0;
+      border-bottom: 1px solid var(--color-gray-200);
+      line-height: 1.5;
+    }
+
+    .product-card__features li:last-child {
+      border-bottom: none;
+    }
+
+    /* ===== Accessory Section ===== */
+    .accessory-section {
+      background: var(--color-gray-50);
+      padding: 64px 0;
+    }
+
+    .accessory-content {
+      text-align: center;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .accessory-content h2 {
+      font-family: var(--font-serif);
+      font-size: 32px;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+
+    .accessory-content p {
+      font-size: 16px;
+      color: var(--color-gray-600);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .cta-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-teal);
+      transition: gap 0.2s ease;
+    }
+
+    .cta-link:hover {
+      gap: 10px;
+      color: var(--color-teal-dark);
+    }
+
+    /* ===== Footer ===== */
+    .site-footer {
+      background: var(--color-black);
+      color: var(--color-white);
+      padding: 64px 0 32px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      margin-bottom: 32px;
+    }
+
+    .footer-col h3 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      letter-spacing: 0.02em;
+    }
+
+    .footer-col a {
+      display: block;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 10px;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: var(--color-white);
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-bottom p {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    .footer-bottom-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-bottom-links a {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.4);
+      transition: color 0.2s;
+    }
+
+    .footer-bottom-links a:hover {
+      color: var(--color-white);
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 1024px) {
+      .page-title h1 {
+        font-size: 48px;
+      }
+
+      .page-title p {
+        font-size: 26px;
+      }
+
+      .product-card--large .product-card__name {
+        font-size: 20px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header-nav {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .page-title {
+        padding: 96px 0 48px;
+      }
+
+      .page-title h1 {
+        font-size: 36px;
+      }
+
+      .page-title__sub {
+        font-size: 20px;
+      }
+
+      .page-title p {
+        font-size: 22px;
+      }
+
+      .category-section {
+        padding: 48px 0;
+      }
+
+      .product-grid,
+      .product-grid--2col {
+        grid-template-columns: 1fr;
+      }
+
+      .accessory-content h2 {
+        font-size: 26px;
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .page-title h1 {
+        font-size: 28px;
+      }
+
+      .page-title__sub {
+        font-size: 18px;
+      }
+
+      .page-title p {
+        font-size: 20px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-logo">
+        <a href="index.html">
+          <img src="images/logo.svg" alt="Cambridge Audio" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="logo-text" style="display:none">CAMBRIDGE AUDIO</span>
+        </a>
+      </div>
+
+      <nav class="header-nav" aria-label="メインナビゲーション">
+        <a href="hifi.html">Hi-Fi</a>
+        <a href="headphones.html" class="active">ヘッドホン</a>
+        <a href="speakers.html">スピーカー</a>
+        <a href="accessories.html">アクセサリー</a>
+        <a href="about.html">ブランドストーリー</a>
+      </nav>
+
+      <div class="header-right">
+        <span class="region-selector">日本 / JP</span>
+        <button class="search-btn" type="button" aria-label="検索">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== Page Title ===== -->
+    <section class="page-title">
+      <div class="container">
+        <h1>HEADPHONES</h1>
+        <div class="page-title__sub">ヘッドホン</div>
+        <p>Hi-Fiエンジニアが設計した、妥協のないサウンド。</p>
+      </div>
+    </section>
+
+    <!-- ===== Products Section ===== -->
+    <section class="category-section">
+      <div class="container">
+        <div class="product-grid product-grid--2col">
+
+          <a href="products/melomania-a100.html" class="product-card-link">
+          <article class="product-card product-card--large">
+            <div class="product-card__image">
+              <img src="images/products/melomania-a100.webp" alt="Melomania A100" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <h2 class="product-card__name">Melomania A100</h2>
+              <p class="product-card__desc">ANC搭載 完全ワイヤレスイヤホン</p>
+              <ul class="product-card__features">
+                <li>ハイレゾオーディオ対応</li>
+                <li>アクティブノイズキャンセリング</li>
+                <li>最大60時間再生</li>
+                <li>IPX5防水</li>
+              </ul>
+            </div>
+          </article>
+          </a>
+
+          <a href="products/melomania-p100-se.html" class="product-card-link">
+          <article class="product-card product-card--large">
+            <div class="product-card__image">
+              <img src="images/products/p100-se.webp" alt="Melomania P100 SE" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <h2 class="product-card__name">Melomania P100 SE</h2>
+              <p class="product-card__desc">ANC搭載 オーバーイヤーヘッドホン</p>
+              <ul class="product-card__features">
+                <li>ハイレゾオーディオ対応</li>
+                <li>アダプティブANC</li>
+                <li>最大60時間再生</li>
+                <li>折りたたみデザイン</li>
+              </ul>
+            </div>
+          </article>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Accessory Section ===== -->
+    <section class="accessory-section">
+      <div class="container">
+        <div class="accessory-content">
+          <h2>ヘッドホン アクセサリー</h2>
+          <p>イヤーチップ、ケース、ケーブルなど、ヘッドホンをさらに活用するためのアクセサリー。</p>
+          <a href="accessories.html" class="cta-link">アクセサリーを見る &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>製品</h3>
+          <a href="hifi.html">Hi-Fi</a>
+          <a href="headphones.html">ヘッドホン</a>
+          <a href="speakers.html">スピーカー</a>
+          <a href="accessories.html">アクセサリー</a>
+        </div>
+        <div class="footer-col">
+          <h3>サポート</h3>
+          <a href="support.html#registration">製品登録</a>
+          <a href="support.html#faq">よくあるご質問</a>
+          <a href="support.html#manuals">取扱説明書</a>
+          <a href="support.html#contact">お問い合わせ</a>
+        </div>
+        <div class="footer-col">
+          <h3>ブランド</h3>
+          <a href="about.html">ブランドストーリー</a>
+          <a href="technology.html">テクノロジー</a>
+          <a href="news.html">ニュース</a>
+          <a href="reviews.html">レビュー</a>
+        </div>
+        <div class="footer-col">
+          <h3>法的情報</h3>
+          <a href="privacy.html">プライバシーポリシー</a>
+          <a href="terms.html">利用規約</a>
+          <a href="terms.html#tokushoho">特定商取引法に基づく表記</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Cambridge Audio. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">プライバシー</a>
+          <a href="privacy.html#cookies">Cookie設定</a>
+          <a href="terms.html#sitemap">サイトマップ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

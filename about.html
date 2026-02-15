@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ブランドストーリー | Cambridge Audio Japan</title>
+  <meta name="description" content="1968年、ロンドンにて創業。Cambridge Audioのブランドストーリー、哲学、そして革新の歴史をご紹介します。">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ===== Font Face ===== */
+    @font-face {
+      font-family: 'Sohne Wide';
+      src: url('fonts/sohne-wide-bold.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Tiempos Headline';
+      src: url('fonts/tiempos-headline-light.woff2') format('woff2');
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* ===== Reset & Base ===== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --color-black: #000;
+      --color-white: #fff;
+      --color-gray-50: #f8f8f8;
+      --color-gray-100: #f0f0f0;
+      --color-gray-200: #e0e0e0;
+      --color-gray-400: #999;
+      --color-gray-600: #666;
+      --color-gray-800: #333;
+      --color-teal: #00857c;
+      --color-teal-dark: #006b63;
+      --color-beige: #dfded0;
+      --font-sans: 'Helvetica Neue', 'Noto Sans JP', Arial, sans-serif;
+      --font-serif: 'Tiempos Headline', 'Noto Serif JP', Georgia, 'Times New Roman', serif;
+      --max-width: 1280px;
+      --header-height: 64px;
+    }
+
+    html {
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--color-black);
+      background: var(--color-white);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ===== Header ===== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--color-white);
+      border-bottom: 1px solid var(--color-gray-200);
+      height: var(--header-height);
+    }
+
+    .header-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header-logo a {
+      display: flex;
+      align-items: center;
+    }
+
+    .header-logo img {
+      height: 20px;
+      width: auto;
+    }
+
+    .header-logo .logo-text {
+      font-family: var(--font-sans);
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .header-nav a {
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+      position: relative;
+    }
+
+    .header-nav a:hover {
+      color: var(--color-teal);
+    }
+
+    .header-nav a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--color-teal);
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .region-selector {
+      font-size: 13px;
+      color: var(--color-gray-600);
+      font-weight: 500;
+    }
+
+    .search-btn {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+
+    .search-btn svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--color-black);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--color-black);
+      margin: 5px 0;
+      transition: 0.3s;
+    }
+
+    /* ===== Hero Section ===== */
+    .about-hero {
+      position: relative;
+      min-height: 85vh;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      background: #0a0a0a;
+    }
+
+    .about-hero__bg {
+      position: absolute;
+      inset: 0;
+    }
+
+    .about-hero__bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.55;
+    }
+
+    .about-hero__content {
+      position: relative;
+      z-index: 2;
+      padding: 80px 40px;
+      max-width: 900px;
+    }
+
+    .about-hero__title {
+      font-family: 'Sohne Wide', 'Helvetica Neue', Arial, sans-serif;
+      font-size: 80px;
+      font-weight: 700;
+      color: var(--color-white);
+      line-height: 0.95;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+    }
+
+    /* ===== Story Section ===== */
+    .story-section {
+      padding: 100px 0;
+    }
+
+    .story-section--dark {
+      background: var(--color-black);
+      color: var(--color-white);
+    }
+
+    .story-section--beige {
+      background: var(--color-beige);
+    }
+
+    .story-intro {
+      max-width: 700px;
+      margin-bottom: 64px;
+    }
+
+    .story-intro h2 {
+      font-family: var(--font-serif);
+      font-size: 48px;
+      font-weight: 300;
+      line-height: 1.15;
+      margin-bottom: 24px;
+    }
+
+    .story-intro p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--color-gray-600);
+    }
+
+    .story-section--dark .story-intro p {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* Story Grid: image + text pairs */
+    .story-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      margin-bottom: 80px;
+    }
+
+    .story-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .story-block--reverse {
+      direction: rtl;
+    }
+
+    .story-block--reverse > * {
+      direction: ltr;
+    }
+
+    .story-block__image {
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .story-block__image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .story-block__text h3 {
+      font-family: var(--font-serif);
+      font-size: 36px;
+      font-weight: 300;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .story-block__text p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--color-gray-600);
+    }
+
+    .story-section--dark .story-block__text p {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* ===== Decades Section ===== */
+    .decades-section {
+      background: var(--color-black);
+      color: var(--color-white);
+      padding: 120px 0;
+      overflow: hidden;
+    }
+
+    .decades-header {
+      margin-bottom: 48px;
+    }
+
+    .decades-header h2 {
+      font-family: 'Sohne Wide', 'Helvetica Neue', Arial, sans-serif;
+      font-size: 72px;
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 0.95;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+    }
+
+    .decades-header p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.7);
+      max-width: 600px;
+    }
+
+    .decades-images {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 24px;
+    }
+
+    .decades-images img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    /* ===== Expertise Section ===== */
+    .expertise-section {
+      padding: 0;
+    }
+
+    .expertise-hero-image {
+      width: 100%;
+      max-height: 600px;
+      object-fit: cover;
+    }
+
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+
+    .expertise-card {
+      padding: 80px 48px;
+    }
+
+    .expertise-card--beige {
+      background: var(--color-beige);
+    }
+
+    .expertise-card--white {
+      background: var(--color-white);
+    }
+
+    .expertise-card h2 {
+      font-family: var(--font-serif);
+      font-size: 40px;
+      font-weight: 300;
+      line-height: 1.15;
+      margin-bottom: 24px;
+    }
+
+    .expertise-card p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--color-gray-600);
+      margin-bottom: 20px;
+    }
+
+    .expertise-card .cta-link {
+      display: inline-block;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--color-black);
+      border-bottom: 1px solid var(--color-black);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .expertise-card .cta-link:hover {
+      color: var(--color-teal);
+      border-color: var(--color-teal);
+    }
+
+    /* ===== Venue Section ===== */
+    .venue-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+
+    .venue-images img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ===== Partners Section ===== */
+    .partners-section {
+      padding: 100px 0;
+    }
+
+    .partners-header {
+      margin-bottom: 48px;
+      max-width: 600px;
+    }
+
+    .partners-header h2 {
+      font-family: var(--font-serif);
+      font-size: 40px;
+      font-weight: 300;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .partners-header p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--color-gray-600);
+      margin-bottom: 20px;
+    }
+
+    .partners-header .cta-link {
+      display: inline-block;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--color-black);
+      border-bottom: 1px solid var(--color-black);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .partners-header .cta-link:hover {
+      color: var(--color-teal);
+      border-color: var(--color-teal);
+    }
+
+    .partners-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .partner-card {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      aspect-ratio: 1 / 1;
+    }
+
+    .partner-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .partner-card__label {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      font-family: var(--font-serif);
+      font-size: 28px;
+      font-weight: 300;
+      color: var(--color-white);
+      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+
+    /* ===== Join Section ===== */
+    .join-section {
+      background: var(--color-black);
+      color: var(--color-white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .join-section__bg {
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+      opacity: 0.5;
+    }
+
+    .join-section__content {
+      padding: 80px 0;
+    }
+
+    .join-section__content h2 {
+      font-family: var(--font-serif);
+      font-size: 48px;
+      font-weight: 300;
+      line-height: 1.15;
+      margin-bottom: 24px;
+    }
+
+    .join-section__content p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.7);
+      max-width: 600px;
+      margin-bottom: 28px;
+    }
+
+    .cta-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .cta-pill--white {
+      background: var(--color-white);
+      color: var(--color-black);
+    }
+
+    .cta-pill--white:hover {
+      background: var(--color-gray-100);
+    }
+
+    .cta-pill--black {
+      background: var(--color-black);
+      color: var(--color-white);
+    }
+
+    .cta-pill--black:hover {
+      background: var(--color-gray-800);
+    }
+
+    /* ===== Posters Section ===== */
+    .posters-section {
+      width: 100%;
+    }
+
+    .posters-section img {
+      width: 100%;
+      display: block;
+    }
+
+    /* ===== Footer ===== */
+    .site-footer {
+      background: var(--color-black);
+      color: var(--color-white);
+      padding: 64px 0 32px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      margin-bottom: 32px;
+    }
+
+    .footer-col h3 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      letter-spacing: 0.02em;
+    }
+
+    .footer-col a {
+      display: block;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 10px;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: var(--color-white);
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-bottom p {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    .footer-bottom-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-bottom-links a {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.4);
+      transition: color 0.2s;
+    }
+
+    .footer-bottom-links a:hover {
+      color: var(--color-white);
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 1024px) {
+      .about-hero__title {
+        font-size: 56px;
+      }
+
+      .story-intro h2 {
+        font-size: 36px;
+      }
+
+      .story-block__text h3 {
+        font-size: 28px;
+      }
+
+      .decades-header h2 {
+        font-size: 48px;
+      }
+
+      .expertise-card h2 {
+        font-size: 32px;
+      }
+
+      .expertise-card {
+        padding: 60px 36px;
+      }
+
+      .join-section__content h2 {
+        font-size: 36px;
+      }
+
+      .partners-header h2 {
+        font-size: 32px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header-nav {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .about-hero {
+        min-height: 60vh;
+      }
+
+      .about-hero__content {
+        padding: 48px 24px;
+      }
+
+      .about-hero__title {
+        font-size: 40px;
+      }
+
+      .story-section {
+        padding: 64px 0;
+      }
+
+      .story-intro h2 {
+        font-size: 30px;
+      }
+
+      .story-block {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        margin-bottom: 56px;
+      }
+
+      .story-block--reverse {
+        direction: ltr;
+      }
+
+      .decades-section {
+        padding: 80px 0;
+      }
+
+      .decades-header h2 {
+        font-size: 36px;
+      }
+
+      .decades-images {
+        grid-template-columns: 1fr;
+      }
+
+      .expertise-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .expertise-card {
+        padding: 48px 24px;
+      }
+
+      .venue-images {
+        grid-template-columns: 1fr;
+      }
+
+      .partners-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .join-section__content h2 {
+        font-size: 30px;
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .about-hero__title {
+        font-size: 32px;
+      }
+
+      .story-intro h2 {
+        font-size: 26px;
+      }
+
+      .story-block__text h3 {
+        font-size: 24px;
+      }
+
+      .decades-header h2 {
+        font-size: 28px;
+      }
+
+      .expertise-card h2 {
+        font-size: 26px;
+      }
+
+      .partner-card__label {
+        font-size: 22px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-logo">
+        <a href="index.html">
+          <img src="images/logo.svg" alt="Cambridge Audio" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="logo-text" style="display:none">CAMBRIDGE AUDIO</span>
+        </a>
+      </div>
+
+      <nav class="header-nav" aria-label="メインナビゲーション">
+        <a href="hifi.html">Hi-Fi</a>
+        <a href="headphones.html">ヘッドホン</a>
+        <a href="speakers.html">スピーカー</a>
+        <a href="accessories.html">アクセサリー</a>
+        <a href="about.html" class="active">ブランドストーリー</a>
+      </nav>
+
+      <div class="header-right">
+        <span class="region-selector">日本 / JP</span>
+        <button class="search-btn" type="button" aria-label="検索">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== Hero: THE PEOPLE BEHIND THE MUSIC ===== -->
+    <section class="about-hero">
+      <div class="about-hero__bg">
+        <img src="images/about/hero-header.webp" alt="Cambridge Audio デザインチーム" loading="eager">
+      </div>
+      <div class="about-hero__content">
+        <h1 class="about-hero__title">THE PEOPLE<br>BEHIND<br>THE MUSIC</h1>
+      </div>
+    </section>
+
+    <!-- ===== Play it from the start ===== -->
+    <section class="story-section">
+      <div class="container">
+        <div class="story-intro">
+          <h2>はじまりの一曲</h2>
+          <p>「Hey Jude」「I Heard It Through the Grapevine」「Born To Be Wild」――1968年のサウンドトラックが響いていた年、Cambridge Audioは音楽への信念とともに誕生しました。音楽はBGMや"そこそこの音"で済ませるものではなく、もっと良い音で聴くべきものだという信念。それは今も変わりません。</p>
+        </div>
+
+        <div class="story-block">
+          <div class="story-block__image">
+            <img src="images/about/p40.webp" alt="Cambridge Audio P40 アンプ" loading="lazy">
+          </div>
+          <div class="story-block__text">
+            <h3>伝説的デビュー</h3>
+            <p>私たちのデビュー作は、ホームオーディオの常識を変えました。ケンブリッジ大学の卒業生たちがガレージで製作したP40は、トロイダルトランスを世界で初めてアンプに搭載。今やオーディオ設計のゴールドスタンダードとなったこの技術が、その後のすべての基盤を築きました。</p>
+          </div>
+        </div>
+
+        <div class="story-block story-block--reverse">
+          <div class="story-block__image">
+            <img src="images/about/vintage-stack.webp" alt="Cambridge Audio ヴィンテージ Hi-Fi" loading="lazy">
+          </div>
+          <div class="story-block__text">
+            <h3>常識を塗り替える</h3>
+            <p>より良い音への追求は、決して止まることがありませんでした。1971年、R50トランスミッションラインスピーカーは低歪み低音の新しい基準を打ち立てました。1985年、CD1は世界初の2ボックスCDプレーヤーとなり、デジタルデコーディングを分離することで、卓越した精度の音を実現しました。</p>
+          </div>
+        </div>
+
+        <div class="story-block">
+          <div class="story-block__image">
+            <img src="images/about/james-jf.webp" alt="James Johnson-Flint、オーナー兼CEO" loading="lazy">
+          </div>
+          <div class="story-block__text">
+            <h3>新たな章</h3>
+            <p>1990年代初頭、Hi-Fiに情熱を燃やす若き起業家がCambridge Audioの可能性に目を留めました。James Johnson-Flintは小さなチームを率い、数々の賞を受賞し、今日のブランドの礎を築きました。彼は現在もリーダーとして私たちを導いています。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SIX DECADES OF GREAT SOUND ===== -->
+    <section class="decades-section">
+      <div class="container">
+        <div class="decades-header">
+          <h2>SIX DECADES<br>OF GREAT<br>SOUND</h2>
+          <p>1968年の創業以来、Cambridge Audioは音楽に命を吹き込み続けてきました。ささやかな始まりから受賞歴ある革新まで、ピュアサウンドへの情熱が、あなたと愛する音楽を深く結びつけます。今も、これからも。</p>
+        </div>
+        <div class="decades-images">
+          <img src="images/about/six-decades-1.webp" alt="ヴィンテージ CDプレーヤー" loading="lazy">
+          <img src="images/about/six-decades-2.webp" alt="ヴィンテージ Cambridge Audio セットアップ" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Posters ===== -->
+    <div class="posters-section">
+      <img src="images/about/posters.webp" alt="Cambridge Audio ヴィンテージ広告ギャラリー" loading="lazy">
+    </div>
+
+    <!-- ===== Expertise + Venue ===== -->
+    <section class="expertise-section">
+      <img src="images/about/designer.webp" alt="スピーカーのスケッチをレビューするデザイナー" loading="lazy" class="expertise-hero-image">
+      <div class="expertise-grid">
+        <div class="expertise-card expertise-card--beige">
+          <h2>専門性と音楽愛の融合</h2>
+          <p>優れたサウンドは、優れたエンジニアリングから生まれます。手はんだ回路から精密にチューニングされたアコースティクスまで、私たちのチームはあらゆるディテールにこだわり抜きます。正しい設計が、すべての違いを生むからです。</p>
+        </div>
+        <div class="expertise-card expertise-card--white">
+          <h2>ライブミュージックのための空間</h2>
+          <p>音楽好きによる、音楽好きのための空間。ロンドンSE1にある私たちのヴェニュー「Melomania」では、アーティストとオーディエンスが出会い、音楽が本来あるべき音質でライブを届けます。音楽の崇拝と、人をつなぐ力に捧げられた場所です。</p>
+          <a href="technology.html" class="cta-link">詳しく見る →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Venue Images ===== -->
+    <div class="venue-images">
+      <img src="images/about/melomania-venue-1.webp" alt="Melomania ヴェニュー" loading="lazy">
+      <img src="images/about/melomania-venue-2.webp" alt="Melomania ヴェニュー内観" loading="lazy">
+    </div>
+
+    <!-- ===== Partner With Us ===== -->
+    <section class="partners-section">
+      <div class="container">
+        <div class="partners-header">
+          <h2>パートナーシップ</h2>
+          <p>音楽、デザイン、カルチャーへの情熱を共有するアーティスト、レーベル、ブランドとコラボレーションしています。もしそれがあなたにも当てはまるなら、ぜひお話しましょう。</p>
+          <a href="support.html#contact" class="cta-link">お問い合わせ →</a>
+        </div>
+        <div class="partners-grid">
+          <div class="partner-card">
+            <img src="images/about/delorean.webp" alt="Evo DeLorean エディション" loading="lazy">
+            <span class="partner-card__label">DeLorean</span>
+          </div>
+          <div class="partner-card">
+            <img src="images/about/howhigh.webp" alt="Melomania M100 HowHigh エディション" loading="lazy">
+            <span class="partner-card__label">How High</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Join the Team ===== -->
+    <section class="join-section">
+      <img src="images/about/join-team.webp" alt="Cambridge Audio デザインチーム" loading="lazy" class="join-section__bg">
+      <div class="join-section__content">
+        <div class="container">
+          <h2>チームに参加しよう</h2>
+          <p>私たちは、音楽を愛し、デザインに情熱を注ぎ、素晴らしいサウンドの創造に没頭するチームです。あなたも同じなら、きっとフィットするはずです。</p>
+          <a href="about.html#join-team" class="cta-pill cta-pill--white">採用情報を見る →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>製品</h3>
+          <a href="hifi.html">Hi-Fi</a>
+          <a href="headphones.html">ヘッドホン</a>
+          <a href="speakers.html">スピーカー</a>
+          <a href="accessories.html">アクセサリー</a>
+        </div>
+        <div class="footer-col">
+          <h3>サポート</h3>
+          <a href="support.html#registration">製品登録</a>
+          <a href="support.html#faq">よくあるご質問</a>
+          <a href="support.html#manuals">取扱説明書</a>
+          <a href="support.html#contact">お問い合わせ</a>
+        </div>
+        <div class="footer-col">
+          <h3>ブランド</h3>
+          <a href="about.html">ブランドストーリー</a>
+          <a href="technology.html">テクノロジー</a>
+          <a href="news.html">ニュース</a>
+          <a href="reviews.html">レビュー</a>
+        </div>
+        <div class="footer-col">
+          <h3>法的情報</h3>
+          <a href="privacy.html">プライバシーポリシー</a>
+          <a href="terms.html">利用規約</a>
+          <a href="terms.html#tokushoho">特定商取引法に基づく表記</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Cambridge Audio. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">プライバシー</a>
+          <a href="privacy.html#cookies">Cookie設定</a>
+          <a href="terms.html#sitemap">サイトマップ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Melomania P100 SE | Cambridge Audio Japan</title>
+  <meta name="description" content="Cambridge Audio Melomania P100 SE ANC搭載オーバーイヤーヘッドホン。100時間バッテリー、DynamEQ、aptX Lossless対応。交換可能なバッテリー＆イヤークッション。">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    /* ===== Font Face ===== */
+    @font-face {
+      font-family: 'Sohne Wide';
+      src: url('../fonts/sohne-wide-bold.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Tiempos Headline';
+      src: url('../fonts/tiempos-headline-light.woff2') format('woff2');
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* ===== Reset & Base ===== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --color-black: #000;
+      --color-white: #fff;
+      --color-gray-50: #f8f8f8;
+      --color-gray-100: #f0f0f0;
+      --color-gray-200: #e0e0e0;
+      --color-gray-400: #999;
+      --color-gray-600: #666;
+      --color-gray-800: #333;
+      --color-teal: #00857c;
+      --color-teal-dark: #006b63;
+      --font-sans: 'Helvetica Neue', 'Noto Sans JP', Arial, sans-serif;
+      --font-serif: 'Tiempos Headline', 'Noto Serif JP', Georgia, 'Times New Roman', serif;
+      --max-width: 1280px;
+      --header-height: 64px;
+    }
+
+    html {
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--color-black);
+      background: var(--color-white);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ===== Header ===== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--color-white);
+      border-bottom: 1px solid var(--color-gray-200);
+      height: var(--header-height);
+    }
+
+    .header-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header-logo a {
+      display: flex;
+      align-items: center;
+    }
+
+    .header-logo img {
+      height: 20px;
+      width: auto;
+    }
+
+    .header-logo .logo-text {
+      font-family: var(--font-sans);
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .header-nav {
+      display: flex;
+      gap: 32px;
+    }
+
+    .header-nav a {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--color-gray-600);
+      transition: color 0.2s;
+    }
+
+    .header-nav a:hover,
+    .header-nav a.active {
+      color: var(--color-black);
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .region-selector {
+      font-size: 13px;
+      color: var(--color-gray-600);
+    }
+
+    .search-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .search-btn svg {
+      width: 20px;
+      height: 20px;
+      color: var(--color-black);
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--color-black);
+      transition: 0.3s;
+    }
+
+    /* ===== Product Hero ===== */
+    .product-hero {
+      padding: 64px 0 80px;
+    }
+
+    .product-hero .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .product-hero__image {
+      background: var(--color-gray-50);
+      border-radius: 12px;
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+    }
+
+    .product-hero__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .product-hero__info {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .product-hero__category {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--color-teal);
+    }
+
+    .product-hero__name {
+      font-family: var(--font-serif);
+      font-size: 48px;
+      font-weight: 300;
+      line-height: 1.1;
+    }
+
+    .product-hero__tagline {
+      font-size: 18px;
+      color: var(--color-gray-600);
+      line-height: 1.6;
+    }
+
+    .product-hero__features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .product-hero__features span {
+      display: inline-block;
+      padding: 6px 16px;
+      border: 1px solid var(--color-gray-200);
+      border-radius: 100px;
+      font-size: 13px;
+      color: var(--color-gray-800);
+    }
+
+    .product-hero__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--color-teal);
+      color: var(--color-white);
+      padding: 14px 32px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      transition: background 0.2s;
+      width: fit-content;
+      margin-top: 8px;
+    }
+
+    .product-hero__cta:hover {
+      background: var(--color-teal-dark);
+    }
+
+    /* ===== Feature Rows ===== */
+    .feature-row {
+      padding: 80px 0;
+    }
+
+    .feature-row:nth-child(even) {
+      background: var(--color-gray-50);
+    }
+
+    .feature-row .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .feature-row:nth-child(even) .container {
+      direction: rtl;
+    }
+
+    .feature-row:nth-child(even) .container > * {
+      direction: ltr;
+    }
+
+    .feature-row__image {
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+      background: var(--color-gray-100);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .feature-row__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .feature-row__content {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .feature-row__label {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--color-teal);
+    }
+
+    .feature-row__title {
+      font-family: var(--font-serif);
+      font-size: 36px;
+      font-weight: 300;
+      line-height: 1.2;
+    }
+
+    .feature-row__text {
+      font-size: 16px;
+      color: var(--color-gray-600);
+      line-height: 1.8;
+    }
+
+    /* ===== Spec Section ===== */
+    .spec-section {
+      padding: 80px 0;
+      background: var(--color-black);
+      color: var(--color-white);
+    }
+
+    .spec-section__header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .spec-section__header h2 {
+      font-family: var(--font-serif);
+      font-size: 36px;
+      font-weight: 300;
+    }
+
+    .spec-table {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .spec-table__row {
+      display: flex;
+      justify-content: space-between;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .spec-table__label {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.6);
+      flex: 0 0 200px;
+    }
+
+    .spec-table__value {
+      font-size: 14px;
+      text-align: right;
+      flex: 1;
+    }
+
+    /* ===== Related Products ===== */
+    .related-products {
+      padding: 80px 0;
+    }
+
+    .related-products__header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .related-products__header h2 {
+      font-family: var(--font-serif);
+      font-size: 36px;
+      font-weight: 300;
+    }
+
+    .related-products__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .product-card-link {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .product-card {
+      border: 1px solid var(--color-gray-200);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    }
+
+    .product-card__image {
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      background: var(--color-gray-50);
+    }
+
+    .product-card__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+
+    .product-card:hover .product-card__image img {
+      transform: scale(1.05);
+    }
+
+    .product-card__body {
+      padding: 20px;
+    }
+
+    .product-card__name {
+      font-family: 'Sohne Wide', var(--font-sans);
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .product-card__desc {
+      font-size: 13px;
+      color: var(--color-gray-600);
+    }
+
+    /* ===== Footer ===== */
+    .site-footer {
+      background: var(--color-black);
+      color: var(--color-white);
+      padding: 64px 0 32px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer-col h3 {
+      font-family: 'Sohne Wide', var(--font-sans);
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .footer-col a {
+      display: block;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 12px;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: var(--color-white);
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-bottom p {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    .footer-bottom-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-bottom-links a {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.4);
+      transition: color 0.2s;
+    }
+
+    .footer-bottom-links a:hover {
+      color: var(--color-white);
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 1024px) {
+      .product-hero__name {
+        font-size: 36px;
+      }
+
+      .feature-row__title {
+        font-size: 28px;
+      }
+
+      .related-products__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header-nav {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .product-hero .container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .product-hero__name {
+        font-size: 32px;
+      }
+
+      .feature-row .container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .feature-row:nth-child(even) .container {
+        direction: ltr;
+      }
+
+      .spec-table__label {
+        flex: 0 0 140px;
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .product-hero__name {
+        font-size: 28px;
+      }
+
+      .feature-row__title {
+        font-size: 24px;
+      }
+
+      .related-products__grid {
+        grid-template-columns: 1fr;
+      }
+
+      .spec-table__row {
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .spec-table__value {
+        text-align: left;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-logo">
+        <a href="../index.html">
+          <img src="../images/logo.svg" alt="Cambridge Audio" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="logo-text" style="display:none">CAMBRIDGE AUDIO</span>
+        </a>
+      </div>
+
+      <nav class="header-nav" aria-label="メインナビゲーション">
+        <a href="../hifi.html">Hi-Fi</a>
+        <a href="../headphones.html" class="active">ヘッドホン</a>
+        <a href="../speakers.html">スピーカー</a>
+        <a href="../accessories.html">アクセサリー</a>
+        <a href="../about.html">ブランドストーリー</a>
+      </nav>
+
+      <div class="header-right">
+        <span class="region-selector">日本 / JP</span>
+        <button class="search-btn" type="button" aria-label="検索">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== Product Hero ===== -->
+    <section class="product-hero">
+      <div class="container">
+        <div class="product-hero__image">
+          <img src="../images/products/p100-se.webp" alt="Melomania P100 SE">
+        </div>
+        <div class="product-hero__info">
+          <span class="product-hero__category">オーバーイヤーヘッドホン</span>
+          <h1 class="product-hero__name">Melomania P100 SE</h1>
+          <p class="product-hero__tagline">Hi-Fiエンジニアが手がけた、サステナブルなオーバーイヤーヘッドホン。100時間バッテリー、交換可能なバッテリー＆イヤークッションで、長く愛用いただけます。</p>
+          <div class="product-hero__features">
+            <span>交換可能バッテリー</span>
+            <span>100時間バッテリー</span>
+            <span>DynamEQ</span>
+            <span>aptX Lossless</span>
+            <span>ハイブリッドANC</span>
+            <span>7バンドEQ</span>
+            <span>装着検知</span>
+            <span>マルチポイント</span>
+          </div>
+          <a href="../support.html#retailers" class="product-hero__cta">販売店を探す</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Feature Section 1 ===== -->
+    <section class="feature-row">
+      <div class="container">
+        <div class="feature-row__image">
+          <img src="../images/products/p100-se.webp" alt="Hi-Fiエンジニアの手仕事">
+        </div>
+        <div class="feature-row__content">
+          <span class="feature-row__label">サウンド</span>
+          <h2 class="feature-row__title">Hi-Fiエンジニアの手仕事</h2>
+          <p class="feature-row__text">40mm三層コンポジットドライバーとClass A/Bアンプの組み合わせが、スタジオ品質のサウンドを再現。aptX Lossless対応により、ワイヤレスでもCD品質を超えるロスレス再生を実現します。Cambridge Audioの65年以上にわたるHi-Fi技術の結晶です。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Feature Section 2 ===== -->
+    <section class="feature-row">
+      <div class="container">
+        <div class="feature-row__image">
+          <img src="../images/products/p100-se.webp" alt="100時間、音楽と共に">
+        </div>
+        <div class="feature-row__content">
+          <span class="feature-row__label">バッテリー</span>
+          <h2 class="feature-row__title">100時間、音楽と共に</h2>
+          <p class="feature-row__text">圧倒的な100時間のバッテリーライフで、充電を気にすることなく音楽をお楽しみいただけます。さらに、バッテリーとイヤークッションは交換可能。ヘッドホンを使い捨てにしない、サステナブルな設計思想で、何年にもわたって最高のサウンドを提供し続けます。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Feature Section 3 ===== -->
+    <section class="feature-row">
+      <div class="container">
+        <div class="feature-row__image">
+          <img src="../images/products/p100-se.webp" alt="DynamEQ">
+        </div>
+        <div class="feature-row__content">
+          <span class="feature-row__label">テクノロジー</span>
+          <h2 class="feature-row__title">DynamEQ</h2>
+          <p class="feature-row__text">Cambridge Audio独自のDynamEQ技術が、音量レベルに応じて周波数バランスを自動的に最適化。小音量でも低域と高域の豊かさが失われることなく、どの音量でもバランスの取れた自然なサウンドをお楽しみいただけます。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Technical Specs ===== -->
+    <section class="spec-section">
+      <div class="container">
+        <div class="spec-section__header">
+          <h2>技術仕様</h2>
+        </div>
+        <div class="spec-table">
+          <div class="spec-table__row">
+            <span class="spec-table__label">アンプ方式</span>
+            <span class="spec-table__value">Class A/B</span>
+          </div>
+          <div class="spec-table__row">
+            <span class="spec-table__label">ドライバー</span>
+            <span class="spec-table__value">40mm 三層コンポジット</span>
+          </div>
+          <div class="spec-table__row">
+            <span class="spec-table__label">Bluetooth</span>
+            <span class="spec-table__value">5.3</span>
+          </div>
+          <div class="spec-table__row">
+            <span class="spec-table__label">対応コーデック</span>
+            <span class="spec-table__value">aptX Lossless / aptX Adaptive / AAC / SBC</span>
+          </div>
+          <div class="spec-table__row">
+            <span class="spec-table__label">ノイズキャンセリング</span>
+            <span class="spec-table__value">ハイブリッドANC</span>
+          </div>
+          <div class="spec-table__row">
+            <span class="spec-table__label">バッテリー</span>
+            <span class="spec-table__value">最大100時間</span>
+          </div>
+          <div class="spec-table__row">
+            <span class="spec-table__label">バッテリー交換</span>
+            <span class="spec-table__value">対応（交換可能）</span>
+          </div>
+          <div class="spec-table__row">
+            <span class="spec-table__label">イヤークッション交換</span>
+            <span class="spec-table__value">対応（交換可能）</span>
+          </div>
+          <div class="spec-table__row">
+            <span class="spec-table__label">マルチポイント</span>
+            <span class="spec-table__value">対応</span>
+          </div>
+          <div class="spec-table__row">
+            <span class="spec-table__label">装着検知</span>
+            <span class="spec-table__value">搭載</span>
+          </div>
+          <div class="spec-table__row">
+            <span class="spec-table__label">寸法 (折りたたみ時)</span>
+            <span class="spec-table__value">250 x 204 x 59mm</span>
+          </div>
+          <div class="spec-table__row">
+            <span class="spec-table__label">重量</span>
+            <span class="spec-table__value">330g</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Related Products ===== -->
+    <section class="related-products">
+      <div class="container">
+        <div class="related-products__header">
+          <h2>関連製品</h2>
+        </div>
+        <div class="related-products__grid">
+          <a href="melomania-a100.html" class="product-card-link">
+          <article class="product-card">
+            <div class="product-card__image">
+              <img src="../images/products/melomania-a100.webp" alt="Melomania A100" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Melomania A100</h3>
+              <p class="product-card__desc">ANC搭載 完全ワイヤレスイヤホン</p>
+            </div>
+          </article>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>製品</h3>
+          <a href="../hifi.html">Hi-Fi</a>
+          <a href="../headphones.html">ヘッドホン</a>
+          <a href="../speakers.html">スピーカー</a>
+          <a href="../accessories.html">アクセサリー</a>
+        </div>
+        <div class="footer-col">
+          <h3>サポート</h3>
+          <a href="../support.html#registration">製品登録</a>
+          <a href="../support.html#faq">よくあるご質問</a>
+          <a href="../support.html#manuals">取扱説明書</a>
+          <a href="../support.html#contact">お問い合わせ</a>
+        </div>
+        <div class="footer-col">
+          <h3>ブランド</h3>
+          <a href="../about.html">ブランドストーリー</a>
+          <a href="../technology.html">テクノロジー</a>
+          <a href="../news.html">ニュース</a>
+          <a href="../reviews.html">レビュー</a>
+        </div>
+        <div class="footer-col">
+          <h3>法的情報</h3>
+          <a href="../privacy.html">プライバシーポリシー</a>
+          <a href="../terms.html">利用規約</a>
+          <a href="../terms.html#tokushoho">特定商取引法に基づく表記</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Cambridge Audio. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="../privacy.html">プライバシー</a>
+          <a href="../privacy.html#cookies">Cookie設定</a>
+          <a href="../terms.html#sitemap">サイトマップ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

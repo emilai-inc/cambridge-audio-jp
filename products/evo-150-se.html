@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evo 150 SE | Cambridge Audio Japan</title>
+  <meta name="description" content="Cambridge Audio Evo 150 SE ストリーミングアンプ。最高のアンプ技術と最新ストリーミング機能を一台に凝縮。">
+  <link rel="stylesheet" href="../css/style.css">
+<style>
+    /* ===== Font Face ===== */
+    @font-face { font-family: 'Sohne Wide'; src: url('../fonts/sohne-wide-bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Tiempos Headline'; src: url('../fonts/tiempos-headline-light.woff2') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root { --color-black: #000; --color-white: #fff; --color-gray-50: #f8f8f8; --color-gray-100: #f0f0f0; --color-gray-200: #e0e0e0; --color-gray-400: #999; --color-gray-600: #666; --color-gray-800: #333; --color-teal: #00857c; --color-teal-dark: #006b63; --font-sans: 'Helvetica Neue', 'Noto Sans JP', Arial, sans-serif; --font-serif: 'Tiempos Headline', 'Noto Serif JP', Georgia, 'Times New Roman', serif; --max-width: 1280px; --header-height: 64px; }
+    html { font-size: 16px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    body { font-family: var(--font-sans); color: var(--color-black); background: var(--color-white); line-height: 1.6; }
+    a { color: inherit; text-decoration: none; } img { max-width: 100%; height: auto; display: block; } ul { list-style: none; }
+    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+    .site-header { position: sticky; top: 0; z-index: 1000; background: var(--color-white); border-bottom: 1px solid var(--color-gray-200); height: var(--header-height); }
+    .header-inner { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; height: 100%; display: flex; align-items: center; justify-content: space-between; }
+    .header-logo a { display: flex; align-items: center; } .header-logo img { height: 20px; width: auto; }
+    .header-logo .logo-text { font-family: var(--font-sans); font-size: 18px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; }
+    .header-nav { display: flex; gap: 32px; } .header-nav a { font-size: 14px; font-weight: 500; color: var(--color-gray-600); transition: color 0.2s; }
+    .header-nav a:hover, .header-nav a.active { color: var(--color-black); }
+    .header-right { display: flex; align-items: center; gap: 16px; } .region-selector { font-size: 13px; color: var(--color-gray-600); }
+    .search-btn { background: none; border: none; cursor: pointer; padding: 4px; } .search-btn svg { width: 20px; height: 20px; color: var(--color-black); }
+    .menu-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .menu-toggle span { display: block; width: 24px; height: 2px; background: var(--color-black); transition: 0.3s; }
+    .product-hero { padding: 64px 0 80px; }
+    .product-hero .container { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .product-hero__image { background: var(--color-gray-50); border-radius: 12px; padding: 40px; display: flex; align-items: center; justify-content: center; aspect-ratio: 4/3; overflow: hidden; }
+    .product-hero__image img { width: 100%; height: 100%; object-fit: contain; }
+    .product-hero__info { display: flex; flex-direction: column; gap: 24px; }
+    .product-hero__category { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: var(--color-teal); }
+    .product-hero__name { font-family: var(--font-serif); font-size: 48px; font-weight: 300; line-height: 1.1; }
+    .product-hero__tagline { font-size: 18px; color: var(--color-gray-600); line-height: 1.6; }
+    .product-hero__features { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+    .product-hero__features span { display: inline-block; padding: 6px 16px; border: 1px solid var(--color-gray-200); border-radius: 100px; font-size: 13px; color: var(--color-gray-800); }
+    .product-hero__cta { display: inline-flex; align-items: center; gap: 8px; background: var(--color-teal); color: var(--color-white); padding: 14px 32px; border-radius: 8px; font-size: 15px; font-weight: 600; transition: background 0.2s; width: fit-content; margin-top: 8px; }
+    .product-hero__cta:hover { background: var(--color-teal-dark); }
+    .feature-row { padding: 80px 0; } .feature-row:nth-child(even) { background: var(--color-gray-50); }
+    .feature-row .container { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .feature-row:nth-child(even) .container { direction: rtl; } .feature-row:nth-child(even) .container > * { direction: ltr; }
+    .feature-row__image { border-radius: 12px; overflow: hidden; aspect-ratio: 4/3; background: var(--color-gray-100); display: flex; align-items: center; justify-content: center; }
+    .feature-row__image img { width: 100%; height: 100%; object-fit: cover; }
+    .feature-row__content { display: flex; flex-direction: column; gap: 16px; }
+    .feature-row__label { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: var(--color-teal); }
+    .feature-row__title { font-family: var(--font-serif); font-size: 36px; font-weight: 300; line-height: 1.2; }
+    .feature-row__text { font-size: 16px; color: var(--color-gray-600); line-height: 1.8; }
+    .spec-section { padding: 80px 0; background: var(--color-black); color: var(--color-white); }
+    .spec-section__header { text-align: center; margin-bottom: 48px; }
+    .spec-section__header h2 { font-family: var(--font-serif); font-size: 36px; font-weight: 300; }
+    .spec-table { max-width: 800px; margin: 0 auto; }
+    .spec-table__row { display: flex; justify-content: space-between; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .spec-table__label { font-size: 14px; color: rgba(255,255,255,0.6); flex: 0 0 200px; }
+    .spec-table__value { font-size: 14px; text-align: right; flex: 1; }
+    .related-products { padding: 80px 0; }
+    .related-products__header { text-align: center; margin-bottom: 48px; }
+    .related-products__header h2 { font-family: var(--font-serif); font-size: 36px; font-weight: 300; }
+    .related-products__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .product-card-link { text-decoration: none; color: inherit; }
+    .product-card { border: 1px solid var(--color-gray-200); border-radius: 10px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
+    .product-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.08); }
+    .product-card__image { aspect-ratio: 4/3; overflow: hidden; background: var(--color-gray-50); }
+    .product-card__image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+    .product-card:hover .product-card__image img { transform: scale(1.05); }
+    .product-card__body { padding: 20px; }
+    .product-card__name { font-family: 'Sohne Wide', var(--font-sans); font-size: 16px; font-weight: 700; margin-bottom: 4px; }
+    .product-card__desc { font-size: 13px; color: var(--color-gray-600); }
+    .site-footer { background: var(--color-black); color: var(--color-white); padding: 64px 0 32px; }
+    .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 48px; margin-bottom: 48px; }
+    .footer-col h3 { font-family: 'Sohne Wide', var(--font-sans); font-size: 14px; font-weight: 700; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .footer-col a { display: block; font-size: 14px; color: rgba(255,255,255,0.6); margin-bottom: 12px; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--color-white); }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer-bottom p { font-size: 12px; color: rgba(255,255,255,0.4); }
+    .footer-bottom-links { display: flex; gap: 20px; }
+    .footer-bottom-links a { font-size: 12px; color: rgba(255,255,255,0.4); transition: color 0.2s; }
+    .footer-bottom-links a:hover { color: var(--color-white); }
+    @media (max-width: 1024px) { .product-hero__name { font-size: 36px; } .feature-row__title { font-size: 28px; } .related-products__grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 768px) { .header-nav { display: none; } .menu-toggle { display: flex; } .product-hero .container { grid-template-columns: 1fr; gap: 32px; } .product-hero__name { font-size: 32px; } .feature-row .container { grid-template-columns: 1fr; gap: 32px; } .feature-row:nth-child(even) .container { direction: ltr; } .spec-table__label { flex: 0 0 140px; } .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; } }
+    @media (max-width: 480px) { .product-hero__name { font-size: 28px; } .feature-row__title { font-size: 24px; } .related-products__grid { grid-template-columns: 1fr; } .spec-table__row { flex-direction: column; gap: 4px; } .spec-table__value { text-align: left; } .footer-grid { grid-template-columns: 1fr; } .footer-bottom { flex-direction: column; align-items: flex-start; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-logo">
+        <a href="../index.html">
+          <img src="../images/logo.svg" alt="Cambridge Audio" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="logo-text" style="display:none">CAMBRIDGE AUDIO</span>
+        </a>
+      </div>
+      <nav class="header-nav" aria-label="メインナビゲーション">
+        <a href="../hifi.html" class="active">Hi-Fi</a>
+        <a href="../headphones.html">ヘッドホン</a>
+        <a href="../speakers.html">スピーカー</a>
+        <a href="../accessories.html">アクセサリー</a>
+        <a href="../about.html">ブランドストーリー</a>
+      </nav>
+      <div class="header-right">
+        <span class="region-selector">日本 / JP</span>
+        <button class="search-btn" type="button" aria-label="検索">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main>
+
+    <section class="product-hero">
+      <div class="container">
+        <div class="product-hero__image">
+          <img src="../images/products/evo-150-se.webp" alt="Evo 150 SE">
+        </div>
+        <div class="product-hero__info">
+          <span class="product-hero__category">ストリーミングアンプ</span>
+          <h1 class="product-hero__name">Evo 150 SE</h1>
+          <p class="product-hero__tagline">パワフルなアンプ技術と最新のストリーミング機能を一台に凝縮。Cambridge Audioのクラス最高のサウンドを、あらゆる音源から楽しめるオールインワンアンプです。</p>
+          <div class="product-hero__features">
+            <span>150W/ch (8Ω)</span>
+            <span>Class AB</span>
+            <span>StreamMagic Gen 4</span>
+            <span>Roon Ready</span>
+            <span>HDMI eARC</span>
+            <span>フォノステージ内蔵</span>
+            <span>バランスXLR入力</span>
+            <span>マルチルーム</span>
+          </div>
+          <a href="../support.html#retailers" class="product-hero__cta">販売店を探す</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-row">
+      <div class="container">
+        <div class="feature-row__image"><img src="../images/products/evo-150-se.webp" alt="圧倒的な駆動力"></div>
+        <div class="feature-row__content">
+          <span class="feature-row__label">パワー</span>
+          <h2 class="feature-row__title">圧倒的な駆動力</h2>
+          <p class="feature-row__text">150W/chのClass ABアンプが、あらゆるスピーカーを余裕で駆動。ダイナミックな低音から繊細な高音まで、音楽のすべてを忠実に再現します。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-row">
+      <div class="container">
+        <div class="feature-row__image"><img src="../images/products/evo-150-se.webp" alt="すべての音楽をワンタッチで"></div>
+        <div class="feature-row__content">
+          <span class="feature-row__label">ストリーミング</span>
+          <h2 class="feature-row__title">すべての音楽をワンタッチで</h2>
+          <p class="feature-row__text">StreamMagic Gen 4プラットフォームにより、Spotify、TIDAL、Amazon Music、Qobuzなど主要ストリーミングサービスにシームレスにアクセス。Roon Ready、AirPlay 2、Chromecast対応。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-row">
+      <div class="container">
+        <div class="feature-row__image"><img src="../images/products/evo-150-se.webp" alt="洗練されたミニマルデザイン"></div>
+        <div class="feature-row__content">
+          <span class="feature-row__label">デザイン</span>
+          <h2 class="feature-row__title">洗練されたミニマルデザイン</h2>
+          <p class="feature-row__text">Red Dot Award受賞デザイナーGed Martinによる、機能美を追求したデザイン。高品質なアルミニウム筐体と直感的なTFTディスプレイで、インテリアを格上げします。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="spec-section">
+      <div class="container">
+        <div class="spec-section__header"><h2>技術仕様</h2></div>
+        <div class="spec-table">
+          <div class="spec-table__row"><span class="spec-table__label">出力</span><span class="spec-table__value">150W/ch (8Ω)</span></div>
+          <div class="spec-table__row"><span class="spec-table__label">アンプ方式</span><span class="spec-table__value">Class AB</span></div>
+          <div class="spec-table__row"><span class="spec-table__label">DAC</span><span class="spec-table__value">ESS ES9028Q2M Dual</span></div>
+          <div class="spec-table__row"><span class="spec-table__label">周波数特性</span><span class="spec-table__value">5Hz〜60kHz ±1dB</span></div>
+          <div class="spec-table__row"><span class="spec-table__label">S/N比</span><span class="spec-table__value">>103dB</span></div>
+          <div class="spec-table__row"><span class="spec-table__label">ディスプレイ</span><span class="spec-table__value">6.8インチ IPS TFT</span></div>
+          <div class="spec-table__row"><span class="spec-table__label">StreamMagic</span><span class="spec-table__value">Gen 4</span></div>
+          <div class="spec-table__row"><span class="spec-table__label">アナログ入力</span><span class="spec-table__value">1 x バランスXLR、2 x RCA、1 x MMフォノ</span></div>
+          <div class="spec-table__row"><span class="spec-table__label">デジタル入力</span><span class="spec-table__value">1 x TOSlink、1 x S/PDIF、1 x USB-B</span></div>
+          <div class="spec-table__row"><span class="spec-table__label">HDMI</span><span class="spec-table__value">eARC対応</span></div>
+          <div class="spec-table__row"><span class="spec-table__label">Bluetooth</span><span class="spec-table__value">5.0 (aptX HD)</span></div>
+          <div class="spec-table__row"><span class="spec-table__label">ネットワーク</span><span class="spec-table__value">Ethernet、Wi-Fi</span></div>
+          <div class="spec-table__row"><span class="spec-table__label">対応フォーマット</span><span class="spec-table__value">PCM 32bit/384kHz、DSD 128x、MQA</span></div>
+          <div class="spec-table__row"><span class="spec-table__label">寸法 (W x H x D)</span><span class="spec-table__value">432 x 89 x 341mm</span></div>
+          <div class="spec-table__row"><span class="spec-table__label">重量</span><span class="spec-table__value">8.6kg</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-products">
+      <div class="container">
+        <div class="related-products__header"><h2>関連製品</h2></div>
+        <div class="related-products__grid">
+          <a href="evo-one.html" class="product-card-link"><article class="product-card"><div class="product-card__image"><img src="../images/products/evo-one.webp" alt="Evo One" loading="lazy"></div><div class="product-card__body"><h3 class="product-card__name">Evo One</h3><p class="product-card__desc">オールインワン ワイヤレスストリーミングスピーカー</p></div></article></a>
+          <a href="cxn100.html" class="product-card-link"><article class="product-card"><div class="product-card__image"><img src="../images/products/cxn100.webp" alt="CXN100" loading="lazy"></div><div class="product-card__body"><h3 class="product-card__name">CXN100</h3><p class="product-card__desc">ネットワークプレーヤー</p></div></article></a>
+        </div>
+      </div>
+    </section>
+
+</main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col"><h3>製品</h3><a href="../hifi.html">Hi-Fi</a><a href="../headphones.html">ヘッドホン</a><a href="../speakers.html">スピーカー</a><a href="../accessories.html">アクセサリー</a></div>
+        <div class="footer-col"><h3>サポート</h3><a href="../support.html#registration">製品登録</a><a href="../support.html#faq">よくあるご質問</a><a href="../support.html#manuals">取扱説明書</a><a href="../support.html#contact">お問い合わせ</a></div>
+        <div class="footer-col"><h3>ブランド</h3><a href="../about.html">ブランドストーリー</a><a href="../technology.html">テクノロジー</a><a href="../news.html">ニュース</a><a href="../reviews.html">レビュー</a></div>
+        <div class="footer-col"><h3>法的情報</h3><a href="../privacy.html">プライバシーポリシー</a><a href="../terms.html">利用規約</a><a href="../terms.html#tokushoho">特定商取引法に基づく表記</a></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Cambridge Audio. All rights reserved.</p>
+        <div class="footer-bottom-links"><a href="../privacy.html">プライバシー</a><a href="../privacy.html#cookies">Cookie設定</a><a href="../terms.html#sitemap">サイトマップ</a></div>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

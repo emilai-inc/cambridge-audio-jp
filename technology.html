@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>テクノロジー | Cambridge Audio Japan</title>
+  <meta name="description" content="Cambridge Audioのテクノロジー。56年にわたるオーディオエンジニアリングの革新をご紹介します。DAC技術、アンプ設計、ストリーミング、スピーカー設計。">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ===== Font Face ===== */
+    @font-face {
+      font-family: 'Sohne Wide';
+      src: url('fonts/sohne-wide-bold.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Tiempos Headline';
+      src: url('fonts/tiempos-headline-light.woff2') format('woff2');
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* ===== Reset & Base ===== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --color-black: #000;
+      --color-white: #fff;
+      --color-gray-50: #f8f8f8;
+      --color-gray-100: #f0f0f0;
+      --color-gray-200: #e0e0e0;
+      --color-gray-400: #999;
+      --color-gray-600: #666;
+      --color-gray-800: #333;
+      --color-teal: #00857c;
+      --color-teal-dark: #006b63;
+      --font-sans: 'Helvetica Neue', 'Noto Sans JP', Arial, sans-serif;
+      --font-serif: 'Tiempos Headline', 'Noto Serif JP', Georgia, 'Times New Roman', serif;
+      --max-width: 1280px;
+      --header-height: 64px;
+    }
+
+    html {
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--color-black);
+      background: var(--color-white);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ===== Header ===== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--color-white);
+      border-bottom: 1px solid var(--color-gray-200);
+      height: var(--header-height);
+    }
+
+    .header-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header-logo a {
+      display: flex;
+      align-items: center;
+    }
+
+    .header-logo img {
+      height: 20px;
+      width: auto;
+    }
+
+    .header-logo .logo-text {
+      font-family: var(--font-sans);
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .header-nav a {
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+      position: relative;
+    }
+
+    .header-nav a:hover {
+      color: var(--color-teal);
+    }
+
+    .header-nav a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--color-teal);
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .region-selector {
+      font-size: 13px;
+      color: var(--color-gray-600);
+      font-weight: 500;
+    }
+
+    .search-btn {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+
+    .search-btn svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--color-black);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--color-black);
+      margin: 5px 0;
+      transition: 0.3s;
+    }
+
+    /* ===== Hero ===== */
+    .tech-hero {
+      background: var(--color-black);
+      color: var(--color-white);
+      padding: 120px 0 80px;
+    }
+
+    .tech-hero h1 {
+      font-family: 'Sohne Wide', 'Helvetica Neue', Arial, sans-serif;
+      font-size: 72px;
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .tech-hero p {
+      font-family: 'Tiempos Headline', 'Noto Serif JP', Georgia, serif;
+      font-size: 32px;
+      font-weight: 300;
+      line-height: 1.2;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    /* ===== Tech Section (alternating) ===== */
+    .tech-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      min-height: 500px;
+    }
+
+    .tech-section:nth-child(even) .tech-section__image {
+      order: -1;
+    }
+
+    .tech-section__text {
+      padding: 80px 60px;
+      background: var(--color-white);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .tech-section__text h2 {
+      font-family: var(--font-serif);
+      font-size: 36px;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+      color: var(--color-black);
+    }
+
+    .tech-section__text p {
+      font-size: 16px;
+      color: var(--color-gray-600);
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    .tech-section__text p:last-child {
+      margin-bottom: 0;
+    }
+
+    .tech-section__image {
+      overflow: hidden;
+      background: var(--color-gray-100);
+    }
+
+    .tech-section__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ===== Footer ===== */
+    .site-footer {
+      background: var(--color-black);
+      color: var(--color-white);
+      padding: 64px 0 32px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      margin-bottom: 32px;
+    }
+
+    .footer-col h3 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      letter-spacing: 0.02em;
+    }
+
+    .footer-col a {
+      display: block;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 10px;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: var(--color-white);
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-bottom p {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    .footer-bottom-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-bottom-links a {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.4);
+      transition: color 0.2s;
+    }
+
+    .footer-bottom-links a:hover {
+      color: var(--color-white);
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 1024px) {
+      .tech-hero h1 {
+        font-size: 48px;
+      }
+
+      .tech-hero p {
+        font-size: 26px;
+      }
+
+      .tech-section__text {
+        padding: 60px 40px;
+      }
+
+      .tech-section__text h2 {
+        font-size: 30px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header-nav {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .tech-hero {
+        padding: 96px 0 60px;
+      }
+
+      .tech-hero h1 {
+        font-size: 36px;
+      }
+
+      .tech-hero p {
+        font-size: 22px;
+      }
+
+      .tech-section {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+
+      .tech-section:nth-child(even) .tech-section__image {
+        order: 0;
+      }
+
+      .tech-section__image {
+        aspect-ratio: 16 / 9;
+      }
+
+      .tech-section__text {
+        padding: 48px 24px;
+      }
+
+      .tech-section__text h2 {
+        font-size: 26px;
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .tech-hero h1 {
+        font-size: 28px;
+      }
+
+      .tech-hero p {
+        font-size: 20px;
+      }
+
+      .tech-section__text h2 {
+        font-size: 24px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-logo">
+        <a href="index.html">
+          <img src="images/logo.svg" alt="Cambridge Audio" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="logo-text" style="display:none">CAMBRIDGE AUDIO</span>
+        </a>
+      </div>
+      <nav class="header-nav" aria-label="メインナビゲーション">
+        <a href="hifi.html">Hi-Fi</a>
+        <a href="headphones.html">ヘッドホン</a>
+        <a href="speakers.html">スピーカー</a>
+        <a href="accessories.html">アクセサリー</a>
+        <a href="about.html">ブランドストーリー</a>
+      </nav>
+      <div class="header-right">
+        <span class="region-selector">日本 / JP</span>
+        <button class="search-btn" type="button" aria-label="検索">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== Hero ===== -->
+    <section class="tech-hero">
+      <div class="container">
+        <h1>テクノロジー</h1>
+        <p>56年にわたるオーディオエンジニアリングの革新。</p>
+      </div>
+    </section>
+
+    <!-- ===== DAC Technology ===== -->
+    <section class="tech-section">
+      <div class="tech-section__text">
+        <h2>クラス最高峰のDAC</h2>
+        <p>Cambridge Audioは、ESS Technology社のSabre DACチップを採用し、デジタルからアナログへの変換において業界最高水準の精度を実現しています。この選択は、徹底したリスニングテストと測定に基づいており、音楽の持つ微細なニュアンスを忠実に再現します。</p>
+        <p>DSD256やMQAフルデコードに対応し、ハイレゾリューションオーディオの可能性を最大限に引き出します。独自のジッターリダクション技術により、デジタル信号の時間軸精度を極限まで高め、クリアで臨場感あふれるサウンドをお届けします。</p>
+      </div>
+      <div class="tech-section__image">
+        <img src="images/products/cxn100.webp" alt="Cambridge Audio DAC技術" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='var(--color-gray-200)'">
+      </div>
+    </section>
+
+    <!-- ===== Amplifier Design ===== -->
+    <section class="tech-section">
+      <div class="tech-section__text">
+        <h2>Class ABアンプ設計</h2>
+        <p>Cambridge Audioのアンプは、伝統的なClass AB増幅回路をベースに、最新の設計技術を融合させています。大型トロイダルトランスによる安定した電源供給は、ダイナミックレンジの広い音楽再生において、力強さと繊細さを両立させます。</p>
+        <p>ローノイズ設計を徹底し、信号経路の最短化と厳選されたオーディオグレードコンポーネントの採用により、音楽信号への色付けを最小限に抑えています。結果として、アーティストが意図した通りの音を、ありのままにお届けします。</p>
+      </div>
+      <div class="tech-section__image">
+        <img src="images/products/exa100.webp" alt="Cambridge Audio アンプ設計" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='var(--color-gray-200)'">
+      </div>
+    </section>
+
+    <!-- ===== Streaming Technology ===== -->
+    <section class="tech-section">
+      <div class="tech-section__text">
+        <h2>StreamMagicプラットフォーム</h2>
+        <p>StreamMagicは、Cambridge Audioが自社開発したストリーミングプラットフォームです。直感的なアプリケーションを通じて、Spotify Connect、TIDAL、Qobuz、Amazon Music、Deezerなど、主要なストリーミングサービスにシームレスにアクセスできます。</p>
+        <p>Chromecast built-in、Apple AirPlay 2、Roon Readyにも対応し、お好みのエコシステムからの再生が可能です。定期的なファームウェアアップデートにより、新しいサービスや機能が継続的に追加され、製品の価値が長期にわたって向上し続けます。</p>
+      </div>
+      <div class="tech-section__image">
+        <img src="images/products/evo-one.webp" alt="Cambridge Audio StreamMagic" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='var(--color-gray-200)'">
+      </div>
+    </section>
+
+    <!-- ===== Speaker Engineering ===== -->
+    <section class="tech-section">
+      <div class="tech-section__text">
+        <h2>音響エンジニアリング</h2>
+        <p>Cambridge Audioのスピーカーは、BMR（バランスドモードラジエーター）ドライバー技術を核に据えた革新的な設計を採用しています。BMRドライバーは、従来のドライバーと比較して広い周波数帯域にわたって均一な指向性を実現し、リスニングポジションを選ばない自然な音場を生み出します。</p>
+        <p>先進的なDSP（デジタルシグナルプロセッシング）最適化により、ドライバーとエンクロージャーの特性を精密にコントロール。ロンドンのエンジニアリングチームによる入念なチューニングが、音楽の感動をそのままお届けする、真に優れたリスニング体験を実現します。</p>
+      </div>
+      <div class="tech-section__image">
+        <img src="images/lifestyle/emotive-sound.webp" alt="Cambridge Audio 音響エンジニアリング" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='var(--color-gray-200)'">
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>製品</h3>
+          <a href="hifi.html">Hi-Fi</a>
+          <a href="headphones.html">ヘッドホン</a>
+          <a href="speakers.html">スピーカー</a>
+          <a href="accessories.html">アクセサリー</a>
+        </div>
+        <div class="footer-col">
+          <h3>サポート</h3>
+          <a href="support.html#registration">製品登録</a>
+          <a href="support.html#faq">よくあるご質問</a>
+          <a href="support.html#manuals">取扱説明書</a>
+          <a href="support.html#contact">お問い合わせ</a>
+        </div>
+        <div class="footer-col">
+          <h3>ブランド</h3>
+          <a href="about.html">ブランドストーリー</a>
+          <a href="technology.html">テクノロジー</a>
+          <a href="news.html">ニュース</a>
+          <a href="reviews.html">レビュー</a>
+        </div>
+        <div class="footer-col">
+          <h3>法的情報</h3>
+          <a href="privacy.html">プライバシーポリシー</a>
+          <a href="terms.html">利用規約</a>
+          <a href="terms.html#tokushoho">特定商取引法に基づく表記</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Cambridge Audio. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">プライバシー</a>
+          <a href="privacy.html#cookies">Cookie設定</a>
+          <a href="terms.html#sitemap">サイトマップ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
