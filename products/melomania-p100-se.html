@@ -9,620 +9,31 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="Melomania P100 SE | Cambridge Audio Japan">
-  <meta property="og:description" content="Cambridge Audio Melomania P100 SE ANC搭載オーバーイヤーヘッドホン。100時間バッテリー、DynamEQ、aptX Lossless対応。交換可能なバッテリー＆イヤークッション。">
+  <meta property="og:description" content="Cambridge Audio Melomania P100 SE ANC搭載オーバーイヤーヘッドホン。100時間バッテリー、DynamEQ、aptX Lossless対応。">
   <meta property="og:type" content="product">
   <meta property="og:url" content="https://www.cambridgeaudio.com/jp/products/melomania-p100-se.html">
-  <meta property="og:image" content="../images/products/p100-se.webp">
+  <meta property="og:image" content="../images/products/melomania-p100-se.webp">
   <meta property="og:locale" content="ja_JP">
   <meta property="og:site_name" content="Cambridge Audio Japan">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Melomania P100 SE | Cambridge Audio Japan">
-  <meta name="twitter:description" content="Cambridge Audio Melomania P100 SE ANC搭載オーバーイヤーヘッドホン。100時間バッテリー、DynamEQ、aptX Lossless対応。交換可能なバッテリー＆イヤークッション。">
-  <meta name="twitter:image" content="../images/products/p100-se.webp">
+  <meta name="twitter:description" content="Cambridge Audio Melomania P100 SE ANC搭載オーバーイヤーヘッドホン。100時間バッテリー、DynamEQ、aptX Lossless対応。">
+  <meta name="twitter:image" content="../images/products/melomania-p100-se.webp">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"></noscript>
-  <link rel="stylesheet" href="../css/style.css">
   <style>
-    /* ===== Font Face ===== */
-    @font-face {
-      font-family: 'Sohne Wide';
-      src: url('../fonts/sohne-wide-bold.woff2') format('woff2');
-      font-weight: 700;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: 'Tiempos Headline';
-      src: url('../fonts/tiempos-headline-light.woff2') format('woff2');
-      font-weight: 300;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    /* ===== Reset & Base ===== */
-    *, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    :root {
-      --color-black: #000;
-      --color-white: #fff;
-      --color-gray-50: #f8f8f8;
-      --color-gray-100: #f0f0f0;
-      --color-gray-200: #e0e0e0;
-      --color-gray-400: #999;
-      --color-gray-600: #666;
-      --color-gray-800: #333;
-      --color-teal: #00857c;
-      --color-teal-dark: #006b63;
-      --font-sans: 'Helvetica Neue', 'Noto Sans JP', Arial, sans-serif;
-      --font-serif: 'Tiempos Headline', 'Noto Serif JP', Georgia, 'Times New Roman', serif;
-      --max-width: 1280px;
-      --header-height: 64px;
-    }
-
-    html {
-      font-size: 16px;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    body {
-      font-family: var(--font-sans);
-      color: var(--color-black);
-      background: var(--color-white);
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    ul {
-      list-style: none;
-    }
-
-    .container {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    /* ===== Header ===== */
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: var(--color-white);
-      border-bottom: 1px solid var(--color-gray-200);
-      height: var(--header-height);
-    }
-
-    .header-inner {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 24px;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .header-logo a {
-      display: flex;
-      align-items: center;
-    }
-
-    .header-logo img {
-      height: 20px;
-      width: auto;
-    }
-
-    .header-logo .logo-text {
-      font-family: var(--font-sans);
-      font-size: 18px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-    }
-
-    .header-nav {
-      display: flex;
-      gap: 32px;
-    }
-
-    .header-nav a {
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--color-gray-600);
-      transition: color 0.2s;
-    }
-
-    .header-nav a:hover,
-    .header-nav a.active {
-      color: var(--color-black);
-    }
-
-    .header-right {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .region-selector {
-      font-size: 13px;
-      color: var(--color-gray-600);
-    }
-
-    .search-btn {
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 4px;
-    }
-
-    .search-btn svg {
-      width: 20px;
-      height: 20px;
-      color: var(--color-black);
-    }
-
-    .menu-toggle {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 4px;
-    }
-
-    .menu-toggle span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: var(--color-black);
-      transition: 0.3s;
-    }
-
-    /* ===== Product Hero ===== */
-    .product-hero {
-      padding: 64px 0 80px;
-    }
-
-    .product-hero .container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 64px;
-      align-items: center;
-    }
-
-    .product-hero__image {
-      background: var(--color-gray-50);
-      border-radius: 12px;
-      padding: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      aspect-ratio: 4 / 3;
-      overflow: hidden;
-    }
-
-    .product-hero__image img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-
-    .product-hero__info {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
-
-    .product-hero__category {
-      font-size: 13px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: var(--color-teal);
-    }
-
-    .product-hero__name {
-      font-family: var(--font-serif);
-      font-size: 48px;
-      font-weight: 300;
-      line-height: 1.1;
-    }
-
-    .product-hero__tagline {
-      font-size: 18px;
-      color: var(--color-gray-600);
-      line-height: 1.6;
-    }
-
-    .product-hero__features {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 8px;
-    }
-
-    .product-hero__features span {
-      display: inline-block;
-      padding: 6px 16px;
-      border: 1px solid var(--color-gray-200);
-      border-radius: 100px;
-      font-size: 13px;
-      color: var(--color-gray-800);
-    }
-
-    .product-hero__cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--color-teal);
-      color: var(--color-white);
-      padding: 14px 32px;
-      border-radius: 8px;
-      font-size: 15px;
-      font-weight: 600;
-      transition: background 0.2s;
-      width: fit-content;
-      margin-top: 8px;
-    }
-
-    .product-hero__cta:hover {
-      background: var(--color-teal-dark);
-    }
-
-    /* ===== Feature Rows ===== */
-    .feature-row {
-      padding: 80px 0;
-    }
-
-    .feature-row:nth-child(even) {
-      background: var(--color-gray-50);
-    }
-
-    .feature-row .container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 64px;
-      align-items: center;
-    }
-
-    .feature-row:nth-child(even) .container {
-      direction: rtl;
-    }
-
-    .feature-row:nth-child(even) .container > * {
-      direction: ltr;
-    }
-
-    .feature-row__image {
-      border-radius: 12px;
-      overflow: hidden;
-      aspect-ratio: 4 / 3;
-      background: var(--color-gray-100);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .feature-row__image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .feature-row__content {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .feature-row__label {
-      font-size: 13px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: var(--color-teal);
-    }
-
-    .feature-row__title {
-      font-family: var(--font-serif);
-      font-size: 36px;
-      font-weight: 300;
-      line-height: 1.2;
-    }
-
-    .feature-row__text {
-      font-size: 16px;
-      color: var(--color-gray-600);
-      line-height: 1.8;
-    }
-
-    /* ===== Spec Section ===== */
-    .spec-section {
-      padding: 80px 0;
-      background: var(--color-black);
-      color: var(--color-white);
-    }
-
-    .spec-section__header {
-      text-align: center;
-      margin-bottom: 48px;
-    }
-
-    .spec-section__header h2 {
-      font-family: var(--font-serif);
-      font-size: 36px;
-      font-weight: 300;
-    }
-
-    .spec-table {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .spec-table__row {
-      display: flex;
-      justify-content: space-between;
-      padding: 16px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .spec-table__label {
-      font-size: 14px;
-      color: rgba(255, 255, 255, 0.6);
-      flex: 0 0 200px;
-    }
-
-    .spec-table__value {
-      font-size: 14px;
-      text-align: right;
-      flex: 1;
-    }
-
-    /* ===== Related Products ===== */
-    .related-products {
-      padding: 80px 0;
-    }
-
-    .related-products__header {
-      text-align: center;
-      margin-bottom: 48px;
-    }
-
-    .related-products__header h2 {
-      font-family: var(--font-serif);
-      font-size: 36px;
-      font-weight: 300;
-    }
-
-    .related-products__grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
-    }
-
-    .product-card-link {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .product-card {
-      border: 1px solid var(--color-gray-200);
-      border-radius: 10px;
-      overflow: hidden;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .product-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
-    }
-
-    .product-card__image {
-      aspect-ratio: 4 / 3;
-      overflow: hidden;
-      background: var(--color-gray-50);
-    }
-
-    .product-card__image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s;
-    }
-
-    .product-card:hover .product-card__image img {
-      transform: scale(1.05);
-    }
-
-    .product-card__body {
-      padding: 20px;
-    }
-
-    .product-card__name {
-      font-family: 'Sohne Wide', var(--font-sans);
-      font-size: 16px;
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-
-    .product-card__desc {
-      font-size: 13px;
-      color: var(--color-gray-600);
-    }
-
-    /* ===== Footer ===== */
-    .site-footer {
-      background: var(--color-black);
-      color: var(--color-white);
-      padding: 64px 0 32px;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 48px;
-      margin-bottom: 48px;
-    }
-
-    .footer-col h3 {
-      font-family: 'Sohne Wide', var(--font-sans);
-      font-size: 14px;
-      font-weight: 700;
-      margin-bottom: 20px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .footer-col a {
-      display: block;
-      font-size: 14px;
-      color: rgba(255, 255, 255, 0.6);
-      margin-bottom: 12px;
-      transition: color 0.2s;
-    }
-
-    .footer-col a:hover {
-      color: var(--color-white);
-    }
-
-    .footer-bottom {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-
-    .footer-bottom p {
-      font-size: 12px;
-      color: rgba(255, 255, 255, 0.7);
-    }
-
-    .footer-bottom-links {
-      display: flex;
-      gap: 20px;
-    }
-
-    .footer-bottom-links a {
-      font-size: 12px;
-      color: rgba(255, 255, 255, 0.7);
-      transition: color 0.2s;
-    }
-
-    .footer-bottom-links a:hover {
-      color: var(--color-white);
-    }
-
-    /* ===== Responsive ===== */
-    @media (max-width: 1024px) {
-      .product-hero__name {
-        font-size: 36px;
-      }
-
-      .feature-row__title {
-        font-size: 28px;
-      }
-
-      .related-products__grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 768px) {
-      .header-nav {
-        display: none;
-      }
-
-      .menu-toggle {
-        display: flex;
-      }
-
-      .product-hero .container {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-
-      .product-hero__name {
-        font-size: 32px;
-      }
-
-      .feature-row .container {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-
-      .feature-row:nth-child(even) .container {
-        direction: ltr;
-      }
-
-      .spec-table__label {
-        flex: 0 0 140px;
-      }
-
-      .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 32px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .product-hero__name {
-        font-size: 28px;
-      }
-
-      .feature-row__title {
-        font-size: 24px;
-      }
-
-      .related-products__grid {
-        grid-template-columns: 1fr;
-      }
-
-      .spec-table__row {
-        flex-direction: column;
-        gap: 4px;
-      }
-
-      .spec-table__value {
-        text-align: left;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-bottom {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
+    @font-face { font-family: 'Sohne Wide'; src: url('../fonts/sohne-wide-bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Tiempos Headline'; src: url('../fonts/tiempos-headline-light.woff2') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
   </style>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/product-page.css">
 </head>
 <body>
 <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
-
-  <!-- ===== Header ===== -->
   <header class="site-header">
     <div class="header-inner">
       <div class="header-logo">
@@ -631,7 +42,6 @@
           <span class="logo-text" style="display:none">CAMBRIDGE AUDIO</span>
         </a>
       </div>
-
       <nav class="header-nav" aria-label="メインナビゲーション">
         <a href="../hifi.html">Hi-Fi</a>
         <a href="../headphones.html" class="active" aria-current="page">ヘッドホン</a>
@@ -639,216 +49,393 @@
         <a href="../accessories.html">アクセサリー</a>
         <a href="../about.html">ブランドストーリー</a>
       </nav>
-
       <div class="header-right">
         <span class="region-selector">日本 / JP</span>
         <button class="search-btn" type="button" aria-label="検索">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
         </button>
         <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span></span><span></span><span></span>
         </button>
       </div>
     </div>
   </header>
-
   <main id="main-content">
 
-    <!-- ===== Product Hero ===== -->
-    <section class="product-hero">
-      <div class="container">
-        <div class="product-hero__image fade-in">
-          <img src="../images/products/p100-se.webp" alt="Melomania P100 SE">
-        </div>
-        <div class="product-hero__info slide-right">
-          <span class="product-hero__category">オーバーイヤーヘッドホン</span>
-          <h1 class="product-hero__name">Melomania P100 SE</h1>
-          <p class="product-hero__tagline">Hi-Fiエンジニアが手がけた、サステナブルなオーバーイヤーヘッドホン。100時間バッテリー、交換可能なバッテリー＆イヤークッションで、長く愛用いただけます。</p>
-          <div class="product-hero__features">
-            <span>交換可能バッテリー</span>
-            <span>100時間バッテリー</span>
-            <span>DynamEQ</span>
-            <span>aptX Lossless</span>
-            <span>ハイブリッドANC</span>
-            <span>7バンドEQ</span>
-            <span>装着検知</span>
-            <span>マルチポイント</span>
+    <!-- 1. Hero: Gallery + Info -->
+    <section class="pp-hero fade-in">
+      <div class="pp-hero__grid">
+        <div class="pp-gallery">
+          <div class="pp-gallery__main">
+            <img class="pp-gallery__img is-active" src="../images/products/melomania-p100-se/hero-1.webp" alt="Melomania P100 SE ブラック 正面">
+            <img class="pp-gallery__img" src="../images/products/melomania-p100-se/hero-2.webp" alt="Melomania P100 SE ブラック 斜め">
+            <img class="pp-gallery__img" src="../images/products/melomania-p100-se/hero-3.webp" alt="Melomania P100 SE ブラック 側面">
+            <img class="pp-gallery__img" src="../images/products/melomania-p100-se/hero-4.webp" alt="Melomania P100 SE ブラック 折りたたみ">
           </div>
-          <a href="../support.html#retailers" class="product-hero__cta">販売店を探す</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Feature Section 1 ===== -->
-    <section class="feature-row fade-in">
-      <div class="container">
-        <div class="feature-row__image">
-          <img src="../images/products/p100-se.webp" alt="Hi-Fiエンジニアの手仕事">
-        </div>
-        <div class="feature-row__content">
-          <span class="feature-row__label">サウンド</span>
-          <h2 class="feature-row__title">Hi-Fiエンジニアの手仕事</h2>
-          <p class="feature-row__text">40mm三層コンポジットドライバーとClass A/Bアンプの組み合わせが、スタジオ品質のサウンドを再現。aptX Lossless対応により、ワイヤレスでもCD品質を超えるロスレス再生を実現します。Cambridge Audioの65年以上にわたるHi-Fi技術の結晶です。</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Feature Section 2 ===== -->
-    <section class="feature-row fade-in">
-      <div class="container">
-        <div class="feature-row__image">
-          <img src="../images/products/p100-se.webp" alt="100時間、音楽と共に">
-        </div>
-        <div class="feature-row__content">
-          <span class="feature-row__label">バッテリー</span>
-          <h2 class="feature-row__title">100時間、音楽と共に</h2>
-          <p class="feature-row__text">圧倒的な100時間のバッテリーライフで、充電を気にすることなく音楽をお楽しみいただけます。さらに、バッテリーとイヤークッションは交換可能。ヘッドホンを使い捨てにしない、サステナブルな設計思想で、何年にもわたって最高のサウンドを提供し続けます。</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Feature Section 3 ===== -->
-    <section class="feature-row fade-in">
-      <div class="container">
-        <div class="feature-row__image">
-          <img src="../images/products/p100-se.webp" alt="DynamEQ">
-        </div>
-        <div class="feature-row__content">
-          <span class="feature-row__label">テクノロジー</span>
-          <h2 class="feature-row__title">DynamEQ</h2>
-          <p class="feature-row__text">Cambridge Audio独自のDynamEQ技術が、音量レベルに応じて周波数バランスを自動的に最適化。小音量でも低域と高域の豊かさが失われることなく、どの音量でもバランスの取れた自然なサウンドをお楽しみいただけます。</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Technical Specs ===== -->
-    <section class="spec-section fade-in">
-      <div class="container">
-        <div class="spec-section__header">
-          <h2>技術仕様</h2>
-        </div>
-        <div class="spec-table">
-          <div class="spec-table__row">
-            <span class="spec-table__label">アンプ方式</span>
-            <span class="spec-table__value">Class A/B</span>
-          </div>
-          <div class="spec-table__row">
-            <span class="spec-table__label">ドライバー</span>
-            <span class="spec-table__value">40mm 三層コンポジット</span>
-          </div>
-          <div class="spec-table__row">
-            <span class="spec-table__label">Bluetooth</span>
-            <span class="spec-table__value">5.3</span>
-          </div>
-          <div class="spec-table__row">
-            <span class="spec-table__label">対応コーデック</span>
-            <span class="spec-table__value">aptX Lossless / aptX Adaptive / AAC / SBC</span>
-          </div>
-          <div class="spec-table__row">
-            <span class="spec-table__label">ノイズキャンセリング</span>
-            <span class="spec-table__value">ハイブリッドANC</span>
-          </div>
-          <div class="spec-table__row">
-            <span class="spec-table__label">バッテリー</span>
-            <span class="spec-table__value">最大100時間</span>
-          </div>
-          <div class="spec-table__row">
-            <span class="spec-table__label">バッテリー交換</span>
-            <span class="spec-table__value">対応（交換可能）</span>
-          </div>
-          <div class="spec-table__row">
-            <span class="spec-table__label">イヤークッション交換</span>
-            <span class="spec-table__value">対応（交換可能）</span>
-          </div>
-          <div class="spec-table__row">
-            <span class="spec-table__label">マルチポイント</span>
-            <span class="spec-table__value">対応</span>
-          </div>
-          <div class="spec-table__row">
-            <span class="spec-table__label">装着検知</span>
-            <span class="spec-table__value">搭載</span>
-          </div>
-          <div class="spec-table__row">
-            <span class="spec-table__label">寸法 (折りたたみ時)</span>
-            <span class="spec-table__value">250 x 204 x 59mm</span>
-          </div>
-          <div class="spec-table__row">
-            <span class="spec-table__label">重量</span>
-            <span class="spec-table__value">330g</span>
+          <div class="pp-gallery__dots">
+            <button class="pp-gallery__dot is-active" aria-label="画像 1"></button>
+            <button class="pp-gallery__dot" aria-label="画像 2"></button>
+            <button class="pp-gallery__dot" aria-label="画像 3"></button>
+            <button class="pp-gallery__dot" aria-label="画像 4"></button>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- ===== Related Products ===== -->
-    <section class="related-products fade-in">
-      <div class="container">
-        <div class="related-products__header">
-          <h2>関連製品</h2>
-        </div>
-        <div class="related-products__grid">
-          <a href="melomania-a100.html" class="product-card-link">
-          <article class="product-card">
-            <div class="product-card__image">
-              <img src="../images/products/melomania-a100.webp" alt="Melomania A100" loading="lazy">
+        <div class="pp-info">
+          <p class="pp-info__category">ANC搭載オーバーイヤーヘッドホン</p>
+          <h1 class="pp-info__name">Melomania P100 SE</h1>
+          <p class="pp-info__desc">快適性とチューニングを向上させ、没入感のある高忠実度オーディオをさらに進化。Class A/Bアンプ駆動の40mmドライバー、アダプティブハイブリッドANC、最大100時間のユーザー交換可能バッテリー——果てしないリスニングのために設計されました。</p>
+          <div class="pp-swatches">
+            <button class="pp-swatch pp-swatch--black is-active" aria-label="ブラック"></button>
+            <button class="pp-swatch pp-swatch--white" aria-label="ホワイト"></button>
+            <button class="pp-swatch" style="background:#2c4a7c;" aria-label="ブルー"></button>
+          </div>
+          <div class="pp-features">
+            <div class="pp-feature-item">
+              <div class="pp-feature-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M10 18h4"/><path d="M12 6v6"/></svg></div>
+              <span class="pp-feature-item__text">交換可能バッテリー＆イヤークッション</span>
             </div>
-            <div class="product-card__body">
-              <h3 class="product-card__name">Melomania A100</h3>
-              <p class="product-card__desc">ANC搭載 完全ワイヤレスイヤホン</p>
+            <div class="pp-feature-item">
+              <div class="pp-feature-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="3" width="12" height="18" rx="2"/><line x1="12" y1="17" x2="12" y2="17.01"/></svg></div>
+              <span class="pp-feature-item__text">100時間バッテリー</span>
             </div>
-          </article>
+            <div class="pp-feature-item">
+              <div class="pp-feature-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12h4l3-9 6 18 3-9h4"/></svg></div>
+              <span class="pp-feature-item__text">DynamEQ</span>
+            </div>
+            <div class="pp-feature-item">
+              <div class="pp-feature-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2l6 6-6 6"/><path d="M15 8h6v12H3V8h6"/></svg></div>
+              <span class="pp-feature-item__text">aptX™ Lossless対応</span>
+            </div>
+            <div class="pp-feature-item">
+              <div class="pp-feature-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
+              <span class="pp-feature-item__text">アダプティブANC</span>
+            </div>
+            <div class="pp-feature-item">
+              <div class="pp-feature-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg></div>
+              <span class="pp-feature-item__text">7バンド調整EQ</span>
+            </div>
+            <div class="pp-feature-item">
+              <div class="pp-feature-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+              <span class="pp-feature-item__text">装着検知</span>
+            </div>
+            <div class="pp-feature-item">
+              <div class="pp-feature-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 6h13"/><path d="M8 12h13"/><path d="M8 18h13"/><circle cx="3" cy="6" r="1.5"/><circle cx="3" cy="12" r="1.5"/><circle cx="3" cy="18" r="1.5"/></svg></div>
+              <span class="pp-feature-item__text">マルチポイント接続</span>
+            </div>
+          </div>
+          <a href="../support.html#retailers" class="pp-info__link">販売店を探す →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Sticky Nav -->
+    <nav class="pp-sticky-nav" aria-label="製品ナビゲーション">
+      <div class="pp-sticky-nav__inner">
+        <span class="pp-sticky-nav__name">Melomania P100 SE</span>
+        <a href="#specs" class="pp-sticky-nav__link">仕様</a>
+        <a href="../support.html#retailers" class="pp-sticky-nav__link">販売店を探す</a>
+      </div>
+    </nav>
+
+    <!-- 3. Three-Column Feature Images -->
+    <div class="pp-three-col fade-in">
+      <img src="../images/products/melomania-p100-se/feature-col-1.webp" alt="P100 SE イヤーカップ外側クローズアップ" loading="lazy">
+      <img src="../images/products/melomania-p100-se/feature-col-2.webp" alt="P100 SE イヤーパッドと内部チャンバー" loading="lazy">
+      <img src="../images/products/melomania-p100-se/feature-col-3.webp" alt="P100 SE ホワイト USB-Cポートとコントロール" loading="lazy">
+    </div>
+
+    <!-- 4. Feature Text Sections -->
+    <section class="pp-text-section fade-in">
+      <h2 class="pp-text-section__heading">Hi-Fiエンジニアが設計、音楽のために生まれた</h2>
+      <p class="pp-text-section__body">50年以上のエンジニアリング専門知識を、シグネチャーHi-Fiサウンドに凝縮。初代P100からのサウンドをさらに磨き上げるために、エンジニアがすべての音符にこだわり抜きました。その成果をぜひ体感してください。</p>
+    </section>
+
+    <section class="pp-text-section fade-in">
+      <h2 class="pp-text-section__heading">大好きな音楽を、もっと長く</h2>
+      <p class="pp-text-section__body">再設計されたヘッドバンドにより快適性が向上し、音楽への没入感がさらに深まります。バッテリーとイヤーパッドクッションは一般的な工具で交換可能。長期間のご使用を前提にした設計で、大好きな音楽をもっと長くお楽しみいただけます。</p>
+    </section>
+
+    <section class="pp-text-section fade-in">
+      <h2 class="pp-text-section__heading">DynamEQ</h2>
+      <p class="pp-text-section__body">現代のライフスタイルにはリスニングの柔軟性が求められますが、どんな環境でも音楽の品質は犠牲にしたくない。DynamEQは、低音と高音を微妙に調整し、あらゆる音量で音楽を完璧にバランスさせます。ボリュームを最大にしても、オフィスで控えめに聴いても、すべてのトラックがフルでナチュラルに響きます。</p>
+    </section>
+
+    <!-- 5. Press Quotes Carousel -->
+    <section class="pp-quote fade-in">
+      <div class="pp-quote__inner">
+        <div class="pp-quote__slide is-active">
+          <p class="pp-quote__text">"サウンドは素晴らしく、ビルドクオリティも印象的。そしてバッテリーライフは依然として圧巻。"</p>
+          <div class="pp-quote__source"><img src="../images/products/melomania-p100-se/quote-logo-1.webp" alt="T3" loading="lazy"></div>
+        </div>
+        <div class="pp-quote__slide">
+          <p class="pp-quote__text">"400ドル以下で最も優れたサウンドのヘッドホン。"</p>
+          <div class="pp-quote__source"><img src="../images/products/melomania-p100-se/quote-logo-2.webp" alt="Tom's Guide" loading="lazy"></div>
+        </div>
+        <div class="pp-quote__slide">
+          <p class="pp-quote__text">"よりクリーンで、よりダイナミックな、Hi-Fiワイヤレスサウンド。"</p>
+          <div class="pp-quote__source"><img src="../images/products/melomania-p100-se/quote-logo-3.webp" alt="eCoustics" loading="lazy"></div>
+        </div>
+        <div class="pp-gallery__dots" style="margin-top:32px;">
+          <button class="pp-gallery__dot is-active" data-quote aria-label="クォート 1"></button>
+          <button class="pp-gallery__dot" data-quote aria-label="クォート 2"></button>
+          <button class="pp-gallery__dot" data-quote aria-label="クォート 3"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Full-Width Image + Heading Block: Deep Listening -->
+    <div class="pp-fullwidth-img pp-fullwidth-img--16x9 fade-in">
+      <img src="../images/products/melomania-p100-se/fullwidth-1.webp" alt="P100 SEを着用する2人のモデル" loading="lazy">
+    </div>
+
+    <section class="pp-heading-block fade-in">
+      <h2 class="pp-heading-block__title">Deep Listening, Even Outside Your Home</h2>
+      <p class="pp-heading-block__text">ロンドンのHi-Fiエンジニアが設計——音楽を愛し、外出先でも最高品質の再生を求める方のために。スマートテクノロジーとプレミアム素材、そして最長の旅を何度でも支える交換可能バッテリーを組み合わせ、人生の挑戦に立ち向かいながら、お気に入りの曲をまるで初めて聴くかのように体験できるヘッドホンです。</p>
+    </section>
+
+    <!-- 7. Twin Images -->
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:0;" class="fade-in">
+      <div class="pp-fullwidth-img pp-fullwidth-img--tall"><img src="../images/products/melomania-p100-se/design-detail-1.webp" alt="ホワイトP100 SEを着用する女性" loading="lazy"></div>
+      <div class="pp-fullwidth-img pp-fullwidth-img--hero"><img src="../images/products/melomania-p100-se/design-detail-2.webp" alt="ブルーP100 SE イヤーカップ調整" loading="lazy"></div>
+    </div>
+
+    <!-- 8. Sub-Features: Crafted for true music lovers -->
+    <section class="pp-section-heading fade-in">
+      <h2 class="pp-section-heading__title">真の音楽愛好家のために</h2>
+    </section>
+
+    <section class="pp-eng-features fade-in">
+      <div class="pp-eng-feature">
+        <h3 class="pp-eng-feature__title">ワンチャージで100時間</h3>
+        <p class="pp-eng-feature__text">フル充電で最大100時間（ANC使用時60時間）のリスニングをお楽しみいただけます。バッテリーが少なくなっても、わずか5分の充電で約4時間の再生が可能です。</p>
+      </div>
+      <div class="pp-eng-feature">
+        <h3 class="pp-eng-feature__title">優れたアンプリフィケーション</h3>
+        <p class="pp-eng-feature__text">受賞歴のあるCXシリーズアンプの核となるClass A/Bアンプが、シグネチャーサウンドを駆動。99%のヘッドホンに搭載される標準技術とは一線を画す、聴けばわかる違いをお届けします。</p>
+      </div>
+      <div class="pp-eng-feature">
+        <h3 class="pp-eng-feature__title">ロスレスクラリティ</h3>
+        <p class="pp-eng-feature__text">aptX Lossless Bluetoothが音楽をビットバイビットで完全に伝送し、ワイヤレスリスニング中も妥協のないサウンドクオリティを維持。Snapdragon Soundにより24bit/96kHzでのストリーミングも実現。</p>
+      </div>
+      <div class="pp-eng-feature">
+        <h3 class="pp-eng-feature__title">アダプティブコネクティビティ</h3>
+        <p class="pp-eng-feature__text">aptX Adaptiveがインテリジェントに接続品質をモニタリングし維持。電波環境が厳しい場所でも、途切れのないパフォーマンスを実現します。</p>
+      </div>
+      <div class="pp-eng-feature">
+        <h3 class="pp-eng-feature__title">カスタマイズ可能なサウンド</h3>
+        <p class="pp-eng-feature__text">よりダイナミックなサウンドを実現するためチューニングを強化しましたが、お好みに合わせたカスタマイズも可能。Melomania Connectで自分だけのプリセットを作成するか、6つの厳選プロファイルからお選びいただけます。</p>
+      </div>
+    </section>
+
+    <!-- 9. Full-Width Image -->
+    <div class="pp-fullwidth-img pp-fullwidth-img--16x9 fade-in">
+      <img src="../images/products/melomania-p100-se/fullwidth-2.webp" alt="ブラックP100 SEを着用する男性" loading="lazy">
+    </div>
+
+    <!-- 10. Section Heading: Engineered for excellence -->
+    <section class="pp-section-heading fade-in">
+      <h2 class="pp-section-heading__title">エンジニアリングの追求</h2>
+    </section>
+
+    <!-- 11. Feature Row 1: Discovery is in the detail -->
+    <section class="pp-feature-row fade-in">
+      <div class="pp-feature-row__grid">
+        <div class="pp-feature-row__image">
+          <img src="../images/products/melomania-p100-se/feature-1.webp" alt="P100 SE イヤーカップ分解図" loading="lazy">
+        </div>
+        <div class="pp-feature-row__content">
+          <h2 class="pp-feature-row__title">ディテールに宿る発見</h2>
+          <p class="pp-feature-row__text">精巧に作り込まれた40mmドライバーが、音楽のエネルギーをすべて保存。サウンドに包み込まれ、これまで聞こえなかった楽曲のニュアンスを発見できます。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. Feature Row 2: For music and for the planet (reverse) -->
+    <section class="pp-feature-row pp-feature-row--reverse fade-in">
+      <div class="pp-feature-row__grid">
+        <div class="pp-feature-row__image">
+          <img src="../images/products/melomania-p100-se/feature-2.webp" alt="P100 SE パッケージとサステナブル素材" loading="lazy">
+        </div>
+        <div class="pp-feature-row__content">
+          <h2 class="pp-feature-row__title">音楽のため、地球のため</h2>
+          <p class="pp-feature-row__text">循環型経済を推進し、廃棄物を最小限に。レアアース・ネオジムの100%とプラスチックの50%にリサイクル素材を使用。パッケージもすべてエコフレンドリーでプラスチックフリーです。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13. Feature Row 3: Crystal clear phone calls -->
+    <section class="pp-feature-row fade-in">
+      <div class="pp-feature-row__grid">
+        <div class="pp-feature-row__image">
+          <img src="../images/products/melomania-p100-se/feature-3.webp" alt="P100 SE ブルー イヤーカップ正面" loading="lazy">
+        </div>
+        <div class="pp-feature-row__content">
+          <h2 class="pp-feature-row__title">クリスタルクリアな通話品質</h2>
+          <p class="pp-feature-row__text">複数のビームフォーミングマイクとQualcomm最新のcVc 8.0テクノロジーが背景ノイズを抑制し、卓越した音声クリアリティを実現します。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 14. Feature Row 4: Active Noise Cancellation (reverse) -->
+    <section class="pp-feature-row pp-feature-row--reverse fade-in">
+      <div class="pp-feature-row__grid">
+        <div class="pp-feature-row__image">
+          <img src="../images/products/melomania-p100-se/feature-4.webp" alt="P100 SE ブルー ノイズキャンセリング" loading="lazy">
+        </div>
+        <div class="pp-feature-row__content">
+          <h2 class="pp-feature-row__title">アクティブノイズキャンセリング</h2>
+          <p class="pp-feature-row__text">騒がしい街の喧騒を静寂のサンクチュアリに変える。高性能アダプティブハイブリッドノイズキャンセリングが、マイクアレイと最先端テクノロジーを組み合わせ、真に没入感のある体験を提供。周囲の音を聞きたいときは、ワンタップでトランスペアレンシーモードに切り替えられます。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 15. Feature Row 5: Effortless listening -->
+    <section class="pp-feature-row fade-in">
+      <div class="pp-feature-row__grid">
+        <div class="pp-feature-row__image">
+          <img src="../images/products/melomania-p100-se/feature-5.webp" alt="P100 SE ホワイト コントロールボタン" loading="lazy">
+        </div>
+        <div class="pp-feature-row__content">
+          <h2 class="pp-feature-row__title">エフォートレスリスニング</h2>
+          <p class="pp-feature-row__text">シンプルで直感的なコントロールで、リスニング体験を簡単に操作。SiriやGoogleアシスタントとのシームレスな連携もお楽しみいただけます。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 16. Feature Row 6: Make the most of your music (reverse) -->
+    <section class="pp-feature-row pp-feature-row--reverse fade-in">
+      <div class="pp-feature-row__grid">
+        <div class="pp-feature-row__image">
+          <img src="../images/products/melomania-p100-se/feature-6.webp" alt="Melomaniaアプリ カスタムEQ設定" loading="lazy">
+        </div>
+        <div class="pp-feature-row__content">
+          <h2 class="pp-feature-row__title">音楽を最大限に楽しむ</h2>
+          <p class="pp-feature-row__text">2台のデバイスに同時接続し、プレイリスト、ノートPCの映画、スマートフォンの通話をシームレスに切り替え——再接続の手間はありません。付属ケーブルを使えば、24bit/96kHzの有線接続も可能です。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 17. App Section: Customise your sound -->
+    <div class="pp-fullwidth-img pp-fullwidth-img--16x9 fade-in">
+      <img src="../images/products/melomania-p100-se/fullwidth-3.webp" alt="Melomaniaアプリ EQ設定画面" loading="lazy">
+    </div>
+
+    <section class="pp-heading-block fade-in">
+      <h2 class="pp-heading-block__title">サウンドをカスタマイズ</h2>
+      <p class="pp-heading-block__text">7バンド調整EQで、自分だけのサウンドシグネチャーを作り上げましょう。ボーカルを強化し、低音を引き締め、高音を微調整——リスニング体験を完全にコントロールできます。</p>
+    </section>
+
+    <!-- 18. Full-Width Image + Heading: Crafted for unmatched sound -->
+    <div class="pp-fullwidth-img pp-fullwidth-img--16x9 fade-in">
+      <img src="../images/products/melomania-p100-se/fullwidth-4.webp" alt="P100 SE ヘッドバンドとヒンジのディテール" loading="lazy">
+    </div>
+
+    <section class="pp-heading-block fade-in">
+      <h2 class="pp-heading-block__title">比類なきサウンドのために</h2>
+      <p class="pp-heading-block__text">ロンドンで設計・チューニング。エンジニアが多彩な音楽ジャンルで徹底的にテストし、卓越したリスニング体験を実現し、業界ベンチマークを超えるパフォーマンスを達成しました。</p>
+    </section>
+
+    <!-- 19. Technical Specifications -->
+    <section id="specs" class="pp-specs fade-in">
+      <div class="pp-specs__inner">
+        <h2 class="pp-specs__title">技術仕様</h2>
+        <div class="pp-specs__table">
+          <div class="pp-specs__row"><span class="pp-specs__label">高性能オーディオモード</span><span class="pp-specs__value">Class A/Bアンプ</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">ドライバー</span><span class="pp-specs__value">40mm 三層コンポジットダイヤフラム</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">バッテリー再生時間</span><span class="pp-specs__value">最大100時間</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">バッテリー再生時間（ANC ON）</span><span class="pp-specs__value">最大60時間</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">充電時間</span><span class="pp-specs__value">160分以内</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">急速充電</span><span class="pp-specs__value">5分で4時間再生（ANC OFF）</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">電源供給</span><span class="pp-specs__value">USB-C</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">ノイズキャンセリング</span><span class="pp-specs__value">ハイブリッドANC</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">トランスペアレンシーモード</span><span class="pp-specs__value">対応</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">マイク</span><span class="pp-specs__value">6基</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">音声処理</span><span class="pp-specs__value">Qualcomm® cVc™ エコーキャンセリング＆ノイズ抑制</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">対応アプリ</span><span class="pp-specs__value">Melomania Connect</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">音声アシスタント</span><span class="pp-specs__value">対応</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">ファームウェア更新</span><span class="pp-specs__value">対応（Melomania Connect経由）</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">プロセッサー</span><span class="pp-specs__value">Qualcomm QCC3084 トリプルコアアーキテクチャ + Analog Devices ADAU1787</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">低遅延</span><span class="pp-specs__value">&lt;80ms（ゲーミングモード）</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">対応コーデック</span><span class="pp-specs__value">aptX™ Lossless, aptX™ Adaptive, AAC, SBC</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">対応プロファイル</span><span class="pp-specs__value">A2DP, AVRCP, HSP, HFP</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Bluetoothバージョン</span><span class="pp-specs__value">5.3</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">DynamEQ</span><span class="pp-specs__value">対応</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">装着検知</span><span class="pp-specs__value">対応</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Google Fast Pair</span><span class="pp-specs__value">対応</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">風切り音低減</span><span class="pp-specs__value">対応</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">有線モード</span><span class="pp-specs__value">USB-C または 3.5mmジャック</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">調整可能EQ</span><span class="pp-specs__value">7バンド（Melomania Connect経由）</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">動作温度</span><span class="pp-specs__value">0°C 〜 +40°C</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">動作湿度</span><span class="pp-specs__value">10〜80%（結露なきこと）</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">付属品</span><span class="pp-specs__value">クイックスタートガイド、USB-C to USB-C、USB-C to 3.5mmジャック</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">寸法（ヘッドホン）</span><span class="pp-specs__value">250 × 204 × 59mm</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">重量（ヘッドホン）</span><span class="pp-specs__value">330g</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 20. Related Products -->
+    <section class="pp-related fade-in">
+      <div class="pp-related__inner">
+        <h2 class="pp-related__title">関連製品</h2>
+        <div class="pp-related__grid">
+          <a href="melomania-a100.html" class="pp-product-card">
+            <div class="pp-product-card__image"><img src="../images/products/melomania-a100.webp" alt="Melomania A100" loading="lazy"></div>
+            <h3 class="pp-product-card__name">Melomania A100</h3>
+            <p class="pp-product-card__desc">ANC搭載完全ワイヤレスイヤホン</p>
+          </a>
+          <a href="melomania-m1-plus.html" class="pp-product-card">
+            <div class="pp-product-card__image"><img src="../images/products/melomania-m1-plus.webp" alt="Melomania M1+" loading="lazy"></div>
+            <h3 class="pp-product-card__name">Melomania M1+</h3>
+            <p class="pp-product-card__desc">完全ワイヤレスイヤホン</p>
           </a>
         </div>
       </div>
     </section>
 
   </main>
-
-  <!-- ===== Footer ===== -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-col">
-          <h3>製品</h3>
-          <a href="../hifi.html">Hi-Fi</a>
-          <a href="../headphones.html">ヘッドホン</a>
-          <a href="../speakers.html">スピーカー</a>
-          <a href="../accessories.html">アクセサリー</a>
-        </div>
-        <div class="footer-col">
-          <h3>サポート</h3>
-          <a href="../support.html#registration">製品登録</a>
-          <a href="../support.html#faq">よくあるご質問</a>
-          <a href="../support.html#manuals">取扱説明書</a>
-          <a href="../support.html#contact">お問い合わせ</a>
-        </div>
-        <div class="footer-col">
-          <h3>ブランド</h3>
-          <a href="../about.html">ブランドストーリー</a>
-          <a href="../technology.html">テクノロジー</a>
-          <a href="../news.html">ニュース</a>
-          <a href="../reviews.html">レビュー</a>
-        </div>
-        <div class="footer-col">
-          <h3>法的情報</h3>
-          <a href="../privacy.html">プライバシーポリシー</a>
-          <a href="../terms.html">利用規約</a>
-          <a href="../terms.html#tokushoho">特定商取引法に基づく表記</a>
-        </div>
+        <div class="footer-col"><h3>製品</h3><a href="../hifi.html">Hi-Fi</a><a href="../headphones.html">ヘッドホン</a><a href="../speakers.html">スピーカー</a><a href="../accessories.html">アクセサリー</a></div>
+        <div class="footer-col"><h3>サポート</h3><a href="../support.html#registration">製品登録</a><a href="../support.html#faq">よくあるご質問</a><a href="../support.html#manuals">取扱説明書</a><a href="../support.html#contact">お問い合わせ</a></div>
+        <div class="footer-col"><h3>ブランド</h3><a href="../about.html">ブランドストーリー</a><a href="../technology.html">テクノロジー</a><a href="../news.html">ニュース</a><a href="../reviews.html">レビュー</a></div>
+        <div class="footer-col"><h3>法的情報</h3><a href="../privacy.html">プライバシーポリシー</a><a href="../terms.html">利用規約</a><a href="../terms.html#tokushoho">特定商取引法に基づく表記</a></div>
       </div>
       <div class="footer-bottom">
         <p>&copy; 2025 Cambridge Audio. All rights reserved.</p>
-        <div class="footer-bottom-links">
-          <a href="../privacy.html">プライバシー</a>
-          <a href="../privacy.html#cookies">Cookie設定</a>
-          <a href="../terms.html#sitemap">サイトマップ</a>
-        </div>
+        <div class="footer-bottom-links"><a href="../privacy.html">プライバシー</a><a href="../privacy.html#cookies">Cookie設定</a><a href="../terms.html#sitemap">サイトマップ</a></div>
       </div>
     </div>
   </footer>
-
   <script src="../js/main.js" defer></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Hero gallery
+    var imgs = document.querySelectorAll('.pp-gallery__img');
+    var dots = document.querySelectorAll('.pp-gallery__dot:not([data-quote])');
+    dots.forEach(function(dot, i) {
+      dot.addEventListener('click', function() {
+        imgs.forEach(function(img) { img.classList.remove('is-active'); });
+        dots.forEach(function(d) { d.classList.remove('is-active'); });
+        imgs[i].classList.add('is-active');
+        dot.classList.add('is-active');
+      });
+    });
+    // Quote carousel
+    var slides = document.querySelectorAll('.pp-quote__slide');
+    var qdots = document.querySelectorAll('.pp-gallery__dot[data-quote]');
+    qdots.forEach(function(dot, i) {
+      dot.addEventListener('click', function() {
+        slides.forEach(function(s) { s.classList.remove('is-active'); s.style.display = 'none'; });
+        qdots.forEach(function(d) { d.classList.remove('is-active'); });
+        slides[i].classList.add('is-active');
+        slides[i].style.display = 'block';
+        dot.classList.add('is-active');
+      });
+    });
+    // Initialize: hide non-active slides
+    slides.forEach(function(s) { if (!s.classList.contains('is-active')) s.style.display = 'none'; });
+  });
+  </script>
 </body>
 </html>
