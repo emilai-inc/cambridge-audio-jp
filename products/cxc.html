@@ -25,82 +25,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"></noscript>
-  <link rel="stylesheet" href="../css/style.css">
-<style>
-    /* ===== Font Face ===== */
+  <style>
     @font-face { font-family: 'Sohne Wide'; src: url('../fonts/sohne-wide-bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
     @font-face { font-family: 'Tiempos Headline'; src: url('../fonts/tiempos-headline-light.woff2') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    :root { --color-black: #000; --color-white: #fff; --color-gray-50: #f8f8f8; --color-gray-100: #f0f0f0; --color-gray-200: #e0e0e0; --color-gray-400: #999; --color-gray-600: #666; --color-gray-800: #333; --color-teal: #00857c; --color-teal-dark: #006b63; --font-sans: 'Helvetica Neue', 'Noto Sans JP', Arial, sans-serif; --font-serif: 'Tiempos Headline', 'Noto Serif JP', Georgia, 'Times New Roman', serif; --max-width: 1280px; --header-height: 64px; }
-    html { font-size: 16px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-    body { font-family: var(--font-sans); color: var(--color-black); background: var(--color-white); line-height: 1.6; }
-    a { color: inherit; text-decoration: none; } img { max-width: 100%; height: auto; display: block; } ul { list-style: none; }
-    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
-    .site-header { position: sticky; top: 0; z-index: 1000; background: var(--color-white); border-bottom: 1px solid var(--color-gray-200); height: var(--header-height); }
-    .header-inner { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; height: 100%; display: flex; align-items: center; justify-content: space-between; }
-    .header-logo a { display: flex; align-items: center; } .header-logo img { height: 20px; width: auto; }
-    .header-logo .logo-text { font-family: var(--font-sans); font-size: 18px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; }
-    .header-nav { display: flex; gap: 32px; } .header-nav a { font-size: 14px; font-weight: 500; color: var(--color-gray-600); transition: color 0.2s; }
-    .header-nav a:hover, .header-nav a.active { color: var(--color-black); }
-    .header-right { display: flex; align-items: center; gap: 16px; } .region-selector { font-size: 13px; color: var(--color-gray-600); }
-    .search-btn { background: none; border: none; cursor: pointer; padding: 4px; } .search-btn svg { width: 20px; height: 20px; color: var(--color-black); }
-    .menu-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
-    .menu-toggle span { display: block; width: 24px; height: 2px; background: var(--color-black); transition: 0.3s; }
-    .product-hero { padding: 64px 0 80px; }
-    .product-hero .container { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-    .product-hero__image { background: var(--color-gray-50); border-radius: 12px; padding: 40px; display: flex; align-items: center; justify-content: center; aspect-ratio: 4/3; overflow: hidden; }
-    .product-hero__image img { width: 100%; height: 100%; object-fit: contain; }
-    .product-hero__info { display: flex; flex-direction: column; gap: 24px; }
-    .product-hero__category { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: var(--color-teal); }
-    .product-hero__name { font-family: var(--font-serif); font-size: 48px; font-weight: 300; line-height: 1.1; }
-    .product-hero__tagline { font-size: 18px; color: var(--color-gray-600); line-height: 1.6; }
-    .product-hero__features { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
-    .product-hero__features span { display: inline-block; padding: 6px 16px; border: 1px solid var(--color-gray-200); border-radius: 100px; font-size: 13px; color: var(--color-gray-800); }
-    .product-hero__cta { display: inline-flex; align-items: center; gap: 8px; background: var(--color-teal); color: var(--color-white); padding: 14px 32px; border-radius: 8px; font-size: 15px; font-weight: 600; transition: background 0.2s; width: fit-content; margin-top: 8px; }
-    .product-hero__cta:hover { background: var(--color-teal-dark); }
-    .feature-row { padding: 80px 0; } .feature-row:nth-child(even) { background: var(--color-gray-50); }
-    .feature-row .container { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-    .feature-row:nth-child(even) .container { direction: rtl; } .feature-row:nth-child(even) .container > * { direction: ltr; }
-    .feature-row__image { border-radius: 12px; overflow: hidden; aspect-ratio: 4/3; background: var(--color-gray-100); display: flex; align-items: center; justify-content: center; }
-    .feature-row__image img { width: 100%; height: 100%; object-fit: cover; }
-    .feature-row__content { display: flex; flex-direction: column; gap: 16px; }
-    .feature-row__label { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: var(--color-teal); }
-    .feature-row__title { font-family: var(--font-serif); font-size: 36px; font-weight: 300; line-height: 1.2; }
-    .feature-row__text { font-size: 16px; color: var(--color-gray-600); line-height: 1.8; }
-    .spec-section { padding: 80px 0; background: var(--color-black); color: var(--color-white); }
-    .spec-section__header { text-align: center; margin-bottom: 48px; }
-    .spec-section__header h2 { font-family: var(--font-serif); font-size: 36px; font-weight: 300; }
-    .spec-table { max-width: 800px; margin: 0 auto; }
-    .spec-table__row { display: flex; justify-content: space-between; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
-    .spec-table__label { font-size: 14px; color: rgba(255,255,255,0.6); flex: 0 0 200px; }
-    .spec-table__value { font-size: 14px; text-align: right; flex: 1; }
-    .related-products { padding: 80px 0; }
-    .related-products__header { text-align: center; margin-bottom: 48px; }
-    .related-products__header h2 { font-family: var(--font-serif); font-size: 36px; font-weight: 300; }
-    .related-products__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
-    .product-card-link { text-decoration: none; color: inherit; }
-    .product-card { border: 1px solid var(--color-gray-200); border-radius: 10px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
-    .product-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.08); }
-    .product-card__image { aspect-ratio: 4/3; overflow: hidden; background: var(--color-gray-50); }
-    .product-card__image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
-    .product-card:hover .product-card__image img { transform: scale(1.05); }
-    .product-card__body { padding: 20px; }
-    .product-card__name { font-family: 'Sohne Wide', var(--font-sans); font-size: 16px; font-weight: 700; margin-bottom: 4px; }
-    .product-card__desc { font-size: 13px; color: var(--color-gray-600); }
-    .site-footer { background: var(--color-black); color: var(--color-white); padding: 64px 0 32px; }
-    .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 48px; margin-bottom: 48px; }
-    .footer-col h3 { font-family: 'Sohne Wide', var(--font-sans); font-size: 14px; font-weight: 700; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px; }
-    .footer-col a { display: block; font-size: 14px; color: rgba(255,255,255,0.6); margin-bottom: 12px; transition: color 0.2s; }
-    .footer-col a:hover { color: var(--color-white); }
-    .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
-    .footer-bottom p { font-size: 12px; color: rgba(255,255,255,0.4); }
-    .footer-bottom-links { display: flex; gap: 20px; }
-    .footer-bottom-links a { font-size: 12px; color: rgba(255,255,255,0.4); transition: color 0.2s; }
-    .footer-bottom-links a:hover { color: var(--color-white); }
-    @media (max-width: 1024px) { .product-hero__name { font-size: 36px; } .feature-row__title { font-size: 28px; } .related-products__grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 768px) { .header-nav { display: none; } .menu-toggle { display: flex; } .product-hero .container { grid-template-columns: 1fr; gap: 32px; } .product-hero__name { font-size: 32px; } .feature-row .container { grid-template-columns: 1fr; gap: 32px; } .feature-row:nth-child(even) .container { direction: ltr; } .spec-table__label { flex: 0 0 140px; } .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; } }
-    @media (max-width: 480px) { .product-hero__name { font-size: 28px; } .feature-row__title { font-size: 24px; } .related-products__grid { grid-template-columns: 1fr; } .spec-table__row { flex-direction: column; gap: 4px; } .spec-table__value { text-align: left; } .footer-grid { grid-template-columns: 1fr; } .footer-bottom { flex-direction: column; align-items: flex-start; } }
   </style>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/product-page.css">
 </head>
 <body>
 <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
@@ -132,80 +62,221 @@
   </header>
   <main id="main-content">
 
-    <section class="product-hero">
-      <div class="container">
-        <div class="product-hero__image fade-in">
-          <img src="../images/products/cxc.webp" alt="CXC">
-        </div>
-        <div class="product-hero__info slide-right">
-          <span class="product-hero__category">CDトランスポート</span>
-          <h1 class="product-hero__name">CXC</h1>
-          <p class="product-hero__tagline">純粋なCDトランスポートとして、ディスクの読み取りに特化した設計。外部DACと組み合わせることで、CDの持つポテンシャルを最大限に引き出します。</p>
-          <div class="product-hero__features">
-            <span>デジタル出力専用</span>
-            <span>S/PDIF出力</span>
-            <span>TOSlink出力</span>
-            <span>低ジッター設計</span>
+    <!-- 1. Hero Section -->
+    <section class="pp-hero fade-in">
+      <div class="pp-hero__grid">
+        <div class="pp-gallery" aria-label="製品画像ギャラリー">
+          <div class="pp-gallery__main">
+            <img class="pp-gallery__img is-active" src="../images/products/cxc/hero-1.webp" alt="CXC">
+            <img class="pp-gallery__img" src="../images/products/cxc/hero-2.webp" alt="CXC">
+            <img class="pp-gallery__img" src="../images/products/cxc/hero-3.webp" alt="CXC">
+            <img class="pp-gallery__img" src="../images/products/cxc/hero-4.webp" alt="CXC">
+            <img class="pp-gallery__img" src="../images/products/cxc/hero-5.webp" alt="CXC">
+            <img class="pp-gallery__img" src="../images/products/cxc/hero-6.webp" alt="CXC">
+            <img class="pp-gallery__img" src="../images/products/cxc/hero-7.webp" alt="CXC">
           </div>
-          <a href="../support.html#retailers" class="product-hero__cta">販売店を探す</a>
+          <div class="pp-gallery__dots" role="tablist" aria-label="画像選択">
+            <button class="pp-gallery__dot is-active" type="button" role="tab" aria-selected="true" aria-label="画像1" data-index="0"></button>
+            <button class="pp-gallery__dot" type="button" role="tab" aria-selected="false" aria-label="画像2" data-index="1"></button>
+            <button class="pp-gallery__dot" type="button" role="tab" aria-selected="false" aria-label="画像3" data-index="2"></button>
+            <button class="pp-gallery__dot" type="button" role="tab" aria-selected="false" aria-label="画像4" data-index="3"></button>
+            <button class="pp-gallery__dot" type="button" role="tab" aria-selected="false" aria-label="画像5" data-index="4"></button>
+            <button class="pp-gallery__dot" type="button" role="tab" aria-selected="false" aria-label="画像6" data-index="5"></button>
+            <button class="pp-gallery__dot" type="button" role="tab" aria-selected="false" aria-label="画像7" data-index="6"></button>
+          </div>
+        </div>
+        <div class="pp-info">
+          <span class="pp-info__category">Compact Disc Transport</span>
+          <h1 class="pp-info__name">CXC</h1>
+          <p class="pp-info__desc">Unlock every detail. CXC is a precision-engineered CD transport designed for exceptional digital playback. Paired with a high-quality DAC or DAC-equipped amplifier, it brings your CD collection to life with unrivalled clarity and accuracy.</p>
+          <span class="pp-info__category">Lunar Grey</span>
+          <a href="../retailers.html" class="pp-info__link">販売店を探す</a>
+          <div class="pp-features">
+            <div class="pp-feature-item">
+              <div class="pp-feature-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+              <span class="pp-feature-item__text">S3 Servo</span>
+            </div>
+            <div class="pp-feature-item">
+              <div class="pp-feature-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div>
+              <span class="pp-feature-item__text">S/PDIF coaxial</span>
+            </div>
+            <div class="pp-feature-item">
+              <div class="pp-feature-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+              <span class="pp-feature-item__text">TOSLINK optical</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="feature-row fade-in">
-      <div class="container">
-        <div class="feature-row__image"><img src="../images/products/cxc.webp" alt="純粋なトランスポート"></div>
-        <div class="feature-row__content">
-          <span class="feature-row__label">コンセプト</span>
-          <h2 class="feature-row__title">純粋なトランスポート</h2>
-          <p class="feature-row__text">CXCはDACを内蔵しない純粋なCDトランスポートです。ディスクの読み取りとデジタル信号の出力に特化することで、ジッターを最小限に抑えた高品質なデジタルストリームを生成します。</p>
+    <!-- 2. Full-width Lifestyle Image -->
+    <section class="pp-fullwidth-img pp-fullwidth-img--hero fade-in">
+      <img src="../images/products/cxc/lifestyle-1.webp" alt="CXC CD player on wooden shelf with magazines" loading="lazy">
+    </section>
+
+    <!-- 3. Sticky Navigation -->
+    <nav class="pp-sticky-nav" aria-label="製品ページナビゲーション">
+      <div class="pp-sticky-nav__inner">
+        <span class="pp-sticky-nav__name">CXC</span>
+        <a href="#specs" class="pp-sticky-nav__link">仕様</a>
+        <a href="../retailers.html" class="pp-sticky-nav__link">販売店を探す</a>
+      </div>
+    </nav>
+
+    <!-- 4. Three-Column Feature Images -->
+    <section class="pp-three-col fade-in">
+      <img src="../images/products/cxc/feature-col-1.webp" alt="CXC with open tray showing CD" loading="lazy">
+      <img src="../images/products/cxc/feature-col-2.webp" alt="Person pressing CXC button with CXN100" loading="lazy">
+      <img src="../images/products/cxc/feature-col-3.webp" alt="CXC angled view in silver finish" loading="lazy">
+    </section>
+
+    <!-- 5. Three Text Sections -->
+    <section class="pp-text-section fade-in">
+      <h2 class="pp-text-section__heading">Pure purpose, perfect performance</h2>
+      <p class="pp-text-section__body">CXC is built with a singular focus: to read the digital audio from your CDs with total accuracy. Every component is designed to perform with precision. The end result is pure, perfect listening. Every time.</p>
+    </section>
+
+    <section class="pp-text-section fade-in">
+      <h2 class="pp-text-section__heading">Precision driving</h2>
+      <p class="pp-text-section__body">CXC's disc drive—the renowned S3 Servo—spins CDs at the exact speed needed for flawless data retrieval. This precision engineering gives you the best possible audio from every disc in your collection.</p>
+    </section>
+
+    <section class="pp-text-section fade-in">
+      <h2 class="pp-text-section__heading">Physical Perfection</h2>
+      <p class="pp-text-section__body">The acoustically dampened metal chassis in CXC ensures nothing disrupts the digital signal. With coaxial and optical S/PDIF digital outputs, you can easily connect to any DAC or DAC-equipped amplifier, ensuring a cleaner experience, whichever way you listen.</p>
+    </section>
+
+    <!-- 6. Fullwidth Image + Heading Block -->
+    <section class="pp-fullwidth-img pp-fullwidth-img--16x9 fade-in">
+      <img src="../images/products/cxc/fullwidth-1.webp" alt="CX stack with model enjoying music" loading="lazy">
+    </section>
+
+    <div class="pp-heading-block fade-in">
+      <h2 class="pp-heading-block__title">REWARDING PERFORMANCE</h2>
+      <p class="pp-heading-block__text">CXC is for those wanting the pinnacle of CD performance. Its focused, digital-only design, premium components, and precise engineering make it the ultimate companion for high-end DACs and digital-first amplifiers, enriching any audio system.</p>
+    </div>
+
+    <!-- 7. Twin Detail Images -->
+    <section class="pp-feature-row fade-in">
+      <div class="pp-feature-row__grid">
+        <div class="pp-feature-row__image">
+          <img src="../images/products/cxc/design-detail-1.webp" alt="CXC front view with display and controls" loading="lazy">
+        </div>
+        <div class="pp-feature-row__image">
+          <img src="../images/products/cxc/design-detail-2.webp" alt="CXC side profile minimalist finish" loading="lazy">
         </div>
       </div>
     </section>
 
-    <section class="feature-row fade-in">
-      <div class="container">
-        <div class="feature-row__image"><img src="../images/products/cxc.webp" alt="低ジッターで高品質"></div>
-        <div class="feature-row__content">
-          <span class="feature-row__label">テクノロジー</span>
-          <h2 class="feature-row__title">低ジッターで高品質</h2>
-          <p class="feature-row__text">専用設計のディスクメカニズムとクロック回路により、極めて低いジッターでデジタル信号を出力。お手持ちのDACの性能を最大限に引き出すことができます。</p>
+    <!-- 8. Sub-features -->
+    <div class="pp-section-heading fade-in">
+      <h2 class="pp-section-heading__title">Pure precision, pristine playback</h2>
+    </div>
+
+    <section class="pp-text-section fade-in">
+      <h2 class="pp-text-section__heading">Custom S3 Servo drive</h2>
+      <p class="pp-text-section__body">ensures precise, error-free CD reading.</p>
+    </section>
+
+    <section class="pp-text-section fade-in">
+      <h2 class="pp-text-section__heading">Digital coaxial and optical outputs</h2>
+      <p class="pp-text-section__body">provide flexibility for pure digital connectivity.</p>
+    </section>
+
+    <section class="pp-text-section fade-in">
+      <h2 class="pp-text-section__heading">Gapless playback</h2>
+      <p class="pp-text-section__body">perfect for live recordings and continuous mixes.</p>
+    </section>
+
+    <section class="pp-text-section fade-in">
+      <h2 class="pp-text-section__heading">Acoustically dampened</h2>
+      <p class="pp-text-section__body">chassis isolates internal components for optimal performance.</p>
+    </section>
+
+    <section class="pp-text-section fade-in">
+      <h2 class="pp-text-section__heading">Complete Remote Control</h2>
+      <p class="pp-text-section__body">Compatibility across the CX Series for effortless system management.</p>
+    </section>
+
+    <!-- 9. Fullwidth Image before Quotes -->
+    <section class="pp-fullwidth-img pp-fullwidth-img--hero fade-in">
+      <img src="../images/products/cxc/fullwidth-2.webp" alt="CX Series stack with turntable and records" loading="lazy">
+    </section>
+
+    <!-- 10. Press Quotes (Carousel) -->
+    <section class="pp-quote fade-in">
+      <div class="pp-quote__inner">
+        <blockquote class="pp-quote__text pp-quote__slide is-active">"Trust us, its sound will impress."</blockquote>
+        <blockquote class="pp-quote__text pp-quote__slide" style="display:none">"...a very pleasant reminder that real time and attention spent listening to music pays dividends."</blockquote>
+        <blockquote class="pp-quote__text pp-quote__slide" style="display:none">"...robust power supply, durability, and solid construction make it a worthwhile addition to your system."</blockquote>
+        <div class="pp-quote__source pp-quote__source-slide is-active">
+          <img src="../images/products/cxc/quote-logo-1.webp" alt="What Hi-Fi?" loading="lazy">
+        </div>
+        <div class="pp-quote__source pp-quote__source-slide" style="display:none">
+          <img src="../images/products/cxc/quote-logo-2.webp" alt="Twittering Machines" loading="lazy">
+        </div>
+        <div class="pp-quote__source pp-quote__source-slide" style="display:none">
+          <img src="../images/products/cxc/quote-logo-3.webp" alt="ecoustics" loading="lazy">
+        </div>
+        <div class="pp-gallery__dots" role="tablist" aria-label="レビュー選択" style="margin-top:32px">
+          <button class="pp-gallery__dot is-active" type="button" role="tab" aria-selected="true" aria-label="レビュー1" data-quote="0"></button>
+          <button class="pp-gallery__dot" type="button" role="tab" aria-selected="false" aria-label="レビュー2" data-quote="1"></button>
+          <button class="pp-gallery__dot" type="button" role="tab" aria-selected="false" aria-label="レビュー3" data-quote="2"></button>
         </div>
       </div>
     </section>
 
-    <section class="feature-row fade-in">
-      <div class="container">
-        <div class="feature-row__image"><img src="../images/products/cxc.webp" alt="お気に入りのDACと組み合わせ"></div>
-        <div class="feature-row__content">
-          <span class="feature-row__label">柔軟性</span>
-          <h2 class="feature-row__title">お気に入りのDACと組み合わせ</h2>
-          <p class="feature-row__text">S/PDIFとTOSlinkの2系統のデジタル出力を搭載。CXシリーズのDacMagicはもちろん、お好みの外部DACと自由に組み合わせて、理想のCDプレイバックシステムを構築できます。</p>
+    <!-- 11. Feature Row -->
+    <section class="pp-feature-row fade-in">
+      <div class="pp-feature-row__grid">
+        <div class="pp-feature-row__image">
+          <img src="../images/products/cxc/feature-row-1.webp" alt="CXA81, CXN100 and CXC stacked on shelf" loading="lazy">
+        </div>
+        <div class="pp-feature-row__content">
+          <h2 class="pp-feature-row__title">Timeless and Lasting</h2>
+          <p class="pp-feature-row__text">We designed CXC to stand the test of time. With the precision-engineered S3 Servo, it plays your discs perfectly for years to come. And with its minimalist aluminium and steel construction, CXC's timeless design will continue to look great in any setup.</p>
         </div>
       </div>
     </section>
 
-    <section class="spec-section fade-in">
-      <div class="container">
-        <div class="spec-section__header"><h2>技術仕様</h2></div>
-        <div class="spec-table">
-          <div class="spec-table__row"><span class="spec-table__label">デジタル出力</span><span class="spec-table__value">1 x S/PDIF (同軸)、1 x TOSlink</span></div>
-          <div class="spec-table__row"><span class="spec-table__label">ディスクタイプ</span><span class="spec-table__value">CD、CD-R、CD-RW</span></div>
-          <div class="spec-table__row"><span class="spec-table__label">出力フォーマット</span><span class="spec-table__value">16bit/44.1kHz</span></div>
-          <div class="spec-table__row"><span class="spec-table__label">低ジッター設計</span><span class="spec-table__value">対応</span></div>
-          <div class="spec-table__row"><span class="spec-table__label">ディスク方式</span><span class="spec-table__value">スロットローディング</span></div>
-          <div class="spec-table__row"><span class="spec-table__label">寸法 (W x H x D)</span><span class="spec-table__value">430 x 86 x 305mm</span></div>
-          <div class="spec-table__row"><span class="spec-table__label">重量</span><span class="spec-table__value">4.0kg</span></div>
+    <!-- 12. Spec Table -->
+    <section class="pp-specs fade-in" id="specs">
+      <div class="pp-specs__inner">
+        <h2 class="pp-specs__title">技術仕様</h2>
+        <div class="pp-specs__table">
+          <div class="pp-specs__row"><span class="pp-specs__label">Digital audio outputs</span><span class="pp-specs__value">S/PDIF coaxial and TOSLINK optical</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Total correlated jitter</span><span class="pp-specs__value">&lt;140ps</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">S/PDIF output impedance</span><span class="pp-specs__value">&lt;75 Ohms</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Max power consumption</span><span class="pp-specs__value">25W</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Standby power consumption</span><span class="pp-specs__value">&lt;0.5W</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Gapless playback?</span><span class="pp-specs__value">Yes</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Remote control</span><span class="pp-specs__value">Yes</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Dimensions (h x w x d)</span><span class="pp-specs__value">85 x 430 x 315mm (3.1 x 16.9 x 12.4")</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Weight</span><span class="pp-specs__value">4.7kg (10.3lbs)</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Box contents</span><span class="pp-specs__value">CXC CD Transport, Power Cable, 3 x AAA Batteries, Remote Control, Control Bus Cable</span></div>
         </div>
       </div>
     </section>
 
-    <section class="related-products fade-in">
-      <div class="container">
-        <div class="related-products__header"><h2>関連製品</h2></div>
-        <div class="related-products__grid">
-          <a href="axc35.html" class="product-card-link"><article class="product-card"><div class="product-card__image"><img src="../images/products/axc35.webp" alt="AXC35" loading="lazy"></div><div class="product-card__body"><h3 class="product-card__name">AXC35</h3><p class="product-card__desc">CDプレーヤー</p></div></article></a>
-          <a href="dacmagic-200m.html" class="product-card-link"><article class="product-card"><div class="product-card__image"><img src="../images/products/dacmagic-200m.webp" alt="DacMagic 200M" loading="lazy"></div><div class="product-card__body"><h3 class="product-card__name">DacMagic 200M</h3><p class="product-card__desc">D/Aコンバーター＆ヘッドホンアンプ</p></div></article></a>
+    <!-- 13. Related Products -->
+    <section class="pp-related fade-in">
+      <div class="pp-related__inner">
+        <h2 class="pp-related__title">関連製品</h2>
+        <div class="pp-related__grid">
+          <a href="cxa81-mkii.html" class="pp-product-card">
+            <div class="pp-product-card__image">
+              <img src="../images/products/cxa81-mkii.webp" alt="CXA81 Mk II" loading="lazy">
+            </div>
+            <h3 class="pp-product-card__name">CXA81 Mk II</h3>
+            <p class="pp-product-card__desc">Integrated Stereo Amplifier</p>
+          </a>
+          <a href="cxn100.html" class="pp-product-card">
+            <div class="pp-product-card__image">
+              <img src="../images/products/cxn100.webp" alt="CXN100" loading="lazy">
+            </div>
+            <h3 class="pp-product-card__name">CXN100</h3>
+            <p class="pp-product-card__desc">Network Player</p>
+          </a>
         </div>
       </div>
     </section>
@@ -226,5 +297,47 @@
     </div>
   </footer>
   <script src="../js/main.js" defer></script>
+  <script>
+    // Image Gallery Carousel
+    (function() {
+      var gallery = document.querySelector('.pp-gallery');
+      if (!gallery) return;
+      var imgs = gallery.querySelectorAll('.pp-gallery__img');
+      var dots = gallery.querySelectorAll('.pp-gallery__dot');
+      dots.forEach(function(dot, i) {
+        dot.addEventListener('click', function() {
+          imgs.forEach(function(img) { img.classList.remove('is-active'); });
+          dots.forEach(function(d) { d.classList.remove('is-active'); d.setAttribute('aria-selected', 'false'); });
+          imgs[i].classList.add('is-active');
+          dot.classList.add('is-active');
+          dot.setAttribute('aria-selected', 'true');
+        });
+      });
+    })();
+
+    // Quote Carousel
+    (function() {
+      var quoteSection = document.querySelector('.pp-quote');
+      if (!quoteSection) return;
+      var quotes = quoteSection.querySelectorAll('.pp-quote__slide');
+      var sources = quoteSection.querySelectorAll('.pp-quote__source-slide');
+      var dots = quoteSection.querySelectorAll('.pp-gallery__dot[data-quote]');
+      if (quotes.length < 2) return;
+      dots.forEach(function(dot) {
+        dot.addEventListener('click', function() {
+          var idx = parseInt(this.dataset.quote, 10);
+          quotes.forEach(function(q) { q.style.display = 'none'; q.classList.remove('is-active'); });
+          sources.forEach(function(s) { s.style.display = 'none'; s.classList.remove('is-active'); });
+          dots.forEach(function(d) { d.classList.remove('is-active'); d.setAttribute('aria-selected', 'false'); });
+          quotes[idx].style.display = '';
+          quotes[idx].classList.add('is-active');
+          sources[idx].style.display = '';
+          sources[idx].classList.add('is-active');
+          dot.classList.add('is-active');
+          dot.setAttribute('aria-selected', 'true');
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
