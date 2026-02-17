@@ -25,82 +25,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"></noscript>
-  <link rel="stylesheet" href="../css/style.css">
-<style>
-    /* ===== Font Face ===== */
+  <style>
     @font-face { font-family: 'Sohne Wide'; src: url('../fonts/sohne-wide-bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
     @font-face { font-family: 'Tiempos Headline'; src: url('../fonts/tiempos-headline-light.woff2') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    :root { --color-black: #000; --color-white: #fff; --color-gray-50: #f8f8f8; --color-gray-100: #f0f0f0; --color-gray-200: #e0e0e0; --color-gray-400: #999; --color-gray-600: #666; --color-gray-800: #333; --color-teal: #00857c; --color-teal-dark: #006b63; --font-sans: 'Helvetica Neue', 'Noto Sans JP', Arial, sans-serif; --font-serif: 'Tiempos Headline', 'Noto Serif JP', Georgia, 'Times New Roman', serif; --max-width: 1280px; --header-height: 64px; }
-    html { font-size: 16px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-    body { font-family: var(--font-sans); color: var(--color-black); background: var(--color-white); line-height: 1.6; }
-    a { color: inherit; text-decoration: none; } img { max-width: 100%; height: auto; display: block; } ul { list-style: none; }
-    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
-    .site-header { position: sticky; top: 0; z-index: 1000; background: var(--color-white); border-bottom: 1px solid var(--color-gray-200); height: var(--header-height); }
-    .header-inner { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; height: 100%; display: flex; align-items: center; justify-content: space-between; }
-    .header-logo a { display: flex; align-items: center; } .header-logo img { height: 20px; width: auto; }
-    .header-logo .logo-text { font-family: var(--font-sans); font-size: 18px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; }
-    .header-nav { display: flex; gap: 32px; } .header-nav a { font-size: 14px; font-weight: 500; color: var(--color-gray-600); transition: color 0.2s; }
-    .header-nav a:hover, .header-nav a.active { color: var(--color-black); }
-    .header-right { display: flex; align-items: center; gap: 16px; } .region-selector { font-size: 13px; color: var(--color-gray-600); }
-    .search-btn { background: none; border: none; cursor: pointer; padding: 4px; } .search-btn svg { width: 20px; height: 20px; color: var(--color-black); }
-    .menu-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
-    .menu-toggle span { display: block; width: 24px; height: 2px; background: var(--color-black); transition: 0.3s; }
-    .product-hero { padding: 64px 0 80px; }
-    .product-hero .container { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-    .product-hero__image { background: var(--color-gray-50); border-radius: 12px; padding: 40px; display: flex; align-items: center; justify-content: center; aspect-ratio: 4/3; overflow: hidden; }
-    .product-hero__image img { width: 100%; height: 100%; object-fit: contain; }
-    .product-hero__info { display: flex; flex-direction: column; gap: 24px; }
-    .product-hero__category { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: var(--color-teal); }
-    .product-hero__name { font-family: var(--font-serif); font-size: 48px; font-weight: 300; line-height: 1.1; }
-    .product-hero__tagline { font-size: 18px; color: var(--color-gray-600); line-height: 1.6; }
-    .product-hero__features { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
-    .product-hero__features span { display: inline-block; padding: 6px 16px; border: 1px solid var(--color-gray-200); border-radius: 100px; font-size: 13px; color: var(--color-gray-800); }
-    .product-hero__cta { display: inline-flex; align-items: center; gap: 8px; background: var(--color-teal); color: var(--color-white); padding: 14px 32px; border-radius: 8px; font-size: 15px; font-weight: 600; transition: background 0.2s; width: fit-content; margin-top: 8px; }
-    .product-hero__cta:hover { background: var(--color-teal-dark); }
-    .feature-row { padding: 80px 0; } .feature-row:nth-child(even) { background: var(--color-gray-50); }
-    .feature-row .container { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-    .feature-row:nth-child(even) .container { direction: rtl; } .feature-row:nth-child(even) .container > * { direction: ltr; }
-    .feature-row__image { border-radius: 12px; overflow: hidden; aspect-ratio: 4/3; background: var(--color-gray-100); display: flex; align-items: center; justify-content: center; }
-    .feature-row__image img { width: 100%; height: 100%; object-fit: cover; }
-    .feature-row__content { display: flex; flex-direction: column; gap: 16px; }
-    .feature-row__label { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: var(--color-teal); }
-    .feature-row__title { font-family: var(--font-serif); font-size: 36px; font-weight: 300; line-height: 1.2; }
-    .feature-row__text { font-size: 16px; color: var(--color-gray-600); line-height: 1.8; }
-    .spec-section { padding: 80px 0; background: var(--color-black); color: var(--color-white); }
-    .spec-section__header { text-align: center; margin-bottom: 48px; }
-    .spec-section__header h2 { font-family: var(--font-serif); font-size: 36px; font-weight: 300; }
-    .spec-table { max-width: 800px; margin: 0 auto; }
-    .spec-table__row { display: flex; justify-content: space-between; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
-    .spec-table__label { font-size: 14px; color: rgba(255,255,255,0.6); flex: 0 0 200px; }
-    .spec-table__value { font-size: 14px; text-align: right; flex: 1; }
-    .related-products { padding: 80px 0; }
-    .related-products__header { text-align: center; margin-bottom: 48px; }
-    .related-products__header h2 { font-family: var(--font-serif); font-size: 36px; font-weight: 300; }
-    .related-products__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
-    .product-card-link { text-decoration: none; color: inherit; }
-    .product-card { border: 1px solid var(--color-gray-200); border-radius: 10px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
-    .product-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.08); }
-    .product-card__image { aspect-ratio: 4/3; overflow: hidden; background: var(--color-gray-50); }
-    .product-card__image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
-    .product-card:hover .product-card__image img { transform: scale(1.05); }
-    .product-card__body { padding: 20px; }
-    .product-card__name { font-family: 'Sohne Wide', var(--font-sans); font-size: 16px; font-weight: 700; margin-bottom: 4px; }
-    .product-card__desc { font-size: 13px; color: var(--color-gray-600); }
-    .site-footer { background: var(--color-black); color: var(--color-white); padding: 64px 0 32px; }
-    .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 48px; margin-bottom: 48px; }
-    .footer-col h3 { font-family: 'Sohne Wide', var(--font-sans); font-size: 14px; font-weight: 700; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px; }
-    .footer-col a { display: block; font-size: 14px; color: rgba(255,255,255,0.6); margin-bottom: 12px; transition: color 0.2s; }
-    .footer-col a:hover { color: var(--color-white); }
-    .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
-    .footer-bottom p { font-size: 12px; color: rgba(255,255,255,0.4); }
-    .footer-bottom-links { display: flex; gap: 20px; }
-    .footer-bottom-links a { font-size: 12px; color: rgba(255,255,255,0.4); transition: color 0.2s; }
-    .footer-bottom-links a:hover { color: var(--color-white); }
-    @media (max-width: 1024px) { .product-hero__name { font-size: 36px; } .feature-row__title { font-size: 28px; } .related-products__grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 768px) { .header-nav { display: none; } .menu-toggle { display: flex; } .product-hero .container { grid-template-columns: 1fr; gap: 32px; } .product-hero__name { font-size: 32px; } .feature-row .container { grid-template-columns: 1fr; gap: 32px; } .feature-row:nth-child(even) .container { direction: ltr; } .spec-table__label { flex: 0 0 140px; } .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; } }
-    @media (max-width: 480px) { .product-hero__name { font-size: 28px; } .feature-row__title { font-size: 24px; } .related-products__grid { grid-template-columns: 1fr; } .spec-table__row { flex-direction: column; gap: 4px; } .spec-table__value { text-align: left; } .footer-grid { grid-template-columns: 1fr; } .footer-bottom { flex-direction: column; align-items: flex-start; } }
   </style>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/product-page.css">
 </head>
 <body>
 <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
@@ -132,88 +62,249 @@
   </header>
   <main id="main-content">
 
-    <section class="product-hero">
-      <div class="container">
-        <div class="product-hero__image fade-in">
-          <img src="../images/products/cxa81-mkii.webp" alt="CXA81 Mk II">
-        </div>
-        <div class="product-hero__info slide-right">
-          <span class="product-hero__category">インテグレーテッド アンプ</span>
-          <h1 class="product-hero__name">CXA81 Mk II</h1>
-          <p class="product-hero__tagline">豊かな音楽体験を約束する、高性能インテグレーテッドアンプ。ESS Sabre DACとBluetooth aptX HDを搭載し、あらゆるソースからハイレゾクオリティのサウンドをお届けします。</p>
-          <div class="product-hero__features">
-            <span>80W/ch (8Ω)</span>
-            <span>ESS Sabre DAC</span>
-            <span>Bluetooth aptX HD</span>
-            <span>USB入力</span>
-            <span>トロイダルトランス</span>
-            <span>ヘッドホンアンプ内蔵</span>
+    <!-- 1. Hero Section -->
+    <section class="pp-hero fade-in">
+      <div class="pp-hero__grid">
+        <div class="pp-gallery" aria-label="製品画像ギャラリー">
+          <div class="pp-gallery__main">
+            <img class="pp-gallery__img is-active" src="../images/products/cxa81-mkii/hero-1.webp" alt="CXA81 Mk II">
+            <img class="pp-gallery__img" src="../images/products/cxa81-mkii/hero-2.webp" alt="CXA81 Mk II">
+            <img class="pp-gallery__img" src="../images/products/cxa81-mkii/hero-3.webp" alt="CXA81 Mk II">
+            <img class="pp-gallery__img" src="../images/products/cxa81-mkii/hero-4.webp" alt="CXA81 Mk II">
+            <img class="pp-gallery__img" src="../images/products/cxa81-mkii/hero-5.webp" alt="CXA81 Mk II">
+            <img class="pp-gallery__img" src="../images/products/cxa81-mkii/hero-6.webp" alt="CXA81 Mk II">
+            <img class="pp-gallery__img" src="../images/products/cxa81-mkii/hero-7.webp" alt="CXA81 Mk II">
           </div>
-          <a href="../support.html#retailers" class="product-hero__cta">販売店を探す</a>
+          <div class="pp-gallery__dots" role="tablist" aria-label="画像選択">
+            <button class="pp-gallery__dot is-active" type="button" role="tab" aria-selected="true" aria-label="画像1" data-index="0"></button>
+            <button class="pp-gallery__dot" type="button" role="tab" aria-selected="false" aria-label="画像2" data-index="1"></button>
+            <button class="pp-gallery__dot" type="button" role="tab" aria-selected="false" aria-label="画像3" data-index="2"></button>
+            <button class="pp-gallery__dot" type="button" role="tab" aria-selected="false" aria-label="画像4" data-index="3"></button>
+            <button class="pp-gallery__dot" type="button" role="tab" aria-selected="false" aria-label="画像5" data-index="4"></button>
+            <button class="pp-gallery__dot" type="button" role="tab" aria-selected="false" aria-label="画像6" data-index="5"></button>
+            <button class="pp-gallery__dot" type="button" role="tab" aria-selected="false" aria-label="画像7" data-index="6"></button>
+          </div>
+        </div>
+        <div class="pp-info">
+          <span class="pp-info__category">Integrated Stereo Amplifier</span>
+          <h1 class="pp-info__name">CXA81 Mk II</h1>
+          <p class="pp-info__desc">Like the music we love, we keep moving—evolving and pushing forward. We've reimagined our multi award-winning integrated amplifier for new clarity and depth. 80 Watts per channel give it complete authority over your music, to reveal every emotion and nuance.</p>
+          <span class="pp-info__category">Lunar Grey</span>
+          <a href="../retailers.html" class="pp-info__link">販売店を探す</a>
+          <div class="pp-features">
+            <div class="pp-feature-item">
+              <div class="pp-feature-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg></div>
+              <span class="pp-feature-item__text">80 Watts per channel</span>
+            </div>
+            <div class="pp-feature-item">
+              <div class="pp-feature-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+              <span class="pp-feature-item__text">Class AB Amplification</span>
+            </div>
+            <div class="pp-feature-item">
+              <div class="pp-feature-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg></div>
+              <span class="pp-feature-item__text">Toroidal Transformer</span>
+            </div>
+            <div class="pp-feature-item">
+              <div class="pp-feature-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+              <span class="pp-feature-item__text">ESS ES9018K2M SABRE32 DAC</span>
+            </div>
+            <div class="pp-feature-item">
+              <div class="pp-feature-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6.5 6.5a15 15 0 0 1 11 0M9 9.5a9 9 0 0 1 6 0"/><circle cx="12" cy="13" r="1"/></svg></div>
+              <span class="pp-feature-item__text">Bluetooth aptX HD</span>
+            </div>
+            <div class="pp-feature-item">
+              <div class="pp-feature-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"/><line x1="12" y1="2" x2="12" y2="12"/></svg></div>
+              <span class="pp-feature-item__text">Balanced XLR inputs</span>
+            </div>
+            <div class="pp-feature-item">
+              <div class="pp-feature-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+              <span class="pp-feature-item__text">Roon Tested</span>
+            </div>
+            <div class="pp-feature-item">
+              <div class="pp-feature-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+              <span class="pp-feature-item__text">Dual Speaker Outputs</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="feature-row fade-in">
-      <div class="container">
-        <div class="feature-row__image"><img src="../images/products/cxa81-mkii.webp" alt="CXシリーズの心臓部"></div>
-        <div class="feature-row__content">
-          <span class="feature-row__label">サウンド</span>
-          <h2 class="feature-row__title">CXシリーズの心臓部</h2>
-          <p class="feature-row__text">80W/chの力強い出力と、ESS Sabre ES9016K2M DACによる高精度なデジタルオーディオ変換が融合。音楽のあらゆるディテールを豊かに表現する、CXシリーズの中核モデルです。</p>
+    <!-- 2. Full-width Lifestyle Image -->
+    <section class="pp-fullwidth-img pp-fullwidth-img--hero fade-in">
+      <img src="../images/products/cxa81-mkii/lifestyle-1.webp" alt="CXA81 amplifier on wooden sideboard showcasing premium aluminium design" loading="lazy">
+    </section>
+
+    <!-- 3. Sticky Navigation -->
+    <nav class="pp-sticky-nav" aria-label="製品ページナビゲーション">
+      <div class="pp-sticky-nav__inner">
+        <span class="pp-sticky-nav__name">CXA81 Mk II</span>
+        <a href="#specs" class="pp-sticky-nav__link">仕様</a>
+        <a href="../retailers.html" class="pp-sticky-nav__link">販売店を探す</a>
+      </div>
+    </nav>
+
+    <!-- 4. Three-Column Feature Images -->
+    <section class="pp-three-col fade-in">
+      <img src="../images/products/cxa81-mkii/feature-col-1.webp" alt="Close-up of hand turning CXA81 volume dial" loading="lazy">
+      <img src="../images/products/cxa81-mkii/feature-col-2.webp" alt="CXA81 front panel input selectors detail" loading="lazy">
+      <img src="../images/products/cxa81-mkii/feature-col-3.webp" alt="StreamMagic app playing music with Cambridge Audio stack" loading="lazy">
+    </section>
+
+    <!-- 5. Three Text Sections -->
+    <section class="pp-text-section fade-in">
+      <h2 class="pp-text-section__heading">Reveal new detail</h2>
+      <p class="pp-text-section__body">Experience more musical detail than ever before. Subtle shifts in tone, harmonies, and instrument placement become crystal clear, immersing you in a vivid, three-dimensional soundstage where every instrument comes to life.</p>
+    </section>
+
+    <section class="pp-text-section fade-in">
+      <h2 class="pp-text-section__heading">Raising the standard</h2>
+      <p class="pp-text-section__body">Re-engineered for excellence, the CXA81 Mk II features premium components and an upgraded DAC. The result? Audio performance that exceeds expectations, delivering new levels of clarity and depth.</p>
+    </section>
+
+    <section class="pp-text-section fade-in">
+      <h2 class="pp-text-section__heading">Seamlessly integrated</h2>
+      <p class="pp-text-section__body">With enhanced connectivity including Bluetooth aptX HD, balanced XLR inputs, and Roon Tested compatibility, CXA81 Mk II integrates seamlessly into your system. Connect a second set of speakers to hear your music in another room.</p>
+    </section>
+
+    <!-- 6. Fullwidth Image + Heading Block -->
+    <section class="pp-fullwidth-img pp-fullwidth-img--16x9 fade-in">
+      <img src="../images/products/cxa81-mkii/fullwidth-1.webp" alt="CXA81 beside turntable under purple lighting" loading="lazy">
+    </section>
+
+    <div class="pp-heading-block fade-in">
+      <h2 class="pp-heading-block__title">MINIMAL DESIGN, MAXIMAL PERFORMANCE</h2>
+      <p class="pp-heading-block__text">Designed for performance over clutter, CXA81 Mk II keeps things minimal and focused. Its clean aluminium fascia features only what's needed—power, input selectors, and a beautifully smooth volume control.</p>
+    </div>
+
+    <!-- 7. Twin Detail Images -->
+    <section class="pp-feature-row fade-in">
+      <div class="pp-feature-row__grid">
+        <div class="pp-feature-row__image">
+          <img src="../images/products/cxa81-mkii/design-detail-1.webp" alt="CXA81 Mk II front panel and button" loading="lazy">
+        </div>
+        <div class="pp-feature-row__image">
+          <img src="../images/products/cxa81-mkii/design-detail-2.webp" alt="CXA81 Mk II side panel" loading="lazy">
         </div>
       </div>
     </section>
 
-    <section class="feature-row fade-in">
-      <div class="container">
-        <div class="feature-row__image"><img src="../images/products/cxa81-mkii.webp" alt="ワイヤレスでもハイレゾ品質"></div>
-        <div class="feature-row__content">
-          <span class="feature-row__label">テクノロジー</span>
-          <h2 class="feature-row__title">ワイヤレスでもハイレゾ品質</h2>
-          <p class="feature-row__text">Bluetooth aptX HD対応により、スマートフォンやタブレットからワイヤレスでハイレゾ相当の音質を実現。USB-B入力では32bit/384kHzのネイティブ再生に対応します。</p>
+    <!-- 8. Sub-features -->
+    <div class="pp-section-heading fade-in">
+      <h2 class="pp-section-heading__title">Evolved power, refined sound</h2>
+    </div>
+
+    <section class="pp-text-section fade-in">
+      <h2 class="pp-text-section__heading">Effortlessly musical</h2>
+      <p class="pp-text-section__body">A custom Class AB amplifier combines the warmth of Class A with the efficiency of Class B, delivering a refined, balanced, and engaging sound. Its super-efficient short signal path reduces colouration, ensuring every note connects you to the emotional power of music.</p>
+    </section>
+
+    <section class="pp-text-section fade-in">
+      <h2 class="pp-text-section__heading">The ultimate upgrade</h2>
+      <p class="pp-text-section__body">The ESS ES9018K2M DAC brings energy and precision to digital music, revealing new layers of detail with audio clarity up to 32-bit/384kHz and DSD256.</p>
+    </section>
+
+    <section class="pp-text-section fade-in">
+      <h2 class="pp-text-section__heading">Power and precision</h2>
+      <p class="pp-text-section__body">With 80 Watts per channel, CXA81 Mk II delivers effortless power and dynamic range. Its toroidal transformer and dual taps provide a vivid, immersive soundstage, ensuring loud and quiet passages are handled with ease.</p>
+    </section>
+
+    <section class="pp-text-section fade-in">
+      <h2 class="pp-text-section__heading">Ready to Roon</h2>
+      <p class="pp-text-section__body">Seamlessly integrates with Roon for a next-level music experience, with easy USB connection to your PC or Mac.</p>
+    </section>
+
+    <section class="pp-text-section fade-in">
+      <h2 class="pp-text-section__heading">Designed for Life</h2>
+      <p class="pp-text-section__body">With elegant, minimalistic lines crafted from aluminium and steel, CXA81 Mk II is built to endure both physically and aesthetically.</p>
+    </section>
+
+    <!-- 9. Fullwidth Image before Quotes -->
+    <section class="pp-fullwidth-img pp-fullwidth-img--hero fade-in">
+      <img src="../images/products/cxa81-mkii/fullwidth-2.webp" alt="CX Series stack with CXA81, CXN100, CXC and turntable" loading="lazy">
+    </section>
+
+    <!-- 10. Press Quotes (Carousel) -->
+    <section class="pp-quote fade-in">
+      <div class="pp-quote__inner">
+        <blockquote class="pp-quote__text pp-quote__slide is-active">"A very refined performance"</blockquote>
+        <blockquote class="pp-quote__text pp-quote__slide" style="display:none">"They have honed and tweaked a good amp and made it better. At £1,000 this is the class of the field."</blockquote>
+        <blockquote class="pp-quote__text pp-quote__slide" style="display:none">"I have to admit I am totally smitten. The sound is superb with so much detail, rhythm, and pace."</blockquote>
+        <blockquote class="pp-quote__text pp-quote__slide" style="display:none">"Excellent blend of refinement and grunt that works across a huge range of music."</blockquote>
+        <div class="pp-quote__source pp-quote__source-slide is-active">
+          <img src="../images/products/cxa81-mkii/quote-logo-1.webp" alt="HiFi Pig" loading="lazy">
+        </div>
+        <div class="pp-quote__source pp-quote__source-slide" style="display:none">
+          <img src="../images/products/cxa81-mkii/quote-logo-2.webp" alt="Trusted Reviews" loading="lazy">
+        </div>
+        <div class="pp-quote__source pp-quote__source-slide" style="display:none">
+          <img src="../images/products/cxa81-mkii/quote-logo-3.webp" alt="Forbes" loading="lazy">
+        </div>
+        <div class="pp-quote__source pp-quote__source-slide" style="display:none">
+          <img src="../images/products/cxa81-mkii/quote-logo-4.webp" alt="AV Forums" loading="lazy">
+        </div>
+        <div class="pp-gallery__dots" role="tablist" aria-label="レビュー選択" style="margin-top:32px">
+          <button class="pp-gallery__dot is-active" type="button" role="tab" aria-selected="true" aria-label="レビュー1" data-quote="0"></button>
+          <button class="pp-gallery__dot" type="button" role="tab" aria-selected="false" aria-label="レビュー2" data-quote="1"></button>
+          <button class="pp-gallery__dot" type="button" role="tab" aria-selected="false" aria-label="レビュー3" data-quote="2"></button>
+          <button class="pp-gallery__dot" type="button" role="tab" aria-selected="false" aria-label="レビュー4" data-quote="3"></button>
         </div>
       </div>
     </section>
 
-    <section class="feature-row fade-in">
-      <div class="container">
-        <div class="feature-row__image"><img src="../images/products/cxa81-mkii.webp" alt="こだわりの筐体設計"></div>
-        <div class="feature-row__content">
-          <span class="feature-row__label">デザイン</span>
-          <h2 class="feature-row__title">こだわりの筐体設計</h2>
-          <p class="feature-row__text">カスタム設計のトロイダルトランスフォーマーにより、低ノイズで安定した電源を供給。堅牢なアルミニウムシャーシが不要な振動を抑制し、純粋なサウンドを実現します。</p>
+    <!-- 11. Feature Row -->
+    <section class="pp-feature-row fade-in">
+      <div class="pp-feature-row__grid">
+        <div class="pp-feature-row__image">
+          <img src="../images/products/cxa81-mkii/feature-row-1.webp" alt="Man adjusting CXA81 volume in dimly lit room" loading="lazy">
+        </div>
+        <div class="pp-feature-row__content">
+          <h2 class="pp-feature-row__title">Crafted for true musicality</h2>
+          <p class="pp-feature-row__text">Our London-based engineering team dedicated countless hours to listening, tuning, and refining every element of CXA81 Mk II. Every component was selected to achieve the ultimate in detail, depth, and musicality—delivering a performance that goes beyond expectations.</p>
         </div>
       </div>
     </section>
 
-    <section class="spec-section fade-in">
-      <div class="container">
-        <div class="spec-section__header"><h2>技術仕様</h2></div>
-        <div class="spec-table">
-          <div class="spec-table__row"><span class="spec-table__label">出力</span><span class="spec-table__value">80W/ch (8Ω)</span></div>
-          <div class="spec-table__row"><span class="spec-table__label">アンプ方式</span><span class="spec-table__value">Class AB</span></div>
-          <div class="spec-table__row"><span class="spec-table__label">DAC</span><span class="spec-table__value">ESS Sabre ES9016K2M</span></div>
-          <div class="spec-table__row"><span class="spec-table__label">周波数特性</span><span class="spec-table__value">5Hz〜60kHz ±1dB</span></div>
-          <div class="spec-table__row"><span class="spec-table__label">S/N比</span><span class="spec-table__value">>93dB</span></div>
-          <div class="spec-table__row"><span class="spec-table__label">THD</span><span class="spec-table__value"><0.002% (1kHz)</span></div>
-          <div class="spec-table__row"><span class="spec-table__label">アナログ入力</span><span class="spec-table__value">4 x RCA</span></div>
-          <div class="spec-table__row"><span class="spec-table__label">デジタル入力</span><span class="spec-table__value">2 x TOSlink、1 x S/PDIF、1 x USB-B</span></div>
-          <div class="spec-table__row"><span class="spec-table__label">Bluetooth</span><span class="spec-table__value">5.0 (aptX HD)</span></div>
-          <div class="spec-table__row"><span class="spec-table__label">ヘッドホン出力</span><span class="spec-table__value">6.35mmフロントパネル</span></div>
-          <div class="spec-table__row"><span class="spec-table__label">USB DAC</span><span class="spec-table__value">PCM 32bit/384kHz、DSD256</span></div>
-          <div class="spec-table__row"><span class="spec-table__label">寸法 (W x H x D)</span><span class="spec-table__value">430 x 121 x 341mm</span></div>
-          <div class="spec-table__row"><span class="spec-table__label">重量</span><span class="spec-table__value">8.0kg</span></div>
+    <!-- 12. Spec Table -->
+    <section class="pp-specs fade-in" id="specs">
+      <div class="pp-specs__inner">
+        <h2 class="pp-specs__title">技術仕様</h2>
+        <div class="pp-specs__table">
+          <div class="pp-specs__row"><span class="pp-specs__label">Power output</span><span class="pp-specs__value">80W RMS into 8 Ohms, 120W RMS into 4 Ohms</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">DAC</span><span class="pp-specs__value">ESS Sabre ES9018K2M</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Frequency response</span><span class="pp-specs__value">&lt;5Hz– 60kHz +/-1dB</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Analogue audio inputs</span><span class="pp-specs__value">1x balanced XLR, 4 x RCA</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Compatibility</span><span class="pp-specs__value">TOSLINK optical: 16/24bit 32-96kHz PCM only / S/PDIF coaxial: 16/24bit 32-192kHz PCM only / USB: audio profile 1.0/2.0 (default 2.0), up to 24-bit 384kHz PCM, up to DSD256 or DoP256 / Bluetooth: 4.2 A2DP/AVRCP supporting up to aptX HD (24bit 48kHz)</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Bluetooth aptX HD receiver built-in</span><span class="pp-specs__value">Yes</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Roon tested</span><span class="pp-specs__value">Yes</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Remote control</span><span class="pp-specs__value">Yes</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Max power consumption</span><span class="pp-specs__value">750W</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Standby power consumption</span><span class="pp-specs__value">&lt;0.5W</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Dimensions (h x w x d)</span><span class="pp-specs__value">115 x 430 x 341mm (4.5 x 16.9 x 13.4")</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Weight</span><span class="pp-specs__value">8.7kg (19.1lbs)</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Box contents</span><span class="pp-specs__value">CXA81 Integrated Amplifier, Power Cable, 3 x AAA Batteries, Remote Control, Control Bus Cable, Bluetooth antenna, Quick Start Guide, Safety Guide</span></div>
         </div>
       </div>
     </section>
 
-    <section class="related-products fade-in">
-      <div class="container">
-        <div class="related-products__header"><h2>関連製品</h2></div>
-        <div class="related-products__grid">
-          <a href="exa100.html" class="product-card-link"><article class="product-card"><div class="product-card__image"><img src="../images/products/exa100.webp" alt="EXA100" loading="lazy"></div><div class="product-card__body"><h3 class="product-card__name">EXA100</h3><p class="product-card__desc">インテグレーテッド ステレオアンプ</p></div></article></a>
-          <a href="cxn100.html" class="product-card-link"><article class="product-card"><div class="product-card__image"><img src="../images/products/cxn100.webp" alt="CXN100" loading="lazy"></div><div class="product-card__body"><h3 class="product-card__name">CXN100</h3><p class="product-card__desc">ネットワークプレーヤー</p></div></article></a>
+    <!-- 13. Related Products -->
+    <section class="pp-related fade-in">
+      <div class="pp-related__inner">
+        <h2 class="pp-related__title">関連製品</h2>
+        <div class="pp-related__grid">
+          <a href="cxn100.html" class="pp-product-card">
+            <div class="pp-product-card__image">
+              <img src="../images/products/cxn100.webp" alt="CXN100" loading="lazy">
+            </div>
+            <h3 class="pp-product-card__name">CXN100</h3>
+            <p class="pp-product-card__desc">Network Player</p>
+          </a>
+          <a href="cxc.html" class="pp-product-card">
+            <div class="pp-product-card__image">
+              <img src="../images/products/cxc.webp" alt="CXC" loading="lazy">
+            </div>
+            <h3 class="pp-product-card__name">CXC</h3>
+            <p class="pp-product-card__desc">Compact Disc Transport</p>
+          </a>
         </div>
       </div>
     </section>
@@ -234,5 +325,47 @@
     </div>
   </footer>
   <script src="../js/main.js" defer></script>
+  <script>
+    // Image Gallery Carousel
+    (function() {
+      var gallery = document.querySelector('.pp-gallery');
+      if (!gallery) return;
+      var imgs = gallery.querySelectorAll('.pp-gallery__img');
+      var dots = gallery.querySelectorAll('.pp-gallery__dot');
+      dots.forEach(function(dot, i) {
+        dot.addEventListener('click', function() {
+          imgs.forEach(function(img) { img.classList.remove('is-active'); });
+          dots.forEach(function(d) { d.classList.remove('is-active'); d.setAttribute('aria-selected', 'false'); });
+          imgs[i].classList.add('is-active');
+          dot.classList.add('is-active');
+          dot.setAttribute('aria-selected', 'true');
+        });
+      });
+    })();
+
+    // Quote Carousel
+    (function() {
+      var quoteSection = document.querySelector('.pp-quote');
+      if (!quoteSection) return;
+      var quotes = quoteSection.querySelectorAll('.pp-quote__slide');
+      var sources = quoteSection.querySelectorAll('.pp-quote__source-slide');
+      var dots = quoteSection.querySelectorAll('.pp-gallery__dot[data-quote]');
+      if (quotes.length < 2) return;
+      dots.forEach(function(dot) {
+        dot.addEventListener('click', function() {
+          var idx = parseInt(this.dataset.quote, 10);
+          quotes.forEach(function(q) { q.style.display = 'none'; q.classList.remove('is-active'); });
+          sources.forEach(function(s) { s.style.display = 'none'; s.classList.remove('is-active'); });
+          dots.forEach(function(d) { d.classList.remove('is-active'); d.setAttribute('aria-selected', 'false'); });
+          quotes[idx].style.display = '';
+          quotes[idx].classList.add('is-active');
+          sources[idx].style.display = '';
+          sources[idx].classList.add('is-active');
+          dot.classList.add('is-active');
+          dot.setAttribute('aria-selected', 'true');
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
