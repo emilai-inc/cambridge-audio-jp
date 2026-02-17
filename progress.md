@@ -348,3 +348,35 @@ QA: Lead 直接検証（grep + ブラウザ）
 
 完了: 2026-02-17 16:00
 
+---
+
+## 製品 #7: SX-60
+開始: 2026-02-17 15:51
+
+### チーム構成
+image-downloader (Bash) → images/products/sx-60/ (15画像)
+frontend-builder (general-purpose) → products/sx-60.html
+QA: Lead 直接検証（grep + ブラウザ）
+
+### 進捗ログ
+15:51 UK SX-60 ページ分析完了（パッシブスタンドマウント、SX-50と同シリーズ）
+15:51 チーム sx60-redesign 作成、エージェントスポーン
+15:52 [image-downloader] 15画像ダウンロード完了
+15:54 [frontend-builder] sx-60.html リビルド完了（309行）
+15:55 [Lead] QA直接検証 — 全項目 PASS（grep counts + ブラウザ全ページスクリーンショット）
+15:55 [Lead] Git コミット `e028c34` → Push `36cb779`
+
+### 成果物
+- products/sx-60.html: 309行（インラインCSS完全除去、product-page.css使用）
+- images/products/sx-60/: 15画像（hero x6, lifestyle x1, feature-col x3, fullwidth x1, design-detail x2, feature-row x1, quote-logo x1）
+- CSS修正: なし（product-page.css そのまま再利用）
+- Spec Table: 10行（UK準拠: 89dB感度, 41Hz-22kHz, 8Ω, 6.5インチウーファー + 1インチツイーター, フロントポート）
+- Related Products: SX-50, SX-80
+
+### 特記事項
+- パッシブスピーカー: StreamMagic/Multi-room/Vinyl セクション全て除外
+- SX-50と同じSXシリーズテンプレート + 追加フィーチャー行（ホームシアターライフスタイル画像）
+- What Hi-Fi? 5スター プレスクォート
+- 4フィーチャーアイコン（SX-50は3つ）
+
+完了: 2026-02-17 15:56
