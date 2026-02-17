@@ -5,7 +5,7 @@
 ### 目的
 Cambridge Audio 公式サイト（cambridgeaudio.com/row/en）をベースに、日本語ローカライズされた実運用レベルのクローンサイトを構築する。
 
-### 現在のステータス: Phase 12 完了 — GitHub Issues 全件解決
+### 現在のステータス: Phase 14 完了 — Hi-Fi製品ページ翻訳修正 + CSSクラス正規化
 
 | フェーズ | 内容 | ステータス |
 |---------|------|----------|
@@ -21,13 +21,15 @@ Cambridge Audio 公式サイト（cambridgeaudio.com/row/en）をベースに、
 | Phase 10 | index.html ヒーローCTAリンク修正（Issue #3） | 完了 |
 | Phase 11 | サイト品質改善: Google Fonts + スクロールアニメーション + バグ修正 | 完了 |
 | Phase 12 | GitHub Issues #4-#12 全件解決: favicon, OGP, モバイルQA, SX+Minx 8製品追加 | 完了 |
+| Phase 13 | 全37製品ページ UK準拠リデザイン: pp-classシステム + product-page.css + UK画像 | 完了 |
+| Phase 14 | Hi-Fi 7製品ページ英語→日本語全文翻訳 + CSSクラス正規化(3ファイル) + スペック表統一 | 完了 |
 
 ### サイト規模
 - **HTMLファイル**: 51ページ（ルート13 + 製品詳細37 + 404.html）
-- **画像ファイル**: 69枚（製品41 + ヒーロー/ライフスタイル/アイコン/about28）
+- **画像ファイル**: 400+枚（製品サブディレクトリに hero/lifestyle/feature/fullwidth/quote-logo 等）
 - **フォントファイル**: 10個（Sohne系8 + Tiempos Headline系2）
-- **CSS**: style.css（共通基盤 ~3,700行）+ 各ページのインラインCSS
-- **JS**: main.js（~800行 — カルーセル、メニュー、スクロールアニメーション）
+- **CSS**: style.css（共通基盤 ~3,700行）+ product-page.css（製品ページ共有 ~810行）+ ルートページのインラインCSS
+- **JS**: main.js（~800行 — カルーセル、メニュー、スクロールアニメーション）+ 製品ページ内ギャラリーJS
 - **外部フォント**: Google Fonts（Noto Sans JP: 400/500/700）— 全50HTMLに読み込み済み
 - **favicon**: favicon.png（48x48px）— 全51ページに設定済み
 - **OGP/Twitter Card**: 全51ページにメタデータ設定済み
@@ -414,3 +416,93 @@ find . -name "*.html" | wc -l
 - **プレス引用カルーセル画像**: index.htmlのプレス引用セクションで2枚の画像が非表示になることがあるが、カルーセルのオフスクリーン画像のため正常動作
 - **ローカルとGitリポの2ディレクトリ同期**: 変更は必ず `/Users/kenzo/claude/cambridge-audio-jp/` と `/tmp/test-sites-clone/CMB/` の両方に適用する必要あり
 - **products.htmlの独自構造**: 他のカタログページ（hifi等）とデザインパターンが異なる。将来的に統一検討が必要
+
+---
+
+## 2026-02-17 作業記録（Phase 13: UK準拠リデザイン）
+
+### 処理したタスク
+- **全37製品ページをUK Cambridge Audioサイト準拠にリデザイン**
+  - 製品 #1-3: L/R X, L/R M, L/R S（アクティブスピーカー）
+  - 製品 #4-5: Evo One, Evo 150 SE（オールインワン/ストリーミングアンプ）
+  - 製品 #6-8: SX-50, SX-60, SX-80（パッシブスピーカー）
+  - 製品 #9-13: Minx Min 12/22, XL, X201, X301（コンパクト/サブウーファー）
+  - 製品 #14-18: CXN100, CXA81 MkII, CXC, AXA25, AXC35（CX/AXシリーズ）
+  - 製品 #19-23: EXA100, EXN100, DacMagic 200M, MXN10, MXW70（EX/MXシリーズ）
+  - 製品 #24-27: Alva Duo, Alva Solo, Alva ST, Alva MC（ターンテーブル/カートリッジ）
+  - 製品 #28-29: Melomania A100, Melomania P100 SE（ヘッドホン）
+  - 製品 #30-37: BT100, EX Remote, Memory Foam Tips, Minx Floor/Table/Wall Stands, Replacement Case M1+/Touch（アクセサリー8製品）
+- **P100 SEカテゴリサムネイル欠損修正**: `images/products/melomania-p100-se.webp` を追加
+
+### 未解決のまま残ったIssue
+なし。全37製品ページのリデザインが完了。
+
+### 技術的な判断・変更点
+
+1. **CSSアーキテクチャの大転換: インラインCSS → 共有 product-page.css**
+   - 旧: 各製品HTMLに ~100行のインライン `<style>` ブロック（Phase 2で確立した自己完結型）
+   - 新: `css/product-page.css`（810行）に全レイアウトを集約、`pp-` プレフィックスのBEM命名
+   - 各HTMLの `<head>` には `<style>` でフォント定義（@font-face 2件）のみ残存
+   - **注意**: 今後の新規製品ページは `style.css` + `product-page.css` の2ファイルをリンクすること
+
+2. **pp-classシステム（product-page.css の主要コンポーネント）**
+   - `pp-hero`: 2カラムグリッド（画像ギャラリー左 + 製品情報右）
+   - `pp-gallery`: 画像切替 + ドットナビゲーション（`is-active` クラスで制御）
+   - `pp-swatch`: カラースウォッチ（`--black`, `--white`, `--lunar-grey` 等）
+   - `pp-sticky-nav`: 製品名 + アンカーリンク（スクロール追従）
+   - `pp-fullwidth-img--hero`: 3:2 ライフスタイル画像
+   - `pp-three-col`: 3カラム フィーチャー画像グリッド
+   - `pp-text-section`: センター寄せテキストブロック（暗い背景）
+   - `pp-quote`: プレスクォート（カルーセル対応）
+   - `pp-heading-block`: フルワイド画像 + オーバーレイ大見出し
+   - `pp-feature-row`: 画像+テキスト交互レイアウト
+   - `pp-specs`: 仕様表（白背景、2カラム）
+   - `pp-related`: 関連製品カード（2-3列グリッド）
+
+3. **画像ディレクトリ構造の変更**
+   - 旧: `images/products/{product-name}.webp`（1枚のみ）
+   - 新: `images/products/{product-name}/`（サブディレクトリに hero-N, lifestyle-N, feature-N, fullwidth-N, feature-col-N, quote-logo-N 等を格納）
+   - カテゴリページ用サムネイル `images/products/{product-name}.webp` は維持
+
+4. **UK画像の取得方法**
+   - Chrome DevTools MCP でUKサイトを訪問 → snapshot/screenshotで構造分析
+   - 画像URLを特定後、`curl` で直接ダウンロード（403回避）
+   - WebFetch は UK サイトに対して 403 エラーのため使用不可
+
+5. **ギャラリーJS（2パターン）**
+   - メイン製品: `querySelectorAll('.pp-gallery__dot:not([data-quote])')` で画像ドットのみ選択（クォートカルーセルと共存）
+   - アクセサリー（クォートなし）: `querySelectorAll('.pp-gallery__dot')` でシンプルに選択
+
+6. **除外セクション（ユーザー指示）**
+   - 星評価（Find a retailer 付近の ★ マーク）
+   - Reviews セクション（ページ下部のユーザーレビュー）
+
+### 既知の問題・注意事項
+- **2ディレクトリ同期**: ローカル `/Users/kenzo/claude/cambridge-audio-jp/` と Git `/tmp/test-sites-clone/CMB/` は rsync で同期。必ず両方に反映すること
+- **product-page.css の単一管理**: 全37製品が依存するため、変更時は全ページへの影響を確認すること
+- **products.htmlの独自構造**: カテゴリページ（hifi.html等）と異なるデザインパターンが残存（優先度低）
+- **SX/Minx製品画像**: UK画像に置換済み。旧プレースホルダー画像は不要
+- **Git最終コミット**: `75159b7` (main branch, pushed to Kenzokono/Test-Sites)
+
+---
+
+## 2026-02-18 作業記録（Phase 14: 翻訳修正 + CSSクラス正規化）
+
+### 処理したタスク
+- **Phase 14**: Hi-Fi 7製品ページ（CXN100, CXA81 MkII, CXC, AXA25, AXC35, EXA100, EXN100）の英語テキスト約143箇所を日本語に全文翻訳
+- **CSSクラス正規化**: exa100, exn100, axc35 の3ファイルで `pp-hero__*` → `pp-info__*` に統一（product-page.cssの定義と整合）
+- **QA指摘修正**: スペック表 "Yes"→"対応" 全7ファイル統一、同梱物スペック値を日本語化、タイトルタグ正規化（axa25）、CSSクラス名ミス修正（exn100: `pp-feature-row__heading`→`__title`）
+- **Phase 13アクセサリー画像追加**: Alva MC, BT100, EX Remote, Memory Foam Tips, Minx Stands x3, Replacement Case x2 の製品画像28点をコミット
+
+### 未解決のまま残ったIssue
+なし。Phase 14 の全タスクが完了。
+
+### 技術的な判断・変更点
+1. **CSSクラス正規化ルール確定**: `pp-hero__info`→`pp-info`, `pp-hero__category`→`pp-info__category`, `pp-hero__name`→`pp-info__name`, `pp-hero__desc`→`pp-info__desc`, `pp-hero__cta`→`pp-info__link`, `pp-hero__features`→`pp-features`。今後の新規ファイルでは `pp-info__*` パターンのみ使用すること
+2. **スペック表の"Yes"統一**: 全製品ページで boolean スペック値は「対応」に統一（dacmagic-200m.htmlの先例に従う）
+3. **同梱物翻訳**: スペック値であっても同梱物リストは日本語化する方針に確定（"Power cable, Remote control..."→「電源ケーブル、リモコン...」）
+4. **タイトルタグ形式**: `[製品名] | Cambridge Audio Japan` が正式パターン。カテゴリ名（"Integrated Stereo Amplifier"等）は含めない
+
+### 既知の問題・注意事項
+- **DacMagic 200Mの独自クラスパターン**: `pp-hero__gallery`, `pp-hero__subtitle`, `pp-hero__title`, `pp-hero__description` を使用しており、`pp-info__*` パターンと不一致。Phase 14のスコープ外として未修正（機能的には正常動作）
+- **Git最終コミット**: `7882b15` (main branch, 未push)

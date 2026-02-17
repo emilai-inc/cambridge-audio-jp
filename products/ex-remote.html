@@ -25,66 +25,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"></noscript>
-  <link rel="stylesheet" href="../css/style.css">
-<style>
-    /* ===== Font Face ===== */
+  <style>
     @font-face { font-family: 'Sohne Wide'; src: url('../fonts/sohne-wide-bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
     @font-face { font-family: 'Tiempos Headline'; src: url('../fonts/tiempos-headline-light.woff2') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    :root { --color-black: #000; --color-white: #fff; --color-gray-50: #f8f8f8; --color-gray-100: #f0f0f0; --color-gray-200: #e0e0e0; --color-gray-400: #999; --color-gray-600: #666; --color-gray-800: #333; --color-teal: #00857c; --color-teal-dark: #006b63; --font-sans: 'Helvetica Neue', 'Noto Sans JP', Arial, sans-serif; --font-serif: 'Tiempos Headline', 'Noto Serif JP', Georgia, 'Times New Roman', serif; --max-width: 1280px; --header-height: 64px; }
-    html { font-size: 16px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-    body { font-family: var(--font-sans); color: var(--color-black); background: var(--color-white); line-height: 1.6; }
-    a { color: inherit; text-decoration: none; } img { max-width: 100%; height: auto; display: block; } ul { list-style: none; }
-    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
-    .site-header { position: sticky; top: 0; z-index: 1000; background: var(--color-white); border-bottom: 1px solid var(--color-gray-200); height: var(--header-height); }
-    .header-inner { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; height: 100%; display: flex; align-items: center; justify-content: space-between; }
-    .header-logo a { display: flex; align-items: center; } .header-logo img { height: 20px; width: auto; }
-    .header-logo .logo-text { font-family: var(--font-sans); font-size: 18px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; }
-    .header-nav { display: flex; gap: 32px; } .header-nav a { font-size: 14px; font-weight: 500; color: var(--color-gray-600); transition: color 0.2s; }
-    .header-nav a:hover, .header-nav a.active { color: var(--color-black); }
-    .header-right { display: flex; align-items: center; gap: 16px; } .region-selector { font-size: 13px; color: var(--color-gray-600); }
-    .search-btn { background: none; border: none; cursor: pointer; padding: 4px; } .search-btn svg { width: 20px; height: 20px; color: var(--color-black); }
-    .menu-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
-    .menu-toggle span { display: block; width: 24px; height: 2px; background: var(--color-black); transition: 0.3s; }
-    .product-hero { padding: 64px 0 80px; }
-    .product-hero .container { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-    .product-hero__image { background: var(--color-gray-50); border-radius: 12px; padding: 40px; display: flex; align-items: center; justify-content: center; aspect-ratio: 4/3; overflow: hidden; }
-    .product-hero__image img { width: 100%; height: 100%; object-fit: contain; }
-    .product-hero__info { display: flex; flex-direction: column; gap: 24px; }
-    .product-hero__category { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: var(--color-teal); }
-    .product-hero__name { font-family: var(--font-serif); font-size: 48px; font-weight: 300; line-height: 1.1; }
-    .product-hero__tagline { font-size: 18px; color: var(--color-gray-600); line-height: 1.6; }
-    .product-hero__features { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
-    .product-hero__features span { display: inline-block; padding: 6px 16px; border: 1px solid var(--color-gray-200); border-radius: 100px; font-size: 13px; color: var(--color-gray-800); }
-    .product-hero__cta { display: inline-flex; align-items: center; gap: 8px; background: var(--color-teal); color: var(--color-white); padding: 14px 32px; border-radius: 8px; font-size: 15px; font-weight: 600; transition: background 0.2s; width: fit-content; margin-top: 8px; }
-    .product-hero__cta:hover { background: var(--color-teal-dark); }
-    .related-products { padding: 80px 0; }
-    .related-products__header { text-align: center; margin-bottom: 48px; }
-    .related-products__header h2 { font-family: var(--font-serif); font-size: 36px; font-weight: 300; }
-    .related-products__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
-    .product-card-link { text-decoration: none; color: inherit; }
-    .product-card { border: 1px solid var(--color-gray-200); border-radius: 10px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
-    .product-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.08); }
-    .product-card__image { aspect-ratio: 4/3; overflow: hidden; background: var(--color-gray-50); }
-    .product-card__image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
-    .product-card:hover .product-card__image img { transform: scale(1.05); }
-    .product-card__body { padding: 20px; }
-    .product-card__name { font-family: 'Sohne Wide', var(--font-sans); font-size: 16px; font-weight: 700; margin-bottom: 4px; }
-    .product-card__desc { font-size: 13px; color: var(--color-gray-600); }
-    .site-footer { background: var(--color-black); color: var(--color-white); padding: 64px 0 32px; }
-    .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 48px; margin-bottom: 48px; }
-    .footer-col h3 { font-family: 'Sohne Wide', var(--font-sans); font-size: 14px; font-weight: 700; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px; }
-    .footer-col a { display: block; font-size: 14px; color: rgba(255,255,255,0.6); margin-bottom: 12px; transition: color 0.2s; }
-    .footer-col a:hover { color: var(--color-white); }
-    .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
-    .footer-bottom p { font-size: 12px; color: rgba(255,255,255,0.4); }
-    .footer-bottom-links { display: flex; gap: 20px; }
-    .footer-bottom-links a { font-size: 12px; color: rgba(255,255,255,0.4); transition: color 0.2s; }
-    .footer-bottom-links a:hover { color: var(--color-white); }
-    @media (max-width: 1024px) { .product-hero__name { font-size: 36px; } .related-products__grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 768px) { .header-nav { display: none; } .menu-toggle { display: flex; } .product-hero .container { grid-template-columns: 1fr; gap: 32px; } .product-hero__name { font-size: 32px; } .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; } }
-    @media (max-width: 480px) { .product-hero__name { font-size: 28px; } .related-products__grid { grid-template-columns: 1fr; } .footer-grid { grid-template-columns: 1fr; } .footer-bottom { flex-direction: column; align-items: flex-start; } }
   </style>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/product-page.css">
 </head>
 <body>
 <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
@@ -116,36 +62,56 @@
   </header>
   <main id="main-content">
 
-    <section class="product-hero">
-      <div class="container">
-        <div class="product-hero__image fade-in">
-          <img src="../images/products/ex-remote.webp" alt="EXシリーズ リモコン">
-        </div>
-        <div class="product-hero__info slide-right">
-          <span class="product-hero__category">Hi-Fiアクセサリー</span>
-          <h1 class="product-hero__name">EXシリーズ リモコン</h1>
-          <p class="product-hero__tagline">EXA100およびEXN100用の専用リモートコントロール。シンプルで直感的な操作性を備えたアルミニウム仕上げのリモコンです。</p>
-          <div class="product-hero__features">
-            <span>EXA100対応</span>
-            <span>EXN100対応</span>
-            <span>アルミニウム仕上げ</span>
+    <!-- 1. Hero -->
+    <section class="pp-hero fade-in">
+      <div class="pp-hero__grid">
+        <div class="pp-gallery">
+          <div class="pp-gallery__main">
+            <img class="pp-gallery__img is-active" src="../images/products/ex-remote/hero-1.webp" alt="EXシリーズ リモコン">
           </div>
-          <a href="../support.html#retailers" class="product-hero__cta">販売店を探す</a>
+        </div>
+        <div class="pp-hero__info">
+          <p class="pp-hero__category">リモートコントロール</p>
+          <h1 class="pp-hero__name">EXシリーズ リモコン</h1>
+          <p class="pp-hero__tagline">EXA100およびEXN100用の専用リモートコントロール。シンプルで直感的な操作性を備えたアルミニウム仕上げのリモコンです。</p>
+          <div class="pp-hero__icons">
+            <div class="pp-hero__icon-item"><span class="pp-hero__icon-label">EXA100対応</span></div>
+            <div class="pp-hero__icon-item"><span class="pp-hero__icon-label">EXN100対応</span></div>
+            <div class="pp-hero__icon-item"><span class="pp-hero__icon-label">アルミニウム仕上げ</span></div>
+          </div>
+          <a href="../support.html#retailers" class="pp-hero__cta">販売店を探す →</a>
         </div>
       </div>
     </section>
 
-    <section class="related-products fade-in">
-      <div class="container">
-        <div class="related-products__header"><h2>関連製品</h2></div>
-        <div class="related-products__grid">
-          <a href="exa100.html" class="product-card-link"><article class="product-card"><div class="product-card__image"><img src="../images/products/exa100.webp" alt="EXA100" loading="lazy"></div><div class="product-card__body"><h3 class="product-card__name">EXA100</h3><p class="product-card__desc">プリメインアンプ</p></div></article></a>
-          <a href="exn100.html" class="product-card-link"><article class="product-card"><div class="product-card__image"><img src="../images/products/exn100.webp" alt="EXN100" loading="lazy"></div><div class="product-card__body"><h3 class="product-card__name">EXN100</h3><p class="product-card__desc">ネットワークプレーヤー</p></div></article></a>
+    <!-- 2. Sticky Nav -->
+    <nav class="pp-sticky-nav" aria-label="製品ナビゲーション">
+      <div class="pp-sticky-nav__inner">
+        <span class="pp-sticky-nav__name">EXシリーズ リモコン</span>
+        <a href="../support.html#retailers" class="pp-sticky-nav__link">販売店を探す</a>
+      </div>
+    </nav>
+
+    <!-- 3. Related Products -->
+    <section class="pp-related fade-in">
+      <div class="pp-related__inner">
+        <h2 class="pp-related__title">関連製品</h2>
+        <div class="pp-related__grid">
+          <a href="exa100.html" class="pp-product-card">
+            <div class="pp-product-card__image"><img src="../images/products/exa100.webp" alt="EXA100" loading="lazy"></div>
+            <h3 class="pp-product-card__name">EXA100</h3>
+            <p class="pp-product-card__desc">プリメインアンプ</p>
+          </a>
+          <a href="exn100.html" class="pp-product-card">
+            <div class="pp-product-card__image"><img src="../images/products/exn100.webp" alt="EXN100" loading="lazy"></div>
+            <h3 class="pp-product-card__name">EXN100</h3>
+            <p class="pp-product-card__desc">ネットワークプレーヤー</p>
+          </a>
         </div>
       </div>
     </section>
 
-</main>
+  </main>
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
