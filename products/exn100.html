@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EXN100 | Cambridge Audio Japan</title>
   <link rel="icon" type="image/png" href="../favicon.png" sizes="48x48">
-  <meta name="description" content="Cambridge Audio EXN100 ネットワークプレーヤー。デュアルESS Sabre DACを搭載したプレミアムストリーマー。">
+  <meta name="description" content="Cambridge Audio EXN100 ネットワークプレーヤー。ESS SABRE32 DAC、StreamMagic Gen 4、Roon Ready、HDMI eARC搭載のプレミアムストリーマー。">
 
   <!-- Open Graph -->
   <meta property="og:title" content="EXN100 | Cambridge Audio Japan">
-  <meta property="og:description" content="Cambridge Audio EXN100 ネットワークプレーヤー。デュアルESS Sabre DACを搭載したプレミアムストリーマー。">
+  <meta property="og:description" content="Cambridge Audio EXN100 ネットワークプレーヤー。ESS SABRE32 DAC、StreamMagic Gen 4搭載。">
   <meta property="og:type" content="product">
   <meta property="og:url" content="https://www.cambridgeaudio.com/jp/products/exn100.html">
   <meta property="og:image" content="../images/products/exn100.webp">
@@ -19,88 +19,18 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="EXN100 | Cambridge Audio Japan">
-  <meta name="twitter:description" content="Cambridge Audio EXN100 ネットワークプレーヤー。デュアルESS Sabre DACを搭載したプレミアムストリーマー。">
+  <meta name="twitter:description" content="Cambridge Audio EXN100 ネットワークプレーヤー。ESS SABRE32 DAC、StreamMagic Gen 4搭載。">
   <meta name="twitter:image" content="../images/products/exn100.webp">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"></noscript>
-  <link rel="stylesheet" href="../css/style.css">
-<style>
-    /* ===== Font Face ===== */
+  <style>
     @font-face { font-family: 'Sohne Wide'; src: url('../fonts/sohne-wide-bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
     @font-face { font-family: 'Tiempos Headline'; src: url('../fonts/tiempos-headline-light.woff2') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    :root { --color-black: #000; --color-white: #fff; --color-gray-50: #f8f8f8; --color-gray-100: #f0f0f0; --color-gray-200: #e0e0e0; --color-gray-400: #999; --color-gray-600: #666; --color-gray-800: #333; --color-teal: #00857c; --color-teal-dark: #006b63; --font-sans: 'Helvetica Neue', 'Noto Sans JP', Arial, sans-serif; --font-serif: 'Tiempos Headline', 'Noto Serif JP', Georgia, 'Times New Roman', serif; --max-width: 1280px; --header-height: 64px; }
-    html { font-size: 16px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-    body { font-family: var(--font-sans); color: var(--color-black); background: var(--color-white); line-height: 1.6; }
-    a { color: inherit; text-decoration: none; } img { max-width: 100%; height: auto; display: block; } ul { list-style: none; }
-    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
-    .site-header { position: sticky; top: 0; z-index: 1000; background: var(--color-white); border-bottom: 1px solid var(--color-gray-200); height: var(--header-height); }
-    .header-inner { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; height: 100%; display: flex; align-items: center; justify-content: space-between; }
-    .header-logo a { display: flex; align-items: center; } .header-logo img { height: 20px; width: auto; }
-    .header-logo .logo-text { font-family: var(--font-sans); font-size: 18px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; }
-    .header-nav { display: flex; gap: 32px; } .header-nav a { font-size: 14px; font-weight: 500; color: var(--color-gray-600); transition: color 0.2s; }
-    .header-nav a:hover, .header-nav a.active { color: var(--color-black); }
-    .header-right { display: flex; align-items: center; gap: 16px; } .region-selector { font-size: 13px; color: var(--color-gray-600); }
-    .search-btn { background: none; border: none; cursor: pointer; padding: 4px; } .search-btn svg { width: 20px; height: 20px; color: var(--color-black); }
-    .menu-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
-    .menu-toggle span { display: block; width: 24px; height: 2px; background: var(--color-black); transition: 0.3s; }
-    .product-hero { padding: 64px 0 80px; }
-    .product-hero .container { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-    .product-hero__image { background: var(--color-gray-50); border-radius: 12px; padding: 40px; display: flex; align-items: center; justify-content: center; aspect-ratio: 4/3; overflow: hidden; }
-    .product-hero__image img { width: 100%; height: 100%; object-fit: contain; }
-    .product-hero__info { display: flex; flex-direction: column; gap: 24px; }
-    .product-hero__category { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: var(--color-teal); }
-    .product-hero__name { font-family: var(--font-serif); font-size: 48px; font-weight: 300; line-height: 1.1; }
-    .product-hero__tagline { font-size: 18px; color: var(--color-gray-600); line-height: 1.6; }
-    .product-hero__features { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
-    .product-hero__features span { display: inline-block; padding: 6px 16px; border: 1px solid var(--color-gray-200); border-radius: 100px; font-size: 13px; color: var(--color-gray-800); }
-    .product-hero__cta { display: inline-flex; align-items: center; gap: 8px; background: var(--color-teal); color: var(--color-white); padding: 14px 32px; border-radius: 8px; font-size: 15px; font-weight: 600; transition: background 0.2s; width: fit-content; margin-top: 8px; }
-    .product-hero__cta:hover { background: var(--color-teal-dark); }
-    .feature-row { padding: 80px 0; } .feature-row:nth-child(even) { background: var(--color-gray-50); }
-    .feature-row .container { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-    .feature-row:nth-child(even) .container { direction: rtl; } .feature-row:nth-child(even) .container > * { direction: ltr; }
-    .feature-row__image { border-radius: 12px; overflow: hidden; aspect-ratio: 4/3; background: var(--color-gray-100); display: flex; align-items: center; justify-content: center; }
-    .feature-row__image img { width: 100%; height: 100%; object-fit: cover; }
-    .feature-row__content { display: flex; flex-direction: column; gap: 16px; }
-    .feature-row__label { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: var(--color-teal); }
-    .feature-row__title { font-family: var(--font-serif); font-size: 36px; font-weight: 300; line-height: 1.2; }
-    .feature-row__text { font-size: 16px; color: var(--color-gray-600); line-height: 1.8; }
-    .spec-section { padding: 80px 0; background: var(--color-black); color: var(--color-white); }
-    .spec-section__header { text-align: center; margin-bottom: 48px; }
-    .spec-section__header h2 { font-family: var(--font-serif); font-size: 36px; font-weight: 300; }
-    .spec-table { max-width: 800px; margin: 0 auto; }
-    .spec-table__row { display: flex; justify-content: space-between; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
-    .spec-table__label { font-size: 14px; color: rgba(255,255,255,0.6); flex: 0 0 200px; }
-    .spec-table__value { font-size: 14px; text-align: right; flex: 1; }
-    .related-products { padding: 80px 0; }
-    .related-products__header { text-align: center; margin-bottom: 48px; }
-    .related-products__header h2 { font-family: var(--font-serif); font-size: 36px; font-weight: 300; }
-    .related-products__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
-    .product-card-link { text-decoration: none; color: inherit; }
-    .product-card { border: 1px solid var(--color-gray-200); border-radius: 10px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
-    .product-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.08); }
-    .product-card__image { aspect-ratio: 4/3; overflow: hidden; background: var(--color-gray-50); }
-    .product-card__image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
-    .product-card:hover .product-card__image img { transform: scale(1.05); }
-    .product-card__body { padding: 20px; }
-    .product-card__name { font-family: 'Sohne Wide', var(--font-sans); font-size: 16px; font-weight: 700; margin-bottom: 4px; }
-    .product-card__desc { font-size: 13px; color: var(--color-gray-600); }
-    .site-footer { background: var(--color-black); color: var(--color-white); padding: 64px 0 32px; }
-    .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 48px; margin-bottom: 48px; }
-    .footer-col h3 { font-family: 'Sohne Wide', var(--font-sans); font-size: 14px; font-weight: 700; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px; }
-    .footer-col a { display: block; font-size: 14px; color: rgba(255,255,255,0.6); margin-bottom: 12px; transition: color 0.2s; }
-    .footer-col a:hover { color: var(--color-white); }
-    .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
-    .footer-bottom p { font-size: 12px; color: rgba(255,255,255,0.4); }
-    .footer-bottom-links { display: flex; gap: 20px; }
-    .footer-bottom-links a { font-size: 12px; color: rgba(255,255,255,0.4); transition: color 0.2s; }
-    .footer-bottom-links a:hover { color: var(--color-white); }
-    @media (max-width: 1024px) { .product-hero__name { font-size: 36px; } .feature-row__title { font-size: 28px; } .related-products__grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 768px) { .header-nav { display: none; } .menu-toggle { display: flex; } .product-hero .container { grid-template-columns: 1fr; gap: 32px; } .product-hero__name { font-size: 32px; } .feature-row .container { grid-template-columns: 1fr; gap: 32px; } .feature-row:nth-child(even) .container { direction: ltr; } .spec-table__label { flex: 0 0 140px; } .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; } }
-    @media (max-width: 480px) { .product-hero__name { font-size: 28px; } .feature-row__title { font-size: 24px; } .related-products__grid { grid-template-columns: 1fr; } .spec-table__row { flex-direction: column; gap: 4px; } .spec-table__value { text-align: left; } .footer-grid { grid-template-columns: 1fr; } .footer-bottom { flex-direction: column; align-items: flex-start; } }
   </style>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/product-page.css">
 </head>
 <body>
 <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
@@ -132,89 +62,279 @@
   </header>
   <main id="main-content">
 
-    <section class="product-hero">
-      <div class="container">
-        <div class="product-hero__image fade-in">
-          <img src="../images/products/exn100.webp" alt="EXN100">
-        </div>
-        <div class="product-hero__info slide-right">
-          <span class="product-hero__category">ネットワークプレーヤー</span>
-          <h1 class="product-hero__name">EXN100</h1>
-          <p class="product-hero__tagline">最高のストリーミング体験を提供する、EXシリーズのプレミアムネットワークプレーヤー。デュアルESS Sabre ES9028PRO DACで、リファレンスグレードのサウンドを実現します。</p>
-          <div class="product-hero__features">
-            <span>Dual ESS ES9028PRO</span>
-            <span>バランスXLR出力</span>
-            <span>StreamMagic</span>
-            <span>Roon Ready</span>
-            <span>MQA対応</span>
-            <span>USB DAC機能</span>
+    <!-- 1. Hero Section -->
+    <section class="pp-hero fade-in">
+      <div class="pp-hero__grid">
+        <div class="pp-gallery" aria-label="製品画像ギャラリー">
+          <div class="pp-gallery__main">
+            <img class="pp-gallery__img is-active" src="../images/products/exn100/hero-1.webp" alt="EXN100 Network Player front view">
+            <img class="pp-gallery__img" src="../images/products/exn100/hero-2.webp" alt="EXN100 rear panel view">
+            <img class="pp-gallery__img" src="../images/products/exn100/hero-3.webp" alt="EXN100 top angle view">
+            <img class="pp-gallery__img" src="../images/products/exn100/hero-4.webp" alt="EXN100 angled view with display">
+            <img class="pp-gallery__img" src="../images/products/exn100/hero-5.webp" alt="EXN100 side profile view">
           </div>
-          <a href="../support.html#retailers" class="product-hero__cta">販売店を探す</a>
+          <div class="pp-gallery__dots" role="tablist" aria-label="ギャラリーナビゲーション">
+            <button class="pp-gallery__dot is-active" role="tab" aria-selected="true" aria-label="画像 1"></button>
+            <button class="pp-gallery__dot" role="tab" aria-selected="false" aria-label="画像 2"></button>
+            <button class="pp-gallery__dot" role="tab" aria-selected="false" aria-label="画像 3"></button>
+            <button class="pp-gallery__dot" role="tab" aria-selected="false" aria-label="画像 4"></button>
+            <button class="pp-gallery__dot" role="tab" aria-selected="false" aria-label="画像 5"></button>
+          </div>
+        </div>
+        <div class="pp-hero__info">
+          <p class="pp-hero__category">Network Player</p>
+          <h1 class="pp-hero__name">EXN100</h1>
+          <p class="pp-hero__desc">EXN100 is the music-streaming powerhouse of the EX range. Expertly refined in London, EX is a leap forward in performance, engineered to bring out the full potential of your music.</p>
+          <p class="pp-hero__color">Lunar Grey</p>
+          <a href="../retailers.html" class="pp-hero__cta">販売店を探す</a>
+          <div class="pp-hero__features">
+            <div class="pp-feature-item">
+              <div class="pp-feature-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2"/><line x1="9" y1="9" x2="15" y2="15"/><line x1="15" y1="9" x2="9" y2="15"/></svg></div>
+              <span class="pp-feature-item__text">Preamp Mode</span>
+            </div>
+            <div class="pp-feature-item">
+              <div class="pp-feature-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+              <span class="pp-feature-item__text">ESS ES9028Q2M SABRE32 DAC</span>
+            </div>
+            <div class="pp-feature-item">
+              <div class="pp-feature-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg></div>
+              <span class="pp-feature-item__text">HDMI eARC</span>
+            </div>
+            <div class="pp-feature-item">
+              <div class="pp-feature-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1"/></svg></div>
+              <span class="pp-feature-item__text">StreamMagic Gen 4</span>
+            </div>
+            <div class="pp-feature-item">
+              <div class="pp-feature-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+              <span class="pp-feature-item__text">Multiroom Capability</span>
+            </div>
+            <div class="pp-feature-item">
+              <div class="pp-feature-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
+              <span class="pp-feature-item__text">Roon Ready</span>
+            </div>
+            <div class="pp-feature-item">
+              <div class="pp-feature-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+              <span class="pp-feature-item__text">7-band EQ</span>
+            </div>
+            <div class="pp-feature-item">
+              <div class="pp-feature-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+              <span class="pp-feature-item__text">High-resolution screen</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="feature-row fade-in">
-      <div class="container">
-        <div class="feature-row__image"><img src="../images/products/exn100.webp" alt="リファレンスクオリティ"></div>
-        <div class="feature-row__content">
-          <span class="feature-row__label">サウンド</span>
-          <h2 class="feature-row__title">リファレンスクオリティ</h2>
-          <p class="feature-row__text">デュアルESS ES9028PRO DACを左右独立で搭載し、究極のチャンネルセパレーションと超低ノイズを実現。音楽の最も繊細なニュアンスまで、リファレンスグレードの精度で再現します。</p>
+    <!-- 2. Full-width Lifestyle Image -->
+    <section class="pp-fullwidth-img pp-fullwidth-img--hero fade-in">
+      <img src="../images/products/exn100/lifestyle-1.webp" alt="Front view of a Cambridge Audio network player on a wooden sideboard, featuring a matte grey finish, large volume knob, and a central color display showing album artwork" loading="lazy">
+    </section>
+
+    <!-- 3. Sticky Navigation -->
+    <nav class="pp-sticky-nav" aria-label="製品ページナビゲーション">
+      <div class="pp-sticky-nav__inner">
+        <span class="pp-sticky-nav__name">EXN100</span>
+        <a href="#specs" class="pp-sticky-nav__link">仕様</a>
+        <a href="../retailers.html" class="pp-sticky-nav__link">販売店を探す</a>
+      </div>
+    </nav>
+
+    <!-- 4. Three-Column Feature Images -->
+    <section class="pp-three-col fade-in">
+      <img src="../images/products/exn100/feature-col-1.webp" alt="Close-up front view of the EXN100 network player, featuring a large textured volume knob, matte grey finish, and color display showing album artwork and Spotify playback" loading="lazy">
+      <img src="../images/products/exn100/feature-col-2.webp" alt="StreamMagic Services logos including Spotify, TIDAL, Qobuz, Deezer, and more" loading="lazy">
+      <img src="../images/products/exn100/feature-col-3.webp" alt="Angled top-down view of the interior of the EXN100, showing the circuit board with red capacitors, electronic components, and the StreamMagic processor" loading="lazy">
+    </section>
+
+    <!-- 5. Three Text Sections -->
+    <section class="pp-text-section fade-in">
+      <h2 class="pp-text-section__heading">Next-level digital performance</h2>
+      <p class="pp-text-section__body">We took the best of the CX series and pushed it further. By refining the ESS Reference DAC and meticulously fine-tuning every element of the signal path, EXN100 achieves a new benchmark in clarity, depth, and musicality.</p>
+    </section>
+
+    <section class="pp-text-section fade-in">
+      <h2 class="pp-text-section__heading">Advanced streaming platform</h2>
+      <p class="pp-text-section__body">Built on our fourth-generation StreamMagic platform, the EXN100 provides seamless access to high-resolution audio files, as well as MQA files. It's Roon Ready, with support for Spotify Connect, TIDAL Connect, Amazon Music, Qobuz, and more.</p>
+    </section>
+
+    <section class="pp-text-section fade-in">
+      <h2 class="pp-text-section__heading">Precision engineering</h2>
+      <p class="pp-text-section__body">EXN100 features significant enhancements in its post-DAC analogue stage, contributing to increased clarity, separation, and an expansive soundstage, ensuring a truly exceptional listening experience.</p>
+    </section>
+
+    <!-- 6. Press Quotes -->
+    <section class="pp-quote fade-in">
+      <div class="pp-quote__inner">
+        <blockquote class="pp-quote__text pp-quote__slide is-active">"Cambridge Audio has refined its streaming experience even further with the elevated, refined, features-packed EXN100"</blockquote>
+        <blockquote class="pp-quote__text pp-quote__slide" style="display:none">"It's the unforced and utterly engaging nature of the performance on offer that wins you over."</blockquote>
+        <blockquote class="pp-quote__text pp-quote__slide" style="display:none">"This is a superb streamer and preamp and one of the very best options anywhere near the price."</blockquote>
+        <div class="pp-quote__source pp-quote__source-slide is-active">
+          <img src="../images/products/exn100/quote-logo-1.webp" alt="What Hi-Fi 5 Stars" loading="lazy">
+        </div>
+        <div class="pp-quote__source pp-quote__source-slide" style="display:none">
+          <img src="../images/products/exn100/quote-logo-2.webp" alt="AV Forums" loading="lazy">
+        </div>
+        <div class="pp-quote__source pp-quote__source-slide" style="display:none">
+          <img src="../images/products/exn100/quote-logo-3.webp" alt="Trusted Reviews" loading="lazy">
+        </div>
+        <div class="pp-gallery__dots" role="tablist" aria-label="レビューナビゲーション">
+          <button class="pp-gallery__dot is-active" role="tab" aria-selected="true" data-quote="0" aria-label="レビュー 1"></button>
+          <button class="pp-gallery__dot" role="tab" aria-selected="false" data-quote="1" aria-label="レビュー 2"></button>
+          <button class="pp-gallery__dot" role="tab" aria-selected="false" data-quote="2" aria-label="レビュー 3"></button>
         </div>
       </div>
     </section>
 
-    <section class="feature-row fade-in">
-      <div class="container">
-        <div class="feature-row__image"><img src="../images/products/exn100.webp" alt="バランス出力で最高品質を"></div>
-        <div class="feature-row__content">
-          <span class="feature-row__label">出力</span>
-          <h2 class="feature-row__title">バランス出力で最高品質を</h2>
-          <p class="feature-row__text">バランスXLR出力とRCA出力の両方を装備。バランス接続により、長いケーブルランでもノイズの影響を最小限に抑え、純粋な信号をアンプに届けます。</p>
+    <!-- 7. Fullwidth Image + Heading Block -->
+    <section class="pp-fullwidth-img pp-fullwidth-img--16x9 fade-in">
+      <img src="../images/products/exn100/fullwidth-1.webp" alt="Close-up angled view of the right side of the EXN100, highlighting the large textured metal volume knob and minimalist matte grey front panel" loading="lazy">
+    </section>
+
+    <div class="pp-heading-block fade-in">
+      <h2 class="pp-heading-block__title">THE PINNACLE OF PERFORMANCE</h2>
+      <p class="pp-heading-block__text">EXN100 redefines high-fidelity streaming, combining cutting-edge digital engineering with meticulous analogue refinement to deliver breathtaking clarity, depth, and precision.</p>
+    </div>
+
+    <!-- 8. Twin Detail Images -->
+    <section class="pp-feature-row fade-in">
+      <div class="pp-feature-row__grid">
+        <div class="pp-feature-row__image">
+          <img src="../images/products/exn100/design-detail-1.webp" alt="Macro close-up of the EXN100 volume knob, highlighting the finely machined knurled texture and matte metallic finish" loading="lazy">
+        </div>
+        <div class="pp-feature-row__image">
+          <img src="../images/products/exn100/design-detail-2.webp" alt="Three-quarter high-angle view of the EXN100, showcasing its minimalist matte grey chassis, large textured volume knob, and central color display" loading="lazy">
         </div>
       </div>
     </section>
 
-    <section class="feature-row fade-in">
-      <div class="container">
-        <div class="feature-row__image"><img src="../images/products/exn100.webp" alt="最先端のストリーミング"></div>
-        <div class="feature-row__content">
-          <span class="feature-row__label">テクノロジー</span>
-          <h2 class="feature-row__title">最先端のストリーミング</h2>
-          <p class="feature-row__text">StreamMagicプラットフォームの最新版を搭載。ギャップレス再生、高精度クロック、専用電源回路など、ストリーミング音源の品質を最大限に引き出すための技術が結集しています。</p>
+    <!-- 9. Sub-features -->
+    <div class="pp-section-heading fade-in">
+      <h2 class="pp-section-heading__title">Minimal design, maximal performance</h2>
+    </div>
+
+    <section class="pp-text-section fade-in">
+      <h2 class="pp-text-section__heading">High-Resolution Audio Support</h2>
+      <p class="pp-text-section__body">Experience music as the artist intended, with support for high-resolution audio formats up to 32-bit/784kHz PCM and DSD512. EXN100's precision-engineered DAC ensures every note is delivered with breathtaking accuracy and warmth.</p>
+    </section>
+
+    <section class="pp-text-section fade-in">
+      <h2 class="pp-text-section__heading">Effortless control with StreamMagic</h2>
+      <p class="pp-text-section__body">Navigate your library, discover new artists, control playback, and tweak the 7-band EQ with the StreamMagic app—giving you full command of your music from anywhere in your home.</p>
+    </section>
+
+    <section class="pp-text-section fade-in">
+      <h2 class="pp-text-section__heading">Comprehensive Connectivity</h2>
+      <p class="pp-text-section__body">Designed to fit seamlessly into your setup, EXN100 includes optical, coaxial, USB Type-B and USB Type-A ports for direct playback.</p>
+    </section>
+
+    <section class="pp-text-section fade-in">
+      <h2 class="pp-text-section__heading">TV playback</h2>
+      <p class="pp-text-section__body">HDMI eARC allows TV audio to integrate effortlessly, delivering superior sound for movies, games, and live performances.</p>
+    </section>
+
+    <section class="pp-text-section fade-in">
+      <h2 class="pp-text-section__heading">High-Resolution Display</h2>
+      <p class="pp-text-section__body">See album artwork and track details in stunning clarity on EXN100's large, high-resolution screen. Or switch to VU meters for a classic hi-fi aesthetic.</p>
+    </section>
+
+    <!-- 10. Additional Fullwidth Image -->
+    <section class="pp-fullwidth-img pp-fullwidth-img--16x9 fade-in">
+      <img src="../images/products/exn100/fullwidth-2.webp" alt="Three-quarter front view of the EXN100 on a mid-century wooden sideboard alongside stacked books and a sculptural pencil holder" loading="lazy">
+    </section>
+
+    <!-- 11. Multi-Room Section -->
+    <section class="pp-feature-row fade-in">
+      <div class="pp-feature-row__grid">
+        <div class="pp-feature-row__image">
+          <img src="../images/products/exn100/multiroom.webp" alt="StreamMagic Multiroom setup showing multiple Cambridge Audio devices synced across rooms" loading="lazy">
+        </div>
+        <div class="pp-feature-row__content">
+          <h2 class="pp-feature-row__heading">Multi-Room, Your Way</h2>
+          <p class="pp-feature-row__text">Let the music flow seamlessly from room to room by syncing multiple Cambridge Audio streaming devices around your home.</p>
+          <p class="pp-feature-row__text">Built-in Google Cast, Apple AirPlay 2 and ROON compatibility gives enormous flexibility to build the perfect multi-room system.</p>
+          <p class="pp-feature-row__text">Whether you group all your rooms into one big party system or want the music to follow you from one space to another, multi-room audio keeps the listening going.</p>
         </div>
       </div>
     </section>
 
-    <section class="spec-section fade-in">
-      <div class="container">
-        <div class="spec-section__header"><h2>技術仕様</h2></div>
-        <div class="spec-table">
-          <div class="spec-table__row"><span class="spec-table__label">DAC</span><span class="spec-table__value">Dual ESS ES9028PRO</span></div>
-          <div class="spec-table__row"><span class="spec-table__label">アナログ出力</span><span class="spec-table__value">1 x バランスXLR、1 x RCA</span></div>
-          <div class="spec-table__row"><span class="spec-table__label">デジタル出力</span><span class="spec-table__value">1 x TOSlink、1 x S/PDIF</span></div>
-          <div class="spec-table__row"><span class="spec-table__label">デジタル入力</span><span class="spec-table__value">2 x TOSlink、1 x S/PDIF、1 x USB-B</span></div>
-          <div class="spec-table__row"><span class="spec-table__label">ネットワーク</span><span class="spec-table__value">Ethernet、Wi-Fi (2.4/5GHz)</span></div>
-          <div class="spec-table__row"><span class="spec-table__label">Bluetooth</span><span class="spec-table__value">5.0 (aptX HD)</span></div>
-          <div class="spec-table__row"><span class="spec-table__label">USB DAC</span><span class="spec-table__value">PCM 32bit/384kHz、DSD256</span></div>
-          <div class="spec-table__row"><span class="spec-table__label">S/N比</span><span class="spec-table__value">>117dB</span></div>
-          <div class="spec-table__row"><span class="spec-table__label">対応フォーマット</span><span class="spec-table__value">WAV、FLAC、ALAC、AIFF、DSD、MQA、MP3、AAC</span></div>
-          <div class="spec-table__row"><span class="spec-table__label">Roon Ready</span><span class="spec-table__value">対応</span></div>
-          <div class="spec-table__row"><span class="spec-table__label">AirPlay 2</span><span class="spec-table__value">対応</span></div>
-          <div class="spec-table__row"><span class="spec-table__label">ディスプレイ</span><span class="spec-table__value">6.8インチ IPS TFT</span></div>
-          <div class="spec-table__row"><span class="spec-table__label">寸法 (W x H x D)</span><span class="spec-table__value">430 x 121 x 380mm</span></div>
-          <div class="spec-table__row"><span class="spec-table__label">重量</span><span class="spec-table__value">6.5kg</span></div>
+    <!-- 12. Spec Table -->
+    <section class="pp-specs fade-in" id="specs">
+      <div class="pp-specs__inner">
+        <h2 class="pp-specs__title">技術仕様</h2>
+        <div class="pp-specs__table">
+          <div class="pp-specs__row"><span class="pp-specs__label">DAC</span><span class="pp-specs__value">ESS ES9028Q2M</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Preamp mode</span><span class="pp-specs__value">Yes</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">StreamMagic version</span><span class="pp-specs__value">Gen 4</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Display screen</span><span class="pp-specs__value">4.76" IPS TFT - 1280 x 569</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">USB drive input</span><span class="pp-specs__value">1 x USB 2.0</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">S/PDIF TOSLINK input</span><span class="pp-specs__value">1</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">S/PDIF coaxial input</span><span class="pp-specs__value">1</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Asynchronous USB input</span><span class="pp-specs__value">1</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Bluetooth</span><span class="pp-specs__value">5.0 with aptX HD</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">HDMI ARC input</span><span class="pp-specs__value">1 (eARC compatible)</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Analogue RCA outputs</span><span class="pp-specs__value">1 Pair</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">S/PDIF output</span><span class="pp-specs__value">1</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">TOSLINK output</span><span class="pp-specs__value">1</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Balanced XLR output</span><span class="pp-specs__value">1 Pair</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">S/PDIF TOSLINK optical</span><span class="pp-specs__value">16/24bit 32-96kHz PCM, DoP64 S/PDIF</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">S/PDIF coaxial</span><span class="pp-specs__value">16/24bit 32-192kHz PCM, DoP64</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">HDMI eARC</span><span class="pp-specs__value">PCM up to 24bit/192kHz</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Local USB media</span><span class="pp-specs__value">PCM up to 32-bit 768kHz, DSD up to x512 File system support FAT32, NTFS, Ext2/3/4, ExFAT</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">USB audio</span><span class="pp-specs__value">PCM up to 32-bit 768kHz, DSD up to x512</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Bluetooth codecs</span><span class="pp-specs__value">5.0 A2DP/AVRCP supporting SBC, aptX and aptX HD codecs</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">UPnP</span><span class="pp-specs__value">PCM up to 32bit/768kHz</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Internet radio</span><span class="pp-specs__value">Yes</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">TIDAL Connect</span><span class="pp-specs__value">Yes</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Spotify Connect</span><span class="pp-specs__value">Yes</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Qobuz</span><span class="pp-specs__value">Yes</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Deezer</span><span class="pp-specs__value">Yes</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Amazon Music</span><span class="pp-specs__value">Yes (via Google Cast)</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Google Cast</span><span class="pp-specs__value">Yes</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">AirPlay 2</span><span class="pp-specs__value">Yes</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Roon Ready</span><span class="pp-specs__value">Yes</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Audio formats</span><span class="pp-specs__value">ALAC, WAV, FLAC, AIFF, DSD (x512), WMA, MP3, AAC, HE AAC, AAC+, OGG Vorbis</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Ethernet</span><span class="pp-specs__value">IEEE 802.3, 10 Base-T or 100 Base-T</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Wi-Fi</span><span class="pp-specs__value">IEEE 802.11 a/b/g/n/ac (2.4GHz / 5GHz)</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">RS232 control</span><span class="pp-specs__value">Yes</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">THD @ 1kHz 0dBFS</span><span class="pp-specs__value">&lt; 0.0005 %</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Frequency response</span><span class="pp-specs__value">7Hz to 75kHz +0/-1dB</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Crosstalk @1kHz</span><span class="pp-specs__value">&lt; -120dB</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Signal to noise ratio (ref 1W)</span><span class="pp-specs__value">&gt; 120dB</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Max power consumption</span><span class="pp-specs__value">30W</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Standby power consumption</span><span class="pp-specs__value">Network Standby: &gt;2W ; Eco mode: &lt;0.5W</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Dimensions (W x H x D)</span><span class="pp-specs__value">430 x 90 x 305mm</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Weight</span><span class="pp-specs__value">4.1kg</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">In the box</span><span class="pp-specs__value">Mains lead, control bus cable, antenna x2, quick start guide, safety sheet, registration card</span></div>
         </div>
       </div>
     </section>
 
-    <section class="related-products fade-in">
-      <div class="container">
-        <div class="related-products__header"><h2>関連製品</h2></div>
-        <div class="related-products__grid">
-          <a href="cxn100.html" class="product-card-link"><article class="product-card"><div class="product-card__image"><img src="../images/products/cxn100.webp" alt="CXN100" loading="lazy"></div><div class="product-card__body"><h3 class="product-card__name">CXN100</h3><p class="product-card__desc">ネットワークプレーヤー</p></div></article></a>
-          <a href="exa100.html" class="product-card-link"><article class="product-card"><div class="product-card__image"><img src="../images/products/exa100.webp" alt="EXA100" loading="lazy"></div><div class="product-card__body"><h3 class="product-card__name">EXA100</h3><p class="product-card__desc">インテグレーテッド ステレオアンプ</p></div></article></a>
+    <!-- 13. Related Products -->
+    <section class="pp-related fade-in">
+      <div class="pp-related__inner">
+        <h2 class="pp-related__title">関連製品</h2>
+        <div class="pp-related__grid">
+          <a href="exa100.html" class="pp-product-card">
+            <div class="pp-product-card__image">
+              <img src="../images/products/exa100.webp" alt="EXA100" loading="lazy">
+            </div>
+            <h3 class="pp-product-card__name">EXA100</h3>
+            <p class="pp-product-card__desc">Integrated Stereo Amplifier</p>
+          </a>
+          <a href="cxn100.html" class="pp-product-card">
+            <div class="pp-product-card__image">
+              <img src="../images/products/cxn100.webp" alt="CXN100" loading="lazy">
+            </div>
+            <h3 class="pp-product-card__name">CXN100</h3>
+            <p class="pp-product-card__desc">Network Player</p>
+          </a>
+          <a href="evo-one.html" class="pp-product-card">
+            <div class="pp-product-card__image">
+              <img src="../images/products/evo-one.webp" alt="Evo One" loading="lazy">
+            </div>
+            <h3 class="pp-product-card__name">Evo One</h3>
+            <p class="pp-product-card__desc">All-in-One Wireless Streaming Speaker</p>
+          </a>
         </div>
       </div>
     </section>
@@ -235,5 +355,46 @@
     </div>
   </footer>
   <script src="../js/main.js" defer></script>
+  <script>
+    // Image Gallery Carousel
+    (function() {
+      var gallery = document.querySelector('.pp-gallery');
+      if (!gallery) return;
+      var imgs = gallery.querySelectorAll('.pp-gallery__img');
+      var dots = gallery.querySelectorAll('.pp-gallery__dot:not([data-quote])');
+      dots.forEach(function(dot, i) {
+        dot.addEventListener('click', function() {
+          imgs.forEach(function(img) { img.classList.remove('is-active'); });
+          dots.forEach(function(d) { d.classList.remove('is-active'); d.setAttribute('aria-selected', 'false'); });
+          imgs[i].classList.add('is-active');
+          dot.classList.add('is-active');
+          dot.setAttribute('aria-selected', 'true');
+        });
+      });
+    })();
+    // Quote Carousel
+    (function() {
+      var quoteSection = document.querySelector('.pp-quote');
+      if (!quoteSection) return;
+      var quotes = quoteSection.querySelectorAll('.pp-quote__slide');
+      var sources = quoteSection.querySelectorAll('.pp-quote__source-slide');
+      var dots = quoteSection.querySelectorAll('.pp-gallery__dot[data-quote]');
+      if (quotes.length < 2) return;
+      dots.forEach(function(dot) {
+        dot.addEventListener('click', function() {
+          var idx = parseInt(this.dataset.quote, 10);
+          quotes.forEach(function(q) { q.style.display = 'none'; q.classList.remove('is-active'); });
+          sources.forEach(function(s) { s.style.display = 'none'; s.classList.remove('is-active'); });
+          dots.forEach(function(d) { d.classList.remove('is-active'); d.setAttribute('aria-selected', 'false'); });
+          quotes[idx].style.display = '';
+          quotes[idx].classList.add('is-active');
+          sources[idx].style.display = '';
+          sources[idx].classList.add('is-active');
+          dot.classList.add('is-active');
+          dot.setAttribute('aria-selected', 'true');
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
