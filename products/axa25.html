@@ -25,82 +25,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"></noscript>
-  <link rel="stylesheet" href="../css/style.css">
-<style>
-    /* ===== Font Face ===== */
+  <style>
     @font-face { font-family: 'Sohne Wide'; src: url('../fonts/sohne-wide-bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
     @font-face { font-family: 'Tiempos Headline'; src: url('../fonts/tiempos-headline-light.woff2') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    :root { --color-black: #000; --color-white: #fff; --color-gray-50: #f8f8f8; --color-gray-100: #f0f0f0; --color-gray-200: #e0e0e0; --color-gray-400: #999; --color-gray-600: #666; --color-gray-800: #333; --color-teal: #00857c; --color-teal-dark: #006b63; --font-sans: 'Helvetica Neue', 'Noto Sans JP', Arial, sans-serif; --font-serif: 'Tiempos Headline', 'Noto Serif JP', Georgia, 'Times New Roman', serif; --max-width: 1280px; --header-height: 64px; }
-    html { font-size: 16px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-    body { font-family: var(--font-sans); color: var(--color-black); background: var(--color-white); line-height: 1.6; }
-    a { color: inherit; text-decoration: none; } img { max-width: 100%; height: auto; display: block; } ul { list-style: none; }
-    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
-    .site-header { position: sticky; top: 0; z-index: 1000; background: var(--color-white); border-bottom: 1px solid var(--color-gray-200); height: var(--header-height); }
-    .header-inner { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; height: 100%; display: flex; align-items: center; justify-content: space-between; }
-    .header-logo a { display: flex; align-items: center; } .header-logo img { height: 20px; width: auto; }
-    .header-logo .logo-text { font-family: var(--font-sans); font-size: 18px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; }
-    .header-nav { display: flex; gap: 32px; } .header-nav a { font-size: 14px; font-weight: 500; color: var(--color-gray-600); transition: color 0.2s; }
-    .header-nav a:hover, .header-nav a.active { color: var(--color-black); }
-    .header-right { display: flex; align-items: center; gap: 16px; } .region-selector { font-size: 13px; color: var(--color-gray-600); }
-    .search-btn { background: none; border: none; cursor: pointer; padding: 4px; } .search-btn svg { width: 20px; height: 20px; color: var(--color-black); }
-    .menu-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
-    .menu-toggle span { display: block; width: 24px; height: 2px; background: var(--color-black); transition: 0.3s; }
-    .product-hero { padding: 64px 0 80px; }
-    .product-hero .container { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-    .product-hero__image { background: var(--color-gray-50); border-radius: 12px; padding: 40px; display: flex; align-items: center; justify-content: center; aspect-ratio: 4/3; overflow: hidden; }
-    .product-hero__image img { width: 100%; height: 100%; object-fit: contain; }
-    .product-hero__info { display: flex; flex-direction: column; gap: 24px; }
-    .product-hero__category { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: var(--color-teal); }
-    .product-hero__name { font-family: var(--font-serif); font-size: 48px; font-weight: 300; line-height: 1.1; }
-    .product-hero__tagline { font-size: 18px; color: var(--color-gray-600); line-height: 1.6; }
-    .product-hero__features { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
-    .product-hero__features span { display: inline-block; padding: 6px 16px; border: 1px solid var(--color-gray-200); border-radius: 100px; font-size: 13px; color: var(--color-gray-800); }
-    .product-hero__cta { display: inline-flex; align-items: center; gap: 8px; background: var(--color-teal); color: var(--color-white); padding: 14px 32px; border-radius: 8px; font-size: 15px; font-weight: 600; transition: background 0.2s; width: fit-content; margin-top: 8px; }
-    .product-hero__cta:hover { background: var(--color-teal-dark); }
-    .feature-row { padding: 80px 0; } .feature-row:nth-child(even) { background: var(--color-gray-50); }
-    .feature-row .container { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-    .feature-row:nth-child(even) .container { direction: rtl; } .feature-row:nth-child(even) .container > * { direction: ltr; }
-    .feature-row__image { border-radius: 12px; overflow: hidden; aspect-ratio: 4/3; background: var(--color-gray-100); display: flex; align-items: center; justify-content: center; }
-    .feature-row__image img { width: 100%; height: 100%; object-fit: cover; }
-    .feature-row__content { display: flex; flex-direction: column; gap: 16px; }
-    .feature-row__label { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: var(--color-teal); }
-    .feature-row__title { font-family: var(--font-serif); font-size: 36px; font-weight: 300; line-height: 1.2; }
-    .feature-row__text { font-size: 16px; color: var(--color-gray-600); line-height: 1.8; }
-    .spec-section { padding: 80px 0; background: var(--color-black); color: var(--color-white); }
-    .spec-section__header { text-align: center; margin-bottom: 48px; }
-    .spec-section__header h2 { font-family: var(--font-serif); font-size: 36px; font-weight: 300; }
-    .spec-table { max-width: 800px; margin: 0 auto; }
-    .spec-table__row { display: flex; justify-content: space-between; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
-    .spec-table__label { font-size: 14px; color: rgba(255,255,255,0.6); flex: 0 0 200px; }
-    .spec-table__value { font-size: 14px; text-align: right; flex: 1; }
-    .related-products { padding: 80px 0; }
-    .related-products__header { text-align: center; margin-bottom: 48px; }
-    .related-products__header h2 { font-family: var(--font-serif); font-size: 36px; font-weight: 300; }
-    .related-products__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
-    .product-card-link { text-decoration: none; color: inherit; }
-    .product-card { border: 1px solid var(--color-gray-200); border-radius: 10px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
-    .product-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.08); }
-    .product-card__image { aspect-ratio: 4/3; overflow: hidden; background: var(--color-gray-50); }
-    .product-card__image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
-    .product-card:hover .product-card__image img { transform: scale(1.05); }
-    .product-card__body { padding: 20px; }
-    .product-card__name { font-family: 'Sohne Wide', var(--font-sans); font-size: 16px; font-weight: 700; margin-bottom: 4px; }
-    .product-card__desc { font-size: 13px; color: var(--color-gray-600); }
-    .site-footer { background: var(--color-black); color: var(--color-white); padding: 64px 0 32px; }
-    .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 48px; margin-bottom: 48px; }
-    .footer-col h3 { font-family: 'Sohne Wide', var(--font-sans); font-size: 14px; font-weight: 700; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px; }
-    .footer-col a { display: block; font-size: 14px; color: rgba(255,255,255,0.6); margin-bottom: 12px; transition: color 0.2s; }
-    .footer-col a:hover { color: var(--color-white); }
-    .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
-    .footer-bottom p { font-size: 12px; color: rgba(255,255,255,0.4); }
-    .footer-bottom-links { display: flex; gap: 20px; }
-    .footer-bottom-links a { font-size: 12px; color: rgba(255,255,255,0.4); transition: color 0.2s; }
-    .footer-bottom-links a:hover { color: var(--color-white); }
-    @media (max-width: 1024px) { .product-hero__name { font-size: 36px; } .feature-row__title { font-size: 28px; } .related-products__grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 768px) { .header-nav { display: none; } .menu-toggle { display: flex; } .product-hero .container { grid-template-columns: 1fr; gap: 32px; } .product-hero__name { font-size: 32px; } .feature-row .container { grid-template-columns: 1fr; gap: 32px; } .feature-row:nth-child(even) .container { direction: ltr; } .spec-table__label { flex: 0 0 140px; } .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; } }
-    @media (max-width: 480px) { .product-hero__name { font-size: 28px; } .feature-row__title { font-size: 24px; } .related-products__grid { grid-template-columns: 1fr; } .spec-table__row { flex-direction: column; gap: 4px; } .spec-table__value { text-align: left; } .footer-grid { grid-template-columns: 1fr; } .footer-bottom { flex-direction: column; align-items: flex-start; } }
   </style>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/product-page.css">
 </head>
 <body>
 <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
@@ -132,84 +62,197 @@
   </header>
   <main id="main-content">
 
-    <section class="product-hero">
-      <div class="container">
-        <div class="product-hero__image fade-in">
-          <img src="../images/products/axa25.webp" alt="AXA25">
-        </div>
-        <div class="product-hero__info slide-right">
-          <span class="product-hero__category">インテグレーテッド アンプ</span>
-          <h1 class="product-hero__name">AXA25</h1>
-          <p class="product-hero__tagline">高品質なHi-Fiへの第一歩に最適な、コンパクトなインテグレーテッドアンプ。Cambridge Audioの伝統あるサウンドエンジニアリングを、手の届きやすい価格で実現しました。</p>
-          <div class="product-hero__features">
-            <span>25W/ch (8Ω)</span>
-            <span>Class AB</span>
-            <span>3.5mmヘッドホン出力</span>
-            <span>4系統入力</span>
-            <span>コンパクト設計</span>
+    <!-- 1. Hero Section -->
+    <section class="pp-hero fade-in">
+      <div class="pp-hero__grid">
+        <div class="pp-gallery" aria-label="製品画像ギャラリー">
+          <div class="pp-gallery__main">
+            <img class="pp-gallery__img is-active" src="../images/products/axa25/hero-1.webp" alt="AXA25 Integrated Amplifier Grey">
+            <img class="pp-gallery__img" src="../images/products/axa25/hero-2.webp" alt="AXA25 angled view showing controls">
+            <img class="pp-gallery__img" src="../images/products/axa25/hero-3.webp" alt="AXA25 top angle view">
+            <img class="pp-gallery__img" src="../images/products/axa25/hero-4.webp" alt="AXA25 rear panel view">
+            <img class="pp-gallery__img" src="../images/products/axa25/hero-5.webp" alt="AXA25 close-up detail">
+            <img class="pp-gallery__img" src="../images/products/axa25/hero-6.webp" alt="AXA25 side profile">
+            <img class="pp-gallery__img" src="../images/products/axa25/hero-7.webp" alt="AXA25 three-quarter angle">
           </div>
-          <a href="../support.html#retailers" class="product-hero__cta">販売店を探す</a>
+          <div class="pp-gallery__dots" role="tablist" aria-label="ギャラリーナビゲーション">
+            <button class="pp-gallery__dot is-active" role="tab" aria-selected="true" aria-label="画像 1"></button>
+            <button class="pp-gallery__dot" role="tab" aria-selected="false" aria-label="画像 2"></button>
+            <button class="pp-gallery__dot" role="tab" aria-selected="false" aria-label="画像 3"></button>
+            <button class="pp-gallery__dot" role="tab" aria-selected="false" aria-label="画像 4"></button>
+            <button class="pp-gallery__dot" role="tab" aria-selected="false" aria-label="画像 5"></button>
+            <button class="pp-gallery__dot" role="tab" aria-selected="false" aria-label="画像 6"></button>
+            <button class="pp-gallery__dot" role="tab" aria-selected="false" aria-label="画像 7"></button>
+          </div>
+        </div>
+        <div class="pp-hero__info">
+          <p class="pp-hero__category">Integrated Stereo Amplifier</p>
+          <h1 class="pp-hero__name">AXA25</h1>
+          <p class="pp-hero__desc">AXA25 is the perfect first step into hi-fi. Designed for pure, unfiltered sound, the AXA25 delivers clarity, depth, and warmth beyond its class. With a focus on effortless performance, AXA25 lets you experience music the way it was meant to be heard—detailed, dynamic, and full of life.</p>
+          <p class="pp-hero__color">Grey</p>
+          <a href="../retailers.html" class="pp-hero__cta">販売店を探す</a>
+          <div class="pp-hero__features">
+            <div class="pp-feature-item">
+              <div class="pp-feature-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+              <span class="pp-feature-item__text">25 watts per channel</span>
+            </div>
+            <div class="pp-feature-item">
+              <div class="pp-feature-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div>
+              <span class="pp-feature-item__text">4 x RCA inputs</span>
+            </div>
+            <div class="pp-feature-item">
+              <div class="pp-feature-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="2" y1="12" x2="22" y2="12"/></svg></div>
+              <span class="pp-feature-item__text">Slim Timeless Design</span>
+            </div>
+            <div class="pp-feature-item">
+              <div class="pp-feature-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
+              <span class="pp-feature-item__text">Tone Controls</span>
+            </div>
+            <div class="pp-feature-item">
+              <div class="pp-feature-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12H3M12 3v18"/></svg></div>
+              <span class="pp-feature-item__text">Balance Controls</span>
+            </div>
+            <div class="pp-feature-item">
+              <div class="pp-feature-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+              <span class="pp-feature-item__text">Front Aux Input</span>
+            </div>
+            <div class="pp-feature-item">
+              <div class="pp-feature-item__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="16" width="16" height="4" rx="1"/><path d="M6 16V8a2 2 0 012-2h8a2 2 0 012 2v8"/></svg></div>
+              <span class="pp-feature-item__text">Floating Base</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="feature-row fade-in">
-      <div class="container">
-        <div class="feature-row__image"><img src="../images/products/axa25.webp" alt="Cambridge Audioのエントリーモデル"></div>
-        <div class="feature-row__content">
-          <span class="feature-row__label">サウンド</span>
-          <h2 class="feature-row__title">Cambridge Audioのエントリーモデル</h2>
-          <p class="feature-row__text">25W/chの出力でありながら、Cambridge Audio伝統のクリアで力強いサウンドを忠実に再現。小型スピーカーとの組み合わせで、デスクトップやベッドルームに最適なHi-Fiシステムを構築できます。</p>
+    <!-- 2. Full-width Lifestyle Image -->
+    <section class="pp-fullwidth-img pp-fullwidth-img--hero fade-in">
+      <img src="../images/products/axa25/lifestyle-1.webp" alt="Wide shot of AXA25 and AXC25 with SX speaker and green plant, showing clean setup and aluminium finish" loading="lazy">
+    </section>
+
+    <!-- 3. Sticky Navigation -->
+    <nav class="pp-sticky-nav" aria-label="製品ページナビゲーション">
+      <div class="pp-sticky-nav__inner">
+        <span class="pp-sticky-nav__name">AXA25</span>
+        <a href="#specs" class="pp-sticky-nav__link">仕様</a>
+        <a href="../retailers.html" class="pp-sticky-nav__link">販売店を探す</a>
+      </div>
+    </nav>
+
+    <!-- 4. Two-Column Feature Images -->
+    <section class="pp-three-col fade-in">
+      <img src="../images/products/axa25/feature-col-1.webp" alt="Angled shot of AXA25 integrated amplifier showing input selection, balance, and volume controls" loading="lazy">
+      <img src="../images/products/axa25/feature-col-2.webp" alt="Rear panel of the Cambridge Audio AXA25 showing analogue inputs, speaker terminals, and USB power output" loading="lazy">
+    </section>
+
+    <!-- 5. Text Sections -->
+    <section class="pp-text-section fade-in">
+      <h2 class="pp-text-section__heading">Your journey into sound</h2>
+      <p class="pp-text-section__body">Your first step into a richer listening experience, AXA25 will reveal details in your favourite tracks that lesser systems miss. Designed to faithfully amplify sound from any source, the AXA25 lets you experience your music with newfound clarity, depth, and warmth.</p>
+    </section>
+
+    <section class="pp-text-section fade-in">
+      <h2 class="pp-text-section__heading">Setting the tone</h2>
+      <p class="pp-text-section__body">Fine-tune your listening experience with independent bass and treble controls. Whether adjusting to suit your speakers, personal taste, or room acoustics, AXA25 gives you precision control over 25 watts per channel at your fingertips.</p>
+    </section>
+
+    <!-- 6. Fullwidth Image + Heading Block -->
+    <section class="pp-fullwidth-img pp-fullwidth-img--16x9 fade-in">
+      <img src="../images/products/axa25/fullwidth-1.webp" alt="Wide shot of AXA25 and AXC25 with SX speaker and green plant, showing clean setup and aluminium finish" loading="lazy">
+    </section>
+
+    <div class="pp-heading-block fade-in">
+      <h2 class="pp-heading-block__title">PURE SOUND, MADE SIMPLE</h2>
+      <p class="pp-heading-block__text">With its minimalist fascia, black steel cabinet, and floating base, AXA25 embodies Cambridge Audio's signature design. Timeless, durable, and built to last, it's part of an upgrade path that grows with your love for great sound.</p>
+    </div>
+
+    <!-- 7. Twin Detail Images -->
+    <section class="pp-feature-row fade-in">
+      <div class="pp-feature-row__grid">
+        <div class="pp-feature-row__image">
+          <img src="../images/products/axa25/design-detail-1.webp" alt="Side angle of Cambridge Audio AXA25 and AXC25 stacked with matching SX speaker and electric guitar in background" loading="lazy">
+        </div>
+        <div class="pp-feature-row__image">
+          <img src="../images/products/axa25/design-detail-2.webp" alt="Stacked Cambridge Audio AXA25 integrated amplifier and AXC25 CD player on wooden shelf, paired with SX speaker in a modern living space" loading="lazy">
         </div>
       </div>
     </section>
 
-    <section class="feature-row fade-in">
-      <div class="container">
-        <div class="feature-row__image"><img src="../images/products/axa25.webp" alt="豊富な入力端子"></div>
-        <div class="feature-row__content">
-          <span class="feature-row__label">接続性</span>
-          <h2 class="feature-row__title">豊富な入力端子</h2>
-          <p class="feature-row__text">4系統のRCAライン入力により、CDプレーヤー、ネットワークプレーヤー、テレビなど複数のソースを接続可能。フロントパネルの3.5mm端子で、ヘッドホンリスニングにも対応します。</p>
+    <!-- 8. Feature Row: Seamless connectivity -->
+    <section class="pp-feature-row fade-in">
+      <div class="pp-feature-row__grid">
+        <div class="pp-feature-row__image">
+          <img src="../images/products/axa25/feature-row-1.webp" alt="Detail view of the AXA25's front panel controls and AUX input with minimalist grey-white background" loading="lazy">
+        </div>
+        <div class="pp-feature-row__content">
+          <h2 class="pp-feature-row__title">Seamless connectivity</h2>
+          <p class="pp-feature-row__text">AXA25 integrates effortlessly into any hi-fi setup. With a 3.5mm aux input for quick plug-and-play listening and multiple RCA inputs, it connects to turntables, CD players, streamers, and more—giving you the flexibility to enjoy music your way.</p>
         </div>
       </div>
     </section>
 
-    <section class="feature-row fade-in">
-      <div class="container">
-        <div class="feature-row__image"><img src="../images/products/axa25.webp" alt="シンプルで堅実な設計"></div>
-        <div class="feature-row__content">
-          <span class="feature-row__label">デザイン</span>
-          <h2 class="feature-row__title">シンプルで堅実な設計</h2>
-          <p class="feature-row__text">不要な装飾を排した、Cambridge Audioらしいクリーンなデザイン。コンパクトなフットプリントで、どんな環境にも自然に馴染みます。</p>
+    <!-- 9. Feature Row: Wired for Sound -->
+    <section class="pp-feature-row fade-in">
+      <div class="pp-feature-row__grid">
+        <div class="pp-feature-row__image">
+          <img src="../images/products/axa25/feature-row-2.webp" alt="Rear panel of the Cambridge Audio AXA25 showing analogue inputs, speaker terminals, and USB power output" loading="lazy">
+        </div>
+        <div class="pp-feature-row__content">
+          <h2 class="pp-feature-row__title">Wired for Sound</h2>
+          <p class="pp-feature-row__text">Built for sound, AXA25 features hi-fi quality speaker binding posts for a secure, high-performance connection. AXA25's low-resistance terminals ensure optimal signal transfer, so nothing gets between you and your music.</p>
         </div>
       </div>
     </section>
 
-    <section class="spec-section fade-in">
-      <div class="container">
-        <div class="spec-section__header"><h2>技術仕様</h2></div>
-        <div class="spec-table">
-          <div class="spec-table__row"><span class="spec-table__label">出力</span><span class="spec-table__value">25W/ch (8Ω)</span></div>
-          <div class="spec-table__row"><span class="spec-table__label">アンプ方式</span><span class="spec-table__value">Class AB</span></div>
-          <div class="spec-table__row"><span class="spec-table__label">周波数特性</span><span class="spec-table__value">20Hz〜20kHz ±1dB</span></div>
-          <div class="spec-table__row"><span class="spec-table__label">S/N比</span><span class="spec-table__value">>82dB</span></div>
-          <div class="spec-table__row"><span class="spec-table__label">THD</span><span class="spec-table__value"><0.01% (1kHz)</span></div>
-          <div class="spec-table__row"><span class="spec-table__label">入力</span><span class="spec-table__value">4 x RCAライン入力</span></div>
-          <div class="spec-table__row"><span class="spec-table__label">ヘッドホン出力</span><span class="spec-table__value">3.5mmフロントパネル</span></div>
-          <div class="spec-table__row"><span class="spec-table__label">スピーカー出力</span><span class="spec-table__value">1系統</span></div>
-          <div class="spec-table__row"><span class="spec-table__label">寸法 (W x H x D)</span><span class="spec-table__value">286 x 72 x 259mm</span></div>
-          <div class="spec-table__row"><span class="spec-table__label">重量</span><span class="spec-table__value">2.9kg</span></div>
+    <!-- 10. Spec Table -->
+    <section class="pp-specs fade-in" id="specs">
+      <div class="pp-specs__inner">
+        <h2 class="pp-specs__title">技術仕様</h2>
+        <div class="pp-specs__table">
+          <div class="pp-specs__row"><span class="pp-specs__label">Power output</span><span class="pp-specs__value">25 Watts (into 8 Ohms)</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Thd (unweighted)</span><span class="pp-specs__value">&lt;0.015% @ 1kHz, 80% of rated power &lt;0.15% 20Hz – 20kHz, 80% of rated power &lt;0.1% 20Hz – 20kHz @ 10W</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Frequency response (-3dB)</span><span class="pp-specs__value">(-3dB) 10Hz - 30kHz</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">S/n ratio (ref 1w)</span><span class="pp-specs__value">&gt;82dB (unweighted)</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Input impedances</span><span class="pp-specs__value">32k ohms</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Power amp damping factor</span><span class="pp-specs__value">&gt; 100</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Max. power consumption</span><span class="pp-specs__value">180W</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Bass/treble controls</span><span class="pp-specs__value">Shelving, ultimate boost/cut +/- 5.5dB @ 20Hz and 20kHz</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Standby power consumption</span><span class="pp-specs__value">&lt;0.5W</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Inputs</span><span class="pp-specs__value">4x RCA, 1 x 3.5mm Aux input (front panel)</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Outputs</span><span class="pp-specs__value">Speakers, Rec Out, USB 5V power</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Dimensions (hxwxd)</span><span class="pp-specs__value">83 x 430 x 340mm (3.3 x 16.9 x 13.4")</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">Weight</span><span class="pp-specs__value">5.1kg (11.2lbs)</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">In the box</span><span class="pp-specs__value">AXA25 Integrated Amplifier, Power Cable</span></div>
         </div>
       </div>
     </section>
 
-    <section class="related-products fade-in">
-      <div class="container">
-        <div class="related-products__header"><h2>関連製品</h2></div>
-        <div class="related-products__grid">
-          <a href="cxa81-mkii.html" class="product-card-link"><article class="product-card"><div class="product-card__image"><img src="../images/products/cxa81-mkii.webp" alt="CXA81 Mk II" loading="lazy"></div><div class="product-card__body"><h3 class="product-card__name">CXA81 Mk II</h3><p class="product-card__desc">インテグレーテッド ステレオアンプ</p></div></article></a>
-          <a href="axc35.html" class="product-card-link"><article class="product-card"><div class="product-card__image"><img src="../images/products/axc35.webp" alt="AXC35" loading="lazy"></div><div class="product-card__body"><h3 class="product-card__name">AXC35</h3><p class="product-card__desc">CDプレーヤー</p></div></article></a>
+    <!-- 11. Related Products -->
+    <section class="pp-related fade-in">
+      <div class="pp-related__inner">
+        <h2 class="pp-related__title">関連製品</h2>
+        <div class="pp-related__grid">
+          <a href="axc35.html" class="pp-product-card">
+            <div class="pp-product-card__image">
+              <img src="../images/products/axc35.webp" alt="AXC35" loading="lazy">
+            </div>
+            <h3 class="pp-product-card__name">AXC35</h3>
+            <p class="pp-product-card__desc">CD Player</p>
+          </a>
+          <a href="sx-50.html" class="pp-product-card">
+            <div class="pp-product-card__image">
+              <img src="../images/products/sx-50.webp" alt="SX50" loading="lazy">
+            </div>
+            <h3 class="pp-product-card__name">SX50</h3>
+            <p class="pp-product-card__desc">Bookshelf Speakers</p>
+          </a>
+          <a href="sx-60.html" class="pp-product-card">
+            <div class="pp-product-card__image">
+              <img src="../images/products/sx-60.webp" alt="SX60" loading="lazy">
+            </div>
+            <h3 class="pp-product-card__name">SX60</h3>
+            <p class="pp-product-card__desc">Standmount Speakers</p>
+          </a>
         </div>
       </div>
     </section>
@@ -230,5 +273,23 @@
     </div>
   </footer>
   <script src="../js/main.js" defer></script>
+  <script>
+    // Image Gallery Carousel
+    (function() {
+      var gallery = document.querySelector('.pp-gallery');
+      if (!gallery) return;
+      var imgs = gallery.querySelectorAll('.pp-gallery__img');
+      var dots = gallery.querySelectorAll('.pp-gallery__dot');
+      dots.forEach(function(dot, i) {
+        dot.addEventListener('click', function() {
+          imgs.forEach(function(img) { img.classList.remove('is-active'); });
+          dots.forEach(function(d) { d.classList.remove('is-active'); d.setAttribute('aria-selected', 'false'); });
+          imgs[i].classList.add('is-active');
+          dot.classList.add('is-active');
+          dot.setAttribute('aria-selected', 'true');
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
