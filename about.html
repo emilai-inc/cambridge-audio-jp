@@ -4,7 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ブランドストーリー | Cambridge Audio Japan</title>
+  <link rel="icon" type="image/png" href="favicon.png" sizes="48x48">
   <meta name="description" content="1968年、ロンドンにて創業。Cambridge Audioのブランドストーリー、哲学、そして革新の歴史をご紹介します。">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ブランドストーリー | Cambridge Audio Japan">
+  <meta property="og:description" content="1968年、ロンドンにて創業。Cambridge Audioのブランドストーリー、哲学、そして革新の歴史をご紹介します。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.cambridgeaudio.com/jp/about.html">
+  <meta property="og:image" content="images/hero/edge-series.webp">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="Cambridge Audio Japan">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ブランドストーリー | Cambridge Audio Japan">
+  <meta name="twitter:description" content="1968年、ロンドンにて創業。Cambridge Audioのブランドストーリー、哲学、そして革新の歴史をご紹介します。">
+  <meta name="twitter:image" content="images/hero/edge-series.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"></noscript>
   <link rel="stylesheet" href="css/style.css">
   <style>
     /* ===== Font Face ===== */
@@ -622,7 +642,7 @@
 
     .footer-bottom p {
       font-size: 12px;
-      color: rgba(255, 255, 255, 0.4);
+      color: rgba(255, 255, 255, 0.7);
     }
 
     .footer-bottom-links {
@@ -632,7 +652,7 @@
 
     .footer-bottom-links a {
       font-size: 12px;
-      color: rgba(255, 255, 255, 0.4);
+      color: rgba(255, 255, 255, 0.7);
       transition: color 0.2s;
     }
 
@@ -789,6 +809,7 @@
   </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
 
   <!-- ===== Header ===== -->
   <header class="site-header">
@@ -805,7 +826,7 @@
         <a href="headphones.html">ヘッドホン</a>
         <a href="speakers.html">スピーカー</a>
         <a href="accessories.html">アクセサリー</a>
-        <a href="about.html" class="active">ブランドストーリー</a>
+        <a href="about.html" class="active" aria-current="page">ブランドストーリー</a>
       </nav>
 
       <div class="header-right">
@@ -822,10 +843,10 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
 
     <!-- ===== Hero: THE PEOPLE BEHIND THE MUSIC ===== -->
-    <section class="about-hero">
+    <section class="about-hero fade-in">
       <div class="about-hero__bg">
         <img src="images/about/hero-header.webp" alt="Cambridge Audio デザインチーム" loading="eager">
       </div>
@@ -835,7 +856,7 @@
     </section>
 
     <!-- ===== Play it from the start ===== -->
-    <section class="story-section">
+    <section class="story-section fade-in">
       <div class="container">
         <div class="story-intro">
           <h2>はじまりの一曲</h2>
@@ -875,7 +896,7 @@
     </section>
 
     <!-- ===== SIX DECADES OF GREAT SOUND ===== -->
-    <section class="decades-section">
+    <section class="decades-section fade-in">
       <div class="container">
         <div class="decades-header">
           <h2>SIX DECADES<br>OF GREAT<br>SOUND</h2>
@@ -894,7 +915,7 @@
     </div>
 
     <!-- ===== Expertise + Venue ===== -->
-    <section class="expertise-section">
+    <section class="expertise-section fade-in">
       <img src="images/about/designer.webp" alt="スピーカーのスケッチをレビューするデザイナー" loading="lazy" class="expertise-hero-image">
       <div class="expertise-grid">
         <div class="expertise-card expertise-card--beige">
@@ -916,7 +937,7 @@
     </div>
 
     <!-- ===== Partner With Us ===== -->
-    <section class="partners-section">
+    <section class="partners-section fade-in">
       <div class="container">
         <div class="partners-header">
           <h2>パートナーシップ</h2>
@@ -937,7 +958,7 @@
     </section>
 
     <!-- ===== Join the Team ===== -->
-    <section class="join-section">
+    <section class="join-section fade-in">
       <img src="images/about/join-team.webp" alt="Cambridge Audio デザインチーム" loading="lazy" class="join-section__bg">
       <div class="join-section__content">
         <div class="container">

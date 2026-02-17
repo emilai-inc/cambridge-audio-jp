@@ -22,54 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // 1. MOBILE MENU TOGGLE
   // ============================================
   const initMobileMenu = () => {
-    // --- Pattern A: about.html (#hamburger + #mobile-nav) ---
-    const hamburgerA = document.getElementById('hamburger');
-    const mobileNavA = document.getElementById('mobile-nav');
-
-    if (hamburgerA && mobileNavA) {
-      const toggle = (forceClose = false) => {
-        const isOpen = hamburgerA.classList.contains('is-active');
-
-        if (forceClose || isOpen) {
-          hamburgerA.classList.remove('is-active');
-          mobileNavA.classList.remove('is-open');
-          hamburgerA.setAttribute('aria-expanded', 'false');
-          document.body.classList.remove('menu-open');
-        } else {
-          hamburgerA.classList.add('is-active');
-          mobileNavA.classList.add('is-open');
-          hamburgerA.setAttribute('aria-expanded', 'true');
-          document.body.classList.add('menu-open');
-        }
-      };
-
-      hamburgerA.addEventListener('click', (e) => {
-        e.stopPropagation();
-        toggle();
-      });
-
-      document.addEventListener('click', (e) => {
-        if (
-          mobileNavA.classList.contains('is-open') &&
-          !mobileNavA.contains(e.target) &&
-          !hamburgerA.contains(e.target)
-        ) {
-          toggle(true);
-        }
-      });
-
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && mobileNavA.classList.contains('is-open')) {
-          toggle(true);
-          hamburgerA.focus();
-        }
-      });
-
-      mobileNavA.querySelectorAll('a').forEach((link) => {
-        link.addEventListener('click', () => toggle(true));
-      });
-    }
-
     // --- Pattern B: index.html (#hamburger-button + #primary-nav) ---
     const hamburgerB = document.getElementById('hamburger-button');
     const primaryNav = document.getElementById('primary-nav');
@@ -116,23 +68,78 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // --- Pattern C: hifi/headphones/products (.menu-toggle + .header-nav) ---
-    const menuToggle = document.querySelector('.menu-toggle');
+    // --- Pattern C: all non-index pages (.menu-toggle / .mobile-menu-toggle + .header-nav) ---
+    const menuToggle = document.querySelector('.menu-toggle') || document.querySelector('.mobile-menu-toggle');
     const headerNav = document.querySelector('.header-nav');
 
     if (menuToggle && headerNav) {
-      menuToggle.addEventListener('click', () => {
+      // Inject mobile menu overlay CSS (pages only have display:none at mobile)
+      const style = document.createElement('style');
+      style.textContent = `
+        @media (max-width: 768px) {
+          .header-nav.is-open {
+            display: flex !important;
+            flex-direction: column;
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: #fff;
+            padding: 80px 24px 24px;
+            gap: 0;
+            overflow-y: auto;
+          }
+          .header-nav.is-open a {
+            display: block;
+            padding: 16px 0;
+            font-size: 18px;
+            color: #1a1a1a;
+            border-bottom: 1px solid #eee;
+          }
+          .header-nav.is-open a:last-child {
+            border-bottom: none;
+          }
+          .menu-toggle, .mobile-menu-toggle {
+            position: relative;
+            z-index: 10000;
+          }
+        }
+      `;
+      document.head.appendChild(style);
+
+      const closeMenu = () => {
+        headerNav.classList.remove('is-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('menu-open');
+        document.body.style.overflow = '';
+      };
+
+      menuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
         const isOpen = headerNav.classList.toggle('is-open');
         menuToggle.setAttribute('aria-expanded', String(isOpen));
+        document.body.classList.toggle('menu-open', isOpen);
         document.body.style.overflow = isOpen ? 'hidden' : '';
       });
 
+      document.addEventListener('click', (e) => {
+        if (
+          headerNav.classList.contains('is-open') &&
+          !headerNav.contains(e.target) &&
+          !menuToggle.contains(e.target)
+        ) {
+          closeMenu();
+        }
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && headerNav.classList.contains('is-open')) {
+          closeMenu();
+          menuToggle.focus();
+        }
+      });
+
       headerNav.querySelectorAll('a').forEach((link) => {
-        link.addEventListener('click', () => {
-          headerNav.classList.remove('is-open');
-          menuToggle.setAttribute('aria-expanded', 'false');
-          document.body.style.overflow = '';
-        });
+        link.addEventListener('click', () => closeMenu());
       });
     }
   };
@@ -230,6 +237,19 @@ document.addEventListener('DOMContentLoaded', () => {
       carousel.style.userSelect = 'none';
       carousel.style.webkitUserSelect = 'none';
 
+      // Keyboard navigation
+      carousel.setAttribute('tabindex', '0');
+      carousel.setAttribute('aria-label', '製品カルーセル');
+      carousel.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') {
+          carousel.scrollBy({ left: 300, behavior: 'smooth' });
+          e.preventDefault();
+        } else if (e.key === 'ArrowLeft') {
+          carousel.scrollBy({ left: -300, behavior: 'smooth' });
+          e.preventDefault();
+        }
+      });
+
       // Optional dot indicators
       initCarouselDots(carousel);
     });
@@ -252,7 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
     Array.from(items).forEach((_, i) => {
       const dot = document.createElement('button');
       dot.className = `carousel-dot${i === 0 ? ' is-active' : ''}`;
-      dot.setAttribute('aria-label', `Slide ${i + 1}`);
+      dot.setAttribute('aria-label', `スライド ${i + 1}`);
       dot.addEventListener('click', () => {
         items[i].scrollIntoView({
           behavior: 'smooth',
@@ -641,13 +661,32 @@ document.addEventListener('DOMContentLoaded', () => {
   // ============================================
   // 8. SCROLL ANIMATIONS (IntersectionObserver)
   // ============================================
+  const ANIM_CLASSES = ['fade-in', 'slide-left', 'slide-right', 'scale-up', 'stagger', 'image-reveal'];
+
+  const addVisibleClass = (el) => {
+    // Add --visible suffix for matching animation classes
+    for (const cls of ANIM_CLASSES) {
+      if (el.classList.contains(cls)) {
+        el.classList.add(cls + '--visible');
+      }
+    }
+    // Also add generic is-visible for .animate-on-scroll fallback
+    el.classList.add('is-visible');
+    // Clear inline styles that may override CSS class transitions
+    if (el.style.opacity) {
+      el.style.opacity = '';
+      el.style.transform = '';
+    }
+  };
+
   const initScrollAnimations = () => {
-    const elements = document.querySelectorAll('.animate-on-scroll');
+    const selector = '.' + ANIM_CLASSES.join(', .') + ', .animate-on-scroll';
+    const elements = document.querySelectorAll(selector);
     if (!elements.length) return;
 
     // Fallback for browsers without IntersectionObserver
     if (!('IntersectionObserver' in window)) {
-      elements.forEach((el) => el.classList.add('is-visible'));
+      elements.forEach(addVisibleClass);
       return;
     }
 
@@ -657,45 +696,46 @@ document.addEventListener('DOMContentLoaded', () => {
           if (entry.isIntersecting) {
             const el = entry.target;
 
-            // Stagger animation for sibling .animate-on-scroll elements
+            // Stagger animation for sibling animated elements
             const parent = el.parentElement;
             const siblings = parent
               ? Array.from(parent.children).filter((c) =>
+                  ANIM_CLASSES.some((cls) => c.classList.contains(cls)) ||
                   c.classList.contains('animate-on-scroll')
                 )
               : [el];
             const index = siblings.indexOf(el);
-            const delay = Math.min(index * 120, 600); // cap at 600ms
+            const delay = Math.min(index * 100, 400);
 
-            setTimeout(() => {
-              el.classList.add('is-visible');
-            }, delay);
+            setTimeout(() => addVisibleClass(el), delay);
 
             observer.unobserve(el);
           }
         });
       },
       {
-        threshold: 0.15,
-        rootMargin: '0px 0px -40px 0px',
+        threshold: 0,
+        rootMargin: '100px 0px 100px 0px',
       }
     );
 
     elements.forEach((el) => observer.observe(el));
 
-    // ----- Legacy support -----
-    // Also animate .product-card / .category-section from older templates
-    const legacyElements = document.querySelectorAll(
-      '.product-card:not(.animate-on-scroll), .category-section:not(.animate-on-scroll)'
-    );
-    if (legacyElements.length) {
-      legacyElements.forEach((el) => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
+    // After scroll position restoration, instantly show elements outside viewport.
+    // Browser restores scroll after DOMContentLoaded, so defer the check.
+    const showScrolledPast = () => {
+      elements.forEach((el) => {
+        if (!el.classList.contains('is-visible')) {
+          const rect = el.getBoundingClientRect();
+          if (rect.bottom < 0 || (rect.top < window.innerHeight && rect.bottom > 0)) {
+            addVisibleClass(el);
+            observer.unobserve(el);
+          }
+        }
       });
-    }
+    };
+    requestAnimationFrame(() => requestAnimationFrame(showScrolledPast));
+    window.addEventListener('scroll', showScrolledPast, { once: true, passive: true });
   };
 
 

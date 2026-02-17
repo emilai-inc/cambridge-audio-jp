@@ -4,7 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>スピーカー | Cambridge Audio Japan</title>
+  <link rel="icon" type="image/png" href="favicon.png" sizes="48x48">
   <meta name="description" content="Cambridge Audioスピーカー。ワイヤレスとパッシブ、あなたの空間に最適なスピーカーをご紹介します。">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="スピーカー | Cambridge Audio Japan">
+  <meta property="og:description" content="Cambridge Audioスピーカー。ワイヤレスとパッシブ、あなたの空間に最適なスピーカーをご紹介します。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.cambridgeaudio.com/jp/speakers.html">
+  <meta property="og:image" content="images/hero/lr-series-hero.webp">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="Cambridge Audio Japan">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="スピーカー | Cambridge Audio Japan">
+  <meta name="twitter:description" content="Cambridge Audioスピーカー。ワイヤレスとパッシブ、あなたの空間に最適なスピーカーをご紹介します。">
+  <meta name="twitter:image" content="images/hero/lr-series-hero.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"></noscript>
   <link rel="stylesheet" href="css/style.css">
   <style>
     /* ===== Font Face ===== */
@@ -348,7 +368,7 @@
 
     .footer-bottom p {
       font-size: 12px;
-      color: rgba(255, 255, 255, 0.4);
+      color: rgba(255, 255, 255, 0.7);
     }
 
     .footer-bottom-links {
@@ -358,7 +378,7 @@
 
     .footer-bottom-links a {
       font-size: 12px;
-      color: rgba(255, 255, 255, 0.4);
+      color: rgba(255, 255, 255, 0.7);
       transition: color 0.2s;
     }
 
@@ -449,6 +469,7 @@
   </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
 
   <!-- ===== Header ===== -->
   <header class="site-header">
@@ -462,7 +483,7 @@
       <nav class="header-nav" aria-label="メインナビゲーション">
         <a href="hifi.html">Hi-Fi</a>
         <a href="headphones.html">ヘッドホン</a>
-        <a href="speakers.html" class="active">スピーカー</a>
+        <a href="speakers.html" class="active" aria-current="page">スピーカー</a>
         <a href="accessories.html">アクセサリー</a>
         <a href="about.html">ブランドストーリー</a>
       </nav>
@@ -478,10 +499,10 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
 
     <!-- ===== Page Title ===== -->
-    <section class="page-title">
+    <section class="page-title fade-in">
       <div class="container">
         <h1>SPEAKERS</h1>
         <p>ワイヤレスとパッシブ、あなたの空間に最適なスピーカー。</p>
@@ -489,21 +510,43 @@
     </section>
 
     <!-- ===== アクティブスピーカー ===== -->
-    <section class="category-section">
+    <section class="category-section fade-in">
       <div class="container">
         <div class="category-header">
           <h2>アクティブスピーカー</h2>
           <p>ワイヤレスで、妥協のないサウンドを。</p>
         </div>
-        <div class="product-grid">
-          <a href="products/evo-one.html" class="product-card-link">
+        <div class="product-grid product-grid--3col">
+          <a href="products/lr-x.html" class="product-card-link">
           <article class="product-card">
             <div class="product-card__image">
-              <img src="images/products/lr-speaker.webp" alt="L/R" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='var(--color-gray-200)'">
+              <img src="images/products/lr-x.webp" alt="L/R X" loading="lazy">
             </div>
             <div class="product-card__body">
-              <h3 class="product-card__name">L/R</h3>
-              <p class="product-card__desc">アクティブステレオスピーカー</p>
+              <h3 class="product-card__name">L/R X</h3>
+              <p class="product-card__desc">アドバンスド アクティブステレオストリーミングスピーカー</p>
+            </div>
+          </article>
+          </a>
+          <a href="products/lr-m.html" class="product-card-link">
+          <article class="product-card">
+            <div class="product-card__image">
+              <img src="images/products/lr-m.webp" alt="L/R M" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">L/R M</h3>
+              <p class="product-card__desc">バーサタイル アクティブステレオストリーミングスピーカー</p>
+            </div>
+          </article>
+          </a>
+          <a href="products/lr-s.html" class="product-card-link">
+          <article class="product-card">
+            <div class="product-card__image">
+              <img src="images/products/lr-s.webp" alt="L/R S" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">L/R S</h3>
+              <p class="product-card__desc">コンパクト アクティブステレオスピーカー</p>
             </div>
           </article>
           </a>
@@ -515,6 +558,118 @@
             <div class="product-card__body">
               <h3 class="product-card__name">Evo One</h3>
               <p class="product-card__desc">オールインワン ワイヤレスストリーミングスピーカー</p>
+            </div>
+          </article>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== パッシブスピーカー — SX シリーズ ===== -->
+    <section class="category-section fade-in">
+      <div class="container">
+        <div class="category-header">
+          <h2>パッシブスピーカー — SX シリーズ</h2>
+          <p>伝統のブリティッシュサウンドを受け継ぐ、本格パッシブスピーカー。</p>
+        </div>
+        <div class="product-grid product-grid--3col">
+          <a href="products/sx-50.html" class="product-card-link">
+          <article class="product-card">
+            <div class="product-card__image">
+              <img src="images/products/sx-50.webp" alt="SX-50" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">SX-50</h3>
+              <p class="product-card__desc">コンパクト ブックシェルフスピーカー</p>
+            </div>
+          </article>
+          </a>
+          <a href="products/sx-60.html" class="product-card-link">
+          <article class="product-card">
+            <div class="product-card__image">
+              <img src="images/products/sx-60.webp" alt="SX-60" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">SX-60</h3>
+              <p class="product-card__desc">スタンドマウント ブックシェルフスピーカー</p>
+            </div>
+          </article>
+          </a>
+          <a href="products/sx-80.html" class="product-card-link">
+          <article class="product-card">
+            <div class="product-card__image">
+              <img src="images/products/sx-80.webp" alt="SX-80" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">SX-80</h3>
+              <p class="product-card__desc">フロアスタンディングスピーカー</p>
+            </div>
+          </article>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== コンパクトスピーカー — Minx ===== -->
+    <section class="category-section fade-in">
+      <div class="container">
+        <div class="category-header">
+          <h2>コンパクトスピーカー — Minx</h2>
+          <p>BMRドライバー搭載の超コンパクトスピーカーとサブウーファー。</p>
+        </div>
+        <div class="product-grid product-grid--3col">
+          <a href="products/minx-min-12.html" class="product-card-link">
+          <article class="product-card">
+            <div class="product-card__image">
+              <img src="images/products/minx-min-12.webp" alt="Minx Min 12" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Minx Min 12</h3>
+              <p class="product-card__desc">BMRドライバー搭載 超コンパクトスピーカー</p>
+            </div>
+          </article>
+          </a>
+          <a href="products/minx-min-22.html" class="product-card-link">
+          <article class="product-card">
+            <div class="product-card__image">
+              <img src="images/products/minx-min-22.webp" alt="Minx Min 22" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Minx Min 22</h3>
+              <p class="product-card__desc">デュアルドライバー コンパクトスピーカー</p>
+            </div>
+          </article>
+          </a>
+          <a href="products/minx-xl.html" class="product-card-link">
+          <article class="product-card">
+            <div class="product-card__image">
+              <img src="images/products/minx-xl.webp" alt="Minx XL" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Minx XL</h3>
+              <p class="product-card__desc">フラッグシップ ブックシェルフスピーカー</p>
+            </div>
+          </article>
+          </a>
+          <a href="products/minx-x201.html" class="product-card-link">
+          <article class="product-card">
+            <div class="product-card__image">
+              <img src="images/products/minx-x201.webp" alt="Minx X201" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Minx X201</h3>
+              <p class="product-card__desc">200W コンパクトサブウーファー</p>
+            </div>
+          </article>
+          </a>
+          <a href="products/minx-x301.html" class="product-card-link">
+          <article class="product-card">
+            <div class="product-card__image">
+              <img src="images/products/minx-x301.webp" alt="Minx X301" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Minx X301</h3>
+              <p class="product-card__desc">300W ハイパフォーマンスサブウーファー</p>
             </div>
           </article>
           </a>

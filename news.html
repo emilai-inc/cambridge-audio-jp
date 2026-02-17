@@ -4,7 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ニュース | Cambridge Audio Japan</title>
+  <link rel="icon" type="image/png" href="favicon.png" sizes="48x48">
   <meta name="description" content="Cambridge Audioの最新ニュースとプレスリリース。新製品情報、アワード受賞、テクノロジーアップデートをお届けします。">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ニュース | Cambridge Audio Japan">
+  <meta property="og:description" content="Cambridge Audioの最新ニュースとプレスリリース。新製品情報、アワード受賞、テクノロジーアップデートをお届けします。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.cambridgeaudio.com/jp/news.html">
+  <meta property="og:image" content="images/hero/lr-series-hero.webp">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="Cambridge Audio Japan">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ニュース | Cambridge Audio Japan">
+  <meta name="twitter:description" content="Cambridge Audioの最新ニュースとプレスリリース。新製品情報、アワード受賞、テクノロジーアップデートをお届けします。">
+  <meta name="twitter:image" content="images/hero/lr-series-hero.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"></noscript>
   <link rel="stylesheet" href="css/style.css">
   <style>
     /* ===== Font Face ===== */
@@ -307,7 +327,7 @@
 
     .footer-bottom p {
       font-size: 12px;
-      color: rgba(255, 255, 255, 0.4);
+      color: rgba(255, 255, 255, 0.7);
     }
 
     .footer-bottom-links {
@@ -317,7 +337,7 @@
 
     .footer-bottom-links a {
       font-size: 12px;
-      color: rgba(255, 255, 255, 0.4);
+      color: rgba(255, 255, 255, 0.7);
       transition: color 0.2s;
     }
 
@@ -396,6 +416,7 @@
   </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
 
   <!-- ===== Header ===== -->
   <header class="site-header">
@@ -425,10 +446,10 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
 
     <!-- ===== Page Title ===== -->
-    <section class="page-title">
+    <section class="page-title fade-in">
       <div class="container">
         <h1>NEWS</h1>
         <p>Cambridge Audioの最新ニュースとプレスリリース</p>
@@ -436,7 +457,7 @@
     </section>
 
     <!-- ===== News Cards ===== -->
-    <section class="news-section">
+    <section class="news-section fade-in">
       <div class="container">
 
         <article class="news-card">

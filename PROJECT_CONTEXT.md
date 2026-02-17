@@ -5,7 +5,7 @@
 ### 目的
 Cambridge Audio 公式サイト（cambridgeaudio.com/row/en）をベースに、日本語ローカライズされた実運用レベルのクローンサイトを構築する。
 
-### 現在のステータス: Phase 8 完了 — サイト全体完成
+### 現在のステータス: Phase 12 完了 — GitHub Issues 全件解決
 
 | フェーズ | 内容 | ステータス |
 |---------|------|----------|
@@ -17,13 +17,20 @@ Cambridge Audio 公式サイト（cambridgeaudio.com/row/en）をベースに、
 | Phase 6 | accessories.html カテゴリページ + ナビリンク更新 | 完了 |
 | Phase 7 | アクセサリー 9製品の詳細ページ作成 | 完了 |
 | Phase 8 | 7つの補助ページ作成 + 全329箇所の href="#" 解消 | 完了 |
+| Phase 9 | L/Rスピーカー製品ページ3枚作成 + speakers.html修正（Issue #1, #2） | 完了 |
+| Phase 10 | index.html ヒーローCTAリンク修正（Issue #3） | 完了 |
+| Phase 11 | サイト品質改善: Google Fonts + スクロールアニメーション + バグ修正 | 完了 |
+| Phase 12 | GitHub Issues #4-#12 全件解決: favicon, OGP, モバイルQA, SX+Minx 8製品追加 | 完了 |
 
 ### サイト規模
-- **HTMLファイル**: 39ページ（ルート13 + 製品詳細26）
-- **画像ファイル**: 61枚（製品33 + ヒーロー/ライフスタイル/アイコン/about28）
+- **HTMLファイル**: 51ページ（ルート13 + 製品詳細37 + 404.html）
+- **画像ファイル**: 69枚（製品41 + ヒーロー/ライフスタイル/アイコン/about28）
 - **フォントファイル**: 10個（Sohne系8 + Tiempos Headline系2）
-- **CSS**: style.css（共通基盤 3,707行）+ 各ページのインラインCSS
-- **JS**: main.js（781行 — カルーセル、メニュー、アニメーション）
+- **CSS**: style.css（共通基盤 ~3,700行）+ 各ページのインラインCSS
+- **JS**: main.js（~800行 — カルーセル、メニュー、スクロールアニメーション）
+- **外部フォント**: Google Fonts（Noto Sans JP: 400/500/700）— 全50HTMLに読み込み済み
+- **favicon**: favicon.png（48x48px）— 全51ページに設定済み
+- **OGP/Twitter Card**: 全51ページにメタデータ設定済み
 - **href="#" 残存**: 0件（全329箇所を解消済み）
 
 ---
@@ -35,7 +42,7 @@ cambridge-audio-jp/
 ├── index.html              (2,158行) ホームページ — 本家に忠実なフルリライト
 ├── hifi.html               (803行)   Hi-Fiカテゴリページ — 15製品をカテゴリ別グリッド表示
 ├── headphones.html         (668行)   ヘッドホンカテゴリページ — 2製品
-├── speakers.html           (571行)   スピーカーカテゴリページ — L/R + Evo One
+├── speakers.html           (680行)   スピーカーカテゴリページ — Active(L/R+Evo) + SX + Minx
 ├── accessories.html        (695行)   アクセサリーカテゴリページ — 9製品
 ├── products.html           (989行)   全製品一覧 — 4カテゴリカード + レンジカード
 ├── about.html              (998行)   ブランドストーリー — 歴史・哲学・チーム紹介
@@ -46,7 +53,10 @@ cambridge-audio-jp/
 ├── privacy.html            (565行)   プライバシーポリシー + Cookieポリシー
 ├── terms.html              (715行)   利用規約 + 特定商取引法 + サイトマップ
 │
-├── products/                         製品詳細ページ（26ファイル）
+├── products/                         製品詳細ページ（37ファイル）
+│   ├── lr-x.html                     L/R X — アドバンスド アクティブステレオストリーミングスピーカー
+│   ├── lr-m.html                     L/R M — バーサタイル アクティブステレオストリーミングスピーカー
+│   ├── lr-s.html                     L/R S — コンパクト アクティブステレオスピーカー
 │   ├── evo-one.html        (224行)   Evo One — オールインワンスピーカー
 │   ├── evo-150-se.html     (221行)   Evo 150 SE — ストリーミングアンプ
 │   ├── axa25.html          (213行)   AXA25 — インテグレーテッドアンプ
@@ -70,6 +80,14 @@ cambridge-audio-jp/
 │   ├── memory-foam-tips.html (160行) メモリーフォームイヤーチップ
 │   ├── replacement-case-m1plus.html (159行) 交換用ケース Melomania 1+
 │   ├── replacement-case-touch.html  (159行) 交換用ケース Melomania Touch
+│   ├── sx-50.html             (236行) SX-50 — コンパクト ブックシェルフスピーカー
+│   ├── sx-60.html             (236行) SX-60 — スタンドマウント ブックシェルフスピーカー
+│   ├── sx-80.html             (236行) SX-80 — フロアスタンディングスピーカー
+│   ├── minx-min-12.html       (234行) Minx Min 12 — BMRドライバー搭載 超コンパクトスピーカー
+│   ├── minx-min-22.html       (234行) Minx Min 22 — デュアルドライバー コンパクトスピーカー
+│   ├── minx-xl.html           (235行) Minx XL — フラッグシップ ブックシェルフスピーカー
+│   ├── minx-x201.html         (235行) Minx X201 — 200W コンパクトサブウーファー
+│   ├── minx-x301.html         (236行) Minx X301 — 300W ハイパフォーマンスサブウーファー
 │   ├── minx-floor-stands.html  (160行) Minx フロアスタンド
 │   ├── minx-table-stands.html  (160行) Minx テーブルスタンド
 │   └── minx-wall-brackets.html (160行) Minx ウォールブラケット
@@ -154,7 +172,8 @@ cambridge-audio-jp/
 - **Tiempos Headline Light** (`tiempos-headline-light.woff2`): セクション見出し (32-56px, serif)
 - **Sohne Book/Bold**: 本文・カード見出し (16-24px)
 
-日本語フォールバック: `Noto Sans JP`, `Noto Serif JP`
+日本語フォント: Google Fonts `Noto Sans JP`（400/500/700）を全42ページに読み込み。
+フォールバック: `-apple-system`, `BlinkMacSystemFont`, `Hiragino Sans`, `Meiryo`
 
 ### 3.3 タイポグラフィ仕様（本家実測値を再現）
 
@@ -202,7 +221,10 @@ cambridge-audio-jp/
 - パターン: UPPERCASE大見出し + Tiempos説明文 + カテゴリ別製品グリッド
 - 製品カード: #f0f0f0背景、10px角丸、ホバーでtranslateY + box-shadow
 
-#### products/（26製品ページ）
+#### index.html ヒーローCTA
+- Phase 10で修正: 「詳しく見る」CTA → `speakers.html`（L/Rシリーズ紹介に対応）
+
+#### products/（37製品ページ）
 - 3ティアテンプレート:
   - **Tier A** (フル): ヒーロー + フィーチャー3行 + スペック表 + 関連製品
   - **Tier B** (中): ヒーロー + フィーチャー1-2行 + スペック表 + 関連製品
@@ -219,7 +241,7 @@ cambridge-audio-jp/
 - DAC、アンプ設計、StreamMagic、音響エンジニアリング
 
 #### terms.html
-- `#sitemap` セクションに全ページリンク一覧（全39ページ）
+- `#sitemap` セクションに全ページリンク一覧（全42ページ）
 - `#tokushoho` セクションに特定商取引法テーブル
 
 ### 3.7 リンク構造
@@ -241,7 +263,31 @@ cambridge-audio-jp/
 - ルートHTMLから: `href="speakers.html"`, `href="support.html#faq"`
 - products/内から: `href="../speakers.html"`, `href="../support.html#faq"`
 
-### 3.8 画像
+### 3.8 スクロールアニメーション（Phase 11で追加）
+
+**仕組み**: CSS初期状態（opacity:0等）+ IntersectionObserverで `--visible` クラスを付与してアニメーション発火。
+
+**アニメーションクラス（style.css定義）:**
+| クラス | 効果 | 可視クラス |
+|--------|------|-----------|
+| `.fade-in` | フェードイン + 上にスライド | `.fade-in--visible` |
+| `.slide-left` | 左からスライドイン | `.slide-left--visible` |
+| `.slide-right` | 右からスライドイン | `.slide-right--visible` |
+| `.scale-up` | 拡大フェードイン | `.scale-up--visible` |
+
+**IntersectionObserver設定（main.js）:**
+- `threshold: 0` — 1pxでも交差したら発火
+- `rootMargin: '100px 0px 100px 0px'` — ビューポートの上下100px外で先行検出
+- スクロール位置復元対応: `requestAnimationFrame` で遅延チェック、ビューポート上方の要素は即時表示
+- `prefers-reduced-motion` 対応済み（style.css）
+
+**各ページへの適用:**
+- index.html: 18要素（セクション見出し、カルーセル、ブランドストーリー画像等）
+- カタログページ（hifi等）: ページ見出し + category-section に `fade-in`
+- 製品ページ（products/*）: hero画像 `fade-in`、hero情報 `slide-right`、feature-row/spec/related `fade-in`
+- products.html: カテゴリカードに `scale-up`
+
+### 3.9 画像
 
 - 全てwebp形式（SVGロゴを除く）
 - 本家サイトからcurlでダウンロード
@@ -256,7 +302,7 @@ cambridge-audio-jp/
 - **HTML5**: セマンティックHTML（header, nav, main, section, article, footer）
 - **CSS3**: Custom Properties, Grid, Flexbox, @font-face, @media queries
 - **Vanilla JavaScript**: ES6+（カルーセル、IntersectionObserver、イベント委譲）
-- **外部依存**: なし（CDN、ライブラリ、フレームワーク一切不使用）
+- **外部依存**: Google Fonts（Noto Sans JP）のみ。ライブラリ・フレームワーク不使用
 
 ### ビルド不要
 - 静的HTMLサイト。ビルドステップなし
@@ -273,22 +319,45 @@ cambridge-audio-jp/
 
 ### 5.1 残存課題
 
-1. **L/Rスピーカー専用詳細ページなし**: speakers.htmlにL/Rスピーカーが掲載されているが、個別の製品詳細ページ（products/lr-*.html）は未作成。現在は暫定的にproducts/evo-one.htmlにリンク
-2. **products.htmlの独自構造**: 他のカタログページ（hifi, headphones等）と異なる自己完結型デザイン。統一するかは判断が必要
-3. **モバイルメニュー**: main.jsのハンバーガーメニューのセレクタがページによって異なる可能性あり。全ページでの動作テストが必要
-4. **画像の最適化**: 一部画像が大きめ。WebP圧縮率の調整や、srcset/sizes属性によるレスポンシブ画像対応は未実施
-5. **メタデータ**: OGP（Open Graph Protocol）タグ、Twitter Cardタグが未設定
-6. **favicon**: 未設定
+1. **products.htmlの独自構造**: 他のカタログページ（hifi, headphones等）と異なる自己完結型デザイン。統一するかは判断が必要
+2. **画像の最適化**: 一部画像が大きめ。WebP圧縮率の調整や、srcset/sizes属性によるレスポンシブ画像対応は未実施
+3. **SX/Minx製品画像**: 現在プレースホルダー画像（800x600 テキストのみ）。実画像への差し替えが必要
 
-### 5.2 改善候補（優先度低）
+### 5.2 解決済みの課題（GitHub Issues — 全12件クローズ済み）
 
-- Google Fonts (`Noto Sans JP`) の読み込み追加（日本語テキストのフォント品質向上）
-- Lighthouse パフォーマンス監査 + 改善
-- アクセシビリティ改善（ARIA属性の追加、コントラスト比の確認）
-- 404エラーページの作成
-- アニメーション/トランジションの追加（IntersectionObserverによるスクロールアニメーション）
+| Issue | 内容 | Phase | コミット |
+|-------|------|-------|---------|
+| #1 | スピーカーページの遷移バグ（L/Rカード → evo-one.htmlを参照） | Phase 9 | `a5b08ef` |
+| #2 | L/Rスピーカー製品ページ未実装（lr-x/m/s.html が未作成） | Phase 9 | `a5b08ef` |
+| #3 | トップページ ヒーローCTAリンク不正（products.html → speakers.htmlに修正） | Phase 10 | `7639263` |
+| #4 | スピーカーラインナップ拡充 — SX 3製品 + Minx 5製品の新規ページ | Phase 12 | `fef3abc` |
+| #5 | モバイルメニュー QA — dead code削除 + 全ページ動作確認 | Phase 12 | `cfa1601` |
+| #6 | OGP/Twitter Card メタデータ — 全43ページに追加 | Phase 12 | `a49d9d0` |
+| #7 | favicon 作成 — 48x48px PNG + 全43ページに設定 | Phase 12 | `6a150e3` |
+| #8 | フォント品質向上 — Noto Sans JP 全42 HTMLに非同期ロード | Phase 11 | `af5f094` |
+| #9 | パフォーマンス向上 — LCP 826ms→67ms | Phase 11 | `81d4edb` |
+| #10 | アクセシビリティ — skip-link/aria-current/コントラスト比 | Phase 11 | `0a70bd0` |
+| #11 | エラーページ — 404.html 新規作成 | Phase 11 | `d40f99f` |
+| #12 | アニメーション — IntersectionObserver 全43ページ | Phase 11 | `2b1a7be` |
 
-### 5.3 開発上の注意事項
+### 5.3 Phase 11 で解決済みの改善候補（全5件完了）
+
+| # | 改善項目 | 対応内容 | コミット |
+|---|---------|---------|---------|
+| 1 | Google Fonts (Noto Sans JP) | 全42 HTMLに `<link>` 追加、style.css + index.html の font-family 更新 | `af5f094` |
+| 2 | Lighthouse パフォーマンス | Google Fonts非同期化、preload(hero+font)、fetchpriority、decoding="async"、大画像圧縮。LCP 826ms→67ms (91.9%改善) | `81d4edb` |
+| 3 | アクセシビリティ改善 | skip-link全42HTML追加、aria-current="page"、コントラスト比修正(#888→#666以上、rgba 0.4→0.7)、見出し階層修正、カルーセルkeyboard操作+日本語aria-label | `0a70bd0` |
+| 4 | 404エラーページ | `404.html` 新規作成（526行、インラインCSS自己完結型、ヘッダー/フッター完備） | `d40f99f` |
+| 5 | アニメーション/トランジション | 全43ページにスクロールアニメーション追加（fade-in/slide-left/right/scale-up） | `2b1a7be` |
+| 5b | アニメーション不具合修正 | legacy code削除、Observer threshold:0/rootMargin:100px最適化、スクロール復元対応 | `31a9b28` |
+
+### 5.4 残存改善候補（優先度低）
+
+- **srcset/sizes**: レスポンシブ画像対応（現在は単一webpのみ）
+- **products.htmlの構造統一**: 他カタログページと異なる独自デザインの統一検討
+- **SX/Minx実製品画像**: プレースホルダーから本番画像への差し替え
+
+### 5.5 開発上の注意事項
 
 1. **CSSの自己完結性を維持**: 新規ページ追加時は必ずインライン `<style>` ブロックに全CSSを含める。style.cssに依存するレイアウトCSSを追加しない
 2. **テンプレート参照**: 新しい製品ページを作成する場合は `products/cxc.html`（209行）をテンプレートとして使用
@@ -296,8 +365,14 @@ cambridge-audio-jp/
 4. **フッター/ヘッダーの一貫性**: 全ページで共通のヘッダーナビ5項目（Hi-Fi / ヘッドホン / スピーカー / アクセサリー / ブランドストーリー）とフッター4カラム（製品 / サポート / ブランド / 法的情報）を維持
 5. **フォントファイル**: fonts/ディレクトリのwoff2はローカルに存在。外部CDNからの読み込みではない
 6. **SNSリンク**: 外部URLには必ず `target="_blank" rel="noopener noreferrer"` を付与
+7. **アニメーションクラス**: 新規セクション追加時は `fade-in` 等のクラスを付与すること。CSSの初期状態は `opacity:0` のため、クラスなしだとJSが発火しない
+8. **Google Fonts**: 新規HTML作成時は `<head>` に Noto Sans JP の `<link>` 3行を忘れずに追加
+9. **Legacy support code禁止**: main.jsでインラインstyleで `opacity:0` を設定するパターンは使わない（CSS specificity問題の原因）
+10. **skip-link**: 新規HTML作成時は `<body>` 直後に `<a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>` を追加、`<main>` に `id="main-content"` を設定
+11. **aria-current="page"**: ナビゲーションのアクティブリンクには `aria-current="page"` を付与
+12. **Google Fonts非同期**: `<link>` は `media="print" onload="this.media='all'"` + `<noscript>` フォールバックで読み込み
 
-### 5.4 プロジェクトの実行方法
+### 5.6 プロジェクトの実行方法
 
 ```bash
 # ローカルサーバーで確認
@@ -311,5 +386,31 @@ grep -rn 'href="#"' *.html products/*.html | wc -l
 
 # ファイル数の確認
 find . -name "*.html" | wc -l
-# → 39
+# → 43 (42ページ + 404.html)
 ```
+
+---
+
+## 2026-02-17 作業記録
+
+### 処理したIssue
+- **Phase 11 Issue #1**: Google Fonts (Noto Sans JP) — 全42 HTMLに非同期読み込み追加 (`af5f094`)
+- **Phase 11 Issue #2**: Lighthouse パフォーマンス — LCP 826ms→67ms、大画像圧縮、preload/fetchpriority (`81d4edb`)
+- **Phase 11 Issue #3**: アクセシビリティ改善 — skip-link、aria-current、コントラスト比修正、keyboard操作 (`0a70bd0`)
+- **Phase 11 Issue #4**: 404エラーページ新規作成 (`d40f99f`)
+- **Phase 11 Issue #5**: スクロールアニメーション全43ページ追加 (`2b1a7be`) + バグ修正 (`31a9b28`)
+- **ドキュメント更新**: PROJECT_CONTEXT.md (`54ed527`)
+
+### 未解決のまま残ったIssue
+なし。Phase 11 の全5件が完了。
+
+### 技術的な判断・変更点
+1. **Google Fonts非同期化**: `media="print" onload="this.media='all'"` パターン + `<noscript>` フォールバック（レンダリングブロッキング回避）
+2. **IntersectionObserver設定**: threshold:0, rootMargin:'100px 0px 100px 0px' に最適化（ジャンプスクロール・スクロール復元対応）
+3. **Legacy support code完全削除**: main.jsのインラインstyle設定パターンはCSS specificity問題を引き起こすため禁止
+4. **アクセシビリティ基盤**: skip-link + id="main-content" + aria-current="page" を全ページに追加（今後の新規ページにも必須）
+
+### 既知の問題・注意事項
+- **プレス引用カルーセル画像**: index.htmlのプレス引用セクションで2枚の画像が非表示になることがあるが、カルーセルのオフスクリーン画像のため正常動作
+- **ローカルとGitリポの2ディレクトリ同期**: 変更は必ず `/Users/kenzo/claude/cambridge-audio-jp/` と `/tmp/test-sites-clone/CMB/` の両方に適用する必要あり
+- **products.htmlの独自構造**: 他のカタログページ（hifi等）とデザインパターンが異なる。将来的に統一検討が必要

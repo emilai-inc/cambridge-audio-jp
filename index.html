@@ -15,8 +15,21 @@
   <meta property="og:locale" content="ja_JP">
   <meta property="og:site_name" content="Cambridge Audio Japan">
 
-  <title>Cambridge Audio Japan | 音で、主張する。</title>
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cambridge Audio Japan - 音で、主張する。">
+  <meta name="twitter:description" content="比類なきサウンドを追求するCambridge Audio。Hi-Fi、ヘッドホン、スピーカー、アクセサリーの公式日本サイト。">
+  <meta name="twitter:image" content="images/hero/lr-series-hero.webp">
 
+  <title>Cambridge Audio Japan | 音で、主張する。</title>
+  <link rel="icon" type="image/png" href="favicon.png" sizes="48x48">
+
+  <link rel="preload" href="fonts/sohne-book.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/sohne-wide-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="images/hero/lr-series-hero.webp" as="image" type="image/webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"></noscript>
   <link rel="stylesheet" href="css/style.css">
   <style>
     /* ===== Reset & Base ===== */
@@ -34,7 +47,7 @@
     }
 
     body {
-      font-family: 'Sohne', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: 'Sohne', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
       color: #000;
       background: #fff;
       line-height: 1.2;
@@ -451,7 +464,7 @@
 
     .product-card-description {
       font-size: 16px;
-      color: #888;
+      color: #666;
       line-height: 1.4;
     }
 
@@ -773,7 +786,7 @@
       width: 44px;
       height: 44px;
       border-radius: 50%;
-      border: 1.5px solid rgba(255, 255, 255, 0.4);
+      border: 1.5px solid rgba(255, 255, 255, 0.7);
       background: transparent;
       color: #fff;
       cursor: pointer;
@@ -1168,7 +1181,7 @@
     }
 
     .newsletter-input-group input::placeholder {
-      color: rgba(255, 255, 255, 0.4);
+      color: rgba(255, 255, 255, 0.7);
     }
 
     .newsletter-input-group input:focus {
@@ -1311,7 +1324,7 @@
 
     .footer-copyright {
       font-size: 12px;
-      color: rgba(255, 255, 255, 0.4);
+      color: rgba(255, 255, 255, 0.7);
     }
 
     .footer-legal {
@@ -1321,7 +1334,7 @@
 
     .footer-legal a {
       font-size: 12px;
-      color: rgba(255, 255, 255, 0.4);
+      color: rgba(255, 255, 255, 0.7);
       transition: color 0.2s;
     }
 
@@ -1556,6 +1569,7 @@
   </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
 
   <!-- ============================================================
        1. HEADER
@@ -1563,7 +1577,7 @@
   <header class="site-header" id="site-header">
     <div class="header-inner">
       <a href="index.html" class="header-logo" aria-label="Cambridge Audio">
-        <img src="images/logo.svg" alt="Cambridge Audio" width="180" height="24">
+        <img src="images/logo.svg" alt="Cambridge Audio" width="180" height="24" decoding="async">
       </a>
 
       <nav class="primary-nav" id="primary-nav" aria-label="メインナビゲーション">
@@ -1595,19 +1609,19 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
 
     <!-- ============================================================
          2. HERO SECTION
          ============================================================ -->
     <section class="hero-section" id="hero" aria-label="メインビジュアル">
       <div class="hero-background">
-        <img src="images/hero/lr-series-hero.webp" alt="L/R アクティブステレオスピーカーシリーズ" loading="eager">
+        <img src="images/hero/lr-series-hero.webp" alt="L/R アクティブステレオスピーカーシリーズ" loading="eager" fetchpriority="high" width="1920" height="1080" decoding="async">
       </div>
       <div class="hero-content">
         <h1 class="hero-headline">音で、主張する。</h1>
         <p class="hero-subheading">新登場 L/R アクティブステレオスピーカーシリーズ</p>
-        <a href="products.html" class="cta-pill cta-pill--white">詳しく見る <span class="cta-arrow" aria-hidden="true">&rarr;</span></a>
+        <a href="speakers.html" class="cta-pill cta-pill--white">詳しく見る <span class="cta-arrow" aria-hidden="true">&rarr;</span></a>
       </div>
     </section>
 
@@ -1618,16 +1632,16 @@
     <section class="product-carousel-section" id="products-featured" aria-label="注目の製品">
       <div class="section-container">
         <div class="product-section-header">
-          <h2 class="product-section-heading">比類なきサウンドを、日常に。</h2>
+          <h2 class="product-section-heading fade-in">比類なきサウンドを、日常に。</h2>
           <a href="products.html" class="cta-pill cta-pill--outline-black">全ての製品を見る <span class="cta-arrow" aria-hidden="true">&rarr;</span></a>
         </div>
 
-        <div class="product-carousel-wrapper" data-carousel-wrapper>
+        <div class="product-carousel-wrapper fade-in" data-carousel-wrapper>
           <div class="product-carousel" data-carousel="products" role="region" aria-label="製品カルーセル">
             <article class="product-card">
               <a href="products.html" class="product-card-link">
                 <div class="product-card-image">
-                  <img src="images/products/melomania-a100.webp" alt="Melomania A100" loading="lazy" width="400" height="400">
+                  <img src="images/products/melomania-a100.webp" alt="Melomania A100" loading="lazy" width="400" height="400" decoding="async">
                 </div>
                 <div class="product-card-info">
                   <h3 class="product-card-title">Melomania A100</h3>
@@ -1639,7 +1653,7 @@
             <article class="product-card">
               <a href="products.html" class="product-card-link">
                 <div class="product-card-image">
-                  <img src="images/products/p100-se.webp" alt="Melomania P100 SE" loading="lazy" width="400" height="400">
+                  <img src="images/products/p100-se.webp" alt="Melomania P100 SE" loading="lazy" width="400" height="400" decoding="async">
                 </div>
                 <div class="product-card-info">
                   <h3 class="product-card-title">Melomania P100 SE</h3>
@@ -1651,7 +1665,7 @@
             <article class="product-card">
               <a href="products.html" class="product-card-link">
                 <div class="product-card-image">
-                  <img src="images/products/evo-one.webp" alt="Evo One" loading="lazy" width="400" height="400">
+                  <img src="images/products/evo-one.webp" alt="Evo One" loading="lazy" width="400" height="400" decoding="async">
                 </div>
                 <div class="product-card-info">
                   <h3 class="product-card-title">Evo One</h3>
@@ -1663,7 +1677,7 @@
             <article class="product-card">
               <a href="products.html" class="product-card-link">
                 <div class="product-card-image">
-                  <img src="images/products/cxa81-mkii.webp" alt="CXA81 Mk II" loading="lazy" width="400" height="400">
+                  <img src="images/products/cxa81-mkii.webp" alt="CXA81 Mk II" loading="lazy" width="400" height="400" decoding="async">
                 </div>
                 <div class="product-card-info">
                   <h3 class="product-card-title">CXA81 Mk II</h3>
@@ -1675,7 +1689,7 @@
             <article class="product-card">
               <a href="products.html" class="product-card-link">
                 <div class="product-card-image">
-                  <img src="images/products/cxn100.webp" alt="CXN100" loading="lazy" width="400" height="400">
+                  <img src="images/products/cxn100.webp" alt="CXN100" loading="lazy" width="400" height="400" decoding="async">
                 </div>
                 <div class="product-card-info">
                   <h3 class="product-card-title">CXN100</h3>
@@ -1693,9 +1707,9 @@
     <!-- ============================================================
          4. EVO ONE FEATURE (2-column, row-reverse)
          ============================================================ -->
-    <section class="evo-feature" id="evo-one-feature" aria-label="Evo One 特集">
+    <section class="evo-feature fade-in" id="evo-one-feature" aria-label="Evo One 特集">
       <div class="evo-feature-image">
-        <img src="images/hero/evo-one-hero.webp" alt="Evo One ライフスタイル" loading="lazy">
+        <img src="images/hero/evo-one-hero.webp" alt="Evo One ライフスタイル" loading="lazy" decoding="async">
       </div>
       <div class="evo-feature-text">
         <h2>Evo One</h2>
@@ -1708,9 +1722,9 @@
     <!-- ============================================================
          5. CAMBRIDGE SELECTS (2-column, normal)
          ============================================================ -->
-    <section class="selects-feature" id="cambridge-selects" aria-label="Cambridge Selects">
+    <section class="selects-feature fade-in" id="cambridge-selects" aria-label="Cambridge Selects">
       <div class="selects-feature-image">
-        <img src="images/hero/cambridge-selects.webp" alt="Cambridge Selects 今月のアルバム" loading="lazy">
+        <img src="images/hero/cambridge-selects.webp" alt="Cambridge Selects 今月のアルバム" loading="lazy" decoding="async">
       </div>
       <div class="selects-feature-text">
         <h2>Cambridge Selects: 今月のアルバム</h2>
@@ -1727,14 +1741,14 @@
       <div class="section-container">
         <div class="brand-story-layout">
           <div class="brand-story-images">
-            <div class="brand-story-image-large">
-              <img src="images/lifestyle/piano-bw.webp" alt="ピアノ演奏 モノクロ" loading="lazy">
+            <div class="brand-story-image-large slide-left">
+              <img src="images/lifestyle/piano-bw.webp" alt="ピアノ演奏 モノクロ" loading="lazy" decoding="async">
             </div>
-            <div class="brand-story-image-small">
-              <img src="images/lifestyle/saxophone-bw.webp" alt="サクソフォン モノクロ" loading="lazy">
+            <div class="brand-story-image-small slide-left">
+              <img src="images/lifestyle/saxophone-bw.webp" alt="サクソフォン モノクロ" loading="lazy" decoding="async">
             </div>
           </div>
-          <div class="brand-story-text">
+          <div class="brand-story-text slide-right">
             <h2>偉大な音楽は、<br>注意を惹きつける。</h2>
             <p>音楽は感情を込め、意図を形づくり、精密さを求め、確信に火をつける。私たちはテクノロジーの最前線で絶えず革新を続けています。それは、すべてのビート、ノート、歌詞に、素晴らしいサウンドを届けるべきだという信念に突き動かされているからです。</p>
             <a href="about.html" class="cta-pill cta-pill--black">ブランドについて <span class="cta-arrow" aria-hidden="true">&rarr;</span></a>
@@ -1752,7 +1766,7 @@
         <!-- Slide 1: Evo Series -->
         <div class="series-slide active" data-slide="1">
           <div class="series-slide-background">
-            <img src="images/hero/evo-series.webp" alt="Evo シリーズ" loading="lazy">
+            <img src="images/hero/evo-series.webp" alt="Evo シリーズ" loading="lazy" decoding="async">
           </div>
           <div class="series-slide-top">
             <h2 class="series-display-heading">EVO SERIES</h2>
@@ -1781,7 +1795,7 @@
         <!-- Slide 2: Edge Series -->
         <div class="series-slide" data-slide="2" aria-hidden="true">
           <div class="series-slide-background">
-            <img src="images/hero/edge-series.webp" alt="Edge シリーズ" loading="lazy">
+            <img src="images/hero/edge-series.webp" alt="Edge シリーズ" loading="lazy" decoding="async">
           </div>
           <div class="series-slide-top">
             <h2 class="series-display-heading">EDGE SERIES</h2>
@@ -1815,28 +1829,28 @@
          ============================================================ -->
     <section class="engineering-section" id="engineering" aria-label="エンジニアリング">
       <div class="section-container">
-        <h2 class="engineering-heading">あなたの音楽を高みへ導く、精緻なエンジニアリング</h2>
+        <h2 class="engineering-heading fade-in">あなたの音楽を高みへ導く、精緻なエンジニアリング</h2>
 
         <div class="engineering-rows">
-          <div class="engineering-row">
+          <div class="engineering-row fade-in">
             <div class="engineering-row-image">
-              <img src="images/lifestyle/emotive-sound.webp" alt="感動的なサウンド" loading="lazy">
+              <img src="images/lifestyle/emotive-sound.webp" alt="感動的なサウンド" loading="lazy" decoding="async">
             </div>
             <h3 class="engineering-row-title">感動的なサウンド</h3>
             <p class="engineering-row-desc">私たちのテクノロジーは、サウンドを中心に据え、機械ではなく耳でチューニング。聴くだけでなく、感じることのできる体験をお届けします。</p>
           </div>
 
-          <div class="engineering-row">
+          <div class="engineering-row fade-in">
             <div class="engineering-row-image">
-              <img src="images/lifestyle/sustainable-choices.webp" alt="サステナブルな選択" loading="lazy">
+              <img src="images/lifestyle/sustainable-choices.webp" alt="サステナブルな選択" loading="lazy" decoding="async">
             </div>
             <h3 class="engineering-row-title">サステナブルな選択</h3>
             <p class="engineering-row-desc">何世代にもわたって使い続けられるよう設計された製品は、未来への投資です。地球を尊重する責任ある素材とプロセスに取り組んでいます。</p>
           </div>
 
-          <div class="engineering-row">
+          <div class="engineering-row fade-in">
             <div class="engineering-row-image">
-              <img src="images/lifestyle/enduring-design.webp" alt="不朽のデザイン" loading="lazy">
+              <img src="images/lifestyle/enduring-design.webp" alt="不朽のデザイン" loading="lazy" decoding="async">
             </div>
             <h3 class="engineering-row-title">不朽のデザイン</h3>
             <p class="engineering-row-desc">現代的な美学と時代を超えたシンプリシティを融合。すべての製品は、あらゆる空間を引き立てる控えめなエレガンスを備えています。</p>
@@ -1851,10 +1865,10 @@
          ============================================================ -->
     <section class="podcast-section" id="podcast" aria-label="ポッドキャスト">
       <div class="section-container">
-        <h2 class="podcast-display-heading">MADE BY MUSIC<br>PODCAST</h2>
+        <h2 class="podcast-display-heading fade-in">MADE BY MUSIC<br>PODCAST</h2>
 
         <div class="podcast-layout">
-          <div class="podcast-info">
+          <div class="podcast-info slide-left">
             <p class="podcast-subheading">世界の音楽の裏側にあるストーリーを発見する</p>
             <a href="https://open.spotify.com/" target="_blank" rel="noopener noreferrer" class="cta-pill cta-pill--outline-white">Spotifyで聴く <span class="cta-arrow" aria-hidden="true">&rarr;</span></a>
             <div class="podcast-rating" aria-label="評価: 5点中5.0点、69件のレビュー">
@@ -1863,8 +1877,8 @@
               <span class="podcast-rating-count">(69)</span>
             </div>
           </div>
-          <div class="podcast-portrait">
-            <img src="images/hero/podcast-hero.webp" alt="Made by Music Podcast" loading="lazy">
+          <div class="podcast-portrait slide-right">
+            <img src="images/hero/podcast-hero.webp" alt="Made by Music Podcast" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
@@ -1874,21 +1888,21 @@
     <!-- ============================================================
          10. PRESS QUOTES (dark carousel)
          ============================================================ -->
-    <section class="press-quotes-section" id="press-quotes" aria-label="メディア掲載">
+    <section class="press-quotes-section fade-in" id="press-quotes" aria-label="メディア掲載">
       <div class="section-container">
         <div class="press-carousel" data-carousel="press" role="region" aria-label="メディア引用カルーセル">
           <div class="press-carousel-track">
             <blockquote class="press-quote active" data-slide="1">
               <p class="press-quote-text">「Cambridge Audioは、オーディオ企業がどこまで明瞭さと音質を追求できるか、その限界を押し広げ続けている」</p>
               <footer class="press-quote-source">
-                <img src="images/icons/gq-logo.webp" alt="GQ" loading="lazy" width="80" height="40">
+                <img src="images/icons/gq-logo.webp" alt="GQ" loading="lazy" width="80" height="40" decoding="async">
               </footer>
             </blockquote>
 
             <blockquote class="press-quote" data-slide="2" aria-hidden="true">
               <p class="press-quote-text">「時代を超えるデザインと最先端テクノロジーの融合」</p>
               <footer class="press-quote-source">
-                <img src="images/icons/forbes-logo.webp" alt="Forbes" loading="lazy" width="120" height="40">
+                <img src="images/icons/forbes-logo.webp" alt="Forbes" loading="lazy" width="120" height="40" decoding="async">
               </footer>
             </blockquote>
           </div>
@@ -1915,9 +1929,9 @@
          ============================================================ -->
     <section class="vinyl-section" id="vinyl" aria-label="ヴァイナル">
       <div class="vinyl-background">
-        <img src="images/hero/alva-vinyl.webp" alt="Alva ターンテーブル" loading="lazy">
+        <img src="images/hero/alva-vinyl.webp" alt="Alva ターンテーブル" loading="lazy" decoding="async">
       </div>
-      <div class="vinyl-content">
+      <div class="vinyl-content fade-in">
         <h2 class="vinyl-display-heading">FOR THE LOVE<br>OF VINYL</h2>
         <p class="vinyl-subheading">録音された音楽を、最も純粋な形で体験する</p>
         <a href="products.html" class="cta-pill cta-pill--outline-white">Alva を見る <span class="cta-arrow" aria-hidden="true">&rarr;</span></a>
@@ -1930,7 +1944,7 @@
          ============================================================ -->
     <section class="social-section" id="social" aria-label="ソーシャルメディア">
       <div class="section-container">
-        <h2 class="social-heading">#MyCambridgeAudio</h2>
+        <h2 class="social-heading fade-in">#MyCambridgeAudio</h2>
         <p class="social-description">ソーシャルメディアで @CambridgeAudio と #MyCambridgeAudio を使って、あなたのセットアップをシェアしてください。</p>
       </div>
     </section>
@@ -1944,7 +1958,7 @@
   <footer class="site-footer" id="site-footer">
 
     <!-- Newsletter -->
-    <div class="footer-newsletter">
+    <div class="footer-newsletter fade-in">
       <div class="section-container">
         <h2 class="footer-newsletter-heading">最新の音楽ニュースをお届けします。</h2>
         <form id="newsletter-form" class="newsletter-form" action="#" method="post" aria-label="ニュースレター登録">
@@ -2069,21 +2083,6 @@
     document.addEventListener('DOMContentLoaded', () => {
       'use strict';
 
-      // Header scroll behavior
-      const header = document.getElementById('site-header');
-      if (header) {
-        let lastScroll = 0;
-        window.addEventListener('scroll', () => {
-          const currentScroll = window.pageYOffset;
-          if (currentScroll > 50) {
-            header.classList.add('scrolled');
-          } else {
-            header.classList.remove('scrolled');
-          }
-          lastScroll = currentScroll;
-        }, { passive: true });
-      }
-
       // Series carousel
       const seriesSlides = document.querySelectorAll('.series-slide');
       const seriesCounters = document.querySelectorAll('.series-counter');
@@ -2118,6 +2117,10 @@
         document.querySelector('.series-carousel')?.addEventListener('mouseleave', () => {
           seriesTimer = setInterval(() => goToSlide((currentSlide + 1) % totalSlides), 6000);
         });
+        document.querySelector('.series-carousel')?.addEventListener('focusin', () => clearInterval(seriesTimer));
+        document.querySelector('.series-carousel')?.addEventListener('focusout', () => {
+          seriesTimer = setInterval(() => goToSlide((currentSlide + 1) % totalSlides), 6000);
+        });
       }
 
       // Press quotes carousel
@@ -2150,6 +2153,10 @@
 
         document.querySelector('.press-carousel')?.addEventListener('mouseenter', () => clearInterval(pressTimer));
         document.querySelector('.press-carousel')?.addEventListener('mouseleave', () => {
+          pressTimer = setInterval(() => goToQuote((currentQuote + 1) % totalQuotes), 5000);
+        });
+        document.querySelector('.press-carousel')?.addEventListener('focusin', () => clearInterval(pressTimer));
+        document.querySelector('.press-carousel')?.addEventListener('focusout', () => {
           pressTimer = setInterval(() => goToQuote((currentQuote + 1) % totalQuotes), 5000);
         });
       }

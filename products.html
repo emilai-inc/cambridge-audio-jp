@@ -4,7 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>全ての製品 | Cambridge Audio Japan</title>
+  <link rel="icon" type="image/png" href="favicon.png" sizes="48x48">
   <meta name="description" content="Cambridge Audio の全製品ラインナップ。Hi-Fi、ヘッドホン、スピーカー、アクセサリーなど、比類なきブリティッシュサウンドをお届けします。">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="全ての製品 | Cambridge Audio Japan">
+  <meta property="og:description" content="Cambridge Audio の全製品ラインナップ。Hi-Fi、ヘッドホン、スピーカー、アクセサリーなど、比類なきブリティッシュサウンドをお届けします。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.cambridgeaudio.com/jp/products.html">
+  <meta property="og:image" content="images/hero/lr-series-hero.webp">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="Cambridge Audio Japan">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="全ての製品 | Cambridge Audio Japan">
+  <meta name="twitter:description" content="Cambridge Audio の全製品ラインナップ。Hi-Fi、ヘッドホン、スピーカー、アクセサリーなど、比類なきブリティッシュサウンドをお届けします。">
+  <meta name="twitter:image" content="images/hero/lr-series-hero.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"></noscript>
   <link rel="stylesheet" href="css/style.css">
   <style>
     @font-face {
@@ -511,7 +531,7 @@
     }
 
     .newsletter-form input::placeholder {
-      color: rgba(255, 255, 255, 0.4);
+      color: rgba(255, 255, 255, 0.7);
     }
 
     .newsletter-form input:focus {
@@ -576,7 +596,7 @@
 
     .footer-copyright {
       font-size: 12px;
-      color: rgba(255, 255, 255, 0.4);
+      color: rgba(255, 255, 255, 0.7);
     }
 
     .footer-social {
@@ -697,6 +717,7 @@
   </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
 
   <!-- ===== Header ===== -->
   <header class="site-header">
@@ -730,20 +751,20 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
 
     <!-- ===== Hero / Title Section ===== -->
-    <section class="page-hero">
+    <section class="page-hero fade-in">
       <h1>全ての製品</h1>
       <p>比類なきサウンドを、あなたの暮らしに。</p>
     </section>
 
     <!-- ===== Category Grid ===== -->
-    <section class="categories-section" aria-label="製品カテゴリー">
+    <section class="categories-section fade-in" aria-label="製品カテゴリー">
       <div class="category-grid">
 
         <!-- Hi-Fi -->
-        <article class="category-card">
+        <article class="category-card scale-up">
           <a href="hifi.html">
             <div class="category-card-image">
               <img src="images/products/evo-150-se.webp" alt="Evo 150 SE - Hi-Fi ストリーミングアンプ" loading="lazy">
@@ -757,7 +778,7 @@
         </article>
 
         <!-- ヘッドホン -->
-        <article class="category-card">
+        <article class="category-card scale-up">
           <a href="headphones.html">
             <div class="category-card-image">
               <img src="images/products/melomania-a100.webp" alt="Melomania A100 - 完全ワイヤレスイヤホン" loading="lazy">
@@ -771,7 +792,7 @@
         </article>
 
         <!-- スピーカー -->
-        <article class="category-card">
+        <article class="category-card scale-up">
           <a href="speakers.html">
             <div class="category-card-image">
               <img src="images/products/lr-x.webp" alt="L/R X - アクティブステレオストリーミングスピーカー" loading="lazy">
@@ -785,7 +806,7 @@
         </article>
 
         <!-- アクセサリー -->
-        <article class="category-card">
+        <article class="category-card scale-up">
           <a href="accessories.html">
             <div class="category-card-image">
               <img src="images/products/alva-duo.webp" alt="Alva Duo - フォノプリアンプ" loading="lazy">
@@ -802,7 +823,7 @@
     </section>
 
     <!-- ===== Featured Products ===== -->
-    <section class="featured-section" aria-label="注目の製品">
+    <section class="featured-section fade-in" aria-label="注目の製品">
       <div class="section-header">
         <h2>注目の製品</h2>
       </div>
@@ -878,7 +899,7 @@
     </section>
 
     <!-- ===== Product Ranges ===== -->
-    <section class="ranges-section" aria-label="製品シリーズ">
+    <section class="ranges-section fade-in" aria-label="製品シリーズ">
       <div class="section-header">
         <h2>製品シリーズ</h2>
       </div>
@@ -899,6 +920,18 @@
         <a href="hifi.html" class="range-card">
           <h3>AX シリーズ</h3>
           <p>手軽に始めるHi-Fiの世界</p>
+          <span class="range-link">詳しく見る <span class="arrow">&rarr;</span></span>
+        </a>
+
+        <a href="speakers.html" class="range-card">
+          <h3>SX シリーズ</h3>
+          <p>伝統のブリティッシュサウンドを受け継ぐパッシブスピーカー</p>
+          <span class="range-link">詳しく見る <span class="arrow">&rarr;</span></span>
+        </a>
+
+        <a href="speakers.html" class="range-card">
+          <h3>Minx シリーズ</h3>
+          <p>BMRドライバー搭載の超コンパクトスピーカー＆サブウーファー</p>
           <span class="range-link">詳しく見る <span class="arrow">&rarr;</span></span>
         </a>
 

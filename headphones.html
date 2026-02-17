@@ -4,7 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ヘッドホン | Cambridge Audio Japan</title>
+  <link rel="icon" type="image/png" href="favicon.png" sizes="48x48">
   <meta name="description" content="Cambridge Audioのヘッドホン＆イヤホン。Hi-Fiエンジニアが設計した、妥協のないサウンドをどこでも。">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ヘッドホン | Cambridge Audio Japan">
+  <meta property="og:description" content="Cambridge Audioのヘッドホン＆イヤホン。Hi-Fiエンジニアが設計した、妥協のないサウンドをどこでも。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.cambridgeaudio.com/jp/headphones.html">
+  <meta property="og:image" content="images/hero/lr-series-hero.webp">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="Cambridge Audio Japan">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ヘッドホン | Cambridge Audio Japan">
+  <meta name="twitter:description" content="Cambridge Audioのヘッドホン＆イヤホン。Hi-Fiエンジニアが設計した、妥協のないサウンドをどこでも。">
+  <meta name="twitter:image" content="images/hero/lr-series-hero.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"></noscript>
   <link rel="stylesheet" href="css/style.css">
   <style>
     /* ===== Font Face ===== */
@@ -416,7 +436,7 @@
 
     .footer-bottom p {
       font-size: 12px;
-      color: rgba(255, 255, 255, 0.4);
+      color: rgba(255, 255, 255, 0.7);
     }
 
     .footer-bottom-links {
@@ -426,7 +446,7 @@
 
     .footer-bottom-links a {
       font-size: 12px;
-      color: rgba(255, 255, 255, 0.4);
+      color: rgba(255, 255, 255, 0.7);
       transition: color 0.2s;
     }
 
@@ -518,6 +538,7 @@
   </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
 
   <!-- ===== Header ===== -->
   <header class="site-header">
@@ -531,7 +552,7 @@
 
       <nav class="header-nav" aria-label="メインナビゲーション">
         <a href="hifi.html">Hi-Fi</a>
-        <a href="headphones.html" class="active">ヘッドホン</a>
+        <a href="headphones.html" class="active" aria-current="page">ヘッドホン</a>
         <a href="speakers.html">スピーカー</a>
         <a href="accessories.html">アクセサリー</a>
         <a href="about.html">ブランドストーリー</a>
@@ -551,10 +572,10 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
 
     <!-- ===== Page Title ===== -->
-    <section class="page-title">
+    <section class="page-title fade-in">
       <div class="container">
         <h1>HEADPHONES</h1>
         <div class="page-title__sub">ヘッドホン</div>
@@ -563,7 +584,7 @@
     </section>
 
     <!-- ===== Products Section ===== -->
-    <section class="category-section">
+    <section class="category-section fade-in">
       <div class="container">
         <div class="product-grid product-grid--2col">
 
@@ -573,7 +594,7 @@
               <img src="images/products/melomania-a100.webp" alt="Melomania A100" loading="lazy">
             </div>
             <div class="product-card__body">
-              <h2 class="product-card__name">Melomania A100</h2>
+              <h3 class="product-card__name">Melomania A100</h3>
               <p class="product-card__desc">ANC搭載 完全ワイヤレスイヤホン</p>
               <ul class="product-card__features">
                 <li>ハイレゾオーディオ対応</li>
@@ -591,7 +612,7 @@
               <img src="images/products/p100-se.webp" alt="Melomania P100 SE" loading="lazy">
             </div>
             <div class="product-card__body">
-              <h2 class="product-card__name">Melomania P100 SE</h2>
+              <h3 class="product-card__name">Melomania P100 SE</h3>
               <p class="product-card__desc">ANC搭載 オーバーイヤーヘッドホン</p>
               <ul class="product-card__features">
                 <li>ハイレゾオーディオ対応</li>

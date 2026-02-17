@@ -1,0 +1,764 @@
+/* ============================================================
+   Cambridge Audio Japan - Product Page Stylesheet
+   Shared CSS for UK-style product detail pages
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1. PRODUCT HERO (2-column: gallery + info)
+   ------------------------------------------------------------ */
+
+.pp-hero {
+  padding: 48px 0 64px;
+}
+
+.pp-hero__grid {
+  max-width: var(--max-width, 1280px);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* Image Gallery */
+.pp-gallery {
+  position: relative;
+}
+
+.pp-gallery__main {
+  aspect-ratio: 1 / 1;
+  background: #f5f5f5;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pp-gallery__main img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 24px;
+}
+
+.pp-gallery__img {
+  display: none;
+}
+
+.pp-gallery__img.is-active {
+  display: block;
+}
+
+.pp-gallery__dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.pp-gallery__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1.5px solid #999;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.pp-gallery__dot.is-active {
+  background: #000;
+  border-color: #000;
+}
+
+/* Product Info */
+.pp-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 8px;
+}
+
+.pp-info__category {
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #666;
+}
+
+.pp-info__name {
+  font-family: 'Tiempos Headline', Georgia, serif;
+  font-size: 56px;
+  font-weight: 300;
+  line-height: 1.05;
+  margin: 0;
+}
+
+.pp-info__desc {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* Color Swatches */
+.pp-swatches {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.pp-swatch {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid #e0e0e0;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  padding: 0;
+}
+
+.pp-swatch:hover,
+.pp-swatch.is-active {
+  border-color: #000;
+}
+
+.pp-swatch--black { background: #1a1a1a; }
+.pp-swatch--white { background: #f5f5f5; }
+.pp-swatch--orange { background: #d4622b; }
+.pp-swatch--green { background: #4a6741; }
+.pp-swatch--blue { background: #2d4a7a; }
+.pp-swatch--walnut { background: #6b4c3b; }
+
+.pp-info__link {
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s;
+}
+
+.pp-info__link:hover {
+  color: #555;
+}
+
+/* Feature Icons Grid */
+.pp-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.pp-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.pp-feature-item__icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+}
+
+.pp-feature-item__icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.pp-feature-item__text {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* ------------------------------------------------------------
+   2. FULL-WIDTH IMAGE SECTION
+   ------------------------------------------------------------ */
+
+.pp-fullwidth-img {
+  width: 100%;
+}
+
+.pp-fullwidth-img img {
+  width: 100%;
+  display: block;
+}
+
+.pp-fullwidth-img--hero img {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.pp-fullwidth-img--16x9 img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.pp-fullwidth-img--tall img {
+  aspect-ratio: 117 / 100;
+  object-fit: cover;
+}
+
+/* ------------------------------------------------------------
+   3. STICKY PRODUCT NAV
+   ------------------------------------------------------------ */
+
+.pp-sticky-nav {
+  position: sticky;
+  top: var(--header-height, 64px);
+  z-index: 900;
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.pp-sticky-nav__inner {
+  max-width: var(--max-width, 1280px);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  height: 48px;
+}
+
+.pp-sticky-nav__name {
+  font-size: 15px;
+  font-weight: 700;
+  margin-right: auto;
+}
+
+.pp-sticky-nav__link {
+  font-size: 14px;
+  color: #666;
+  transition: color 0.2s;
+}
+
+.pp-sticky-nav__link:hover {
+  color: #000;
+}
+
+/* ------------------------------------------------------------
+   4. THREE-COLUMN FEATURE IMAGES
+   ------------------------------------------------------------ */
+
+.pp-three-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0;
+}
+
+.pp-three-col img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+/* ------------------------------------------------------------
+   5. FEATURE TEXT SECTIONS
+   ------------------------------------------------------------ */
+
+.pp-text-section {
+  padding: 80px 24px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pp-text-section__heading {
+  font-family: 'Tiempos Headline', Georgia, serif;
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.pp-text-section__body {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* ------------------------------------------------------------
+   6. LARGE HEADING + TEXT (below full-width image)
+   ------------------------------------------------------------ */
+
+.pp-heading-block {
+  padding: 80px 24px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pp-heading-block__title {
+  font-family: 'Tiempos Headline', Georgia, serif;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 1.25;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+}
+
+.pp-heading-block__sub {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.pp-heading-block__text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* ------------------------------------------------------------
+   7. PRESS QUOTE (dark bg)
+   ------------------------------------------------------------ */
+
+.pp-quote {
+  background: #000;
+  color: #fff;
+  padding: 100px 24px;
+  text-align: center;
+}
+
+.pp-quote__inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.pp-quote__text {
+  font-family: 'Tiempos Headline', Georgia, serif;
+  font-size: 28px;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.5;
+  margin-bottom: 32px;
+}
+
+.pp-quote__source {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pp-quote__source img {
+  height: 24px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+/* ------------------------------------------------------------
+   8. SECTION HEADING (centered)
+   ------------------------------------------------------------ */
+
+.pp-section-heading {
+  padding: 80px 24px 40px;
+  text-align: center;
+}
+
+.pp-section-heading__title {
+  font-family: 'Tiempos Headline', Georgia, serif;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+/* ------------------------------------------------------------
+   9. ALTERNATING FEATURE ROWS (image + text)
+   ------------------------------------------------------------ */
+
+.pp-feature-row {
+  padding: 40px 0;
+}
+
+.pp-feature-row__grid {
+  max-width: var(--max-width, 1280px);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.pp-feature-row--reverse .pp-feature-row__grid {
+  direction: rtl;
+}
+
+.pp-feature-row--reverse .pp-feature-row__grid > * {
+  direction: ltr;
+}
+
+.pp-feature-row__image {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.pp-feature-row__image img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  display: block;
+}
+
+.pp-feature-row__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pp-feature-row__title {
+  font-family: 'Tiempos Headline', Georgia, serif;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+.pp-feature-row__text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* ------------------------------------------------------------
+   10. MULTI-ROOM SECTION (image + text below)
+   ------------------------------------------------------------ */
+
+.pp-multiroom {
+  padding: 80px 0;
+}
+
+.pp-multiroom__inner {
+  max-width: var(--max-width, 1280px);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.pp-multiroom__image {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 48px;
+}
+
+.pp-multiroom__image img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  display: block;
+}
+
+.pp-multiroom__content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pp-multiroom__title {
+  font-family: 'Tiempos Headline', Georgia, serif;
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 1.3;
+  margin-bottom: 24px;
+}
+
+.pp-multiroom__text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+.pp-multiroom__text:last-child {
+  margin-bottom: 0;
+}
+
+/* ------------------------------------------------------------
+   11. TECHNICAL SPEC TABLE (white bg)
+   ------------------------------------------------------------ */
+
+.pp-specs {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.pp-specs__inner {
+  max-width: var(--max-width, 1280px);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.pp-specs__title {
+  font-family: 'Tiempos Headline', Georgia, serif;
+  font-size: 36px;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.pp-specs__table {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.pp-specs__row {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.pp-specs__row:first-child {
+  border-top: 1px solid #e0e0e0;
+}
+
+.pp-specs__label {
+  font-size: 14px;
+  color: #666;
+  flex: 0 0 220px;
+}
+
+.pp-specs__value {
+  font-size: 14px;
+  color: #111;
+  text-align: right;
+  flex: 1;
+}
+
+/* ------------------------------------------------------------
+   12. RELATED PRODUCTS
+   ------------------------------------------------------------ */
+
+.pp-related {
+  padding: 80px 0;
+}
+
+.pp-related__inner {
+  max-width: var(--max-width, 1280px);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.pp-related__title {
+  font-family: 'Tiempos Headline', Georgia, serif;
+  font-size: 36px;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.pp-related__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.pp-product-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.pp-product-card__image {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #f5f5f5;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.pp-product-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.pp-product-card:hover .pp-product-card__image img {
+  transform: scale(1.03);
+}
+
+.pp-product-card__name {
+  font-family: 'Sohne Wide', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.pp-product-card__desc {
+  font-size: 13px;
+  color: #666;
+}
+
+/* ------------------------------------------------------------
+   13. RESPONSIVE
+   ------------------------------------------------------------ */
+
+@media (max-width: 1024px) {
+  .pp-info__name {
+    font-size: 42px;
+  }
+
+  .pp-feature-row__title {
+    font-size: 26px;
+  }
+
+  .pp-heading-block__title {
+    font-size: 32px;
+  }
+
+  .pp-quote__text {
+    font-size: 24px;
+  }
+
+  .pp-section-heading__title {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pp-hero__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .pp-info__name {
+    font-size: 36px;
+  }
+
+  .pp-features {
+    grid-template-columns: 1fr;
+  }
+
+  .pp-three-col {
+    grid-template-columns: 1fr;
+  }
+
+  .pp-feature-row__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .pp-feature-row--reverse .pp-feature-row__grid {
+    direction: ltr;
+  }
+
+  .pp-text-section {
+    padding: 48px 24px;
+  }
+
+  .pp-text-section__heading {
+    font-size: 28px;
+  }
+
+  .pp-heading-block {
+    padding: 48px 24px;
+  }
+
+  .pp-heading-block__title {
+    font-size: 26px;
+  }
+
+  .pp-quote {
+    padding: 64px 24px;
+  }
+
+  .pp-quote__text {
+    font-size: 22px;
+  }
+
+  .pp-section-heading {
+    padding: 48px 24px 24px;
+  }
+
+  .pp-section-heading__title {
+    font-size: 30px;
+  }
+
+  .pp-feature-row {
+    padding: 24px 0;
+  }
+
+  .pp-feature-row__title {
+    font-size: 24px;
+  }
+
+  .pp-multiroom__title {
+    font-size: 28px;
+  }
+
+  .pp-specs__label {
+    flex: 0 0 140px;
+  }
+
+  .pp-related__grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+
+  .pp-sticky-nav__inner {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pp-info__name {
+    font-size: 32px;
+  }
+
+  .pp-text-section__heading {
+    font-size: 24px;
+  }
+
+  .pp-heading-block__title {
+    font-size: 22px;
+  }
+
+  .pp-quote__text {
+    font-size: 18px;
+  }
+
+  .pp-section-heading__title {
+    font-size: 26px;
+  }
+
+  .pp-feature-row__title {
+    font-size: 22px;
+  }
+
+  .pp-multiroom__title {
+    font-size: 24px;
+  }
+
+  .pp-specs__row {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .pp-specs__value {
+    text-align: left;
+  }
+
+  .pp-specs__title {
+    font-size: 28px;
+  }
+
+  .pp-related__title {
+    font-size: 28px;
+  }
+}

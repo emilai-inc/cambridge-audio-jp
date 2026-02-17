@@ -109,7 +109,7 @@
   --color-overlay-light: rgba(0, 0, 0, 0.06);
 
   /* Typography - Font Families */
-  --font-sans: 'Sohne', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  --font-sans: 'Sohne', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
   --font-sans-wide: 'Sohne Wide', 'Sohne', -apple-system, BlinkMacSystemFont,
     'Segoe UI', sans-serif;
@@ -2817,6 +2817,19 @@ p + p {
   transform: scaleX(0);
 }
 
+/* Generic animate-on-scroll fallback */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity var(--duration-slower) var(--ease-out),
+    transform var(--duration-slower) var(--ease-out);
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ------------------------------------------------------------
    23. UTILITY CLASSES
    ------------------------------------------------------------ */
@@ -3704,4 +3717,23 @@ p + p {
   img {
     opacity: 0.9;
   }
+}
+
+/* Skip Navigation Link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  z-index: 9999;
+  padding: 8px 16px;
+  background: #000;
+  color: #fff;
+  font-size: 14px;
+  font-family: var(--font-sans);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: top 0.2s;
+}
+.skip-link:focus {
+  top: 8px;
 }
