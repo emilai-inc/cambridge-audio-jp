@@ -380,3 +380,34 @@ QA: Lead 直接検証（grep + ブラウザ）
 - 4フィーチャーアイコン（SX-50は3つ）
 
 完了: 2026-02-17 15:56
+
+---
+
+## 製品 #8: SX-80
+開始: 2026-02-17 15:58
+
+### チーム構成
+image-downloader (Bash) → images/products/sx-80/ (15画像)
+frontend-builder (general-purpose) → products/sx-80.html
+QA: Lead 直接検証（grep + ブラウザ）
+
+### 進捗ログ
+15:58 UK SX-80 ページ分析完了（パッシブフロアスタンディング、SXシリーズ最大）
+15:58 チーム sx80-redesign 作成、エージェントスポーン
+15:59 [image-downloader] 15画像ダウンロード完了
+16:02 [frontend-builder] sx-80.html リビルド完了（316行）
+16:02 [Lead] QA直接検証 — 全項目 PASS
+16:03 [Lead] Git コミット `9f719ed` → Push `e230d92`
+
+### 成果物
+- products/sx-80.html: 316行
+- images/products/sx-80/: 15画像（hero x6, lifestyle x1, feature-col x3, fullwidth x1, design-detail x2, feature-row x1, quote-logo x1）
+- Spec Table: 8行（UK準拠: 87dB, 40Hz-20kHz, 8Ω, ツイン165mmウーファー, フロントポート）
+- Related Products: SX-50, SX-60
+
+### 特記事項
+- フロアスタンディング固有: 5フィーチャーアイコン + 6サブフィーチャー（フロアスパイク付属追加）
+- Stereonet プレスクォート（SX-50/60 の What Hi-Fi? と異なる）
+- SXシリーズ3製品すべて完了
+
+完了: 2026-02-17 16:03
