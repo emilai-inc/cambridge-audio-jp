@@ -714,6 +714,11 @@
   .pp-sticky-nav__inner {
     gap: 20px;
   }
+
+  .pp-eng-features {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -761,4 +766,45 @@
   .pp-related__title {
     font-size: 28px;
   }
+
+  .pp-eng-features {
+    padding: 2rem 1rem;
+  }
+}
+
+/* ------------------------------------------------------------
+   14. ENGINEERING FEATURES (3-col with small icons)
+   ------------------------------------------------------------ */
+
+.pp-eng-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  max-width: var(--max-width, 1280px);
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.pp-eng-feature {
+  text-align: left;
+}
+
+.pp-eng-feature__icon {
+  width: 45px;
+  height: 45px;
+  margin-bottom: 1.5rem;
+}
+
+.pp-eng-feature__title {
+  font-family: 'Tiempos Headline', Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+.pp-eng-feature__text {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.7;
 }
