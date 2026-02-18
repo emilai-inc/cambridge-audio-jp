@@ -368,17 +368,73 @@
   <script src="../js/main.js" defer></script>
   <script>
   document.addEventListener('DOMContentLoaded', function() {
-    // Hero gallery
-    var imgs = document.querySelectorAll('.pp-gallery__img');
-    var dots = document.querySelectorAll('.pp-gallery__dot:not([data-quote])');
-    dots.forEach(function(dot, i) {
-      dot.addEventListener('click', function() {
-        imgs.forEach(function(img) { img.classList.remove('is-active'); });
-        dots.forEach(function(d) { d.classList.remove('is-active'); });
-        imgs[i].classList.add('is-active');
-        dot.classList.add('is-active');
+    var gallery = document.querySelector('.pp-gallery');
+    if (!gallery) return;
+    var galleryMain = gallery.querySelector('.pp-gallery__main');
+    var dotsContainer = gallery.querySelector('.pp-gallery__dots');
+
+    var colorMap = {
+      'black': ['hero-1.webp', 'hero-2.webp', 'hero-3.webp', 'hero-4.webp', 'hero-5.webp'],
+      'white': ['hero-white-1.webp']
+    };
+    var basePath = '../images/products/melomania-a100/';
+    var productName = 'Melomania A100';
+
+    function buildGallery(images) {
+      galleryMain.innerHTML = '';
+      dotsContainer.innerHTML = '';
+      images.forEach(function(src, i) {
+        var img = document.createElement('img');
+        img.className = 'pp-gallery__img' + (i === 0 ? ' is-active' : '');
+        img.src = basePath + src;
+        img.alt = productName + ' ' + (i + 1);
+        galleryMain.appendChild(img);
+
+        var dot = document.createElement('button');
+        dot.className = 'pp-gallery__dot' + (i === 0 ? ' is-active' : '');
+        dot.type = 'button';
+        dot.setAttribute('role', 'tab');
+        dot.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+        dot.setAttribute('aria-label', '画像' + (i + 1));
+        dot.dataset.index = i;
+        dotsContainer.appendChild(dot);
+      });
+      bindDots();
+    }
+
+    function bindDots() {
+      var imgs = galleryMain.querySelectorAll('.pp-gallery__img');
+      var dots = dotsContainer.querySelectorAll('.pp-gallery__dot');
+      dots.forEach(function(dot) {
+        dot.addEventListener('click', function() {
+          var idx = parseInt(this.dataset.index, 10);
+          imgs.forEach(function(img, i) { img.classList.toggle('is-active', i === idx); });
+          dots.forEach(function(d, i) {
+            d.classList.toggle('is-active', i === idx);
+            d.setAttribute('aria-selected', i === idx ? 'true' : 'false');
+          });
+        });
+      });
+    }
+
+    // Initial dot binding
+    bindDots();
+
+    // Swatch color switching
+    var swatches = document.querySelectorAll('.pp-swatch');
+    swatches.forEach(function(swatch) {
+      swatch.addEventListener('click', function() {
+        var match = this.className.match(/pp-swatch--(\w+)/);
+        if (!match) return;
+        var color = match[1];
+        if (!colorMap[color]) return;
+
+        swatches.forEach(function(s) { s.classList.remove('is-active'); });
+        this.classList.add('is-active');
+        buildGallery(colorMap[color]);
       });
     });
+
     // Quote carousel
     var slides = document.querySelectorAll('.pp-quote__slide');
     var qdots = document.querySelectorAll('.pp-gallery__dot[data-quote]');

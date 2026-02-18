@@ -62,176 +62,178 @@
   </header>
   <main id="main-content">
 
-    <!-- Hero Gallery -->
-    <section class="pp-hero">
-      <div class="pp-hero__gallery">
-        <div class="pp-hero__main-image">
-          <img src="../images/products/mxw70/hero-1.webp" alt="MXW70 正面" class="pp-gallery__img pp-gallery__img--active">
-          <img src="../images/products/mxw70/hero-2.webp" alt="MXW70 斜め前" class="pp-gallery__img">
-          <img src="../images/products/mxw70/hero-3.webp" alt="MXW70 背面" class="pp-gallery__img">
-          <img src="../images/products/mxw70/hero-4.webp" alt="MXW70 側面" class="pp-gallery__img">
+    <!-- 1. Hero Section -->
+    <section class="pp-hero fade-in">
+      <div class="pp-hero__grid">
+        <div class="pp-gallery" aria-label="製品画像ギャラリー">
+          <div class="pp-gallery__main">
+            <img class="pp-gallery__img is-active" src="../images/products/mxw70/hero-1.webp" alt="MXW70 正面">
+            <img class="pp-gallery__img" src="../images/products/mxw70/hero-2.webp" alt="MXW70 斜め前">
+            <img class="pp-gallery__img" src="../images/products/mxw70/hero-3.webp" alt="MXW70 背面">
+            <img class="pp-gallery__img" src="../images/products/mxw70/hero-4.webp" alt="MXW70 側面">
+          </div>
+          <div class="pp-gallery__dots" role="tablist" aria-label="画像選択">
+            <button class="pp-gallery__dot is-active" type="button" role="tab" aria-selected="true" aria-label="画像1" data-index="0"></button>
+            <button class="pp-gallery__dot" type="button" role="tab" aria-selected="false" aria-label="画像2" data-index="1"></button>
+            <button class="pp-gallery__dot" type="button" role="tab" aria-selected="false" aria-label="画像3" data-index="2"></button>
+            <button class="pp-gallery__dot" type="button" role="tab" aria-selected="false" aria-label="画像4" data-index="3"></button>
+          </div>
         </div>
-        <div class="pp-gallery__dots">
-          <button class="pp-gallery__dot pp-gallery__dot--active" aria-label="画像 1"></button>
-          <button class="pp-gallery__dot" aria-label="画像 2"></button>
-          <button class="pp-gallery__dot" aria-label="画像 3"></button>
-          <button class="pp-gallery__dot" aria-label="画像 4"></button>
+        <div class="pp-info">
+          <span class="pp-info__category">コンパクト パワーアンプ</span>
+          <h1 class="pp-info__name">MXW70</h1>
+          <p class="pp-info__desc">音楽の筋力、コンパクトなフットプリント。MXW70は、あらゆるセットアップにパワーと洗練を加え、他のパワーアンプのような大きさなしに、難しいスピーカーも余裕でドライブします。MXN10ミュージックストリーマーの理想的なパートナーであり、組み合わせることでハーフサイズのハイパフォーマンスストリーミングシステムを構成します。</p>
+          <a href="../support.html#retailers" class="pp-info__link">販売店を探す</a>
+          <div class="pp-features">
+            <div class="pp-feature-item">
+              <span class="pp-feature-item__text">70W/ch</span>
+            </div>
+            <div class="pp-feature-item">
+              <span class="pp-feature-item__text">Hypex NCore Class D</span>
+            </div>
+            <div class="pp-feature-item">
+              <span class="pp-feature-item__text">RCA＆XLR入力</span>
+            </div>
+            <div class="pp-feature-item">
+              <span class="pp-feature-item__text">コンパクト筐体</span>
+            </div>
+            <div class="pp-feature-item">
+              <span class="pp-feature-item__text">12vトリガー入出力</span>
+            </div>
+            <div class="pp-feature-item">
+              <span class="pp-feature-item__text">ブリッジ250Wモノ</span>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="pp-hero__info">
-        <p class="pp-hero__subtitle">コンパクト パワーアンプ</p>
-        <h1 class="pp-hero__title">MXW70</h1>
-        <p class="pp-hero__description">音楽の筋力、コンパクトなフットプリント。MXW70は、あらゆるセットアップにパワーと洗練を加え、他のパワーアンプのような大きさなしに、難しいスピーカーも余裕でドライブします。MXN10ミュージックストリーマーの理想的なパートナーであり、組み合わせることでハーフサイズのハイパフォーマンスストリーミングシステムを構成します。</p>
-        <div class="pp-hero__icons">
-          <div class="pp-hero__icon"><span class="pp-hero__icon-label">70W/ch</span></div>
-          <div class="pp-hero__icon"><span class="pp-hero__icon-label">Hypex NCore Class D</span></div>
-          <div class="pp-hero__icon"><span class="pp-hero__icon-label">RCA＆XLR入力</span></div>
-          <div class="pp-hero__icon"><span class="pp-hero__icon-label">コンパクト筐体</span></div>
-          <div class="pp-hero__icon"><span class="pp-hero__icon-label">12vトリガー入出力</span></div>
-          <div class="pp-hero__icon"><span class="pp-hero__icon-label">ブリッジ250Wモノ</span></div>
-        </div>
-        <a href="../support.html#retailers" class="pp-hero__cta">販売店を探す</a>
       </div>
     </section>
 
-    <!-- Lifestyle Image -->
-    <section class="pp-lifestyle fade-in">
+    <!-- 2. Full-width Lifestyle Image -->
+    <section class="pp-fullwidth-img pp-fullwidth-img--hero fade-in">
       <img src="../images/products/mxw70/lifestyle-1.webp" alt="MXW70 木製家具の上に設置されたルナグレーカラー、額縁アートと本のそばに" loading="lazy">
     </section>
 
-    <!-- Sticky Nav -->
-    <nav class="pp-sticky-nav" aria-label="製品ナビゲーション">
+    <!-- 3. Sticky Navigation -->
+    <nav class="pp-sticky-nav" aria-label="製品ページナビゲーション">
       <div class="pp-sticky-nav__inner">
         <span class="pp-sticky-nav__name">MXW70</span>
-        <div class="pp-sticky-nav__links">
-          <a href="#specs">スペック</a>
-          <a href="../support.html#retailers">販売店を探す</a>
-        </div>
+        <a href="#specs" class="pp-sticky-nav__link">スペック</a>
+        <a href="../support.html#retailers" class="pp-sticky-nav__link">販売店を探す</a>
       </div>
     </nav>
 
-    <!-- 2-Column Feature Images -->
-    <section class="pp-three-col fade-in">
-      <div class="pp-three-col__grid" style="grid-template-columns: 1fr 1fr">
-        <div class="pp-three-col__item">
-          <img src="../images/products/mxw70/feature-col-1.webp" alt="MXW70 リアビュー — バランス・アンバランス入力、スピーカー出力、モード切替" loading="lazy">
-        </div>
-        <div class="pp-three-col__item">
-          <img src="../images/products/mxw70/feature-col-2.webp" alt="MXW70、DacMagic 200M、MXN10 スタックシステム" loading="lazy">
-        </div>
-      </div>
+    <!-- 4. Two-Column Feature Images -->
+    <section class="pp-three-col fade-in" style="grid-template-columns: 1fr 1fr">
+      <img src="../images/products/mxw70/feature-col-1.webp" alt="MXW70 リアビュー — バランス・アンバランス入力、スピーカー出力、モード切替" loading="lazy">
+      <img src="../images/products/mxw70/feature-col-2.webp" alt="MXW70、DacMagic 200M、MXN10 スタックシステム" loading="lazy">
     </section>
 
-    <!-- Text Sections -->
-    <section class="pp-text-block fade-in">
-      <div class="pp-text-block__inner">
-        <h2 class="pp-text-block__heading">パワーに余裕あり</h2>
-        <p class="pp-text-block__body">そのサイズに騙されないでください。MXW70はチャンネルあたり70Wの洗練されたステレオパワーを提供し、モノモードにブリッジすれば圧巻の250Wを実現します。</p>
-      </div>
+    <!-- 5. Text Sections -->
+    <section class="pp-text-section fade-in">
+      <h2 class="pp-text-section__heading">パワーに余裕あり</h2>
+      <p class="pp-text-section__body">そのサイズに騙されないでください。MXW70はチャンネルあたり70Wの洗練されたステレオパワーを提供し、モノモードにブリッジすれば圧巻の250Wを実現します。</p>
     </section>
 
-    <section class="pp-text-block fade-in">
-      <div class="pp-text-block__inner">
-        <h2 class="pp-text-block__heading">超コンパクトシステム</h2>
-        <p class="pp-text-block__body">MXW70を受賞歴のあるMXN10ミュージックストリーマーと組み合わせれば、コンパクトなストリーミングHi-Fiスタックが完成。DacMagic 200M DACを追加すれば、さらなるデジタルの明瞭さとハイレゾヘッドホン出力も手に入ります。</p>
-      </div>
+    <section class="pp-text-section fade-in">
+      <h2 class="pp-text-section__heading">超コンパクトシステム</h2>
+      <p class="pp-text-section__body">MXW70を受賞歴のあるMXN10ミュージックストリーマーと組み合わせれば、コンパクトなストリーミングHi-Fiスタックが完成。DacMagic 200M DACを追加すれば、さらなるデジタルの明瞭さとハイレゾヘッドホン出力も手に入ります。</p>
     </section>
 
-    <!-- Fullwidth Image + Heading -->
-    <section class="pp-fullwidth fade-in">
-      <div class="pp-fullwidth__image">
-        <img src="../images/products/mxw70/fullwidth-1.webp" alt="MXN10とMXW70のスタック、木製家具の上にスマートフォンと額縁アート" loading="lazy">
-      </div>
-      <div class="pp-fullwidth__content">
-        <h2 class="pp-fullwidth__heading">SMALL YET MIGHTY</h2>
-        <p class="pp-fullwidth__text">ロンドンで設計されたMXW70は、コンパクトなケースから卓越したHi-Fiアンプリフィケーションを提供するために綿密にエンジニアリングされました。既存のセットアップに組み込むことも、極小のモダンシステムの基盤とすることもできます。</p>
-      </div>
+    <!-- 6. Fullwidth Image + Heading Block -->
+    <section class="pp-fullwidth-img pp-fullwidth-img--hero fade-in">
+      <img src="../images/products/mxw70/fullwidth-1.webp" alt="MXN10とMXW70のスタック、木製家具の上にスマートフォンと額縁アート" loading="lazy">
     </section>
 
-    <!-- Twin Images -->
-    <section class="pp-twin fade-in">
-      <div class="pp-twin__grid">
-        <div class="pp-twin__item">
+    <div class="pp-heading-block fade-in">
+      <h2 class="pp-heading-block__title">SMALL YET MIGHTY</h2>
+      <p class="pp-heading-block__text">ロンドンで設計されたMXW70は、コンパクトなケースから卓越したHi-Fiアンプリフィケーションを提供するために綿密にエンジニアリングされました。既存のセットアップに組み込むことも、極小のモダンシステムの基盤とすることもできます。</p>
+    </div>
+
+    <!-- 7. Twin Detail Images -->
+    <section class="pp-feature-row fade-in">
+      <div class="pp-feature-row__grid">
+        <div class="pp-feature-row__image">
           <img src="../images/products/mxw70/design-detail-1.webp" alt="MXW70 マクロショット — フロントパネルのディテール" loading="lazy">
         </div>
-        <div class="pp-twin__item">
+        <div class="pp-feature-row__image">
           <img src="../images/products/mxw70/design-detail-2.webp" alt="MXW70 サイドプロファイル — ミニマリストなスプリットパネルデザインとアルミニウムシャーシ" loading="lazy">
         </div>
       </div>
     </section>
 
-    <!-- Sub-Features -->
-    <section class="pp-sub-features fade-in">
-      <h2 class="pp-sub-features__heading">ストリーミングのシンプルさ、Hi-Fiサウンド</h2>
-      <div class="pp-sub-features__grid">
-        <div class="pp-sub-features__item">
-          <h3 class="pp-sub-features__title">Hypex NCore Class Dアンプ</h3>
-          <p class="pp-sub-features__text">MXW70の高効率Class Dアンプは、スムーズでダイナミック、パワフルなオーディオを提供し、幅広いスピーカーを余裕でドライブします。</p>
-        </div>
-        <div class="pp-sub-features__item">
-          <h3 class="pp-sub-features__title">コンパクトフットプリント</h3>
-          <p class="pp-sub-features__text">わずか215mm幅のMXW70は、デスクの上でも、エンターテインメントユニットの中でも、棚の奥でも、必要な場所にぴったり収まります。</p>
-        </div>
-        <div class="pp-sub-features__item">
-          <h3 class="pp-sub-features__title">充実の接続端子</h3>
-          <p class="pp-sub-features__text">高品質なスピーカー出力とステレオRCA入力に加え、ノイズフリーでスタジオグレードの信号伝送を実現するプレミアムXLR入力を搭載しています。</p>
-        </div>
-      </div>
-    </section>
+    <!-- 8. Sub-features -->
+    <div class="pp-section-heading fade-in">
+      <h2 class="pp-section-heading__title">ストリーミングのシンプルさ、Hi-Fiサウンド</h2>
+    </div>
 
-    <!-- Feature Row: Full Metal Jacket -->
+    <div class="pp-eng-features fade-in">
+      <div class="pp-eng-feature">
+        <h3 class="pp-eng-feature__title">Hypex NCore Class Dアンプ</h3>
+        <p class="pp-eng-feature__text">MXW70の高効率Class Dアンプは、スムーズでダイナミック、パワフルなオーディオを提供し、幅広いスピーカーを余裕でドライブします。</p>
+      </div>
+      <div class="pp-eng-feature">
+        <h3 class="pp-eng-feature__title">コンパクトフットプリント</h3>
+        <p class="pp-eng-feature__text">わずか215mm幅のMXW70は、デスクの上でも、エンターテインメントユニットの中でも、棚の奥でも、必要な場所にぴったり収まります。</p>
+      </div>
+      <div class="pp-eng-feature">
+        <h3 class="pp-eng-feature__title">充実の接続端子</h3>
+        <p class="pp-eng-feature__text">高品質なスピーカー出力とステレオRCA入力に加え、ノイズフリーでスタジオグレードの信号伝送を実現するプレミアムXLR入力を搭載しています。</p>
+      </div>
+    </div>
+
+    <!-- 9. Feature Row: Full Metal Jacket -->
     <section class="pp-feature-row fade-in">
       <div class="pp-feature-row__grid">
         <div class="pp-feature-row__image">
           <img src="../images/products/mxw70/feature-detail.webp" alt="MXW70 フロントボタンのディテール" loading="lazy">
         </div>
         <div class="pp-feature-row__content">
-          <h2 class="pp-feature-row__heading">フルメタルジャケット</h2>
+          <h2 class="pp-feature-row__title">フルメタルジャケット</h2>
           <p class="pp-feature-row__text">ハーフサイズチャンピオンの製造に妥協はありません。MXW70は、ミニマリストなタイムレスデザインのプレミアムオールメタル筐体を採用し、トレードマークのルナグレーで完璧に仕上げられています。</p>
         </div>
       </div>
     </section>
 
-    <!-- Spec Table -->
+    <!-- 10. Spec Table -->
     <section class="pp-specs fade-in" id="specs">
-      <h2 class="pp-specs__heading">技術仕様</h2>
-      <div class="pp-specs__table">
-        <div class="pp-specs__row"><span class="pp-specs__label">出力</span><span class="pp-specs__value">2×70W（8Ωステレオ）、2×125W（4Ωステレオ）、250W（8Ωモノ）</span></div>
-        <div class="pp-specs__row"><span class="pp-specs__label">スピーカー出力</span><span class="pp-specs__value">1セット</span></div>
-        <div class="pp-specs__row"><span class="pp-specs__label">その他出力</span><span class="pp-specs__value">12vトリガーパススルー</span></div>
-        <div class="pp-specs__row"><span class="pp-specs__label">THD+N（無加重）</span><span class="pp-specs__value">&lt;0.015% @ 5W/8Ω</span></div>
-        <div class="pp-specs__row"><span class="pp-specs__label">S/N比（ref 1W - 20kHz BW）</span><span class="pp-specs__value">&gt;92dB（XLR）、&gt;89dB（RCA）</span></div>
-        <div class="pp-specs__row"><span class="pp-specs__label">クロストーク @1kHz</span><span class="pp-specs__value">&lt;-82dB</span></div>
-        <div class="pp-specs__row"><span class="pp-specs__label">ゲイン</span><span class="pp-specs__value">22.2dB（XLR）、28.8dB（RCA）</span></div>
-        <div class="pp-specs__row"><span class="pp-specs__label">入力感度</span><span class="pp-specs__value">3.6V（モノXLR）、1.65V（モノRCA）、0.9V（ステレオRCA）、1.9V（ステレオXLR）</span></div>
-        <div class="pp-specs__row"><span class="pp-specs__label">入力インピーダンス</span><span class="pp-specs__value">22kΩ（RCA）、35kΩ（XLR）</span></div>
-        <div class="pp-specs__row"><span class="pp-specs__label">パワーアンプ制動係数</span><span class="pp-specs__value">&gt;180 @ 1kHz 8Ω</span></div>
-        <div class="pp-specs__row"><span class="pp-specs__label">最大消費電力</span><span class="pp-specs__value">300W</span></div>
-        <div class="pp-specs__row"><span class="pp-specs__label">スタンバイ消費電力</span><span class="pp-specs__value">&lt;0.5W</span></div>
-        <div class="pp-specs__row"><span class="pp-specs__label">寸法（H×W×D）</span><span class="pp-specs__value">57 × 215 × 215mm</span></div>
-        <div class="pp-specs__row"><span class="pp-specs__label">重量</span><span class="pp-specs__value">1.65kg</span></div>
-        <div class="pp-specs__row"><span class="pp-specs__label">同梱物</span><span class="pp-specs__value">電源ケーブル、ウェルカムレター、登録カード、安全ガイド</span></div>
+      <div class="pp-specs__inner">
+        <h2 class="pp-specs__title">技術仕様</h2>
+        <div class="pp-specs__table">
+          <div class="pp-specs__row"><span class="pp-specs__label">出力</span><span class="pp-specs__value">2×70W（8Ωステレオ）、2×125W（4Ωステレオ）、250W（8Ωモノ）</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">スピーカー出力</span><span class="pp-specs__value">1セット</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">その他出力</span><span class="pp-specs__value">12vトリガーパススルー</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">THD+N（無加重）</span><span class="pp-specs__value">&lt;0.015% @ 5W/8Ω</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">S/N比（ref 1W - 20kHz BW）</span><span class="pp-specs__value">&gt;92dB（XLR）、&gt;89dB（RCA）</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">クロストーク @1kHz</span><span class="pp-specs__value">&lt;-82dB</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">ゲイン</span><span class="pp-specs__value">22.2dB（XLR）、28.8dB（RCA）</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">入力感度</span><span class="pp-specs__value">3.6V（モノXLR）、1.65V（モノRCA）、0.9V（ステレオRCA）、1.9V（ステレオXLR）</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">入力インピーダンス</span><span class="pp-specs__value">22kΩ（RCA）、35kΩ（XLR）</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">パワーアンプ制動係数</span><span class="pp-specs__value">&gt;180 @ 1kHz 8Ω</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">最大消費電力</span><span class="pp-specs__value">300W</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">スタンバイ消費電力</span><span class="pp-specs__value">&lt;0.5W</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">寸法（H×W×D）</span><span class="pp-specs__value">57 × 215 × 215mm</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">重量</span><span class="pp-specs__value">1.65kg</span></div>
+          <div class="pp-specs__row"><span class="pp-specs__label">同梱物</span><span class="pp-specs__value">電源ケーブル、ウェルカムレター、登録カード、安全ガイド</span></div>
+        </div>
       </div>
     </section>
 
-    <!-- Related Products -->
+    <!-- 11. Related Products -->
     <section class="pp-related fade-in">
-      <h2 class="pp-related__heading">関連製品</h2>
-      <div class="pp-related__grid">
-        <a href="mxn10.html" class="pp-related__card">
-          <div class="pp-related__image"><img src="../images/products/mxn10.webp" alt="MXN10" loading="lazy"></div>
-          <div class="pp-related__body">
-            <h3 class="pp-related__name">MXN10</h3>
-            <p class="pp-related__desc">コンパクト ネットワークプレーヤー</p>
-          </div>
-        </a>
-        <a href="dacmagic-200m.html" class="pp-related__card">
-          <div class="pp-related__image"><img src="../images/products/dacmagic-200m.webp" alt="DacMagic 200M" loading="lazy"></div>
-          <div class="pp-related__body">
-            <h3 class="pp-related__name">DacMagic 200M</h3>
-            <p class="pp-related__desc">D/Aコンバーター＆ヘッドホンアンプ</p>
-          </div>
-        </a>
+      <div class="pp-related__inner">
+        <h2 class="pp-related__title">関連製品</h2>
+        <div class="pp-related__grid">
+          <a href="mxn10.html" class="pp-product-card">
+            <div class="pp-product-card__image"><img src="../images/products/mxn10.webp" alt="MXN10" loading="lazy"></div>
+            <h3 class="pp-product-card__name">MXN10</h3>
+            <p class="pp-product-card__desc">コンパクト ネットワークプレーヤー</p>
+          </a>
+          <a href="dacmagic-200m.html" class="pp-product-card">
+            <div class="pp-product-card__image"><img src="../images/products/dacmagic-200m.webp" alt="DacMagic 200M" loading="lazy"></div>
+            <h3 class="pp-product-card__name">DacMagic 200M</h3>
+            <p class="pp-product-card__desc">D/Aコンバーター＆ヘッドホンアンプ</p>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -252,19 +254,22 @@
   </footer>
   <script src="../js/main.js" defer></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Hero gallery
-      const heroImgs = document.querySelectorAll('.pp-gallery__img');
-      const heroDots = document.querySelectorAll('.pp-gallery__dot:not([data-quote])');
-      heroDots.forEach(function(dot, i) {
+    // Image Gallery Carousel
+    (function() {
+      var gallery = document.querySelector('.pp-gallery');
+      if (!gallery) return;
+      var imgs = gallery.querySelectorAll('.pp-gallery__img');
+      var dots = gallery.querySelectorAll('.pp-gallery__dot');
+      dots.forEach(function(dot, i) {
         dot.addEventListener('click', function() {
-          heroImgs.forEach(function(img) { img.classList.remove('pp-gallery__img--active'); });
-          heroDots.forEach(function(d) { d.classList.remove('pp-gallery__dot--active'); });
-          heroImgs[i].classList.add('pp-gallery__img--active');
-          dot.classList.add('pp-gallery__dot--active');
+          imgs.forEach(function(img) { img.classList.remove('is-active'); });
+          dots.forEach(function(d) { d.classList.remove('is-active'); d.setAttribute('aria-selected', 'false'); });
+          imgs[i].classList.add('is-active');
+          dot.classList.add('is-active');
+          dot.setAttribute('aria-selected', 'true');
         });
       });
-    });
+    })();
   </script>
 </body>
 </html>

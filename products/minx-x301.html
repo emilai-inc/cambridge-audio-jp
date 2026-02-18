@@ -304,27 +304,71 @@
   </footer>
   <script src="../js/main.js" defer></script>
   <script>
-    // Image Gallery Carousel
     document.addEventListener('DOMContentLoaded', function() {
       var gallery = document.querySelector('.pp-gallery');
       if (!gallery) return;
+      var galleryMain = gallery.querySelector('.pp-gallery__main');
+      var dotsContainer = gallery.querySelector('.pp-gallery__dots');
 
-      var imgs = gallery.querySelectorAll('.pp-gallery__img');
-      var dots = gallery.querySelectorAll('.pp-gallery__dot');
+      var colorMap = {
+        'black': ['hero-1.webp', 'hero-2.webp', 'hero-3.webp', 'hero-4.webp', 'hero-5.webp', 'hero-6.webp', 'hero-7.webp', 'hero-8.webp'],
+        'white': ['hero-white-1.webp', 'hero-white-2.webp', 'hero-white-3.webp', 'hero-white-4.webp', 'hero-white-5.webp', 'hero-white-6.webp', 'hero-white-7.webp', 'hero-white-8.webp']
+      };
+      var basePath = '../images/products/minx-x301/';
+      var productName = 'Minx X301';
 
-      function showImage(index) {
-        imgs.forEach(function(img, i) {
-          img.classList.toggle('is-active', i === index);
+      function buildGallery(images) {
+        galleryMain.innerHTML = '';
+        dotsContainer.innerHTML = '';
+        images.forEach(function(src, i) {
+          var img = document.createElement('img');
+          img.className = 'pp-gallery__img' + (i === 0 ? ' is-active' : '');
+          img.src = basePath + src;
+          img.alt = productName + ' ' + (i + 1);
+          galleryMain.appendChild(img);
+
+          var dot = document.createElement('button');
+          dot.className = 'pp-gallery__dot' + (i === 0 ? ' is-active' : '');
+          dot.type = 'button';
+          dot.setAttribute('role', 'tab');
+          dot.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+          dot.setAttribute('aria-label', '画像' + (i + 1));
+          dot.dataset.index = i;
+          dotsContainer.appendChild(dot);
         });
-        dots.forEach(function(dot, i) {
-          dot.classList.toggle('is-active', i === index);
-          dot.setAttribute('aria-selected', i === index ? 'true' : 'false');
+        bindDots();
+      }
+
+      function bindDots() {
+        var imgs = galleryMain.querySelectorAll('.pp-gallery__img');
+        var dots = dotsContainer.querySelectorAll('.pp-gallery__dot');
+        dots.forEach(function(dot) {
+          dot.addEventListener('click', function() {
+            var idx = parseInt(this.dataset.index, 10);
+            imgs.forEach(function(img, i) { img.classList.toggle('is-active', i === idx); });
+            dots.forEach(function(d, i) {
+              d.classList.toggle('is-active', i === idx);
+              d.setAttribute('aria-selected', i === idx ? 'true' : 'false');
+            });
+          });
         });
       }
 
-      dots.forEach(function(dot) {
-        dot.addEventListener('click', function() {
-          showImage(parseInt(this.dataset.index, 10));
+      // Initial dot binding
+      bindDots();
+
+      // Swatch color switching
+      var swatches = document.querySelectorAll('.pp-swatch');
+      swatches.forEach(function(swatch) {
+        swatch.addEventListener('click', function() {
+          var match = this.className.match(/pp-swatch--(\w+)/);
+          if (!match) return;
+          var color = match[1];
+          if (!colorMap[color]) return;
+
+          swatches.forEach(function(s) { s.classList.remove('is-active'); });
+          this.classList.add('is-active');
+          buildGallery(colorMap[color]);
         });
       });
     });

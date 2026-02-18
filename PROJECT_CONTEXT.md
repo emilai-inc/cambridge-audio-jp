@@ -5,7 +5,7 @@
 ### 目的
 Cambridge Audio 公式サイト（cambridgeaudio.com/row/en）をベースに、日本語ローカライズされた実運用レベルのクローンサイトを構築する。
 
-### 現在のステータス: Phase 14 完了 — Hi-Fi製品ページ翻訳修正 + CSSクラス正規化
+### 現在のステータス: Phase 15 完了 — GitHub Issues #13, #17-18, #23-27 全件解決
 
 | フェーズ | 内容 | ステータス |
 |---------|------|----------|
@@ -23,13 +23,14 @@ Cambridge Audio 公式サイト（cambridgeaudio.com/row/en）をベースに、
 | Phase 12 | GitHub Issues #4-#12 全件解決: favicon, OGP, モバイルQA, SX+Minx 8製品追加 | 完了 |
 | Phase 13 | 全37製品ページ UK準拠リデザイン: pp-classシステム + product-page.css + UK画像 | 完了 |
 | Phase 14 | Hi-Fi 7製品ページ英語→日本語全文翻訳 + CSSクラス正規化(3ファイル) + スペック表統一 | 完了 |
+| Phase 15 | GitHub Issues #13,#17-18,#23-27: レイアウト修正6件 + カラースウォッチJS実装 + about.html改善 | 完了 |
 
 ### サイト規模
 - **HTMLファイル**: 51ページ（ルート13 + 製品詳細37 + 404.html）
-- **画像ファイル**: 400+枚（製品サブディレクトリに hero/lifestyle/feature/fullwidth/quote-logo 等）
+- **画像ファイル**: 560+枚（製品サブディレクトリに hero/lifestyle/feature/fullwidth/quote-logo + カラーバリアント162枚）
 - **フォントファイル**: 10個（Sohne系8 + Tiempos Headline系2）
 - **CSS**: style.css（共通基盤 ~3,700行）+ product-page.css（製品ページ共有 ~810行）+ ルートページのインラインCSS
-- **JS**: main.js（~800行 — カルーセル、メニュー、スクロールアニメーション）+ 製品ページ内ギャラリーJS
+- **JS**: main.js（~800行 — カルーセル、メニュー、スクロールアニメーション）+ 製品ページ内ギャラリーJS + カラースウォッチ切替JS（10製品）
 - **外部フォント**: Google Fonts（Noto Sans JP: 400/500/700）— 全50HTMLに読み込み済み
 - **favicon**: favicon.png（48x48px）— 全51ページに設定済み
 - **OGP/Twitter Card**: 全51ページにメタデータ設定済み
@@ -341,6 +342,21 @@ cambridge-audio-jp/
 | #10 | アクセシビリティ — skip-link/aria-current/コントラスト比 | Phase 11 | `0a70bd0` |
 | #11 | エラーページ — 404.html 新規作成 | Phase 11 | `d40f99f` |
 | #12 | アニメーション — IntersectionObserver 全43ページ | Phase 11 | `2b1a7be` |
+| #13 | カラースウォッチ機能実装 — 10製品ページ + 162カラーバリアント画像 | Phase 15 | — |
+| #14 | AXA25 英語テキスト翻訳漏れ | Phase 14 | `4f1dfab` |
+| #15 | CXA81 MkII 英語テキスト翻訳漏れ | Phase 14 | `4f1dfab` |
+| #16 | EXA100 英語テキスト翻訳漏れ | Phase 14 | `4f1dfab` |
+| #17 | MXW70 レイアウト不整合 — CSSクラス修正 | Phase 15 | — |
+| #18 | MXN10 レイアウト不整合 — CSSクラス修正 | Phase 15 | — |
+| #19 | CXN100 英語テキスト翻訳漏れ | Phase 14 | `4f1dfab` |
+| #20 | EXN100 英語テキスト翻訳漏れ | Phase 14 | `4f1dfab` |
+| #21 | AXC35 英語テキスト翻訳漏れ | Phase 14 | `4f1dfab` |
+| #22 | CXC 英語テキスト翻訳漏れ | Phase 14 | `4f1dfab` |
+| #23 | DacMagic 200M レイアウト不整合 — CSSクラス修正 | Phase 15 | — |
+| #24 | Alva Solo レイアウト不整合 — CSSクラス修正 | Phase 15 | — |
+| #25 | Alva Duo レイアウト不整合 — CSSクラス修正 | Phase 15 | — |
+| #26 | Alva ST レイアウト不整合 — CSSクラス修正 | Phase 15 | — |
+| #27 | about.html expertise セクション レイアウト改善 | Phase 15 | — |
 
 ### 5.3 Phase 11 で解決済みの改善候補（全5件完了）
 
@@ -504,5 +520,52 @@ find . -name "*.html" | wc -l
 4. **タイトルタグ形式**: `[製品名] | Cambridge Audio Japan` が正式パターン。カテゴリ名（"Integrated Stereo Amplifier"等）は含めない
 
 ### 既知の問題・注意事項
-- **DacMagic 200Mの独自クラスパターン**: `pp-hero__gallery`, `pp-hero__subtitle`, `pp-hero__title`, `pp-hero__description` を使用しており、`pp-info__*` パターンと不一致。Phase 14のスコープ外として未修正（機能的には正常動作）
+- **DacMagic 200Mの独自クラスパターン**: Phase 15 Issue #23で修正済み（pp-gallery + pp-info パターンに統一）
 - **Git最終コミット**: `7882b15` (main branch, 未push)
+
+---
+
+## 2026-02-18 作業記録（Phase 15: GitHub Issues #13, #17-18, #23-27）
+
+### 処理したIssue
+
+| Issue | 内容 | カテゴリ |
+|-------|------|---------|
+| #13 | カラースウォッチ機能実装 — 10製品ページにJS追加 + UK CDNから162カラーバリアント画像 | 機能追加 |
+| #14-16, #19-22 | 7製品ページ英語翻訳漏れ（Phase 14で解決済み → クローズのみ） | クローズ処理 |
+| #17 | MXW70 レイアウト修正 — CSSクラスをproduct-page.css準拠に統一 | レイアウト |
+| #18 | MXN10 レイアウト修正 — 同上 | レイアウト |
+| #23 | DacMagic 200M レイアウト修正 — 同上 | レイアウト |
+| #24 | Alva Solo レイアウト修正 — 同上 | レイアウト |
+| #25 | Alva Duo レイアウト修正 — 同上 | レイアウト |
+| #26 | Alva ST レイアウト修正 — 同上 | レイアウト |
+| #27 | about.html expertise セクション改善 — story-block パターンに変換 | レイアウト改善 |
+
+### 未解決のまま残ったIssue
+なし。GitHub Issues #1〜#27 全件クローズ済み。
+
+### 技術的な判断・変更点
+
+1. **レイアウト修正6件の共通パターン（#17, #18, #23-26）**
+   - 根本原因: Phase 13リデザイン時にHTMLのCSSクラス名がproduct-page.cssの定義と不一致
+   - 修正: `pp-hero__gallery`→`pp-gallery`, `pp-hero__main-image`→`pp-gallery__main`, `pp-text-block`→`pp-text-section`, `pp-fullwidth`→`pp-fullwidth-img`, `pp-twin`→`pp-feature-row`, `pp-quotes`→`pp-quote`, `pp-sticky-nav__links`→`pp-sticky-nav__nav` 等
+   - 参照ファイル: `products/cxn100.html`（Phase 14で正規化済み）
+
+2. **カラースウォッチJS実装（#13）**
+   - UK Cambridge Audio CDNから162枚のカラーバリアント画像をダウンロード（PNG→WebP変換 cwebp -q 85）
+   - CDNパス2種: `/sites/default/files/media/images/`（新製品）, `/sites/default/files/ecommece/product/image/`（Minx旧製品）
+   - 命名規則: `hero-{color}-{N}.webp`（blackは既存の `hero-{N}.webp` を使用）
+   - JS実装: `buildGallery()` でDOM動的再構築 + `bindDots()` でドットナビ連動 + スウォッチクリックハンドラ（regex `/pp-swatch--(\w+)/` でカラー名抽出）
+   - 対応製品: LR-X/M/S（6色: black/white/orange/green/blue/walnut）、他7製品（2色: black/white）
+   - 既存のquoteカルーセルJS保持（melomania-a100, melomania-p100-se）
+
+3. **about.html改善（#27）**
+   - expertise-section（beige/white 2色カード分割）→ story-section（story-block パターン）に変換
+   - UK本国サイト `/row/en/about-us` のレイアウトに準拠
+   - 不要CSS 14ルール削除（.expertise-section, .expertise-grid, .expertise-card 等）
+   - venue-images を2枚→1枚のフルワイド画像に簡素化
+
+### 既知の問題・注意事項
+- **melomania-p100-se.html の青スウォッチ**: line 89にインラインstyleの青スウォッチ（`style="background:#2c4a7c;"`）があり、`pp-swatch--blue` クラスではないためスウォッチJSのregex `/pp-swatch--(\w+)/` にマッチしない。青画像も存在しないため、クリック時は無害にスキップ。修正する場合は`pp-swatch--blue`クラスに変更 + 青画像のダウンロードが必要
+- **LR-M White #2**: UK CDN上に存在しないため、White カラーは4画像のみ（他カラーは5画像）
+- **Git最終コミット**: Phase 15の変更は未コミット（10製品HTMLスウォッチJS + 162画像 + 6レイアウト修正HTML + about.html）

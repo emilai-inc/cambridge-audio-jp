@@ -1093,3 +1093,190 @@ Lead: HTML直接構築 → products/exa100.html
 - QA指摘修正: 7ファイルでスペック値"Yes"→"対応"統一、同梱物翻訳、タイトルタグ正規化
 - チーム: 実装3名 + QA3名（並行処理）
 - 完了: 2026-02-18
+
+---
+
+## Phase 15: GitHub Issues #13, #17-18, #23-27 対応
+開始: 2026-02-18
+
+### 事前処理
+- GitHub Issues #14-16, #19-22（翻訳系7件）をPhase 14解決済みとしてクローズ
+- 残る未解決Issue: 8件（レイアウト6件 + カラースウォッチ1件 + about改善1件）
+
+---
+
+## Issue #23: DacMagic 200Mのレイアウトがおかしい
+開始: 2026-02-18
+
+### 状況判定
+ステータス: 解決済み
+判定根拠: dacmagic-200m.htmlがpp-hero__gallery, pp-hero__main-image, pp-text-block等のCSS未定義クラスを使用。product-page.cssの正しいクラスに構造リファクタリングが必要。
+
+### チーム構成
+- Agent A: 実装 → products/dacmagic-200m.html のみ
+- QA Agent: 実装完了後にスポーン
+
+### 進捗ログ
+- 実装完了: 47件の変更（CSSクラス名統一、HTML構造変更、JS更新）
+- QA検証: PASS（CSS未定義クラス残存なし、HTML構造正常、JS正常、テキスト保持確認済み）
+- GitHub Issue #23: クローズ済み
+- 完了: 2026-02-18
+
+---
+
+## Issue #17: MXW70のレイアウトがおかしい
+開始: 2026-02-18
+
+### 状況判定
+ステータス: 解決済み
+判定根拠: mxw70.htmlがCSS未定義クラスを使用。DacMagic 200Mと同パターンの構造リファクタリングが必要。
+
+### チーム構成
+- Agent A: 実装 → products/mxw70.html のみ
+- QA Agent: 実装完了後にスポーン
+
+### 進捗ログ
+- 実装完了: 48件の変更（CSSクラス名統一、HTML構造変更、JS更新）
+- QA検証: PASS（CSS未定義クラス残存なし、HTML構造正常、JS正常、テキスト保持確認済み）
+- GitHub Issue #17: クローズ済み
+- 完了: 2026-02-18
+
+---
+
+## Issue #18: MXN10のレイアウトがおかしい
+開始: 2026-02-18
+
+### 状況判定
+ステータス: 解決済み
+判定根拠: mxn10.htmlがCSS未定義クラスを使用。同パターンの構造リファクタリングが必要。
+
+### チーム構成
+- Agent A: 実装 → products/mxn10.html のみ
+- QA Agent: 実装完了後にスポーン
+
+### 進捗ログ
+- 実装完了: 47件の変更（CSSクラス名統一、HTML構造変更、JS更新）
+- QA検証: PASS（CSS未定義クラス残存なし、HTML構造正常、JS正常、テキスト保持確認済み）
+- GitHub Issue #18: クローズ済み
+- 完了: 2026-02-18
+
+---
+
+## Issue #24: Alva Soloのレイアウトがおかしい
+開始: 2026-02-18
+
+### 状況判定
+ステータス: 解決済み
+判定根拠: alva-solo.htmlがCSS未定義クラスを使用。同パターンの構造リファクタリングが必要。
+
+### チーム構成
+- Agent A: 実装 → products/alva-solo.html のみ
+- QA Agent: 実装完了後にスポーン
+
+### 進捗ログ
+- 実装完了: 47件の変更（CSSクラス名統一、HTML構造変更、JS更新）
+- QA検証: PASS（CSS未定義クラス残存なし、HTML構造正常、JS正常、テキスト保持確認済み）
+- GitHub Issue #24: クローズ済み
+- 完了: 2026-02-18
+
+---
+
+## Issue #25: Alva Duoのレイアウトがおかしい
+開始: 2026-02-18
+
+### 状況判定
+ステータス: 解決済み
+判定根拠: alva-duo.htmlがCSS未定義クラスを使用。同パターンの構造リファクタリングが必要。
+
+### チーム構成
+- Agent A: 実装 → products/alva-duo.html のみ
+- QA Agent: 実装完了後にスポーン
+
+### 進捗ログ
+- 実装完了: 40件の変更（CSSクラス名統一、HTML構造変更、JS更新）
+- QA検証: PASS（CSS未定義クラス残存なし、HTML構造正常、JS正常、テキスト保持確認済み）
+- GitHub Issue #25: クローズ済み
+- 完了: 2026-02-18
+
+---
+
+## Issue #26: Alva STのレイアウトがおかしい
+開始: 2026-02-18
+
+### 状況判定
+ステータス: 解決済み
+判定根拠: alva-st.htmlがCSS未定義クラスを使用。同パターンの構造リファクタリングが必要。
+
+### チーム構成
+- Agent A: 実装 → products/alva-st.html のみ
+- QA Agent: 実装完了後にスポーン
+
+### 進捗ログ
+- 実装完了: 46件の変更（CSSクラス名統一、HTML構造変更、JS更新）
+- QA検証: PASS（CSS未定義クラス残存なし、HTML構造正常、JS正常、テキスト保持確認済み）
+- GitHub Issue #26: クローズ済み
+- 完了: 2026-02-18
+
+---
+
+## Issue #13: カラースウォッチ機能実装
+開始: 2026-02-18
+
+### 状況判定
+- ステータス: 解決済み
+- 根本原因: カラースウォッチのHTMLとCSSは存在するが、クリック時に画像を切り替えるJSが未実装
+- 追加対応: UK本国サイトから色別画像をダウンロード（PNG→WebP変換）
+
+### 対応内容
+- UK Cambridge Audio CDNから162枚のカラーバリアント画像をダウンロード
+  - 2つのCDNパス: /media/images/（新製品）, /ecommece/product/image/（旧製品）
+  - cwebp -q 85 で WebP 変換
+  - 命名規則: hero-{color}-{N}.webp（black は既存の hero-{N}.webp を使用）
+- 10製品ページにカラースウォッチ切り替えJS実装:
+  - 6色対応（black/white/orange/green/blue/walnut）: lr-x, lr-m, lr-s
+  - 2色対応（black/white）: melomania-a100, melomania-p100-se, minx-min-12, minx-min-22, minx-x201, minx-x301, minx-floor-stands
+- 実装方式: buildGallery()でDOM動的再構築、bindDots()でドットナビ連動、スウォッチクリックハンドラ
+- 既存のquoteカルーセルJS保持（melomania-a100, melomania-p100-se）
+- LR-M White #2 はUK CDN上に存在しないため4画像のみ
+
+### チーム構成
+- Agent A (impl-a): lr-x, lr-m, lr-s, melomania-a100, melomania-p100-se
+- Agent B (impl-b): minx-min-12, minx-min-22, minx-x201, minx-x301, minx-floor-stands
+- QA Agent: 10ファイルのコードレビュー + ブラウザ視覚確認
+
+### 進捗ログ
+- 画像ダウンロード完了: 162枚（LR系75枚 + その他38枚 → 再ダウンロードで全数成功）
+- 実装完了: 10ファイルの inline script 置換
+- QA検証: PASS（全10ファイル、colorMap照合、162画像ファイル存在確認）
+- ブラウザ視覚確認: LR-X（6色全色切替）、Minx Min 12（黒/白切替）動作確認
+- 注記: melomania-p100-se.html にインラインスタイルの青スウォッチあり（既存の問題、青画像なし、クリック時は無害にスキップ）
+- GitHub Issue #13: クローズ済み
+- 完了: 2026-02-18
+
+---
+
+## Issue #27: about.htmlレイアウト改善
+開始: 2026-02-18
+
+### 状況判定
+- ステータス: 解決済み
+- 根本原因: expertise-sectionが2色カード分割レイアウト（beige/white）で、ページの他のセクションと視覚的に不整合
+
+### 対応内容
+- expertise-section（2色カード分割）をstory-section（画像＋テキスト横並び）に変換
+- designer.webpを「専門性と音楽愛の融合」ブロックの画像として配置
+- melomania-venue-1.webpを「ライブミュージックのための空間」ブロックの画像として配置
+- venue-imagesセクションを1枚のフルワイド画像に簡素化
+- 不要なCSS（expertise-section関連10ルール + レスポンシブ4ルール）をすべて削除
+- UK本国サイトのレイアウトパターンに準拠
+
+### チーム構成
+- Agent: 実装 → about.html のみ
+- QA: ブラウザ視覚確認（team-leadが実施）
+
+### 進捗ログ
+- UK本国サイト調査: /row/en/about-us で同セクションのstory-blockレイアウトを確認
+- 実装完了: HTML構造変更 + CSS14ルール削除/変更
+- ブラウザ視覚確認: PASS（story-blockレイアウトが他セクションと統一、venue画像フルワイド表示確認）
+- GitHub Issue #27: クローズ済み
+- 完了: 2026-02-18

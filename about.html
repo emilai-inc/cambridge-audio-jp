@@ -381,51 +381,20 @@
       border-radius: 8px;
     }
 
-    /* ===== Expertise Section ===== */
-    .expertise-section {
-      padding: 0;
+    /* ===== Venue Section ===== */
+    .venue-images {
+      width: 100%;
     }
 
-    .expertise-hero-image {
+    .venue-images img {
       width: 100%;
-      max-height: 600px;
+      height: auto;
+      max-height: 500px;
       object-fit: cover;
     }
 
-    .expertise-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0;
-    }
-
-    .expertise-card {
-      padding: 80px 48px;
-    }
-
-    .expertise-card--beige {
-      background: var(--color-beige);
-    }
-
-    .expertise-card--white {
-      background: var(--color-white);
-    }
-
-    .expertise-card h2 {
-      font-family: var(--font-serif);
-      font-size: 40px;
-      font-weight: 300;
-      line-height: 1.15;
-      margin-bottom: 24px;
-    }
-
-    .expertise-card p {
-      font-size: 17px;
-      line-height: 1.7;
-      color: var(--color-gray-600);
-      margin-bottom: 20px;
-    }
-
-    .expertise-card .cta-link {
+    /* ===== CTA Link in Story Blocks ===== */
+    .story-block__text .cta-link {
       display: inline-block;
       font-size: 16px;
       font-weight: 500;
@@ -435,22 +404,9 @@
       transition: color 0.2s, border-color 0.2s;
     }
 
-    .expertise-card .cta-link:hover {
+    .story-block__text .cta-link:hover {
       color: var(--color-teal);
       border-color: var(--color-teal);
-    }
-
-    /* ===== Venue Section ===== */
-    .venue-images {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0;
-    }
-
-    .venue-images img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
     }
 
     /* ===== Partners Section ===== */
@@ -678,14 +634,6 @@
         font-size: 48px;
       }
 
-      .expertise-card h2 {
-        font-size: 32px;
-      }
-
-      .expertise-card {
-        padding: 60px 36px;
-      }
-
       .join-section__content h2 {
         font-size: 36px;
       }
@@ -746,18 +694,6 @@
         grid-template-columns: 1fr;
       }
 
-      .expertise-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .expertise-card {
-        padding: 48px 24px;
-      }
-
-      .venue-images {
-        grid-template-columns: 1fr;
-      }
-
       .partners-grid {
         grid-template-columns: 1fr;
       }
@@ -787,10 +723,6 @@
 
       .decades-header h2 {
         font-size: 28px;
-      }
-
-      .expertise-card h2 {
-        font-size: 26px;
       }
 
       .partner-card__label {
@@ -914,25 +846,34 @@
       <img src="images/about/posters.webp" alt="Cambridge Audio ヴィンテージ広告ギャラリー" loading="lazy">
     </div>
 
-    <!-- ===== Expertise + Venue ===== -->
-    <section class="expertise-section fade-in">
-      <img src="images/about/designer.webp" alt="スピーカーのスケッチをレビューするデザイナー" loading="lazy" class="expertise-hero-image">
-      <div class="expertise-grid">
-        <div class="expertise-card expertise-card--beige">
-          <h2>専門性と音楽愛の融合</h2>
-          <p>優れたサウンドは、優れたエンジニアリングから生まれます。手はんだ回路から精密にチューニングされたアコースティクスまで、私たちのチームはあらゆるディテールにこだわり抜きます。正しい設計が、すべての違いを生むからです。</p>
+    <!-- ===== Expertise ===== -->
+    <section class="story-section fade-in">
+      <div class="container">
+        <div class="story-block">
+          <div class="story-block__image">
+            <img src="images/about/designer.webp" alt="スピーカーのスケッチをレビューするデザイナー" loading="lazy">
+          </div>
+          <div class="story-block__text">
+            <h3>専門性と音楽愛の融合</h3>
+            <p>優れたサウンドは、優れたエンジニアリングから生まれます。手はんだ回路から精密にチューニングされたアコースティクスまで、私たちのチームはあらゆるディテールにこだわり抜きます。正しい設計が、すべての違いを生むからです。</p>
+          </div>
         </div>
-        <div class="expertise-card expertise-card--white">
-          <h2>ライブミュージックのための空間</h2>
-          <p>音楽好きによる、音楽好きのための空間。ロンドンSE1にある私たちのヴェニュー「Melomania」では、アーティストとオーディエンスが出会い、音楽が本来あるべき音質でライブを届けます。音楽の崇拝と、人をつなぐ力に捧げられた場所です。</p>
-          <a href="technology.html" class="cta-link">詳しく見る →</a>
+
+        <div class="story-block story-block--reverse">
+          <div class="story-block__image">
+            <img src="images/about/melomania-venue-1.webp" alt="Melomania ヴェニュー" loading="lazy">
+          </div>
+          <div class="story-block__text">
+            <h3>ライブミュージックのための空間</h3>
+            <p>音楽好きによる、音楽好きのための空間。ロンドンSE1にある私たちのヴェニュー「Melomania」では、アーティストとオーディエンスが出会い、音楽が本来あるべき音質でライブを届けます。音楽の崇拝と、人をつなぐ力に捧げられた場所です。</p>
+            <a href="technology.html" class="cta-link" style="margin-top: 8px;">詳しく見る →</a>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ===== Venue Images ===== -->
     <div class="venue-images">
-      <img src="images/about/melomania-venue-1.webp" alt="Melomania ヴェニュー" loading="lazy">
       <img src="images/about/melomania-venue-2.webp" alt="Melomania ヴェニュー内観" loading="lazy">
     </div>
 
