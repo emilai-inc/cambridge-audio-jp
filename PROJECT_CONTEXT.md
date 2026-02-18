@@ -342,21 +342,21 @@ cambridge-audio-jp/
 | #10 | アクセシビリティ — skip-link/aria-current/コントラスト比 | Phase 11 | `0a70bd0` |
 | #11 | エラーページ — 404.html 新規作成 | Phase 11 | `d40f99f` |
 | #12 | アニメーション — IntersectionObserver 全43ページ | Phase 11 | `2b1a7be` |
-| #13 | カラースウォッチ機能実装 — 10製品ページ + 162カラーバリアント画像 | Phase 15 | — |
+| #13 | カラースウォッチ機能実装 — 10製品ページ + 162カラーバリアント画像 | Phase 15 | `fe50e34` |
 | #14 | AXA25 英語テキスト翻訳漏れ | Phase 14 | `4f1dfab` |
 | #15 | CXA81 MkII 英語テキスト翻訳漏れ | Phase 14 | `4f1dfab` |
 | #16 | EXA100 英語テキスト翻訳漏れ | Phase 14 | `4f1dfab` |
-| #17 | MXW70 レイアウト不整合 — CSSクラス修正 | Phase 15 | — |
-| #18 | MXN10 レイアウト不整合 — CSSクラス修正 | Phase 15 | — |
+| #17 | MXW70 レイアウト不整合 — CSSクラス修正 | Phase 15 | `fe50e34` |
+| #18 | MXN10 レイアウト不整合 — CSSクラス修正 | Phase 15 | `fe50e34` |
 | #19 | CXN100 英語テキスト翻訳漏れ | Phase 14 | `4f1dfab` |
 | #20 | EXN100 英語テキスト翻訳漏れ | Phase 14 | `4f1dfab` |
 | #21 | AXC35 英語テキスト翻訳漏れ | Phase 14 | `4f1dfab` |
 | #22 | CXC 英語テキスト翻訳漏れ | Phase 14 | `4f1dfab` |
-| #23 | DacMagic 200M レイアウト不整合 — CSSクラス修正 | Phase 15 | — |
-| #24 | Alva Solo レイアウト不整合 — CSSクラス修正 | Phase 15 | — |
-| #25 | Alva Duo レイアウト不整合 — CSSクラス修正 | Phase 15 | — |
-| #26 | Alva ST レイアウト不整合 — CSSクラス修正 | Phase 15 | — |
-| #27 | about.html expertise セクション レイアウト改善 | Phase 15 | — |
+| #23 | DacMagic 200M レイアウト不整合 — CSSクラス修正 | Phase 15 | `fe50e34` |
+| #24 | Alva Solo レイアウト不整合 — CSSクラス修正 | Phase 15 | `fe50e34` |
+| #25 | Alva Duo レイアウト不整合 — CSSクラス修正 | Phase 15 | `fe50e34` |
+| #26 | Alva ST レイアウト不整合 — CSSクラス修正 | Phase 15 | `fe50e34` |
+| #27 | about.html expertise セクション レイアウト改善 | Phase 15 | `fe50e34` |
 
 ### 5.3 Phase 11 で解決済みの改善候補（全5件完了）
 
@@ -566,6 +566,29 @@ find . -name "*.html" | wc -l
    - venue-images を2枚→1枚のフルワイド画像に簡素化
 
 ### 既知の問題・注意事項
-- **melomania-p100-se.html の青スウォッチ**: line 89にインラインstyleの青スウォッチ（`style="background:#2c4a7c;"`）があり、`pp-swatch--blue` クラスではないためスウォッチJSのregex `/pp-swatch--(\w+)/` にマッチしない。青画像も存在しないため、クリック時は無害にスキップ。修正する場合は`pp-swatch--blue`クラスに変更 + 青画像のダウンロードが必要
+- **melomania-p100-se.html の青スウォッチ**: ~~line 89にインラインstyleの青スウォッチあり~~ → `8ed0e65` で削除済み
+- **単色製品のスウォッチ**: ~~SX-50/60/80, Evo One/150 SE, BT100に不要な単色スウォッチあり~~ → `8ed0e65` で削除済み
 - **LR-M White #2**: UK CDN上に存在しないため、White カラーは4画像のみ（他カラーは5画像）
-- **Git最終コミット**: Phase 15の変更は未コミット（10製品HTMLスウォッチJS + 162画像 + 6レイアウト修正HTML + about.html）
+- **Git最終コミット**: `8ed0e65` (main branch, pushed)
+
+---
+
+## 2026-02-18 作業記録（Phase 15 コミット＆スウォッチUI修正）
+
+### 処理したIssue
+- **Phase 15 未コミット修正のリポジトリ反映**: 19ファイル（レイアウト修正6件 + カラースウォッチJS10件 + about.html + progress.md + PROJECT_CONTEXT.md）をコミット `fe50e34` → push
+- **P100 SE 青スウォッチ削除**: melomania-p100-se.html のインラインstyle青スウォッチを削除（UK本国に画像なし、JSのregex非対応）
+- **単色製品スウォッチ削除**: SX-50/60/80, Evo One/150 SE, BT100 の6ファイルから不要な単色スウォッチHTML削除 → コミット `8ed0e65` → push
+- **GitHub Issues #13, #17, #18, #23-27**: 各Issueにコミットハッシュ付き検証完了コメントを追加
+
+### 未解決のまま残ったIssue
+なし。GitHub Issues #1〜#27 全件クローズ済み、全件リポジトリにコミット反映済み。
+
+### 技術的な判断・変更点
+1. **スウォッチ表示ポリシー**: カラバリが1色のみの製品にはスウォッチUIを表示しない（切替先がないため不要）
+2. **インラインstyleスウォッチの排除**: `pp-swatch--{color}` クラスを持たないインラインstyleスウォッチはJSのregex `/pp-swatch--(\w+)/` にマッチしないため動作しない。今後は必ず `pp-swatch--{color}` クラスで色を指定すること
+3. **Phase 15修正が未コミットだった根本原因**: 前セッションでワーキングディレクトリに修正を適用後、git commitを実行せずにセッションが終了。今後は必ずセッション終了前にコミット状態を確認すること
+
+### 既知の問題・注意事項
+- **LR-M White #2**: UK CDN上に存在しないため、Whiteカラーは4画像のみ（他カラーは5画像）
+- **残存改善候補（優先度低）**: srcset/sizes対応、products.html構造統一

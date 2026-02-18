@@ -1280,3 +1280,46 @@ Lead: HTML直接構築 → products/exa100.html
 - ブラウザ視覚確認: PASS（story-blockレイアウトが他セクションと統一、venue画像フルワイド表示確認）
 - GitHub Issue #27: クローズ済み
 - 完了: 2026-02-18
+
+---
+
+## Phase 15 コミット＆スウォッチUI修正
+開始: 2026-02-18
+
+### 状況判定
+Phase 15の全修正（19ファイル: レイアウト6件 + カラースウォッチJS10件 + about.html + progress.md + PROJECT_CONTEXT.md）がワーキングディレクトリに適用済みだがgit commitされていなかった。
+
+### 実施内容
+
+#### コミット1: Phase 15修正のリポジトリ反映
+- 19ファイル（2,057行追加、1,316行削除）をコミット `fe50e34` → push完了
+- 内容: カラースウォッチJS実装10製品 + Hi-Fiレイアウト修正6製品 + about.html改善
+
+#### コミット2: スウォッチUI修正
+- 7ファイルをコミット `8ed0e65` → push完了
+- melomania-p100-se.html: インラインstyle青スウォッチ（`style="background:#2c4a7c;"`）を削除
+  - 理由: `pp-swatch--blue`クラスなし → JSのregex `/pp-swatch--(\w+)/` 非対応、UK本国に青画像なし
+- 単色製品6ファイルのスウォッチHTML削除（カラバリなし製品にスウォッチ不要）:
+  - sx-50.html, sx-60.html, sx-80.html: `<div class="pp-swatches">` ブロック削除
+  - evo-one.html, evo-150-se.html: `<div class="pp-swatches">` ブロック削除
+  - bt100.html: `<div class="pp-hero__swatches">` ブロック削除
+
+### Chrome DevTools QA検証
+| ページ | 検証項目 | 結果 |
+|--------|---------|------|
+| MXW70 | ヒーロー2カラム + 全13セクション表示 | ✅ |
+| MXN10 | ヒーロー2カラム + 全15セクション表示 | ✅ |
+| Alva Solo | 全セクション正常表示 | ✅ |
+| P100 SE | 青スウォッチ削除確認 + ホワイト切替動作 | ✅ |
+| SX-50 | 単色スウォッチ削除確認 | ✅ |
+| LR-X | 6色スウォッチ切替（ブルー→hero-blue-1.webp確認） | ✅ |
+| Minx Min 12 | 2色スウォッチ切替（ホワイト→hero-white-1.webp確認） | ✅ |
+
+### GitHub Issues更新
+- Issues #13, #17, #18, #23, #24, #25, #26, #27: コミットハッシュ付きで検証完了コメントを追加
+
+### Git
+- コミット1: `fe50e34` — Phase 15: カラースウォッチJS実装 + Hi-Fiレイアウト修正 + about.html改善
+- コミット2: `8ed0e65` — スウォッチUI修正: P100 SE青スウォッチ削除 + 単色製品スウォッチ削除
+
+完了: 2026-02-18
