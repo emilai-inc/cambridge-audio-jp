@@ -1,0 +1,34 @@
+# === Claude Code internal files ===
+CLAUDE.md
+CLAUDE_PROGRESS.MD
+.claude/
+settings.local.json
+
+# === Development notes ===
+PROJECT_CONTEXT.md
+progress.md
+tasks/
+/todo.md
+/lessons.md
+/deploy-branch-setup.md
+/original-snapshot.txt
+
+# === QA screenshots ===
+screenshots/
+/check-*.png
+/original-*.png
+/rewrite-*.png
+/*-current.png
+/*-fixed*.png
+/current-*.png
+
+# === UK site reference material ===
+uk-*.png
+uk-*.txt
+
+# === macOS / Editor ===
+.DS_Store
+**/.DS_Store
+*.swp
+*.swo
+*~
