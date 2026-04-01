@@ -1,0 +1,42 @@
+# deploy-manifest.txt
+# Cloudflare Pages デプロイ対象ファイルのホワイトリスト
+# GitHub Actions がこのファイルを読み、記載されたファイル/ディレクトリのみを
+# deploy ブランチにコピーする。それ以外は物理的にデプロイされない。
+#
+# ルール:
+#   - コメント行（#）と空行は無視される
+#   - ディレクトリは末尾に / を付ける（中身を再帰的にコピー）
+#   - ファイルはそのままのパスで記載
+#   - 新しい HTML/製品ページを追加したら、ここにパスを追記すること
+#
+# 追加禁止（CI が自動拒否する）:
+#   CLAUDE.md, CLAUDE_PROGRESS.MD, PROJECT_CONTEXT.md, progress.md,
+#   tasks/, screenshots/, .claude/, .github/, uk-*.png, uk-*.txt
+
+# === トップレベル HTML ページ（14ファイル）===
+index.html
+404.html
+about.html
+accessories.html
+headphones.html
+hifi.html
+news.html
+privacy.html
+products.html
+reviews.html
+speakers.html
+support.html
+technology.html
+terms.html
+
+# === 製品詳細ページ（37ファイル）===
+products/
+
+# === アセット ===
+css/
+js/
+fonts/
+images/
+
+# === ファビコン ===
+favicon.png

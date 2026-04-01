@@ -1,0 +1,157 @@
+# deploy-pages.yml
+# main ブランチへの push を検知し、deploy-manifest.txt に記載された
+# ファイルのみを deploy ブランチにコピーして Cloudflare Pages にデプロイする。
+#
+# フロー:
+#   main push → manifest 読み込み → クリーンコピー → 禁止パターン検証
+#   → deploy ブランチに force push → Cloudflare Pages 自動デプロイ
+#
+# 内部ファイル（CLAUDE.md, tasks/, screenshots/ 等）は deploy ブランチに
+# 物理的に存在しないため、CDN 上に配置されることはない。
+
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      REPO_URL: https://github.com/${{ github.repository }}
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+
+      - name: Build deploy directory from manifest
+        run: |
+          set -euo pipefail
+          DEPLOY_DIR=$(mktemp -d)
+          echo "DEPLOY_DIR=$DEPLOY_DIR" >> "$GITHUB_ENV"
+
+          echo "=== Reading deploy-manifest.txt ==="
+          COPIED=0
+          WARNINGS=0
+
+          while IFS= read -r line || [ -n "$line" ]; do
+            # コメントと空行をスキップ
+            [[ "$line" =~ ^[[:space:]]*# ]] && continue
+            [[ -z "${line// }" ]] && continue
+            # インラインコメントを除去してトリム
+            line="${line%%#*}"
+            line="$(echo "$line" | xargs)"
+            [ -z "$line" ] && continue
+
+            if [[ "$line" == */ ]]; then
+              # ディレクトリ: rsync で再帰コピー
+              if [ -d "$line" ]; then
+                mkdir -p "$DEPLOY_DIR/$line"
+                rsync -a "$line" "$DEPLOY_DIR/$line" --exclude='.*'
+                COPIED=$((COPIED + 1))
+                echo "  [DIR]  $line"
+              else
+                echo "::warning::Directory not found in repo: $line"
+                WARNINGS=$((WARNINGS + 1))
+              fi
+            else
+              # ファイル: ディレクトリ作成してコピー
+              if [ -f "$line" ]; then
+                mkdir -p "$DEPLOY_DIR/$(dirname "$line")"
+                cp "$line" "$DEPLOY_DIR/$line"
+                COPIED=$((COPIED + 1))
+                echo "  [FILE] $line"
+              else
+                echo "::warning::File not found in repo: $line"
+                WARNINGS=$((WARNINGS + 1))
+              fi
+            fi
+          done < deploy-manifest.txt
+
+          echo ""
+          echo "Copied $COPIED entries ($WARNINGS warnings)"
+
+      - name: Validate — forbidden patterns
+        run: |
+          set -euo pipefail
+          echo "=== Checking for forbidden files ==="
+          ERRORS=0
+
+          # 禁止ファイル
+          for f in CLAUDE.md CLAUDE_PROGRESS.MD PROJECT_CONTEXT.md progress.md deploy-manifest.txt .gitignore .env; do
+            if [ -e "$DEPLOY_DIR/$f" ]; then
+              echo "::error::Forbidden file detected in deploy: $f"
+              ERRORS=$((ERRORS + 1))
+            fi
+          done
+
+          # 禁止ディレクトリ
+          for d in tasks screenshots .claude .github; do
+            if [ -d "$DEPLOY_DIR/$d" ]; then
+              echo "::error::Forbidden directory detected in deploy: $d/"
+              ERRORS=$((ERRORS + 1))
+            fi
+          done
+
+          # 禁止パターン（UK サイト参考資料）
+          for pattern in "uk-*.png" "uk-*.txt"; do
+            if compgen -G "$DEPLOY_DIR/$pattern" > /dev/null 2>&1; then
+              echo "::error::Forbidden pattern detected in deploy: $pattern"
+              ERRORS=$((ERRORS + 1))
+            fi
+          done
+
+          if [ "$ERRORS" -gt 0 ]; then
+            echo ""
+            echo "VALIDATION FAILED: $ERRORS forbidden item(s) found."
+            echo "Check deploy-manifest.txt for incorrect entries."
+            exit 1
+          fi
+
+          echo "Validation passed: no forbidden files detected"
+
+      - name: Validate — new HTML detection
+        run: |
+          # main に HTML があるのに manifest にない場合に警告（情報提供のみ）
+          for html in $(find . -maxdepth 1 -name '*.html' -printf '%f\n' | sort); do
+            if ! grep -qx "$html" deploy-manifest.txt 2>/dev/null; then
+              echo "::notice::HTML file '$html' exists in main but is NOT in deploy-manifest.txt (intentional exclusion?)"
+            fi
+          done
+          for html in $(find products -name '*.html' -printf '%P\n' 2>/dev/null | sort); do
+            if ! grep -q '^products/' deploy-manifest.txt 2>/dev/null; then
+              echo "::notice::Product page 'products/$html' may not be deployed (products/ not in manifest)"
+            fi
+          done
+
+      - name: Generate file inventory
+        run: |
+          echo "=== Deploy file inventory ==="
+          find "$DEPLOY_DIR" -type f | sed "s|$DEPLOY_DIR/||" | sort | tee /tmp/deploy-inventory.txt
+          echo ""
+          echo "Total files: $(wc -l < /tmp/deploy-inventory.txt)"
+          echo "Total size: $(du -sh "$DEPLOY_DIR" | cut -f1)"
+
+      - name: Push to deploy branch
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO_FULL: ${{ github.repository }}
+        run: |
+          cd "$DEPLOY_DIR"
+          git init -b deploy
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          COMMIT_SHORT="${GITHUB_SHA:0:7}"
+          git commit -m "Deploy from main@${COMMIT_SHORT}
+
+          Source: ${REPO_URL}/commit/${GITHUB_SHA}
+          Manifest: deploy-manifest.txt
+          Generated by: deploy-pages.yml"
+          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${REPO_FULL}.git"
+          git push --force origin deploy
+          echo ""
+          echo "Successfully pushed to deploy branch"
