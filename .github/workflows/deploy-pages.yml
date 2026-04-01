@@ -4,10 +4,12 @@
 #
 # フロー:
 #   main push → manifest 読み込み → クリーンコピー → 禁止パターン検証
-#   → deploy ブランチに force push → Cloudflare Pages 自動デプロイ
+#   → 拡張子 allowlist 検証 → deploy ブランチに force push → Cloudflare Pages 自動デプロイ
 #
 # 内部ファイル（CLAUDE.md, tasks/, screenshots/ 等）は deploy ブランチに
 # 物理的に存在しないため、CDN 上に配置されることはない。
+#
+# テンプレート元: emilai-inc/handbook/templates/deploy-pages.yml
 
 name: Deploy to Cloudflare Pages
 
@@ -80,23 +82,23 @@ jobs:
           echo "=== Checking for forbidden files ==="
           ERRORS=0
 
-          # 禁止ファイル
-          for f in CLAUDE.md CLAUDE_PROGRESS.MD PROJECT_CONTEXT.md progress.md deploy-manifest.txt .gitignore .env; do
+          # 禁止ファイル（テンプレート標準 + サイト固有）
+          for f in CLAUDE.md CLAUDE_PROGRESS.MD README.md .gitignore .env qa-report.md PROJECT_CONTEXT.md progress.md deploy-manifest.txt; do
             if [ -e "$DEPLOY_DIR/$f" ]; then
               echo "::error::Forbidden file detected in deploy: $f"
               ERRORS=$((ERRORS + 1))
             fi
           done
 
-          # 禁止ディレクトリ
-          for d in tasks screenshots .claude .github; do
+          # 禁止ディレクトリ（テンプレート標準 + サイト固有）
+          for d in tasks docs qa data .claude .github artifacts .superpowers screenshots; do
             if [ -d "$DEPLOY_DIR/$d" ]; then
               echo "::error::Forbidden directory detected in deploy: $d/"
               ERRORS=$((ERRORS + 1))
             fi
           done
 
-          # 禁止パターン（UK サイト参考資料）
+          # サイト固有: UK サイト参考資料
           for pattern in "uk-*.png" "uk-*.txt"; do
             if compgen -G "$DEPLOY_DIR/$pattern" > /dev/null 2>&1; then
               echo "::error::Forbidden pattern detected in deploy: $pattern"
@@ -112,6 +114,40 @@ jobs:
           fi
 
           echo "Validation passed: no forbidden files detected"
+
+      - name: Validate — file extension allowlist
+        run: |
+          set -euo pipefail
+          echo "=== Checking file extensions ==="
+          ERRORS=0
+
+          # 許可する拡張子のリスト
+          ALLOWED_EXTENSIONS="html|css|js|txt|xml|json|svg|png|jpg|jpeg|webp|avif|gif|ico|woff|woff2|ttf|eot|csv"
+
+          while IFS= read -r file; do
+            filename=$(basename "$file")
+            case "$filename" in
+              _headers|_redirects) continue ;;
+            esac
+            [ -d "$DEPLOY_DIR/$file" ] && continue
+            ext="${filename##*.}"
+            if [ "$ext" = "$filename" ]; then
+              echo "::error::File without extension in deploy: $file"
+              ERRORS=$((ERRORS + 1))
+              continue
+            fi
+            if ! echo "$ext" | grep -qiE "^($ALLOWED_EXTENSIONS)$"; then
+              echo "::error::Disallowed file extension in deploy: $file (.$ext)"
+              ERRORS=$((ERRORS + 1))
+            fi
+          done < <(find "$DEPLOY_DIR" -type f | sed "s|$DEPLOY_DIR/||")
+
+          if [ "$ERRORS" -gt 0 ]; then
+            echo ""
+            echo "VALIDATION FAILED: $ERRORS file(s) with disallowed extensions."
+            exit 1
+          fi
+          echo "Extension validation passed"
 
       - name: Validate — new HTML detection
         run: |

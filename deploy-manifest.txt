@@ -7,13 +7,16 @@
 #   - コメント行（#）と空行は無視される
 #   - ディレクトリは末尾に / を付ける（中身を再帰的にコピー）
 #   - ファイルはそのままのパスで記載
-#   - 新しい HTML/製品ページを追加したら、ここにパスを追記すること
+#   - 新しい HTML ページを追加したら、ここにパスを追記すること
 #
 # 追加禁止（CI が自動拒否する）:
-#   CLAUDE.md, CLAUDE_PROGRESS.MD, PROJECT_CONTEXT.md, progress.md,
-#   tasks/, screenshots/, .claude/, .github/, uk-*.png, uk-*.txt
+#   CLAUDE.md, CLAUDE_PROGRESS.MD, README.md,
+#   tasks/, docs/, qa/, data/, .claude/, .github/
+#
+# サイト固有の追加禁止:
+#   PROJECT_CONTEXT.md, progress.md, screenshots/, uk-*.png, uk-*.txt
 
-# === トップレベル HTML ページ（14ファイル）===
+# === HTML ページ（14ファイル）===
 index.html
 404.html
 about.html
@@ -40,3 +43,6 @@ images/
 
 # === ファビコン ===
 favicon.png
+
+# === Cloudflare Pages 設定 ===
+_headers
