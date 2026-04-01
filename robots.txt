@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+Sitemap: https://cambridgeaudio.jp/sitemap.xml
+
+# AI crawlers — welcome
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Block internal paths that shouldn't exist on CDN but just in case
+Disallow: /tasks/
+Disallow: /screenshots/
+Disallow: /.claude/
+Disallow: /.github/

@@ -19,13 +19,16 @@
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
 
   # --- Content Security Policy ---
-  # style-src: Google Fonts CSS を許可
+  # style-src: 'unsafe-inline' は本来非推奨だが、全51ページが <style> ブロックで
+  #   ページ固有CSSを定義するインライン CSS 自己完結型アーキテクチャのため必須。
+  #   長期改善: 外部CSSファイルへの移行時に 'unsafe-inline' を削除する。
+  # script-src: 'unsafe-inline' は Google Fonts の onload="this.media='all'" に必要。
+  #   長期改善: onload ハックを削除し通常の <link rel="stylesheet"> に変更する。
   # font-src: Google Fonts WOFF2 + ローカルフォント (Sohne/Tiempos)
-  # img-src: 自サイトのみ（外部画像 CDN なし）
-  # script-src: 自サイトのみ（インラインスクリプト禁止）
+  # img-src: 自サイト + data: URI（インライン SVG/アイコン用）
   # connect-src: 自サイトのみ（外部 API なし）
   # form-action: フォームなし → 'none'
-  Content-Security-Policy: default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self'; script-src 'self'; connect-src 'self'; frame-ancestors 'self'; base-uri 'none'; object-src 'none'; form-action 'none'; upgrade-insecure-requests
+  Content-Security-Policy: default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; script-src 'self' 'unsafe-inline'; connect-src 'self'; frame-ancestors 'self'; base-uri 'none'; object-src 'none'; form-action 'none'; upgrade-insecure-requests
 
 # --- キャッシュ制御 ---
 /css/*

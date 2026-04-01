@@ -1,0 +1,354 @@
+# Cambridge Audio Japan — 全文コンテンツ
+
+> Cambridge Audio（ケンブリッジ・オーディオ）は1968年創業の英国オーディオブランド。株式会社エミライが日本正規代理店として運営する公式サイト。Hi-Fiコンポーネント、ヘッドホン、スピーカー、アクセサリーを展開。
+
+Cambridge Audio は「Great British Sound」を理念に、50年以上にわたり音楽愛好家のためのオーディオ機器を開発。ロンドンの自社設計チームがすべての製品を設計し、最高の音質を手頃な価格で提供することを目指している。日本では株式会社エミライが正規代理店として製品の販売・サポートを行っている。
+
+---
+
+## トップページ
+
+- URL: https://cambridgeaudio.jp/
+- タイトル: Cambridge Audio Japan | 音で、主張する。
+- 説明: Cambridge Audio 日本公式サイト。比類なきサウンドを追求し、Hi-Fi、ヘッドホン、スピーカー、アクセサリーをお届けします。
+- キーメッセージ: 「音で、主張する。」「比類なきサウンドを、日常に。」「偉大な音楽は、注意を惹きつける。」「あなたの音楽を高みへ導く、精緻なエンジニアリング」
+
+---
+
+## ブランド・テクノロジー
+
+### ブランドストーリー
+- URL: https://cambridgeaudio.jp/about.html
+- タイトル: ブランドストーリー | Cambridge Audio Japan
+- 説明: 1968年、ロンドンにて創業。Cambridge Audioのブランドストーリー、哲学、そして革新の歴史をご紹介します。
+- 主要セクション: はじまりの一曲、Six Decades of Great Sound、パートナーシップ
+
+### テクノロジー
+- URL: https://cambridgeaudio.jp/technology.html
+- タイトル: テクノロジー | Cambridge Audio Japan
+- 説明: Cambridge Audioのテクノロジー。56年にわたるオーディオエンジニアリングの革新をご紹介します。DAC技術、アンプ設計、ストリーミング、スピーカー設計。
+- 主要セクション: クラス最高峰のDAC、Class ABアンプ設計、StreamMagicプラットフォーム、音響エンジニアリング
+
+---
+
+## 製品カテゴリー
+
+### Hi-Fi コンポーネント
+- URL: https://cambridgeaudio.jp/hifi.html
+- タイトル: Hi-Fi | Cambridge Audio Japan
+- 説明: Cambridge Audio Hi-Fiコンポーネント。アンプ、ストリーマー、CDプレーヤー、DACなど、最高のリスニング体験を構築するための製品をご紹介します。
+
+### ヘッドホン
+- URL: https://cambridgeaudio.jp/headphones.html
+- タイトル: ヘッドホン | Cambridge Audio Japan
+- 説明: Cambridge Audioのヘッドホン＆イヤホン。Hi-Fiエンジニアが設計した、妥協のないサウンドをどこでも。
+
+### スピーカー
+- URL: https://cambridgeaudio.jp/speakers.html
+- タイトル: スピーカー | Cambridge Audio Japan
+- 説明: Cambridge Audioスピーカー。ワイヤレスとパッシブ、あなたの空間に最適なスピーカーをご紹介します。
+
+### アクセサリー
+- URL: https://cambridgeaudio.jp/accessories.html
+- タイトル: アクセサリー | Cambridge Audio Japan
+- 説明: Cambridge Audio アクセサリー。カートリッジ、Bluetoothレシーバー、イヤーチップ、スピーカースタンドなど、Hi-Fiシステムやヘッドホンの性能を最大限に引き出すアクセサリー。
+
+### 全製品一覧
+- URL: https://cambridgeaudio.jp/products.html
+- タイトル: 全ての製品 | Cambridge Audio Japan
+- 説明: Cambridge Audio の全製品ラインナップ。Hi-Fi、ヘッドホン、スピーカー、アクセサリーなど、比類なきブリティッシュサウンドをお届けします。
+
+---
+
+## Hi-Fi コンポーネント — 製品詳細
+
+### EXA100 — フラッグシップ インテグレーテッドアンプ
+- URL: https://cambridgeaudio.jp/products/exa100.html
+- カテゴリー: Hi-Fi > アンプ
+- 説明: Cambridge Audio EXA100 インテグレーテッドステレオアンプ。100W Class AB、ESS SABRE32 DAC、HDMI eARC、バランスXLR入力搭載のプレミアムアンプ。
+- 主な特徴: 100W Class AB、ESS SABRE32 DAC、HDMI eARC、バランスXLR入力
+
+### EXN100 — フラッグシップ ネットワークプレーヤー
+- URL: https://cambridgeaudio.jp/products/exn100.html
+- カテゴリー: Hi-Fi > ネットワークプレーヤー
+- 説明: Cambridge Audio EXN100 ネットワークプレーヤー。ESS SABRE32 DAC、StreamMagic Gen 4、Roon Ready、HDMI eARC搭載のプレミアムストリーマー。
+- 主な特徴: ESS SABRE32 DAC、StreamMagic Gen 4、Roon Ready、HDMI eARC
+
+### Evo 150 SE — ストリーミングアンプ
+- URL: https://cambridgeaudio.jp/products/evo-150-se.html
+- カテゴリー: Hi-Fi > ストリーミングアンプ
+- 説明: Cambridge Audio Evo 150 SE ストリーミングアンプ。最高のアンプ技術と最新ストリーミング機能を一台に凝縮。
+- 主な特徴: アンプ＋ストリーミング一体型、最新ストリーミング機能
+
+### Evo One — オールインワン ワイヤレスストリーミングスピーカー
+- URL: https://cambridgeaudio.jp/products/evo-one.html
+- カテゴリー: Hi-Fi > オールインワン
+- 説明: Cambridge Audio Evo One オールインワン ワイヤレスストリーミングスピーカー。700W、14スピーカー、内蔵フォノステージ搭載。プレミアムなサウンドを一台で。
+- 主な特徴: 700W合計出力、14スピーカードライバー、内蔵フォノステージ
+
+### CXA81 Mk II — インテグレーテッドアンプ
+- URL: https://cambridgeaudio.jp/products/cxa81-mkii.html
+- カテゴリー: Hi-Fi > アンプ
+- 説明: Cambridge Audio CXA81 Mk II インテグレーテッド ステレオアンプ。ESS Sabre DACとBluetooth aptX HD搭載。
+- 主な特徴: ESS Sabre DAC、Bluetooth aptX HD
+
+### CXN100 — ネットワークプレーヤー
+- URL: https://cambridgeaudio.jp/products/cxn100.html
+- カテゴリー: Hi-Fi > ネットワークプレーヤー
+- 説明: Cambridge Audio CXN100 ネットワークプレーヤー。高品質なストリーミング再生を実現するCXシリーズのネットワークプレーヤー。
+- 主な特徴: CXシリーズ、高品質ストリーミング再生
+
+### CXC — CDトランスポート
+- URL: https://cambridgeaudio.jp/products/cxc.html
+- カテゴリー: Hi-Fi > CDプレーヤー
+- 説明: Cambridge Audio CXC コンパクトディスク トランスポート。外部DACとの組み合わせで最高のCD再生を。
+- 主な特徴: CDトランスポート専用機、外部DAC連携
+
+### AXA25 — エントリーアンプ
+- URL: https://cambridgeaudio.jp/products/axa25.html
+- カテゴリー: Hi-Fi > アンプ
+- 説明: Cambridge Audio AXA25 インテグレーテッド ステレオ アンプ。ピュアで力強いサウンドを手軽に。Hi-Fiの世界への最初の一歩。
+- 主な特徴: エントリーモデル、ピュアなClass ABサウンド
+
+### AXC35 — CDプレーヤー
+- URL: https://cambridgeaudio.jp/products/axc35.html
+- カテゴリー: Hi-Fi > CDプレーヤー
+- 説明: Cambridge Audio AXC35 CDプレーヤー。Wolfson DAC搭載、ギャップレス再生対応の高品質CDプレーヤー。
+- 主な特徴: Wolfson DAC、ギャップレス再生
+
+### DacMagic 200M — DAC＆ヘッドホンアンプ
+- URL: https://cambridgeaudio.jp/products/dacmagic-200m.html
+- カテゴリー: Hi-Fi > DAC
+- 説明: Cambridge Audio DacMagic 200M D/Aコンバーター＆ヘッドホンアンプ。デュアルESS SABRE ES9028Q2M DAC搭載、24-bit/768kHz・DSD512・MQAフルデコード対応。
+- 主な特徴: デュアルESS SABRE ES9028Q2M、24-bit/768kHz、DSD512、MQAフルデコード
+
+### MXN10 — コンパクトネットワークプレーヤー
+- URL: https://cambridgeaudio.jp/products/mxn10.html
+- カテゴリー: Hi-Fi > ネットワークプレーヤー
+- 説明: Cambridge Audio MXN10 コンパクトネットワークプレーヤー。ESS SABRE ES9033Q DAC搭載、ハイレゾ768kHz/DSD512対応。StreamMagic Gen 4、Roon Ready、AirPlay 2、Chromecast built-in。
+- 主な特徴: ESS SABRE ES9033Q DAC、768kHz/DSD512、StreamMagic Gen 4、Roon Ready、AirPlay 2、Chromecast built-in
+
+### MXW70 — コンパクトパワーアンプ
+- URL: https://cambridgeaudio.jp/products/mxw70.html
+- カテゴリー: Hi-Fi > アンプ
+- 説明: Cambridge Audio MXW70 コンパクト パワーアンプ。Hypex NCore Class Dアンプ搭載、70W×2（8Ω）、250Wモノモード対応。RCA＆XLR入力、12vトリガー。
+- 主な特徴: Hypex NCore Class D、70W×2（8Ω）、250Wモノモード、RCA＆XLR入力
+
+---
+
+## ヘッドホン — 製品詳細
+
+### Melomania P100 SE — ANCオーバーイヤーヘッドホン
+- URL: https://cambridgeaudio.jp/products/melomania-p100-se.html
+- カテゴリー: ヘッドホン > オーバーイヤー
+- 説明: Cambridge Audio Melomania P100 SE ANC搭載オーバーイヤーヘッドホン。100時間バッテリー、DynamEQ、aptX Lossless対応。交換可能なバッテリー＆イヤークッション。
+- 主な特徴: ANC、100時間バッテリー、DynamEQ、aptX Lossless、交換可能バッテリー＆イヤークッション
+
+### Melomania A100 — ANC完全ワイヤレスイヤホン
+- URL: https://cambridgeaudio.jp/products/melomania-a100.html
+- カテゴリー: ヘッドホン > 完全ワイヤレス
+- 説明: Cambridge Audio Melomania A100 ANC搭載完全ワイヤレスイヤホン。aptX Lossless、LDAC対応。Hi-Fiエンジニアが設計した妥協のないサウンド。
+- 主な特徴: ANC、aptX Lossless、LDAC、Hi-Fiエンジニア設計
+
+---
+
+## スピーカー — 製品詳細
+
+### L/R シリーズ（アクティブステレオスピーカー）
+
+#### L/R X — アドバンスド アクティブステレオストリーミングスピーカー
+- URL: https://cambridgeaudio.jp/products/lr-x.html
+- カテゴリー: スピーカー > アクティブ
+- 説明: Cambridge Audio L/R X アドバンスド アクティブステレオストリーミングスピーカー。800Wの合計出力、カスタム28mmツイーター、デュアルウーファーシステムで、圧倒的なサウンドを完全ワイヤレスで。
+- 主な特徴: 800W合計出力、カスタム28mmツイーター、デュアルウーファー、完全ワイヤレス
+
+#### L/R M — ヴァーサタイル アクティブステレオストリーミングスピーカー
+- URL: https://cambridgeaudio.jp/products/lr-m.html
+- カテゴリー: スピーカー > アクティブ
+- 説明: Cambridge Audio L/R M ヴァーサタイル アクティブステレオストリーミングスピーカー。300Wの合計出力、カスタム28mmツイーター、デュアル4インチウーファーで、多彩な接続と優れた音質を手軽に。
+- 主な特徴: 300W合計出力、カスタム28mmツイーター、デュアル4インチウーファー
+
+#### L/R S — コンパクト アクティブステレオスピーカー
+- URL: https://cambridgeaudio.jp/products/lr-s.html
+- カテゴリー: スピーカー > アクティブ
+- 説明: Cambridge Audio L/R S コンパクト アクティブステレオスピーカー。100Wの合計出力、21mmアルミツイーター、3インチウーファーで、デスクトップや棚に最適なコンパクトHi-Fiサウンド。
+- 主な特徴: 100W合計出力、21mmアルミツイーター、3インチウーファー、デスクトップ向け
+
+### SX シリーズ（パッシブスピーカー）
+
+#### SX-50 — ブックシェルフスピーカー
+- URL: https://cambridgeaudio.jp/products/sx-50.html
+- カテゴリー: スピーカー > パッシブ
+- 説明: Cambridge Audio SX-50 ブックシェルフスピーカー。コンパクトなボディに凝縮されたCambridge Audio伝統のサウンド。5.25インチウーファーと25mmシルクドームツイーターで本格的なHi-Fiを実現。
+- 主な特徴: 5.25インチウーファー、25mmシルクドームツイーター、ブックシェルフ型
+
+#### SX-60 — スタンドマウントスピーカー
+- URL: https://cambridgeaudio.jp/products/sx-60.html
+- カテゴリー: スピーカー > パッシブ
+- 説明: Cambridge Audio SX-60 スタンドマウントスピーカー。より大きな空間と迫力あるサウンドのために設計されたSX-60は、深い低域、スケール、インパクトを提供します。
+- 主な特徴: スタンドマウント型、深い低域、大空間向け
+
+#### SX-80 — フロアスタンディングスピーカー
+- URL: https://cambridgeaudio.jp/products/sx-80.html
+- カテゴリー: スピーカー > パッシブ
+- 説明: Cambridge Audio SX-80 フロアスタンディングスピーカー。ツイン6.5インチウーファーとシルクドームツイーターが、楽々としたフルレンジパフォーマンスを提供します。
+- 主な特徴: ツイン6.5インチウーファー、シルクドームツイーター、フロアスタンディング型
+
+### Minx シリーズ（コンパクトスピーカー）
+
+#### Minx Min 12
+- URL: https://cambridgeaudio.jp/products/minx-min-12.html
+- カテゴリー: スピーカー > コンパクト
+- 説明: Cambridge Audio Minx Min 12 コンパクトスピーカー。革新的なBMRドライバーを搭載し、手のひらサイズで広指向性の高品質サウンドを実現。サテライトやデスクトップに最適。
+- 主な特徴: BMRドライバー、手のひらサイズ、広指向性
+
+#### Minx Min 22
+- URL: https://cambridgeaudio.jp/products/minx-min-22.html
+- カテゴリー: スピーカー > コンパクト
+- 説明: Cambridge Audio Minx Min 22 コンパクトスピーカー。BMRドライバーに加えて低域専用ドライバーを搭載し、よりフルレンジに近いサウンドを実現するデュアルドライバーモデル。
+- 主な特徴: BMR＋低域専用ドライバー、デュアルドライバー
+
+#### Minx XL — フラッグシップブックシェルフ
+- URL: https://cambridgeaudio.jp/products/minx-xl.html
+- カテゴリー: スピーカー > コンパクト
+- 説明: Cambridge Audio Minx XL フラッグシップブックシェルフスピーカー。BMRテクノロジーを最大限に活かした設計で、コンパクトスピーカーの概念を覆すフルボディのサウンドを実現。
+- 主な特徴: BMRテクノロジー、フラッグシップ、フルボディサウンド
+
+#### Minx X201 — サブウーファー
+- URL: https://cambridgeaudio.jp/products/minx-x201.html
+- カテゴリー: スピーカー > サブウーファー
+- 説明: Cambridge Audio Minx X201 サブウーファー。コンパクトながら200Wデジタルアンプと6.5インチドライバーを搭載。Minxコンパクトスピーカーの理想的なパートナー。
+- 主な特徴: 200Wデジタルアンプ、6.5インチドライバー、コンパクト
+
+#### Minx X301 — サブウーファー
+- URL: https://cambridgeaudio.jp/products/minx-x301.html
+- カテゴリー: スピーカー > サブウーファー
+- 説明: Cambridge Audio Minx X301 300Wサブウーファー。8インチドライバーとABR搭載。コンパクトながら深くパワフルな低音を実現。ホームシネマや音楽システムにシームレスに統合。
+- 主な特徴: 300W、8インチドライバー、ABR搭載
+
+---
+
+## アクセサリー — 製品詳細
+
+### フォノ関連
+
+#### Alva Duo — MC/MMフォノプリアンプ
+- URL: https://cambridgeaudio.jp/products/alva-duo.html
+- カテゴリー: アクセサリー > フォノ
+- 説明: Cambridge Audio Alva Duo MC/MMフォノプリアンプ。ヘッドホンアンプ搭載、サブソニックフィルター、オートパワーダウン機能。高品質フォノステージでレコードの真の音を。
+- 主な特徴: MC/MM対応、ヘッドホンアンプ搭載、サブソニックフィルター
+
+#### Alva Solo — MMフォノプリアンプ
+- URL: https://cambridgeaudio.jp/products/alva-solo.html
+- カテゴリー: アクセサリー > フォノ
+- 説明: Cambridge Audio Alva Solo MMフォノプリアンプ。サブソニックフィルター搭載、オートパワーダウン機能。コンパクトで高品質なフォノステージでレコードの真の音を。
+- 主な特徴: MM専用、サブソニックフィルター、コンパクト
+
+#### Alva MC — 高出力MCカートリッジ
+- URL: https://cambridgeaudio.jp/products/alva-mc.html
+- カテゴリー: アクセサリー > カートリッジ
+- 説明: Cambridge Audio Alva MC 高出力ムービングコイルカートリッジ。露出型カンチレバーと楕円針で、レコードの音楽を驚くほど繊細に再現。
+- 主な特徴: 高出力MC、露出型カンチレバー、楕円針
+
+#### Alva ST — ベルトドライブターンテーブル
+- URL: https://cambridgeaudio.jp/products/alva-st.html
+- カテゴリー: アクセサリー > ターンテーブル
+- 説明: Cambridge Audio Alva ST ベルトドライブターンテーブル。Bluetooth aptX HD対応、フォノステージ内蔵で、ワイヤレスでもハイレゾ品質のレコード再生を。
+- 主な特徴: ベルトドライブ、Bluetooth aptX HD、フォノステージ内蔵
+
+### 接続・リモート
+
+#### BT100 — Bluetoothオーディオレシーバー
+- URL: https://cambridgeaudio.jp/products/bt100.html
+- カテゴリー: アクセサリー > Bluetooth
+- 説明: Cambridge Audio BT100 Bluetoothオーディオレシーバー。aptX HD対応で、ワイヤレスでもハイレゾに迫るサウンドを実現。
+- 主な特徴: aptX HD対応、Bluetoothオーディオレシーバー
+
+#### EXシリーズ リモコン
+- URL: https://cambridgeaudio.jp/products/ex-remote.html
+- カテゴリー: アクセサリー > リモコン
+- 説明: Cambridge Audio EXシリーズ リモコン。EXA100およびEXN100用の専用リモートコントロール。アルミニウム仕上げの洗練されたデザイン。
+- 主な特徴: EXA100/EXN100専用、アルミニウム仕上げ
+
+### イヤーチップ・ケース
+
+#### メモリーフォームイヤーチップ
+- URL: https://cambridgeaudio.jp/products/memory-foam-tips.html
+- カテゴリー: アクセサリー > イヤーチップ
+- 説明: Cambridge Audio メモリーフォームイヤーチップ。Melomania M100およびA100対応。体温で柔らかくなり、耳にぴったりフィット。S/M/Lの3サイズ展開。
+- 主な特徴: Melomania M100/A100対応、メモリーフォーム、S/M/L 3サイズ
+
+#### 交換用ケース Melomania 1+
+- URL: https://cambridgeaudio.jp/products/replacement-case-m1plus.html
+- カテゴリー: アクセサリー > 交換パーツ
+- 説明: Melomania 1+用の交換用充電ケース。バッテリーの劣化や紛失時に、イヤホン本体をそのまま使い続けることができます。
+
+#### 交換用ケース Melomania Touch
+- URL: https://cambridgeaudio.jp/products/replacement-case-touch.html
+- カテゴリー: アクセサリー > 交換パーツ
+- 説明: Melomania Touch用の交換用充電ケース。コンパクトなデザインはそのままに、イヤホンの充電と保護を確実に行います。
+
+### スピーカースタンド・マウント
+
+#### Minx フロアスタンド
+- URL: https://cambridgeaudio.jp/products/minx-floor-stands.html
+- カテゴリー: アクセサリー > スタンド
+- 説明: Cambridge Audio Minx フロアスタンド。Minxシリーズスピーカー専用のフロアスタンド（ペア）。高さ調整可能、ケーブルマネジメント機能付き。
+- 主な特徴: Minx専用、高さ調整可能、ケーブルマネジメント
+
+#### Minx テーブルスタンド
+- URL: https://cambridgeaudio.jp/products/minx-table-stands.html
+- カテゴリー: アクセサリー > スタンド
+- 説明: Cambridge Audio Minx テーブルスタンド。Minxシリーズスピーカー専用のテーブルスタンド。ブラッシュドアルミニウム仕上げ、角度調整可能。
+- 主な特徴: Minx専用、ブラッシュドアルミニウム、角度調整可能
+
+#### Minx ウォールブラケット
+- URL: https://cambridgeaudio.jp/products/minx-wall-brackets.html
+- カテゴリー: アクセサリー > マウント
+- 説明: Cambridge Audio Minx ウォールブラケット。Minxシリーズスピーカー専用の壁掛けブラケット（ペア）。壁面にスピーカーを設置してスペースを有効活用。
+- 主な特徴: Minx専用、壁掛け、ペア
+
+---
+
+## サポート・情報
+
+### サポート
+- URL: https://cambridgeaudio.jp/support.html
+- タイトル: サポート | Cambridge Audio Japan
+- 説明: Cambridge Audio製品のサポート情報。よくあるご質問、取扱説明書、製品登録、お問い合わせなど。
+- 主要セクション: よくあるご質問、取扱説明書、製品登録、正規販売店、保証について、お問い合わせ
+
+### ニュース
+- URL: https://cambridgeaudio.jp/news.html
+- タイトル: ニュース | Cambridge Audio Japan
+- 説明: Cambridge Audioの最新ニュースとプレスリリース。新製品情報、アワード受賞、テクノロジーアップデートをお届けします。
+- 主要トピック: L/R アクティブステレオスピーカー新発売、Evo 150 SE 次世代ストリーミングアンプ、Melomania A100 What Hi-Fi? ベストバイ受賞、StreamMagic 3.0アップデート、EXシリーズ フラッグシップHi-Fiライン
+
+### レビュー
+- URL: https://cambridgeaudio.jp/reviews.html
+- タイトル: レビュー | Cambridge Audio Japan
+- 説明: 世界のメディアが認めたCambridge Audioのサウンド。What Hi-Fi?、Forbes、TechRadarなど、各メディアからの評価をご紹介します。
+
+---
+
+## 法務
+
+### プライバシーポリシー
+- URL: https://cambridgeaudio.jp/privacy.html
+- タイトル: プライバシーポリシー | Cambridge Audio Japan
+- 説明: Cambridge Audio Japanのプライバシーポリシー。個人情報の取り扱い、Cookieポリシーについてご説明します。
+
+### 利用規約
+- URL: https://cambridgeaudio.jp/terms.html
+- タイトル: 利用規約 | Cambridge Audio Japan
+- 説明: Cambridge Audio Japanの利用規約、特定商取引法に基づく表記、サイトマップ。
+
+---
+
+## 運営情報
+
+- サイト運営: 株式会社エミライ（日本正規代理店）
+- ブランド: Cambridge Audio（英国、1968年創業）
+- サイトURL: https://cambridgeaudio.jp
+- LLM向けサマリー: https://cambridgeaudio.jp/llms.txt
+- サイトマップ: https://cambridgeaudio.jp/sitemap.xml

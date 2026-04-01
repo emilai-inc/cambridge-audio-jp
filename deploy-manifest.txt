@@ -46,3 +46,11 @@ favicon.png
 
 # === Cloudflare Pages 設定 ===
 _headers
+
+# === SEO / クローラー ===
+robots.txt
+sitemap.xml
+
+# === LLM コンテキスト（AI クローラー向け公開ファイル）===
+llms.txt
+llms-full.txt

@@ -1,0 +1,39 @@
+# Cambridge Audio Japan
+
+> Cambridge Audio（ケンブリッジ・オーディオ）は1968年創業の英国オーディオブランド。株式会社エミライが日本正規代理店として運営する公式サイト。Hi-Fiコンポーネント、ヘッドホン、スピーカー、アクセサリーを展開。
+
+Cambridge Audio は「Great British Sound」を理念に、50年以上にわたり音楽愛好家のためのオーディオ機器を開発。ロンドンの自社設計チームがすべての製品を設計し、最高の音質を手頃な価格で提供することを目指している。
+
+## 製品カテゴリー
+
+- [Hi-Fi コンポーネント](https://cambridgeaudio.jp/hifi.html): アンプ、ネットワークプレーヤー、CDプレーヤー、DAC
+- [ヘッドホン](https://cambridgeaudio.jp/headphones.html): Melomania シリーズ（完全ワイヤレス、オーバーイヤー）
+- [スピーカー](https://cambridgeaudio.jp/speakers.html): L/R シリーズ（アクティブ）、SX シリーズ（パッシブ）、Minx シリーズ
+- [アクセサリー](https://cambridgeaudio.jp/accessories.html): フォノアンプ、ターンテーブル、Bluetooth レシーバー
+
+## 主要製品
+
+- [Evo One](https://cambridgeaudio.jp/products/evo-one.html): オールインワン ワイヤレスストリーミングスピーカー（700W、14スピーカー）
+- [EXA100](https://cambridgeaudio.jp/products/exa100.html): フラッグシップ インテグレーテッドアンプ
+- [EXN100](https://cambridgeaudio.jp/products/exn100.html): フラッグシップ ネットワークプレーヤー
+- [CXN100](https://cambridgeaudio.jp/products/cxn100.html): ネットワークプレーヤー
+- [CXA81 Mk II](https://cambridgeaudio.jp/products/cxa81-mkii.html): インテグレーテッドアンプ
+- [L/R X](https://cambridgeaudio.jp/products/lr-x.html): アドバンスド アクティブステレオストリーミングスピーカー
+- [Melomania P100 SE](https://cambridgeaudio.jp/products/melomania-p100-se.html): ANCオーバーイヤーヘッドホン
+- [Melomania A100](https://cambridgeaudio.jp/products/melomania-a100.html): ANC完全ワイヤレスイヤホン
+- [DacMagic 200M](https://cambridgeaudio.jp/products/dacmagic-200m.html): DAC&ヘッドホンアンプ
+
+## サポート・情報
+
+- [ブランドについて](https://cambridgeaudio.jp/about.html): Cambridge Audio の歴史と哲学
+- [テクノロジー](https://cambridgeaudio.jp/technology.html): DAC、アンプ、ストリーミング技術
+- [サポート](https://cambridgeaudio.jp/support.html): FAQ、取扱説明書、保証情報
+- [ニュース](https://cambridgeaudio.jp/news.html): 最新ニュース
+- [レビュー](https://cambridgeaudio.jp/reviews.html): メディアレビュー
+
+## Optional
+
+- [全製品一覧](https://cambridgeaudio.jp/products.html): 全カテゴリーの製品リスト
+- [プライバシーポリシー](https://cambridgeaudio.jp/privacy.html)
+- [利用規約](https://cambridgeaudio.jp/terms.html)
+- [LLM向け全文コンテンツ](https://cambridgeaudio.jp/llms-full.txt)
