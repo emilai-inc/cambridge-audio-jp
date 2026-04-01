@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ニュース | Cambridge Audio Japan</title>
+  <link rel="icon" type="image/png" href="favicon.png" sizes="48x48">
+    <link rel="canonical" href="https://cambridgeaudio.jp/news.html">
+    <link rel="alternate" hreflang="ja" href="https://cambridgeaudio.jp/news.html">
+    <link rel="alternate" hreflang="en" href="https://www.cambridgeaudio.com/row/en">
+    <link rel="alternate" hreflang="x-default" href="https://www.cambridgeaudio.com/row/en">
+  <meta name="description" content="Cambridge Audioの最新ニュースとプレスリリース。新製品情報、アワード受賞、テクノロジーアップデートをお届けします。">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ニュース | Cambridge Audio Japan">
+  <meta property="og:description" content="Cambridge Audioの最新ニュースとプレスリリース。新製品情報、アワード受賞、テクノロジーアップデートをお届けします。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cambridgeaudio.jp/news.html">
+  <meta property="og:image" content="https://cambridgeaudio.jp/images/hero/lr-series-hero.webp">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="Cambridge Audio Japan">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ニュース | Cambridge Audio Japan">
+  <meta name="twitter:description" content="Cambridge Audioの最新ニュースとプレスリリース。新製品情報、アワード受賞、テクノロジーアップデートをお届けします。">
+  <meta name="twitter:image" content="https://cambridgeaudio.jp/images/hero/lr-series-hero.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"></noscript>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ===== Font Face ===== */
+    @font-face {
+      font-family: 'Sohne Wide';
+      src: url('fonts/sohne-wide-bold.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Tiempos Headline';
+      src: url('fonts/tiempos-headline-light.woff2') format('woff2');
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* ===== Reset & Base ===== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --color-black: #000;
+      --color-white: #fff;
+      --color-gray-50: #f8f8f8;
+      --color-gray-100: #f0f0f0;
+      --color-gray-200: #e0e0e0;
+      --color-gray-400: #999;
+      --color-gray-600: #666;
+      --color-gray-800: #333;
+      --color-teal: #00857c;
+      --color-teal-dark: #006b63;
+      --font-sans: 'Helvetica Neue', 'Noto Sans JP', Arial, sans-serif;
+      --font-serif: 'Tiempos Headline', 'Noto Serif JP', Georgia, 'Times New Roman', serif;
+      --max-width: 1280px;
+      --header-height: 64px;
+    }
+
+    html {
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--color-black);
+      background: var(--color-white);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ===== Header ===== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--color-white);
+      border-bottom: 1px solid var(--color-gray-200);
+      height: var(--header-height);
+    }
+
+    .header-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header-logo a {
+      display: flex;
+      align-items: center;
+    }
+
+    .header-logo img {
+      height: 20px;
+      width: auto;
+    }
+
+    .header-logo .logo-text {
+      font-family: var(--font-sans);
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .header-nav a {
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+      position: relative;
+    }
+
+    .header-nav a:hover {
+      color: var(--color-teal);
+    }
+
+    .header-nav a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--color-teal);
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .region-selector {
+      font-size: 13px;
+      color: var(--color-gray-600);
+      font-weight: 500;
+    }
+
+    .search-btn {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+
+    .search-btn svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--color-black);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--color-black);
+      margin: 5px 0;
+      transition: 0.3s;
+    }
+
+    /* ===== Page Title ===== */
+    .page-title {
+      background: var(--color-white);
+      padding: 120px 0 60px;
+    }
+
+    .page-title h1 {
+      font-family: 'Sohne Wide', 'Helvetica Neue', Arial, sans-serif;
+      font-size: 72px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #000;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .page-title p {
+      font-family: 'Tiempos Headline', 'Noto Serif JP', Georgia, serif;
+      font-size: 32px;
+      font-weight: 300;
+      color: #000;
+      line-height: 1.2;
+    }
+
+    /* ===== News Cards ===== */
+    .news-section {
+      padding: 0 0 80px;
+    }
+
+    .news-card {
+      background: var(--color-white);
+      border-bottom: 1px solid var(--color-gray-200);
+      padding: 40px 0;
+    }
+
+    .news-card:first-child {
+      border-top: 1px solid var(--color-gray-200);
+    }
+
+    .news-card__date {
+      font-size: 14px;
+      color: var(--color-gray-400);
+      margin-bottom: 8px;
+    }
+
+    .news-card__tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      background: var(--color-gray-100);
+      padding: 4px 12px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .news-card__title {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      font-weight: 300;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .news-card__summary {
+      font-size: 16px;
+      color: var(--color-gray-600);
+      line-height: 1.7;
+    }
+
+    /* ===== Footer ===== */
+    .site-footer {
+      background: var(--color-black);
+      color: var(--color-white);
+      padding: 64px 0 32px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      margin-bottom: 32px;
+    }
+
+    .footer-col h3 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      letter-spacing: 0.02em;
+    }
+
+    .footer-col a {
+      display: block;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 10px;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: var(--color-white);
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-bottom p {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .footer-bottom-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-bottom-links a {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.7);
+      transition: color 0.2s;
+    }
+
+    .footer-bottom-links a:hover {
+      color: var(--color-white);
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 1024px) {
+      .page-title h1 {
+        font-size: 48px;
+      }
+
+      .page-title p {
+        font-size: 26px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header-nav {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .page-title {
+        padding: 96px 0 48px;
+      }
+
+      .page-title h1 {
+        font-size: 36px;
+      }
+
+      .page-title p {
+        font-size: 22px;
+      }
+
+      .news-card__title {
+        font-size: 22px;
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .page-title h1 {
+        font-size: 28px;
+      }
+
+      .page-title p {
+        font-size: 20px;
+      }
+
+      .news-card {
+        padding: 28px 0;
+      }
+
+      .news-card__title {
+        font-size: 20px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://cambridgeaudio.jp/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "ニュース",
+      "item": "https://cambridgeaudio.jp/news.html"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-logo">
+        <a href="index.html">
+          <img src="images/logo.svg" alt="Cambridge Audio" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="logo-text" style="display:none">CAMBRIDGE AUDIO</span>
+        </a>
+      </div>
+      <nav class="header-nav" aria-label="メインナビゲーション">
+        <a href="hifi.html">Hi-Fi</a>
+        <a href="headphones.html">ヘッドホン</a>
+        <a href="speakers.html">スピーカー</a>
+        <a href="accessories.html">アクセサリー</a>
+        <a href="about.html">ブランドストーリー</a>
+      </nav>
+      <div class="header-right">
+        <span class="region-selector">日本 / JP</span>
+        <button class="search-btn" type="button" aria-label="検索">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ===== Page Title ===== -->
+    <section class="page-title fade-in">
+      <div class="container">
+        <h1>NEWS</h1>
+        <p>Cambridge Audioの最新ニュースとプレスリリース</p>
+      </div>
+    </section>
+
+    <!-- ===== News Cards ===== -->
+    <section class="news-section fade-in">
+      <div class="container">
+
+        <article class="news-card">
+          <p class="news-card__date">2025年2月</p>
+          <span class="news-card__tag">プレスリリース</span>
+          <h2 class="news-card__title">L/R アクティブステレオスピーカー 新発売</h2>
+          <p class="news-card__summary">Cambridge Audioは、新しいアクティブステレオスピーカーシリーズ "L/R" を発表しました。Wi-Fi、Bluetooth、AirPlay 2、Chromecastに対応し、Cambridge Audio史上最もパワフルなワイヤレススピーカーです。</p>
+        </article>
+
+        <article class="news-card">
+          <p class="news-card__date">2025年1月</p>
+          <span class="news-card__tag">製品ニュース</span>
+          <h2 class="news-card__title">Evo 150 SE — 次世代ストリーミングアンプ</h2>
+          <p class="news-card__summary">Evoシリーズの最上位モデル Evo 150 SEは、ESS Sabre DACと150W出力を搭載。StreamMagicプラットフォームにより、あらゆるストリーミングサービスに対応します。</p>
+        </article>
+
+        <article class="news-card">
+          <p class="news-card__date">2024年12月</p>
+          <span class="news-card__tag">アワード</span>
+          <h2 class="news-card__title">Melomania A100 — What Hi-Fi? ベストバイ受賞</h2>
+          <p class="news-card__summary">ANC搭載完全ワイヤレスイヤホン Melomania A100 が、What Hi-Fi?の2024年ベストバイアワードを受賞しました。</p>
+        </article>
+
+        <article class="news-card">
+          <p class="news-card__date">2024年11月</p>
+          <span class="news-card__tag">テクノロジー</span>
+          <h2 class="news-card__title">StreamMagic 3.0 アップデート配信開始</h2>
+          <p class="news-card__summary">StreamMagicアプリの大型アップデートを配信開始。新UIデザイン、Roon Ready対応の拡張、マルチルームオーディオ機能の改善を含みます。</p>
+        </article>
+
+        <article class="news-card">
+          <p class="news-card__date">2024年10月</p>
+          <span class="news-card__tag">プレスリリース</span>
+          <h2 class="news-card__title">EXシリーズ — フラッグシップHi-Fiライン</h2>
+          <p class="news-card__summary">EXA100アンプとEXN100ネットワークプレーヤーで構成される新EXシリーズは、Cambridge Audioの最高峰技術を結集したフラッグシップラインです。</p>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>製品</h3>
+          <a href="hifi.html">Hi-Fi</a>
+          <a href="headphones.html">ヘッドホン</a>
+          <a href="speakers.html">スピーカー</a>
+          <a href="accessories.html">アクセサリー</a>
+        </div>
+        <div class="footer-col">
+          <h3>サポート</h3>
+          <a href="support.html#registration">製品登録</a>
+          <a href="support.html#faq">よくあるご質問</a>
+          <a href="support.html#manuals">取扱説明書</a>
+          <a href="support.html#contact">お問い合わせ</a>
+        </div>
+        <div class="footer-col">
+          <h3>ブランド</h3>
+          <a href="about.html">ブランドストーリー</a>
+          <a href="technology.html">テクノロジー</a>
+          <a href="news.html">ニュース</a>
+          <a href="reviews.html">レビュー</a>
+        </div>
+        <div class="footer-col">
+          <h3>法的情報</h3>
+          <a href="privacy.html">プライバシーポリシー</a>
+          <a href="terms.html">利用規約</a>
+          <a href="terms.html#tokushoho">特定商取引法に基づく表記</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Cambridge Audio. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">プライバシー</a>
+          <a href="privacy.html#cookies">Cookie設定</a>
+          <a href="terms.html#sitemap">サイトマップ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
